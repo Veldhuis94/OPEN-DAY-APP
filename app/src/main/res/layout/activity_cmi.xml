@@ -62,7 +62,7 @@
                         android:layout_height="37dp"
                         android:layout_marginLeft="10dp"
                         android:gravity="center|left"
-                        android:text="@string/aboutcmi_phoneNumber"
+                        android:text="@string/aboutcmi_email"
                         android:textColor="@color/textDark"
                         android:textSize="16dp" />
 
