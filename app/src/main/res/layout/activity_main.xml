@@ -37,6 +37,19 @@
                 tools:layout_editor_absoluteX="132dp"
                 tools:layout_editor_absoluteY="258dp" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/white"/>
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
@@ -60,15 +73,53 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/white"/>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/OpenDay_Test2"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="132dp"
+                tools:layout_editor_absoluteY="258dp" />
+
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1000dp"
-                android:text="@string/de_scroller_werkt_lol"
-                app:layout_constraintTop_toBottomOf="@+id/scrollView3"
-                tools:layout_editor_absoluteX="parent" />
+                android:text="@string/opendaybutton"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="184dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@android:color/white"/>
 
         </TableLayout>
     </ScrollView>
