@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CMI Open Day</string>
+    <string name="opendaybutton">more information</string>
+    <string name="de_scroller_werkt_lol">de scroller werkt lol</string>
+    <string name="OpenDay_Test">CMI Open Day, 26–6–2019\n12:00 – 16:00\nInformatica, Technische Informatica, CMGT, Communicatiewetenschappen</string>
+    <string name="open_days">Open Days</string>
 </resources>
