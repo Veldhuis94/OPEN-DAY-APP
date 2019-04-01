@@ -4,4 +4,19 @@
     <string name="de_scroller_werkt_lol">de scroller werkt lol</string>
     <string name="OpenDay_Test">CMI Open Day, 26–6–2019\n12:00 – 16:00\nInformatica, Technische Informatica, CMGT, Communicatiewetenschappen</string>
     <string name="open_days">Open Days</string>
+
+    <string name="aboutcmi_location">Wijnhaven 61</string>
+    <string name="aboutcmi_phoneNumber">Phone number: 018048395734</string>
+    <string name="aboutcmi_email">Email: contact@hr.nl</string>
+    <string name="aboutcmi_website">Url: hogeschoolrotterdam.nl</string>
+    <string name="aboutcmi_questionForm">QUESTION FORM</string>
+    <string name="aboutcmi_textHeader">Willem de Kooning Academie</string>
+    <string name="aboutcmi_content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat
+    </string>
+    <string name="aboutcmi_floorplan">FLOORPLAN</string>
+    <string name="aboutcmi_courses">COURSES</string>
 </resources>
