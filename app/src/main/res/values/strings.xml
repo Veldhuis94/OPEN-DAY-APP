@@ -5,6 +5,17 @@
     <string name="OpenDay_Test">CMI Open Day, 26–6–2019\n12:00 – 16:00\nInformatica, Technische Informatica, CMGT, Communicatiewetenschappen</string>
     <string name="OpenDay_Test2">CMI Open Day, 30–7–2019\n13:00 – 18:00\nInformatica, Technische Informatica, CMGT, Communicatiewetenschappen</string>
     <string name="open_days">Open Days</string>
+    <string name="Informatica">Informatica</string>
+    <string name="OpenDay_Informatica">H.04.208/ 12:00 – 16:00\nWijnhaven 107</string>
+    <string name="Technische_Informatica">Technische informatica</string>
+    <string name="OpenDay_Technische_Informatica">H.03.108/ 12:00 – 16:00\nWijnhaven 107</string>
+    <string name="CMGT">CMGT</string>
+    <string name="OpenDay_CMGT">WD.05.018/ 12:00 – 16:00\nWijnhaven 103</string>
+    <string name="Communicatiewetenschappen">Communicatiewetenschappen</string>
+    <string name="OpenDay_Communicatiewetenschappen">WN.01.014/ 12:00 – 16:00\nWijnhaven 99</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="informaticainfo">We leiden je op tot software engineer. Je gaat aan de slag met het ontwikkelen van software voor diverse toepassingen. Je bent in staat complexe ICT-systemen te analyseren, ontwerpen en implementeren.\n\nSoftware is overal om ons heen te vinden. Jij bent de specialist in het maken van grote en complexe software informatiesystemen die snel, efficiënt en veilig werken. Zo kun je denken aan het ontwikkelen van een functionele app, maar ook aan het analyseren van grote hoeveelheden data van social media. Bij het ontwikkelen van deze systemen kom je in aanraking met verschillende programmeertalen. Zo leer je in het eerste jaar programmeren in Python en geavanceerde programmeertalen zoals Java/C#. Vanaf het tweede jaar kies je zelf welke programmeertaal je wilt gebruiken. Naast het programmeren en ontwikkelen van verschillende toepassingen leer je ook samenwerken.\n\nNa het volgen van de opleiding Informatica ben je breed inzetbaar binnen het vakgebied. Vanuit functies als data engineer, software developer en software engineer kun je verder groeien binnen de ICT.\n\nBen jij geïnteresseerd in nieuwe technologische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!</string>
     <string name="informatica">Software\nEngineering</string>
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/sidebare_homescreen"
+            android:icon="@drawable/ic_home"
+            android:title="Homescreen" />
+
+        <item
+            android:id="@+id/sidebare_location"
+            android:icon="@drawable/ic_location"
+            android:title="Location" />
+
+        <item
+            android:id="@+id/sidebare_study_programs"
+            android:icon="@drawable/ic_school"
+            android:title="Study programs" />
+
+        <item
+            android:id="@+id/sidebare_ask_a_question"
+            android:icon="@drawable/ic_question"
+            android:title="Ask A Question" />
+
+
+    </group>
+
+</menu>
