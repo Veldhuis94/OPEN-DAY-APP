@@ -8,6 +8,7 @@
     <string name="informaticainfo">We leiden je op tot software engineer. Je gaat aan de slag met het ontwikkelen van software voor diverse toepassingen. Je bent in staat complexe ICT-systemen te analyseren, ontwerpen en implementeren.\n\nSoftware is overal om ons heen te vinden. Jij bent de specialist in het maken van grote en complexe software informatiesystemen die snel, efficiënt en veilig werken. Zo kun je denken aan het ontwikkelen van een functionele app, maar ook aan het analyseren van grote hoeveelheden data van social media. Bij het ontwikkelen van deze systemen kom je in aanraking met verschillende programmeertalen. Zo leer je in het eerste jaar programmeren in Python en geavanceerde programmeertalen zoals Java/C#. Vanaf het tweede jaar kies je zelf welke programmeertaal je wilt gebruiken. Naast het programmeren en ontwikkelen van verschillende toepassingen leer je ook samenwerken.\n\nNa het volgen van de opleiding Informatica ben je breed inzetbaar binnen het vakgebied. Vanuit functies als data engineer, software developer en software engineer kun je verder groeien binnen de ICT.\n\nBen jij geïnteresseerd in nieuwe technologische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!</string>
     <string name="informatica">Software\nEngineering</string>
 
+    <!--ABOUT CMI PAGE-->
     <string name="aboutcmi_location">Wijnhaven 61</string>
     <string name="aboutcmi_phoneNumber">Phone number: 018048395734</string>
     <string name="aboutcmi_email">Email: contact@hr.nl</string>
@@ -22,4 +23,11 @@
     </string>
     <string name="aboutcmi_floorplan">FLOORPLAN</string>
     <string name="aboutcmi_courses">COURSES</string>
+
+    <!--FLOORPLAN PAGE-->
+    <string name="floorplan_location">Wijnhaven 61</string>
+    <string name="floorplan_floor">4th floor</string>
+    <string name="floorplan_up">+</string>
+    <string name="floorplan_down">-</string>
+
 </resources>

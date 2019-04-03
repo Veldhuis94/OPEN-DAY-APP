@@ -6,156 +6,165 @@
     android:layout_height="match_parent"
     tools:context=".CMI_Activity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="36dp"
-        android:background="@color/secondary3"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="68dp"
-            android:gravity="center"
-            android:text="@string/aboutcmi_location"
-            android:textColor="@color/textDark2"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:fontFamily="sans-serif" />
+        android:scrollbarStyle="insideOverlay"
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:background="@color/secondary4"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@color/secondary3"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:gravity="center"
+                android:text="@string/aboutcmi_location"
+                android:textColor="@color/textDark2"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
 
             <LinearLayout
-                android:layout_width="261dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/secondary4"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="230dp"
-                    android:layout_height="37dp"
-                    android:layout_marginLeft="25dp"
-                    android:gravity="center|left"
-                    android:text="@string/aboutcmi_phoneNumber"
-                    android:textColor="@color/textDark"
-                    android:textSize="16dp" />
+                <LinearLayout
+                    android:layout_width="245dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="230dp"
-                    android:layout_height="37dp"
-                    android:layout_marginLeft="25dp"
-                    android:gravity="center|left"
-                    android:text="@string/aboutcmi_phoneNumber"
-                    android:textColor="@color/textDark"
-                    android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="230dp"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/aboutcmi_phoneNumber"
+                        android:textColor="@color/textDark"
+                        android:textSize="16dp" />
 
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="230dp"
-                    android:layout_height="37dp"
-                    android:layout_marginLeft="25dp"
-                    android:gravity="center|left"
-                    android:text="@string/aboutcmi_website"
-                    android:textColor="@color/textDark"
-                    android:textSize="16dp"
-                    tools:layout_editor_absoluteX="25dp"
-                    tools:layout_editor_absoluteY="217dp" />
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="230dp"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/aboutcmi_email"
+                        android:textColor="@color/textDark"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="230dp"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/aboutcmi_website"
+                        android:textColor="@color/textDark"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="25dp"
+                        tools:layout_editor_absoluteY="217dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/questionFormButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/round_button"
+                        android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="@string/aboutcmi_questionForm"
+                        android:textColor="@color/textLight"
+                        android:textSize="14dp" />
+                </LinearLayout>
 
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="-2dp"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="false"
+                android:contentDescription="Wijnhaven Image"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/wijnhaven61" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/aboutcmi_textHeader"
+                android:textColor="@color/textDark"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/aboutcmi_content"
+                android:textColor="@color/textDark"
+                android:textSize="16dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/questionFormButton"
-                    android:layout_width="132dp"
-                    android:layout_height="38dp"
-                    android:layout_margin="8dp"
+                    android:id="@+id/floorPlanButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:height="20dp"
                     android:background="@drawable/round_button"
-                    android:gravity="center"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:text="@string/aboutcmi_questionForm"
-                    android:textColor="@color/textLight"
-                    android:textSize="14dp" />
+                    android:text="@string/aboutcmi_floorplan"
+                    android:textColor="@color/textLight" />
+
+                <Button
+                    android:id="@+id/coursesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:height="20dp"
+                    android:background="@drawable/round_button"
+                    android:text="@string/aboutcmi_courses"
+                    android:textColor="@color/textLight" />
             </LinearLayout>
 
         </LinearLayout>
+    </ScrollView>
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_gravity="top"
-            android:layout_marginTop="-2dp"
-            android:layout_marginBottom="20dp"
-            android:adjustViewBounds="false"
-            android:contentDescription="Wijnhaven Image"
-            android:cropToPadding="false"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/wijnhaven61" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="@string/aboutcmi_textHeader"
-            android:textColor="@color/textDark"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-            android:text="@string/aboutcmi_content"
-            android:textColor="@color/textDark"
-            android:textSize="16dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/floorPlanButton"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_margin="20dp"
-                android:layout_weight="1"
-                android:height="20dp"
-                android:background="@drawable/round_button"
-                android:text="@string/aboutcmi_floorplan"
-                android:textColor="@color/textLight" />
-
-            <Button
-                android:id="@+id/coursesButton"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_margin="20dp"
-                android:layout_weight="1"
-                android:height="20dp"
-                android:background="@drawable/round_button"
-                android:text="@string/aboutcmi_courses"
-                android:textColor="@color/textLight" />
-        </LinearLayout>
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
