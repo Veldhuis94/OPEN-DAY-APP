@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, EducationPage.class));
             }
         });
+
             }
             public void openOpenDayDetails(){
         Intent intent = new Intent(this,openDayDetails.class);
         startActivity(intent);
             }
 }
-
 
 
