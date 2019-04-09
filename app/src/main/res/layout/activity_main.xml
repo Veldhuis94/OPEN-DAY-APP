@@ -15,31 +15,18 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="8dp"
             android:background="@android:color/holo_red_dark"
             android:elevation="4dp"
             android:src="@drawable/logohr"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
-
-        <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="107dp"
-        android:layout_marginLeft="107dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginRight="108dp"
-        android:gravity="center_horizontal"
-        android:text="@string/open_days"
-        android:textAllCaps="true"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -210,7 +197,7 @@
         </ScrollView>
 
     </android.support.constraint.ConstraintLayout>
-    
+
 
         <android.support.design.widget.NavigationView
             android:id="@+id/sidebar_view"
