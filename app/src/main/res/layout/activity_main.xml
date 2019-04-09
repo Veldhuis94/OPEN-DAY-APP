@@ -9,18 +9,20 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"> <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:background="@android:color/holo_red_dark"
-        android:elevation="4dp"
-        android:src="@drawable/logohr"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-=======
-    <TextView
-        android:id="@+id/textView"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/holo_red_dark"
+            android:elevation="4dp"
+            android:src="@drawable/logohr"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+        <TextView
+        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_marginStart="107dp"
         android:layout_marginLeft="107dp"
@@ -34,12 +36,11 @@
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
         android:layout_height="wrap_content" />
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/scrollView3"
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="120dp"
@@ -62,29 +63,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
-=======
-            android:layout_height="wrap_content"
-            android:stretchColumns="1">
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="15dp"
-                android:background="@android:color/white"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="15dp"
-                android:background="@android:color/white"/>
 
             <TableLayout
                 android:id="@+id/tableLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:stretchColumns="1">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@android:color/white"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@android:color/white"/>
 
                 <TextView
                     android:id="@+id/textView"
@@ -211,16 +210,7 @@
         </ScrollView>
 
     </android.support.constraint.ConstraintLayout>
-
-
-
-        android:id="@+id/drawerLayout"
-        android:layout_width="match_parent"
-
-        android:layout_height="725dp"
-        android:fitsSystemWindows="false"
-        android:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent">
+    
 
         <android.support.design.widget.NavigationView
             android:id="@+id/sidebar_view"
@@ -231,10 +221,6 @@
             app:menu="@menu/sidebare_menu">
 
         </android.support.design.widget.NavigationView>
-
-
-
-
 
 
 
