@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button tempeduc = (Button)findViewById(R.id.temp);
+        Button tempeduc1 = (Button)findViewById(R.id.temp1);
+        Button tempeduc2 = (Button)findViewById(R.id.temp2);
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,19 +23,14 @@ public class MainActivity extends AppCompatActivity {
                 openOpenDayDetails();
             }
         });
+        tempeduc2.setOnClickListener(new onClickStudypage(1,MainActivity.this));
+        tempeduc1.setOnClickListener(new onClickStudypage(0, MainActivity.this));
+    }
 
-        tempeduc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, EducationPage.class));
-            }
-        });
-
-            }
-            public void openOpenDayDetails(){
+    public void openOpenDayDetails(){
         Intent intent = new Intent(this,openDayDetails.class);
         startActivity(intent);
-            }
+    }
 }
 
 
