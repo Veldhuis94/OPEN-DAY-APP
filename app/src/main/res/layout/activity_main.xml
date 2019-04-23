@@ -27,16 +27,16 @@
 
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="120dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:layout_editor_absoluteX="0dp" />
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="120dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            tools:layout_editor_absoluteX="0dp" />
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/scrollView3"
@@ -199,15 +199,15 @@
     </android.support.constraint.ConstraintLayout>
 
 
-        <android.support.design.widget.NavigationView
-            android:id="@+id/sidebar_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:headerLayout="@layout/sidebare_header"
-            app:menu="@menu/sidebare_menu">
+    <android.support.design.widget.NavigationView
+        android:id="@+id/sidebar_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/sidebare_header"
+        app:menu="@menu/sidebare_menu">
 
-        </android.support.design.widget.NavigationView>
+    </android.support.design.widget.NavigationView>
 
 
 
