@@ -12,18 +12,13 @@ public class EducationPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education_page);
 
-        if (currentPageId == 0) {
-            TextView studyCourseText = findViewById(R.id.textView5);
-            studyCourseText.setText(R.string.informaticainfo);
-            TextView studyCourseHead = findViewById(R.id.textView6);
-            studyCourseHead.setText(R.string.informatica);
-        }
-        if (currentPageId == 1) {
-            TextView studyCourseText = findViewById(R.id.textView5);
-            studyCourseText.setText(R.string.communicatieinfo);
-            TextView studyCourseHead = findViewById(R.id.textView6);
-            studyCourseHead.setText(R.string.communicatie);
+        String[] bodyStrings = getResources().getStringArray(R.array.studyCourseBody);
+        TextView studyCourseText = findViewById(R.id.textView5);
+        studyCourseText.setText(bodyStrings[currentPageId]);
+        String[] headerStrings = getResources().getStringArray(R.array.studyCourseHeader);
+        TextView studyCourseHead = findViewById(R.id.textView6);
+        studyCourseHead.setText(headerStrings[currentPageId]);
 
-        }
+
     }
 }

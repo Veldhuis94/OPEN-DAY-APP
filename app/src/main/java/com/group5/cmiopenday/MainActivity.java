@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
                 openOpenDayDetails();
             }
         });
-        tempeduc2.setOnClickListener(new onClickStudypage(1,MainActivity.this));
-        tempeduc1.setOnClickListener(new onClickStudypage(0, MainActivity.this));
+        tempeduc1.setOnClickListener(new onClickStudypage(0,MainActivity.this));
+        tempeduc2.setOnClickListener(new onClickStudypage(1, MainActivity.this));
     }
 
     public void openOpenDayDetails(){
