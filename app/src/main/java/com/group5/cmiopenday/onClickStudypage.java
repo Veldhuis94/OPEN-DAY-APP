@@ -13,9 +13,8 @@ public class onClickStudypage implements View.OnClickListener {
     }
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(v.getContext(), EducationPage.class);
-        this.activity.startActivity(intent);
+        this.activity.startActivity(new Intent(v.getContext(), EducationPage.class)); //start the activity EducationPage
 
-        EducationPage.currentPageId = pageId;
+        EducationPage.currentPageId = pageId; //pass pageId to the new instance of EducationPage
     }
 }

@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 openOpenDayDetails();
             }
         });
+        /* TODO: remove these buttons */
         tempeduc1.setOnClickListener(new onClickStudypage(0,MainActivity.this));
         tempeduc2.setOnClickListener(new onClickStudypage(1, MainActivity.this));
     }
