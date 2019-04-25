@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import com.group5.cmiopenday.floorplan.DragController;
 import com.group5.cmiopenday.floorplan.DragListener;
 import com.group5.cmiopenday.floorplan.FloorplanLayout;
-import com.group5.cmiopenday.floorplan.FloorplanScaleListener;
+import com.group5.cmiopenday.floorplan.ZoomListener;
 import com.group5.cmiopenday.floorplan.ZoomController;
 
 public class FloorPlanActivity extends AppCompatActivity {
@@ -26,10 +26,12 @@ public class FloorPlanActivity extends AppCompatActivity {
         ImageView floorplanImage = findViewById(R.id.FloorplanImageView);
         FloorplanLayout floorplanLayout = findViewById(R.id.FloorplanLayout); //get the zoomableframelayout that contains the imageview
 
-        ZoomController zoomController = new ZoomController(floorplanImage, 0.25f, 1.0f);
-        floorplanLayout.setScaleDetector(new ScaleGestureDetector(this, new FloorplanScaleListener(zoomController)));
-
         DragController dragController = new DragController(floorplanImage);
         floorplanLayout.setGestureDetector(new GestureDetector(this, new DragListener(dragController)));
+
+        ZoomController zoomController = new ZoomController(floorplanImage, 0.25f, 1.0f);
+        floorplanLayout.setScaleDetector(new ScaleGestureDetector(this, new ZoomListener(zoomController)));
+
+
     }
 }

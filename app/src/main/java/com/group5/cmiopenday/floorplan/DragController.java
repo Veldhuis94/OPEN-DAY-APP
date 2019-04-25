@@ -1,7 +1,6 @@
 package com.group5.cmiopenday.floorplan;
 
 import android.graphics.RectF;
-import android.view.MotionEvent;
 import android.widget.ImageView;
 
 import com.group5.cmiopenday.math.MathUtil;
@@ -26,8 +25,8 @@ public class DragController {
     //move the image
     public void dragImage(float x, float y) {
         RectF boundaries = getBoundaries();
-        x = MathUtil.Clamp(x, boundaries.left, boundaries.right); //clamp the position to the boundaries of the imageview
-        y = MathUtil.Clamp(y, boundaries.top, boundaries.bottom);
+        x = MathUtil.clamp(x, boundaries.left, boundaries.right); //clamp the position to the boundaries of the imageview
+        y = MathUtil.clamp(y, boundaries.top, boundaries.bottom);
 
         floorplanImage.setX(x); //set the imageview position
         floorplanImage.setY(y);

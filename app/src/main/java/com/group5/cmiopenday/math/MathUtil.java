@@ -2,7 +2,7 @@ package com.group5.cmiopenday.math;
 
 public class MathUtil {
     //returns a clamped value between min and max
-    public static float Clamp(float value, float min, float max){
+    public static float clamp(float value, float min, float max){
         if(value < min){ //Under the minimum value?
             value = min;
         }

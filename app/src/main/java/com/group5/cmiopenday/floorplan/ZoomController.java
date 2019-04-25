@@ -18,7 +18,7 @@ public class ZoomController {
 
     //sets the zoom level of image. Use a smaller value if you want to zoom in and a larger value to zoom out. The value will be clamped between the minZoom en maxZoom attributes.
     public void setZoomLevel(float zoom){
-        //Clamp the value
+        //clamp the value
         if(zoom < minZoom){
             zoom = minZoom;
         }
