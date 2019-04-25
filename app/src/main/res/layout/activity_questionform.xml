@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QuestionFormActivity">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,8 +35,8 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:text="@string/questionform_name"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
                     tools:text="@string/questionform_name" />
@@ -48,8 +51,11 @@
                     tools:layout_editor_absoluteY="213dp">
 
                     <android.support.design.widget.TextInputEditText
-                        android:layout_width="300sp"
-                        android:layout_height="40sp" />
+
+                        android:layout_width="220sp"
+                        android:layout_height="40sp"
+                        android:id="@+id/questionform_editname"/>
+
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -62,13 +68,13 @@
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="150sp"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:layout_marginTop="32dp"
                     android:text="@string/questionform_subject"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
+                    android:textColor="@android:color/holo_red_dark"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
                     tools:text="@string/questionform_subject" />
@@ -83,8 +89,11 @@
                     tools:layout_editor_absoluteY="213dp">
 
                     <android.support.design.widget.TextInputEditText
-                        android:layout_width="300sp"
-                        android:layout_height="40sp" />
+
+                        android:layout_width="220sp"
+                        android:layout_height="40sp"
+                        android:id="@+id/questionform_editsubject"/>
+
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -101,9 +110,9 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
+                    android:textColor="@android:color/holo_red_dark"
                     android:text="@string/questionform_email"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textSize="18sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView3"
                     tools:text="@string/questionform_email" />
@@ -118,8 +127,11 @@
                     tools:layout_editor_absoluteX="88dp">
 
                     <android.support.design.widget.TextInputEditText
-                        android:layout_width="300sp"
-                        android:layout_height="40sp" />
+
+                        android:layout_width="220sp"
+                        android:layout_height="40sp"
+                        android:id="@+id/questionform_editemail"/>
+
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -130,10 +142,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:layout_marginTop="44dp"
                 android:text="@string/questionform_message"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textColor="@android:color/holo_red_dark"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
                 tools:text="@string/questionform_message" />
@@ -143,13 +156,18 @@
                 android:layout_height="285dp"
                 android:gravity="center_horizontal"
                 android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="543dp">
 
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal" />
+                    android:gravity="start|top"
+                    android:id="@+id/questionform_editmessage"
+
+                    />
+
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -163,8 +181,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="80dp"
-                    android:background="@color/colorAccent"
+                    android:background="#F44336"
                     android:text="@string/questionform_send"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/secondary3"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -186,15 +206,16 @@
 
         </LinearLayout>
     </ScrollView>
+    </android.support.constraint.ConstraintLayout>
 
-    <android.support.v7.widget.LinearLayoutCompat
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/sidebar_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        tools:context=".QuestionFormActivity"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="65dp">
+        android:layout_gravity="start"
+        android:visibility="gone"
+        app:headerLayout="@layout/sidebare_header"
+        app:menu="@menu/sidebare_menu"
+        tools:visibility="gone" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
-
-</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.DrawerLayout>
