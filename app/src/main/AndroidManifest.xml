@@ -19,8 +19,6 @@
 
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".EducationPage"/>
-        <activity android:name=".openDayDetails"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
