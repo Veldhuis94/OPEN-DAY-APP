@@ -37,7 +37,9 @@
 
     <!--FLOORPLAN PAGE-->
     <string name="floorplan_location">Wijnhaven 61</string>
-    <string name="floorplan_floor">4th floor</string>
+    <string name="floorplan_floor_header">Floor</string>
+    <string name="floorplan_building_header">Building</string>
+
     <string name="floorplan_up">+</string>
     <string name="floorplan_down">-</string>
     <string name="questionform_name">Name:</string>
