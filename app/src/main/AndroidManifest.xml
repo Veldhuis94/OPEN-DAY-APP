@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".EducationPage"></activity>
         <activity android:name=".openDayDetails"></activity>
-        <activity android:name=".QuestionFormActivity">
+        <activity android:name=".QuestionFormActivity"> //decides which activity the app opens into
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
