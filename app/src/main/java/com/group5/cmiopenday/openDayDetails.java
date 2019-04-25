@@ -1,7 +1,9 @@
 package com.group5.cmiopenday;
 
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -10,6 +12,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class openDayDetails extends AppCompatActivity {
 
@@ -52,6 +57,22 @@ public class openDayDetails extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
 
         toggle.syncState();
+
+        ImageButton calendarButton = findViewById(R.id.button);
+        calendarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(openDayDetails.this, "test1", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_INSERT);
+                intent.setType("vnd.android.cursor.item/event");
+                intent.putExtra("title", "test2");
+                intent.putExtra("description", "Some descrsasdsaption");
+                Calendar beginTime = Calendar.getInstance();
+                beginTime.set(2019, 2, 19, 12, 00);
+                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -63,4 +84,5 @@ public class openDayDetails extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
 }
