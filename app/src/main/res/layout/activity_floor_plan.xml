@@ -132,7 +132,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:text="4"
+                    android:text="0"
                     android:textColor="@color/textDark2"
                     android:textSize="20sp"
                     tools:text="4e" />
@@ -168,7 +168,7 @@
                     android:id="@+id/FloorplanImageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/wijnhaven103_4" />
+                    app:srcCompat="@drawable/bg" />
             </com.group5.cmiopenday.floorplan.FloorplanLayout>
         </LinearLayout>
     </LinearLayout>
