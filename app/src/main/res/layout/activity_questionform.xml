@@ -161,9 +161,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="start|top"
-                    android:id="@+id/questionform_editmessage"/>
+                    android:id="@+id/questionform_editmessage"
 
-                    android:gravity="start|top"
                     />
 
             </android.support.design.widget.TextInputLayout>
@@ -184,7 +183,6 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="@color/secondary3"
                     android:textSize="16sp"
-                    android:textColor="@color/secondary3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
