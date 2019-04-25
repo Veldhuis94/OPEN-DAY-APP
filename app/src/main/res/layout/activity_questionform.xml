@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QuestionFormActivity">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -161,9 +164,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="start|top"
-                    android:id="@+id/questionform_editmessage"/>
+                    android:id="@+id/questionform_editmessage"
 
-                    android:gravity="start|top"
                     />
 
             </android.support.design.widget.TextInputLayout>
@@ -184,7 +186,6 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="@color/secondary3"
                     android:textSize="16sp"
-                    android:textColor="@color/secondary3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
@@ -205,13 +206,16 @@
 
         </LinearLayout>
     </ScrollView>
+    </android.support.constraint.ConstraintLayout>
 
-    <android.support.v7.widget.LinearLayoutCompat
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/sidebar_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        tools:context=".QuestionFormActivity"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="65dp" />
+        android:layout_gravity="start"
+        android:visibility="gone"
+        app:headerLayout="@layout/sidebare_header"
+        app:menu="@menu/sidebare_menu"
+        tools:visibility="gone" />
 
-</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.DrawerLayout>
