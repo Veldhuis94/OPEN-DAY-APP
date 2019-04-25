@@ -9,10 +9,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+        <activity android:name=".EducationPage"></activity>
+        <activity android:name=".openDayDetails"></activity>
+        <activity android:name=".QuestionFormActivity"></activity>
+        <activity android:name=".FloorPlanActivity"></activity>
+
+
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".EducationPage"/>
         <activity android:name=".openDayDetails"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
