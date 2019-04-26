@@ -17,7 +17,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class openDayDetails extends AppCompatActivity {
-
+    static int currentPageId;
 
     private DrawerLayout drawer;
 
