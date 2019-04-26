@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudyProgramsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <Button
+            android:id="@+id/sp_com"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_height="90dp"
+            android:text="@string/Communicatie" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/sp_cmd"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_height="90dp"
+            android:text="@string/Communication_and_Multimedia_Design" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/sp_cmgt"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_height="90dp"
+            android:text="@string/Creative_Media_and_Game_Technologies" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/sp_it"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_height="90dp"
+            android:text="@string/Informatica" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/sp_ti"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_height="90dp"
+            android:text="@string/Technische_Informatica" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
