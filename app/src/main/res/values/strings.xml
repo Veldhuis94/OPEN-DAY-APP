@@ -28,17 +28,19 @@
     </string-array>
 
     <!--ABOUT CMI PAGE-->
-    <string name="aboutcmi_location">Wijnhaven 61</string>
-    <string name="aboutcmi_phoneNumber">Phone number: 018048395734</string>
-    <string name="aboutcmi_email">Email: contact@hr.nl</string>
-    <string name="aboutcmi_website">Url: hogeschoolrotterdam.nl</string>
+    <string name="aboutcmi_location">Wijnhaven 99-103-107</string>
+    <string name="aboutcmi_phoneNumber">Phone number: 010 - 794 4000</string>
+    <string name="aboutcmi_email">Email: CMI-Balie@hr.nl</string>
+    <string name="aboutcmi_website">Url: Hogeschoolrotterdam.nl</string>
     <string name="aboutcmi_questionForm">QUESTION FORM</string>
-    <string name="aboutcmi_textHeader">Willem de Kooning Academie</string>
+    <string name="aboutcmi_textHeader">Hogeschool Rotterdam (CMI)</string>
     <string name="aboutcmi_content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat
+    With its courses in Communication, Informatics, Technical Informatics,
+        Creative Media and Game Technologies and Communication and Multimedia Design,
+        the Institute for Communication, Media and Information Technology (CMI)
+        has no fewer than 3000 students who make a valuable contribution to the
+        unlimited world of communication, media and IT.
+
     </string>
     <string name="aboutcmi_floorplan">FLOORPLAN</string>
     <string name="aboutcmi_courses">COURSES</string>
