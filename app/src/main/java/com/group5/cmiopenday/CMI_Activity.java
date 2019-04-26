@@ -10,7 +10,7 @@ import android.widget.Button;
 public class CMI_Activity extends AppCompatActivity {
     Button qfbtn;
     Button fpbtn;
-    Button cbtn
+    Button cbtn;
 
 
     @Override
