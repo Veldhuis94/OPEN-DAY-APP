@@ -10,7 +10,7 @@ import android.widget.Button;
 public class CMI_Activity extends AppCompatActivity {
     Button qfbtn;
     Button fpbtn;
-    ///Button cbtn
+    Button cbtn;
 
 
     @Override
@@ -34,13 +34,13 @@ public class CMI_Activity extends AppCompatActivity {
             }
         });
 
-        //cbtn = (Button) findViewById(R.id.coursesButton);
-        //cbtn.setOnClickListener(new View.OnClickListener() {
-            //@Override
-            //public void onClick(View view) {
-                //startActivity(new Intent(CMI_Activity.this, ACTIVITY.class));
-            //}
-        //});
-        //Als de pagina klaar is verander de ACTIVITY naar de echte naam van de Activity en haal de tekens weg bovenin bij de button
+        cbtn = (Button) findViewById(R.id.coursesButton);
+        cbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CMI_Activity.this, StudyProgramsActivity.class));
+            }
+        });
+
     }
 }
