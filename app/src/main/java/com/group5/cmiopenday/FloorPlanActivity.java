@@ -12,9 +12,18 @@ public class FloorPlanActivity extends AppCompatActivity {
 
     Button Up;
     Button Down;
+    Button H;
+    Button WD;
+    Button WN;
     TextView Floor;
-    int v ;
+    int v = 0 ;
     ImageView Image;
+    Boolean HisPressed = true;
+    Boolean WDisPressed = false;
+    Boolean WNisPressed = false;
+    int imageResourceIdsH[] = {R.drawable.minusone,R.drawable.bg,R.drawable.first,R.drawable.second,R.drawable.third,R.drawable.fourth,R.drawable.fifth,R.drawable.sixth};
+    int imageResourceIdsWD[] = {R.drawable.wdminusone,R.drawable.wdbg,R.drawable.wdone,R.drawable.wdtwo,R.drawable.wdthree,R.drawable.wdfour,R.drawable.wdfive,R.drawable.wdsix};
+    int imageResourceIdsWN[] = {R.drawable.wnminusone,R.drawable.wnbg,R.drawable.wnone,R.drawable.wntwo,R.drawable.wnthree,R.drawable.wnfour,R.drawable.wnfive                                                                                                                                                                                                                                                                                                                                              };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,31 +31,96 @@ public class FloorPlanActivity extends AppCompatActivity {
 
         Up = (Button)findViewById(R.id.Floor_Up_Button);
         Down = (Button)findViewById(R.id.Floor_Down_Button);
+        H = (Button)findViewById(R.id.BuildingH_Button);
+        H.setBackgroundColor(getResources().getColor(R.color.secondary3));
+        WD = (Button)findViewById(R.id.BuildingWD_Button);
+        WN = (Button)findViewById(R.id.BuildingWN_Button);
         Floor = (TextView)findViewById(R.id.Floor_Value_Text);
         Image = (ImageView)findViewById(R.id.FloorplanImageView);
+
         Up.setOnClickListener(new View.OnClickListener() {
-        int imageResourceIds[] = {R.drawable.bg,R.drawable.first,R.drawable.second,R.drawable.third,R.drawable.fourth,R.drawable.fifth,R.drawable.sixth};
             @Override
             public void onClick(View view) {
-                if (v < 6) {
-                v += 1;
-                Floor.setText(String.valueOf(v));
+                if (v < 6 && WNisPressed == false) {
+                    v += 1;
+                    Floor.setText(String.valueOf(v));
             }
-                Image.setImageResource(imageResourceIds[v]);
+                else if(v<5 && WNisPressed){
+                    v+=1;
+                    Floor.setText(String.valueOf(v));
+                }
+                if(HisPressed) {
+                    Image.setImageResource(imageResourceIdsH[v+1]);
+                }
+                if(WDisPressed){
+                    Image.setImageResource(imageResourceIdsWD[v+1]);
+                }
+                if(WNisPressed){
+                    Image.setImageResource(imageResourceIdsWN[v+1]);
+                }
             }
         });
         Down.setOnClickListener(new View.OnClickListener() {
-            int imageResourceIds[] = {R.drawable.bg,R.drawable.first,R.drawable.second,R.drawable.third,R.drawable.fourth,R.drawable.fifth,R.drawable.sixth};
             @Override
             public void onClick(View view) {
-                if(v > 0){
+                if(v > -1){
                     v-=1;
                     Floor.setText(String.valueOf(v));
                 }
-                Image.setImageResource(imageResourceIds[v]);
+                if(HisPressed) {
+                    Image.setImageResource(imageResourceIdsH[v+1]);
+                }
+                if(WDisPressed){
+                    Image.setImageResource(imageResourceIdsWD[v+1]);
+                }
+                if(WNisPressed){
+                    Image.setImageResource(imageResourceIdsWN[v+1]);
+                }
             }
         });
+        H.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HisPressed = true;
+                v = 0;
+                Floor.setText(String.valueOf(v));
+                Image.setImageResource(imageResourceIdsH[v+1]);
+                WDisPressed = false;
+                WNisPressed = false;
+                H.setBackgroundColor(getResources().getColor(R.color.secondary3));
+                WN.setBackgroundColor(getResources().getColor(R.color.secondary2));
+                WD.setBackgroundColor(getResources().getColor(R.color.secondary2));
+            }
+        });
+        WD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WDisPressed = true;
+                v=0;
+                Floor.setText(String.valueOf(v));
+                Image.setImageResource(imageResourceIdsWD[v+1]);
+                HisPressed = false;
+                WNisPressed = false;
+                WD.setBackgroundColor(getResources().getColor(R.color.secondary3));
+                WN.setBackgroundColor(getResources().getColor(R.color.secondary2));
+                H.setBackgroundColor(getResources().getColor(R.color.secondary2));
 
+            }
+        });
+        WN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WNisPressed = true;
+                v = 0;
+                Floor.setText(String.valueOf(v));
+                Image.setImageResource(imageResourceIdsWN[v+1]);
+                WDisPressed = false;
+                HisPressed = false;
+                WN.setBackgroundColor(getResources().getColor(R.color.secondary3));
+                WD.setBackgroundColor(getResources().getColor(R.color.secondary2));
+                H.setBackgroundColor(getResources().getColor(R.color.secondary2));
+            }
+        });
 
     }
 }
