@@ -49,11 +49,11 @@
             android:layout_height="10dp" />
 
         <Button
-            android:id="@+id/sp_it"
+            android:id="@+id/sp_si"
             android:layout_width="match_parent"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_height="90dp"
-            android:text="@string/Informatica" />
+            android:text="@string/software_engineering"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <Space
             android:layout_width="match_parent"
