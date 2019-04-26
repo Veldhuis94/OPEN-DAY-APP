@@ -62,9 +62,9 @@
         <Button
             android:id="@+id/sp_ti"
             android:layout_width="match_parent"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_height="90dp"
-            android:text="@string/Technische_Informatica" />
+            android:text="@string/computer_engineering"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
