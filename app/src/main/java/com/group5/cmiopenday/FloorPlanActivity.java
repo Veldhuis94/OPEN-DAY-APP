@@ -10,131 +10,84 @@ import android.widget.TextView;
 
 import android.view.GestureDetector;
 import android.view.ScaleGestureDetector;
-import android.widget.ImageView;
+
 import com.group5.cmiopenday.floorplan.DragController;
 import com.group5.cmiopenday.floorplan.DragListener;
 import com.group5.cmiopenday.floorplan.FloorplanLayout;
 import com.group5.cmiopenday.floorplan.ZoomListener;
 import com.group5.cmiopenday.floorplan.ZoomController;
+import com.group5.cmiopenday.math.MathUtil;
 
 public class FloorPlanActivity extends AppCompatActivity {
-
-    Button Up;
-    Button Down;
-    Button H;
-    Button WD;
-    Button WN;
-    TextView Floor;
-    int v = 0 ;
-    ImageView Image;
+    Button upButton;
+    Button downButton;
+    Button HButton;
+    Button WDButton;
+    Button WNButton;
+    TextView floorText;
+    int currentFloor = 0 ;
+    ImageView floorplanImage;
     Boolean HisPressed = true;
     Boolean WDisPressed = false;
     Boolean WNisPressed = false;
+
     int imageResourceIdsH[] = {R.drawable.minusone,R.drawable.bg,R.drawable.first,R.drawable.second,R.drawable.third,R.drawable.fourth,R.drawable.fifth,R.drawable.sixth};
     int imageResourceIdsWD[] = {R.drawable.wdminusone,R.drawable.wdbg,R.drawable.wdone,R.drawable.wdtwo,R.drawable.wdthree,R.drawable.wdfour,R.drawable.wdfive,R.drawable.wdsix};
-    int imageResourceIdsWN[] = {R.drawable.wnminusone,R.drawable.wnbg,R.drawable.wnone,R.drawable.wntwo,R.drawable.wnthree,R.drawable.wnfour,R.drawable.wnfive                                                                                                                                                                                                                                                                                                                                              };
+    int imageResourceIdsWN[] = {R.drawable.wnminusone,R.drawable.wnbg,R.drawable.wnone,R.drawable.wntwo,R.drawable.wnthree,R.drawable.wnfour,R.drawable.wnfive};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor_plan);
 
-        Up = (Button)findViewById(R.id.Floor_Up_Button);
-        Down = (Button)findViewById(R.id.Floor_Down_Button);
-        H = (Button)findViewById(R.id.BuildingH_Button);
-        H.setBackgroundColor(getResources().getColor(R.color.secondary3));
-        WD = (Button)findViewById(R.id.BuildingWD_Button);
-        WN = (Button)findViewById(R.id.BuildingWN_Button);
-        Floor = (TextView)findViewById(R.id.Floor_Value_Text);
-        Image = (ImageView)findViewById(R.id.FloorplanImageView);
+        upButton = (Button)findViewById(R.id.Floor_Up_Button);
+        downButton = (Button)findViewById(R.id.Floor_Down_Button);
+        HButton = (Button)findViewById(R.id.BuildingH_Button);
+        HButton.setBackgroundColor(getResources().getColor(R.color.secondary3));
+        WDButton = (Button)findViewById(R.id.BuildingWD_Button);
+        WNButton = (Button)findViewById(R.id.BuildingWN_Button);
+        floorText = (TextView)findViewById(R.id.Floor_Value_Text);
+        floorplanImage = (ImageView)findViewById(R.id.FloorplanImageView);
 
-        Up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (v < 6 && WNisPressed == false) {
-                    v += 1;
-                    Floor.setText(String.valueOf(v));
-            }
-                else if(v<5 && WNisPressed){
-                    v+=1;
-                    Floor.setText(String.valueOf(v));
-                }
-                if(HisPressed) {
-                    Image.setImageResource(imageResourceIdsH[v+1]);
-                }
-                if(WDisPressed){
-                    Image.setImageResource(imageResourceIdsWD[v+1]);
-                }
-                if(WNisPressed){
-                    Image.setImageResource(imageResourceIdsWN[v+1]);
-                }
-            }
-        });
-        Down.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(v > -1){
-                    v-=1;
-                    Floor.setText(String.valueOf(v));
-                }
-                if(HisPressed) {
-                    Image.setImageResource(imageResourceIdsH[v+1]);
-                }
-                if(WDisPressed){
-                    Image.setImageResource(imageResourceIdsWD[v+1]);
-                }
-                if(WNisPressed){
-                    Image.setImageResource(imageResourceIdsWN[v+1]);
-                }
-            }
-        });
-        H.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                HisPressed = true;
-                Floor.setText(String.valueOf(v));
-                Image.setImageResource(imageResourceIdsH[v+1]);
-                WDisPressed = false;
-                WNisPressed = false;
-                H.setBackgroundColor(getResources().getColor(R.color.secondary3));
-                WN.setBackgroundColor(getResources().getColor(R.color.secondary2));
-                WD.setBackgroundColor(getResources().getColor(R.color.secondary2));
-            }
-        });
-        WD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                WDisPressed = true;
-                Floor.setText(String.valueOf(v));
-                Image.setImageResource(imageResourceIdsWD[v+1]);
-                HisPressed = false;
-                WNisPressed = false;
-                WD.setBackgroundColor(getResources().getColor(R.color.secondary3));
-                WN.setBackgroundColor(getResources().getColor(R.color.secondary2));
-                H.setBackgroundColor(getResources().getColor(R.color.secondary2));
-
-            }
-        });
-        WN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                WNisPressed = true;
-                Floor.setText(String.valueOf(v));
-                if(v == 6){
-                    v = 5;
-                    Image.setImageResource(imageResourceIdsWN[v+1]);
-                    Floor.setText(String.valueOf(v));
-                }
-                else {
-                    Image.setImageResource(imageResourceIdsWN[v + 1]);
-                }
-                WDisPressed = false;
-                HisPressed = false;
-                WN.setBackgroundColor(getResources().getColor(R.color.secondary3));
-                WD.setBackgroundColor(getResources().getColor(R.color.secondary2));
-                H.setBackgroundColor(getResources().getColor(R.color.secondary2));
-            }
-        });
+        addEventsToButtons(); //add events to the buttons to change the current floor and building
         floorplanImageInit(); //initialise objects for the floorplan imageview
+    }
+
+    private void updateFloorplanImage(){ //change the floorplan image to the image of the current floor
+        floorplanImage.setImageResource(getCurrentBuildingFloorplans()[currentFloor+1]);
+    }
+
+    //Return the floorplan image id array of the current building
+    private int[] getCurrentBuildingFloorplans(){
+        if(HisPressed) {
+            return imageResourceIdsH;
+        }
+        if(WDisPressed){
+            return imageResourceIdsWD;
+        }
+        else {//wn has been pressed
+            return imageResourceIdsWN;
+        }
+    }
+
+    //The selected building button will have a different color from the other buttons
+    private void updateBuildingButtonColors() {
+        int selectedColor = R.color.secondary3;
+        int defaultColor = R.color.secondary2;
+        //                                                  condition       true            false
+        HButton.setBackgroundColor(getResources().getColor((HisPressed)? selectedColor : defaultColor));
+        WNButton.setBackgroundColor(getResources().getColor((WNisPressed)? selectedColor : defaultColor));
+        WDButton.setBackgroundColor(getResources().getColor((WDisPressed)? selectedColor : defaultColor));
+    }
+
+    private void onBuildingButtonClick(boolean h, boolean wd, boolean wn) { //Used when a new building is selected with a button
+        HisPressed = h;
+        WDisPressed = wd;
+        WNisPressed = wn;
+
+        floorText.setText(String.valueOf(currentFloor));
+        updateFloorplanImage();
+        updateBuildingButtonColors();
     }
 
     //create instances of classes responsible for zooming in and dragging the image
@@ -147,6 +100,52 @@ public class FloorPlanActivity extends AppCompatActivity {
 
         ZoomController zoomController = new ZoomController(floorplanImage, 0.25f, 1.0f);
         floorplanLayout.setScaleDetector(new ScaleGestureDetector(this, new ZoomListener(zoomController)));
+    }
 
+
+
+    private void addEventsToButtons(){ //add the events to the buttons for changing the current floor and building
+        upButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(currentFloor < getCurrentBuildingFloorplans().length - 2){ //because the lowest floor is -1
+                    currentFloor += 1;
+                    floorText.setText(String.valueOf(currentFloor));
+                }
+                updateFloorplanImage();
+            }
+        });
+        downButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(currentFloor > -1){
+                    currentFloor -=1;
+                    floorText.setText(String.valueOf(currentFloor));
+                }
+                updateFloorplanImage();
+            }
+        });
+
+        HButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBuildingButtonClick(true, false, false);
+            }
+        });
+        WDButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBuildingButtonClick(false, true, false); //select wd
+            }
+        });
+        WNButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(currentFloor == 6){
+                    currentFloor = 5;
+                }
+                onBuildingButtonClick(false, false, true);
+            }
+        });
     }
 }
