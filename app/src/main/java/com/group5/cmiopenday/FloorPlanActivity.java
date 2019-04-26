@@ -91,7 +91,6 @@ public class FloorPlanActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 HisPressed = true;
-                v = 0;
                 Floor.setText(String.valueOf(v));
                 Image.setImageResource(imageResourceIdsH[v+1]);
                 WDisPressed = false;
@@ -105,7 +104,6 @@ public class FloorPlanActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 WDisPressed = true;
-                v=0;
                 Floor.setText(String.valueOf(v));
                 Image.setImageResource(imageResourceIdsWD[v+1]);
                 HisPressed = false;
@@ -120,9 +118,15 @@ public class FloorPlanActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 WNisPressed = true;
-                v = 0;
                 Floor.setText(String.valueOf(v));
-                Image.setImageResource(imageResourceIdsWN[v+1]);
+                if(v == 6){
+                    v = 5;
+                    Image.setImageResource(imageResourceIdsWN[v+1]);
+                    Floor.setText(String.valueOf(v));
+                }
+                else {
+                    Image.setImageResource(imageResourceIdsWN[v + 1]);
+                }
                 WDisPressed = false;
                 HisPressed = false;
                 WN.setBackgroundColor(getResources().getColor(R.color.secondary3));
