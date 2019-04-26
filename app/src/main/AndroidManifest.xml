@@ -14,11 +14,11 @@
         <activity android:name=".EducationPage"/>
         <activity android:name=".openDayDetails"/>
         <activity android:name=".QuestionFormActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".FloorPlanActivity"/>
         <activity
             android:name=".PopActivity"
             android:theme="@style/AppTheme.PopMe" />
-        <activity android:name=".FloorPlanActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
