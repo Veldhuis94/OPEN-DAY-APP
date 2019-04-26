@@ -174,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/wijnhaven103_4" />
+                    app:srcCompat="@drawable/bg" />
             </com.group5.cmiopenday.floorplan.FloorplanLayout>
         </LinearLayout>
     </LinearLayout>
