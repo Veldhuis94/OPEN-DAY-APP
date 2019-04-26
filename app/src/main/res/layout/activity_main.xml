@@ -189,7 +189,7 @@
                     android:layout_marginTop="100dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginRight="20dp"
-                    android:text="about cmi page temporary shortcut"
+                    android:text="about cmi page\ntemporary shortcut"
                     tools:layout_editor_absoluteX="161dp"
                     tools:layout_editor_absoluteY="184dp" />
             </TableLayout>
