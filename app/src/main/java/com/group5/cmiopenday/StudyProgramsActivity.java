@@ -11,15 +11,11 @@ public class StudyProgramsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_study_programs);
 
-        Button com = findViewById(R.id.sp_com);
-        com.setOnClickListener(new onClickStudypage(1, this));
-        Button cmd = findViewById(R.id.sp_cmd);
-        cmd.setOnClickListener(new onClickStudypage(2, this));
-        Button cmgt = findViewById(R.id.sp_cmgt);
-        cmgt.setOnClickListener(new onClickStudypage(4, this));
-        Button si = findViewById(R.id.sp_si);
-        si.setOnClickListener(new onClickStudypage(0, this));
-        Button ti = findViewById(R.id.sp_ti);
-        ti.setOnClickListener(new onClickStudypage(3, this));
+        int buttonIds[] = {R.id.sp_com, R.id.sp_cmd, R.id.sp_cmgt, R.id.sp_si, R.id.sp_ti};
+        int pageIds[] = {1,2,4,0,3};
+        for(int i = 0; i < buttonIds.length; i++){
+            Button button = findViewById(buttonIds[i]);
+            button.setOnClickListener(new onClickStudypage(pageIds[i], this));
+        }
     }
 }
