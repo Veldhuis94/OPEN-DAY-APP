@@ -28,7 +28,7 @@
     </string-array>
 
     <!--ABOUT CMI PAGE-->
-    <string name="aboutcmi_location">Wijnhaven 61</string>
+    <string name="aboutcmi_location">Wijnhaven 107</string>
     <string name="aboutcmi_phoneNumber">Phone number: 018048395734</string>
     <string name="aboutcmi_email">Email: contact@hr.nl</string>
     <string name="aboutcmi_website">Url: hogeschoolrotterdam.nl</string>
@@ -44,7 +44,7 @@
     <string name="aboutcmi_courses">COURSES</string>
 
     <!--FLOORPLAN PAGE-->
-    <string name="floorplan_location">Wijnhaven 61</string>
+    <string name="floorplan_location">Wijnhaven 99-103-107</string>
     <string name="floorplan_floor_header">Floor</string>
     <string name="floorplan_building_header">Building</string>
 
