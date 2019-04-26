@@ -5,7 +5,6 @@
     <string name="OpenDay_Test">CMI Open Day, 26–6–2019\n12:00 – 16:00\nInformatica, Technische Informatica, CMGT, Communicatiewetenschappen</string>
     <string name="OpenDay_Test2">CMI Open Day, 30–7–2019\n13:00 – 18:00\nInformatica, Technische Informatica, CMGT, Communicatiewetenschappen</string>
     <string name="open_days">Open Days</string>
-    <string name="Informatica">Informatica</string>
     <string name="OpenDay_Informatica">H.04.208/ 12:00 – 16:00\nWijnhaven 107</string>
     <string name="Technische_Informatica">Technische informatica</string>
     <string name="OpenDay_Technische_Informatica">H.03.108/ 12:00 – 16:00\nWijnhaven 107</string>
@@ -53,5 +52,12 @@
     <string name="questionform_email">E-mail:</string>
     <string name="questionform_message">Message:</string>
     <string name="questionform_send">SEND</string>
+    <string name="cmi_couses">CMI Courses</string>
+    <string name="Communicatie">Communicatie</string>
+    <string name="Communication_and_Multimedia_Design">Communication and Multimedia Design</string>
+    <string name="Creative_Media_and_Game_Technologies">Creative Media and Game Technologies</string>
+    <string name="Informatica">Informatica</string>
+    <string name="software_engineering">Software Engineering</string>
+    <string name="computer_engineering">Computer Engineering</string>
 
 </resources>
