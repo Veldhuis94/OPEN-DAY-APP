@@ -6,4 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".Informatica_courseActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="427dp"
+        android:layout_height="322dp"
+        app:srcCompat="@drawable/informatica_opleiding"
+        tools:layout_editor_absoluteX="-14dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="182dp"
+        android:layout_height="47dp"
+        android:background="@color/secondary3"
+        android:text="Informatica"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@color/secondary3"
+        android:text="Click for more info online"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462" />
+
+    <ScrollView
+        android:layout_width="342dp"
+        android:layout_height="256dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Deze opleiding is ook beschikbaar in: deeltijd" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:text="We leiden je op tot software engineer. Je gaat aan de slag met het ontwikkelen van software voor diverse toepassingen. Je bent in staat complexe ICT-systemen te analyseren, ontwerpen en implementeren." />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="343dp"
+                android:layout_height="433dp"
+                android:text="Software is overal om ons heen te vinden. Jij bent de specialist in het maken van grote en complexe software informatiesystemen die snel, efficiënt en veilig werken. Zo kun je denken aan het ontwikkelen van een functionele app, maar ook aan het analyseren van grote hoeveelheden data van social media. Bij het ontwikkelen van deze systemen kom je in aanraking met verschillende programmeertalen. Zo leer je in het eerste jaar programmeren in Python en geavanceerde programmeertalen zoals Java/C#. Vanaf het tweede jaar kies je zelf welke programmeertaal je wilt gebruiken.
+Naast het programmeren en ontwikkelen van verschillende toepassingen leer je ook samenwerken.
+
+Na het volgen van de opleiding Informatica ben je breed inzetbaar binnen het vakgebied. Vanuit functies als data engineer, software developer en software engineer kun je verder groeien binnen de ICT.
+
+Ben jij geïnteresseerd in nieuwe technologische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!
+
+        " />
+
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

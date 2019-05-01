@@ -6,4 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".cmd_courseActivity">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="410dp"
+        android:layout_height="205dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_case_04" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="314dp"
+        android:layout_height="93dp"
+        android:background="@color/secondary3"
+        android:text="Communication and Multimedia design"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="415dp"
+        android:layout_height="68dp"
+        android:background="@color/secondary3"
+        android:text="Click for more info online"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.248" />
+
+    <ScrollView
+        android:layout_width="341dp"
+        android:layout_height="395dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:text="Bij ons ziet studeren er vaak anders uit. Als ontwerper zit je weinig in de schoolbanken op de traditionele manier. We werken samen met elkaar in de studio, voor echte opdrachtgevers." />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:text="Je ontwerpt betekenisvolle interactieve producten en diensten voor de mens: van website, app, interactieve installatie, tot volledige experience. Voordat je begint met een ontwerp doe je uitgebreid onderzoek naar de gebruikersbehoeften en naar de omgeving waarin jouw interactieve ontwerp gebruikt wordt. Je checkt voortdurend met de gebruiker voor wie je aan het ontwerpen bent en gaat deze partijen ook op locatie betrekken. Ontwerpen is immers: prototypes maken, testen, falen, herontwerpen, testen, bijstellen etc. Je bent bezig met schetsen, onderzoeken, bouwen of onderzoek buiten de deur.
+Je leert werken vanuit de belangen en beleving van gebruikers en opdrachtgevers. Een actieve houding is voorwaarde voor het ontwerpproces bij Communication and Multimedia Design. Evenals een gezonde dosis nieuwsgierigheid, lef en zelfstandigheid om werk van hoge kwaliteit op te leveren. Daarnaast verwachten we dat je kritisch kunt kijken naar je werk en handelen." />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="De eerstejaars studenten richten zich nu op ouderen die in meer of mindere mate fysieke of psychische gezondheidsproblemen ervaren en mantelzorg nodig hebben. De opdrachtgever is op zoek naar slimme, nieuwe technologische toepassingen die ouderen, met behulp van mantelzorgers, langer thuis kunnen laten wonen. " />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="De opleiding CMD daagt je uit jouw kennis, creativiteit en ontwerptalent in te zetten voor interactieve producten en diensten, die het leven en de omgeving van gebruikers veraangenamen of zelfs verbeteren.
+
+" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

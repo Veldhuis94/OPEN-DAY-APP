@@ -6,4 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".Tinformatica_courseActivity">
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="762dp"
+        android:layout_height="296dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/cmd" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="181dp"
+        android:layout_height="78dp"
+        android:background="@color/secondary3"
+        android:text="Technische Informatica"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="416dp"
+        android:layout_height="69dp"
+        android:background="@color/secondary3"
+        android:text="Click for more info online"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <ScrollView
+        android:layout_width="333dp"
+        android:layout_height="305dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:text="Als technisch informaticus werk je aan moderne ICT-systemen waarbij hard- en software geïntegreerd zijn. Dankzij je kennis van programmeren en hardware kun je juist op het snijpunt daarvan opereren." />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="172dp"
+                android:text="In het dagelijks leven zijn we steeds meer afhankelijk geworden van ICT-systemen. Reizen in het OV kan alleen nog met de OV-chipkaart, je bagage komt op Schiphol automatisch op de juiste plek, energiemeters worden ‘slim’ en medische ingrepen worden soms door een apparaat in plaats van een chirurg gedaan. Allemaal voorbeelden waarbij hard- en software samenkomen in een enkel systeem." />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Als technisch informaticus draag je bij aan het ontwikkelen, beveiligen en in de lucht houden van deze systemen. Gedurende de studie maak je kennis met de technische aspecten van ICT. Je leert te programmeren in diverse programmeertalen, waaronder de zogenaamde 'lagere' talen voor hardware toepassingen. Hiermee leer je oplossingen ontwikkelen voor verschillende apparaten, robots en andere moderne systemen. Je bent een all-rounder op alle disciplines, maar specialiseert je ook in een of meerdere aspecten in het werkveld. Denk daarbij aan Machine Learning, Augmented Reality, Automated Systems en uiteraard de met IoT (Internet of Things) nauw verbonden met Embedded Systems." />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

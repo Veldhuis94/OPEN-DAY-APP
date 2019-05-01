@@ -6,4 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".Communicatie_courseActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="416dp"
+        android:layout_height="166dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/communication" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="416dp"
+        android:layout_height="47dp"
+        android:background="@color/secondary3"
+        android:text="Click for more info online"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/secondary3"
+        android:text="Communicatie"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <ScrollView
+        android:layout_width="352dp"
+        android:layout_height="429dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Deze opleiding is ook beschikbaar in: deeltijd" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:text="Heb je een scherp oog en oor voor de verhalen van mensen en merken? Ben je creatief met tekst en beeld en gefascineerd door de wereld van media? Dan is de opleiding Communicatie iets voor jou!" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Organisaties staan voor grote uitdagingen. Een nieuw product promoten, samenwerken met klanten, medewerkers en inwoners, laten zien dat je goede dingen doet voor de samenleving. Hoe doe je dat in een tijd van kritische journalisten, vloggers, maatschappelijke discussies en elkaar snel opvolgende trends?
+
+Onze opleiding Communicatie leidt jou in vier jaar op tot wat we - met trots - een smart connector noemen. Een professional die voor slimme verbindingen zorgt. Met inzet van bijvoorbeeld social tools, storytelling, big data en co-creatie. Je ontwikkelt creatieve concepten zoals mediacampagnes, events en verhalenplatforms. Op basis van goed onderzoek, theorie en strategie en natuurlijk jouw eigen verrassende ideeën.
+
+Vanaf jaar 1 werk je samen met opdrachtgevers uit de praktijk. Van Rotterdamse ondernemers, start-ups en bureaus tot landelijke organisaties. We werken met innovatieve methodes. In teamverband is dat bijvoorbeeld de scrum methodiek: waarbij je fl exibel en intensief samenwerkt met een opdrachtgever. Geen les, cursus of project is hetzelfde. We stemmen de werkvorm af op wat je leert: webinars, TED Talks, content cafés, meet-ups, gastcolleges en bedrijfsbezoeken.
+
+De opleiding Communicatie leert je om als smart connector mensen te raken, te verbinden en te bewegen." />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
