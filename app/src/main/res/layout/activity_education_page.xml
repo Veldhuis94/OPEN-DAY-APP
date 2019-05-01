@@ -64,16 +64,12 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="64dp"
-            android:layout_marginStart="61dp"
-            android:layout_marginLeft="61dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="61dp"
-            android:layout_marginRight="61dp"
             android:contentDescription="hr logo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logo"
+            tools:layout_editor_absoluteY="39dp" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -84,21 +80,25 @@
             app:layout_constraintHorizontal_bias="0.995"
             app:layout_constraintStart_toEndOf="@+id/scrollView3"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.381"
-            app:srcCompat="@drawable/informatica" />
+            app:layout_constraintVertical_bias="0.284"
+            app:srcCompat="@drawable/informatica_opleiding" />
 
         <ImageView
             android:id="@+id/imageView16"
             android:layout_width="498dp"
             android:layout_height="304dp"
-            app:srcCompat="@drawable/DSrulMmXUAAiqAU"
-            tools:layout_editor_absoluteX="-44dp"
-            tools:layout_editor_absoluteY="561dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/cmd" />
 
         <ImageView
             android:id="@+id/imageView15"
-            android:layout_width="552dp"
-            android:layout_height="242dp"
+            android:layout_width="527dp"
+            android:layout_height="218dp"
             android:layout_marginStart="122dp"
             android:layout_marginLeft="122dp"
             android:layout_marginTop="504dp"
@@ -115,14 +115,69 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="415dp"
-            android:layout_height="190dp"
+            android:layout_width="409dp"
+            android:layout_height="165dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/communication" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="414dp"
+            android:layout_height="50dp"
+            android:background="@color/secondary3"
+            android:text="@string/Informatica"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499"
-            app:srcCompat="@drawable/communication" />
+            app:layout_constraintVertical_bias="0.267" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="409dp"
+            android:layout_height="42dp"
+            android:background="@color/secondary3"
+            android:text="@string/Communicatie"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="vibsible" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="411dp"
+            android:layout_height="49dp"
+            android:background="@color/secondary3"
+            android:text="@string/Communication_and_Multimedia_Design"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.737"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="411dp"
+            android:layout_height="57dp"
+            android:background="@color/secondary3"
+            android:text="@string/Technische_Informatica"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.94"
+            tools:visibility="visible" />
 
 
     </android.support.constraint.ConstraintLayout>

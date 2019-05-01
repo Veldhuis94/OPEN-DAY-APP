@@ -1,12 +1,17 @@
 package com.group5.cmiopenday;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 
 public class PopActivity extends Activity {
+
+    Button bt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +32,13 @@ public class PopActivity extends Activity {
         params.y = -20;
 
         getWindow().setAttributes(params);
+        //ff als test hier geplaats voor mijn study courses.
+        bt = (Button) findViewById(R.id.button15);
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent( PopActivity.this, StudyProgramsActivity.class));
+            }
+        });
     }
 }
