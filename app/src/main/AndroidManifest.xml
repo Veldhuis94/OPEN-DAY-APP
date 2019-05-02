@@ -12,11 +12,13 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".EducationPage"
-            android:label="@string/app_name" />
+            android:label="Courses" />
         <activity android:name=".openDayDetails"/>
-        <activity android:name=".CMI_Activity"/>
+        <activity android:name=".CMI_Activity"
+            android:label="About CMI"/>
         <activity android:name=".FloorPlanActivity"/>
-        <activity android:name=".QuestionFormActivity"/>
+        <activity android:name=".QuestionFormActivity"
+            android:label="Ask A Question"/>
         <activity android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
