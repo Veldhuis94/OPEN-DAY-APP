@@ -14,17 +14,20 @@ import android.widget.Button;
 
 public class QuestionFormActivity extends menu_Activity{
 
-    private DrawerLayout drawer;
+    //private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_questionform);
+        super.onCreateDrawer(savedInstanceState);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        drawer = findViewById(R.id.drawer_layout);
-        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View ContentView = inflater.inflate(R.layout.activity_questionform,null,false);
-        drawer.addView(ContentView,0);
+        //drawer = findViewById(R.id.drawer_layout);
+        //LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //View ContentView = inflater.inflate(R.layout.activity_questionform,null,false);
+        //drawer.addView(ContentView,0);
 
 
 

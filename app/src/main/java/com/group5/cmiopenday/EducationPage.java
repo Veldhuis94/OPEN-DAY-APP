@@ -22,6 +22,8 @@ public class EducationPage extends menu_Activity{
         super.onCreate(savedInstanceState);
         //load layout
         setContentView(R.layout.activity_education_page);
+        //super.onCreateDrawer(savedInstanceState);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
