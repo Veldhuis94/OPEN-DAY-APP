@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class openDayDetails extends MainActivity  {
+public class openDayDetails extends menu_Activity  {
 
 
     private DrawerLayout drawer;

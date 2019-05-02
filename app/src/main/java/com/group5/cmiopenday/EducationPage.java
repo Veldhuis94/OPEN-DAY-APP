@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class EducationPage extends MainActivity{
+public class EducationPage extends menu_Activity{
     static int currentPageId; //received from onClickStudypage
     private DrawerLayout drawer;
 

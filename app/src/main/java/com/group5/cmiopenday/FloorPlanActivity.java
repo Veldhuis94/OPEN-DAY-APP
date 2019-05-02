@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class FloorPlanActivity extends MainActivity {
+public class FloorPlanActivity extends menu_Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
