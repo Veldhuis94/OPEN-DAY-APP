@@ -1,20 +1,11 @@
 package com.group5.cmiopenday;
 
-import android.content.Intent;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 public class EducationPage extends menu_Activity{
     static int currentPageId; //received from onClickStudypage
-    private DrawerLayout drawer;
 
 
     @Override
@@ -22,10 +13,9 @@ public class EducationPage extends menu_Activity{
         super.onCreate(savedInstanceState);
         //load layout
         setContentView(R.layout.activity_education_page);
-        //super.onCreateDrawer(savedInstanceState);
+        super.onCreateDrawer(savedInstanceState);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
 
         //set strings for proper display of correct page

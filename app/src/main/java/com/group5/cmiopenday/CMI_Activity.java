@@ -16,17 +16,12 @@ import android.view.View;
 
 public class CMI_Activity extends menu_Activity {
 
-    private DrawerLayout drawer;
-    private NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        drawer = findViewById(R.id.drawer_layout);
-        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View ContentView = inflater.inflate(R.layout.activity_cmi,null,false);
-        drawer.addView(ContentView,0);
+        setContentView(R.layout.activity_cmi);
+        super.onCreateDrawer(savedInstanceState);
 
 
 

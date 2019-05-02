@@ -24,10 +24,7 @@ public class QuestionFormActivity extends menu_Activity{
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //drawer = findViewById(R.id.drawer_layout);
-        //LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //View ContentView = inflater.inflate(R.layout.activity_questionform,null,false);
-        //drawer.addView(ContentView,0);
+
 
 
 
