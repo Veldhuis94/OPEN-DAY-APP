@@ -35,6 +35,13 @@
         <item>Creative Media and\nGame Technologies</item>
     </string-array>
 
+    <!--OPEN DAYS INFO-->
+    <string-array name="openDaysDates">
+        <item>04-06-2019</item>
+    </string-array>
+
+    <!--for the names of the courses, extract from string array studyCourseHeader-->
+
     <!--ABOUT CMI PAGE-->
     <string name="aboutcmi_location">Wijnhaven 99-103-107</string>
     <string name="aboutcmi_phoneNumber">Phone number: 010 - 794 4000</string>

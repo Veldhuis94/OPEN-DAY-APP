@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String[] times = {"17:00 - 20:00"};
+
 
         Button tempeduc1 = (Button)findViewById(R.id.temp1);
         Button tempeduc2 = (Button)findViewById(R.id.temp2);
