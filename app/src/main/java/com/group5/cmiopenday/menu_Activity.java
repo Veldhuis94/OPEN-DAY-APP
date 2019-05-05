@@ -14,21 +14,24 @@ import android.view.MenuItem;
 
 public class menu_Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-
     private DrawerLayout drawer;
     private NavigationView navigationView;
 
     protected void onCreateDrawer(Bundle savedInstanceState) {
-        //super.onCreate(savedInstanceState);
+        // making a variable with from xml
         Toolbar toolbar = findViewById(R.id.toolbar);
+        // Making the toolbar as the action bar
         setSupportActionBar(toolbar);
-        //setContentView(R.layout.activity_main);
 
 
 
+        // making the variable link with xml
         drawer = findViewById(R.id.drawer_layout);
+        // Making the button to open the sidebar
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        // Add the button on the screen make it visible
         drawer.addDrawerListener(toggle);
+        // Making the button move
         toggle.syncState();
 
         navigationView = findViewById(R.id.sidebar_view);
