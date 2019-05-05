@@ -15,12 +15,14 @@ public class QuestionFormActivity extends menu_Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionform);
         super.onCreateDrawer(savedInstanceState);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
         setTitle("Ask A Question");
 
 
