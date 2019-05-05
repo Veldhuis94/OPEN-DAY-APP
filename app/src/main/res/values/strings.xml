@@ -36,8 +36,8 @@
     </string-array>
 
     <!--ABOUT CMI PAGE-->
-    <string name="aboutcmi_location">Wijnhaven 99-103-107</string>
-    <string name="aboutcmi_phoneNumber">Phone number: 010 - 794 4000</string>
+    <string name="aboutcmi_location">Wijnhaven 99–103–107</string>
+    <string name="aboutcmi_phoneNumber">Phone number: 010 – 794 4000</string>
     <string name="aboutcmi_email">Email: CMI-Balie@hr.nl</string>
     <string name="aboutcmi_website">Url: Hogeschoolrotterdam.nl</string>
     <string name="aboutcmi_questionForm">QUESTION FORM</string>
