@@ -22,9 +22,6 @@ public class CMI_Activity extends menu_Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cmi);
         super.onCreateDrawer(savedInstanceState);
-
-
-
     }
 
 

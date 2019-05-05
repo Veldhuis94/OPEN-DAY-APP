@@ -12,7 +12,6 @@ import android.widget.Button;
 
 public class QuestionFormActivity extends menu_Activity{
 
-    //private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
