@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+<<<<<<< HEAD
         <activity android:name=".Tinformatica_courseActivity"></activity>
         <activity android:name=".Communicatie_courseActivity" />
         <activity android:name=".cmd_courseActivity" />
@@ -19,6 +20,8 @@
         <activity android:name=".openDayDetails" />
         <activity android:name=".QuestionFormActivity" />
         <activity android:name=".FloorPlanActivity" />
+=======
+>>>>>>> 1322aa2ea681ef03a8a6b36569d3d0f96a28c858
         <activity android:name=".StudyProgramsActivity" />
         <activity android:name=".EducationPage" />
         <activity android:name=".openDayDetails" />
@@ -34,6 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CMI_Activity" />
     </application>
 
 </manifest>
