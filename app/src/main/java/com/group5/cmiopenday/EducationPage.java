@@ -2,6 +2,7 @@ package com.group5.cmiopenday;
 
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 public class EducationPage extends menu_Activity{
@@ -12,6 +13,8 @@ public class EducationPage extends menu_Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //load layout
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         setContentView(R.layout.activity_education_page);
         super.onCreateDrawer(savedInstanceState);
 

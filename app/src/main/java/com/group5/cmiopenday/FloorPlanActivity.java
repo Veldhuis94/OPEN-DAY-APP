@@ -40,8 +40,8 @@ public class FloorPlanActivity extends menu_Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor_plan);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        super.onCreateDrawer(savedInstanceState);
+
 
 
         upButton = (Button)findViewById(R.id.Floor_Up_Button);
