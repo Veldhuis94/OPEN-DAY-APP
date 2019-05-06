@@ -26,6 +26,10 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,9 +37,10 @@
             android:layout_marginTop="36dp"
             android:background="@color/secondary3"
             android:orientation="vertical"
-            android:paddingBottom="50dp"
+            android:paddingBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
@@ -51,69 +56,146 @@
                 android:textStyle="bold"
                 app:fontFamily="sans-serif" />
 
+            <TextView
+                android:id="@+id/BuildingHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/floorplan_building_header"
+                android:textColor="@color/textDark2"
+                android:textSize="22dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/accent"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/upButton"
-                    android:layout_width="24dp"
+                    android:id="@+id/BuildingH_Button"
+                    android:layout_width="100dp"
                     android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/round_button"
-                    android:text="@string/floorplan_up"
+                    android:background="@drawable/round_button_grey"
+                    android:text="H"
                     android:textColor="@color/textLight"
-                    android:textSize="24dp" />
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/floorplan_floor"
-                    android:textColor="@color/textLight"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
 
                 <Button
-                    android:id="@+id/downButton"
-                    android:layout_width="24dp"
+                    android:id="@+id/BuildingWD_Button"
+                    android:layout_width="100dp"
                     android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/round_button"
-                    android:text="@string/floorplan_down"
+                    android:background="@drawable/round_button_grey"
+                    android:text="WD"
                     android:textColor="@color/textLight"
-                    android:textSize="24dp" />
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/BuildingWN_Button"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_grey"
+                    android:text="WN"
+                    android:textColor="@color/textLight"
+                    android:textSize="16dp" />
 
             </LinearLayout>
 
-            <ScrollView
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/FloorHeader"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbarStyle="insideInset">
+                android:gravity="center"
+                android:text="@string/floorplan_floor_header"
+                android:textColor="@color/textDark2"
+                android:textSize="22dp" />
 
-                <HorizontalScrollView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Floor_Down_Button"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_grey"
+                    android:text="@string/floorplan_down"
+                    android:textColor="@color/textLight"
+                    android:textSize="20dp" />
 
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="600dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/wijnhaven103_4"
-                        android:visibility="visible" />
-                </HorizontalScrollView>
-            </ScrollView>
+                <TextView
+                    android:id="@+id/Floor_Value_Text"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textDark2"
+                    android:textSize="20sp"
+                    tools:text="0" />
+
+                <Button
+                    android:id="@+id/Floor_Up_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_grey"
+                    android:text="@string/floorplan_up"
+                    android:textColor="@color/textLight"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <com.group5.cmiopenday.floorplan.FloorplanLayout
+                android:id="@+id/FloorplanLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/FloorplanImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/bg" />
+            </com.group5.cmiopenday.floorplan.FloorplanLayout>
+        </LinearLayout>
+    </LinearLayout>
+      
+ 
     </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.NavigationView
@@ -125,5 +207,7 @@
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
         tools:visibility="gone" />
+
+
 
 </android.support.v4.widget.DrawerLayout>

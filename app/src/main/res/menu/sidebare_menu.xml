@@ -25,6 +25,10 @@
             android:icon="@drawable/ic_question"
             android:title="Ask A Question" />
 
+        <item
+            android:id="@+id/floorplan"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Floorplan" />
 
     </group>
 

@@ -15,9 +15,8 @@ public class MainActivity extends menu_Activity{
         super.onCreateDrawer(savedInstanceState);
 
 
-        Button tempeduc1 = (Button)findViewById(R.id.temp1);
-        Button tempeduc2 = (Button)findViewById(R.id.temp2);
-        button = (Button) findViewById(R.id.button);
+        Button tempeduc1 = findViewById(R.id.temp1);
+        button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,11 +24,12 @@ public class MainActivity extends menu_Activity{
             }
         });
         /* TODO: remove these buttons */
-        tempeduc1.setOnClickListener(new onClickStudypage(0,MainActivity.this));
-        tempeduc2.setOnClickListener(new onClickStudypage(1, MainActivity.this));
-
-
-
+        tempeduc1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CMI_Activity.class));
+            }
+        });
     }
 
 
