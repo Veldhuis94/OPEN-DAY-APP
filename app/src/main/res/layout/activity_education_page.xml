@@ -8,9 +8,10 @@
     android:layout_height="match_parent"
     tools:context=".EducationPage">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -21,88 +22,87 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <android.support.constraint.ConstraintLayout
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginLeft="77dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="78dp"
+            android:layout_marginRight="78dp"
+            android:layout_marginBottom="13dp"
+            android:gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <ScrollView
+            android:id="@+id/scrollView3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="77dp"
-                android:layout_marginLeft="77dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="78dp"
-                android:layout_marginRight="78dp"
-                android:layout_marginBottom="13dp"
-                android:textAllCaps="true"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/imageView2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:gravity="center_horizontal"/>
-
-            <ScrollView
-                android:id="@+id/scrollView3"
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="200dp"
-                android:fillViewport="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
 
-                <TableLayout
+                <TextView
+                    android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:stretchColumns="1">
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="18sp" />
+            </TableLayout>
 
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:textSize="18sp" />
-                </TableLayout>
+        </ScrollView>
 
-            </ScrollView>
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="64dp"
-                android:layout_marginStart="61dp"
-                android:layout_marginLeft="61dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginEnd="61dp"
-                android:layout_marginRight="61dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
-                app:srcCompat="@drawable/logo"
-                android:contentDescription="hr logo" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginStart="61dp"
+            android:layout_marginLeft="61dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginRight="61dp"
+            android:contentDescription="hr logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:srcCompat="@drawable/logo" />
 
 
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.constraint.ConstraintLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/sidebar_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:visibility="gone"
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
         tools:visibility="gone" />
