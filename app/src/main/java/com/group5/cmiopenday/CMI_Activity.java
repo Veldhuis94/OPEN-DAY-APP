@@ -20,13 +20,8 @@ public class CMI_Activity extends menu_Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cmi);
         super.onCreateDrawer(savedInstanceState);
-    }
 
-
-    }
-
-
-        qfbtn = (Button) findViewById(R.id.questionFormButton);
+    qfbtn = (Button) findViewById(R.id.questionFormButton);
         qfbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

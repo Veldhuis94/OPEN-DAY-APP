@@ -22,6 +22,7 @@ import java.util.Calendar;
 
 public class openDayDetails extends menu_Activity  {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.open_day_layout);
@@ -42,8 +43,6 @@ public class openDayDetails extends menu_Activity  {
             }
         });
 
-    }
-=======
         Button popUpTest = findViewById(R.id.button3);
         popUpTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,9 +50,6 @@ public class openDayDetails extends menu_Activity  {
                 startActivity(new Intent(getApplicationContext(),PopActivity.class));
             }
         });
-        drawer = findViewById(R.id.drawer_layout);
-
-        toggle.syncState();
 
         ImageButton calendarButton = findViewById(R.id.button);
         calendarButton.setOnClickListener(new View.OnClickListener() {
@@ -72,13 +68,5 @@ public class openDayDetails extends menu_Activity  {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)){
-            drawer.closeDrawer(GravityCompat.START);
-        }
-        else{
-            super.onBackPressed();
-        }
-    }
+
 }

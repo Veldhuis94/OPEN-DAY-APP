@@ -2,10 +2,6 @@ package com.group5.cmiopenday;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-
-
-public class FloorPlanActivity extends menu_Activity {
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,6 +14,10 @@ import com.group5.cmiopenday.floorplan.FloorplanLayout;
 import com.group5.cmiopenday.floorplan.ZoomListener;
 import com.group5.cmiopenday.floorplan.ZoomController;
 import com.group5.cmiopenday.math.MathUtil;
+
+
+public class FloorPlanActivity extends menu_Activity {
+
 
     Button upButton;
     Button downButton;
