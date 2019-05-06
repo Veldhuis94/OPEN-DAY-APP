@@ -29,9 +29,9 @@
     </string-array>
     <string-array name="studyCourseHeader">
         <item>Software\nEngineering</item>
-        <item>Communication</item>
+        <item>Communication\n</item>
         <item>Communication and\nMultimedia Design</item>
-        <item>Computer Engineering</item>
+        <item>Computer\nEngineering</item>
         <item>Creative Media and\nGame Technologies</item>
     </string-array>
 
@@ -66,7 +66,7 @@
     <string name="questionform_message">Message:</string>
     <string name="questionform_send">SEND</string>
     <string name="cmi_couses">CMI Courses</string>
-    <string name="Communicatie">Communicatie</string>
+    <string name="Communicatie">Communication</string>
     <string name="Communication_and_Multimedia_Design">Communication and Multimedia Design</string>
     <string name="Creative_Media_and_Game_Technologies">Creative Media and Game Technologies</string>
     <string name="Informatica">Informatica</string>

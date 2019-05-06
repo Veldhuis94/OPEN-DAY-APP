@@ -2,21 +2,18 @@ package com.group5.cmiopenday;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
+import android.view.GestureDetector;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import android.view.GestureDetector;
-import android.view.ScaleGestureDetector;
-
 import com.group5.cmiopenday.floorplan.DragController;
 import com.group5.cmiopenday.floorplan.DragListener;
 import com.group5.cmiopenday.floorplan.FloorplanLayout;
-import com.group5.cmiopenday.floorplan.ZoomListener;
 import com.group5.cmiopenday.floorplan.ZoomController;
-import com.group5.cmiopenday.math.MathUtil;
+import com.group5.cmiopenday.floorplan.ZoomListener;
 
 public class FloorPlanActivity extends AppCompatActivity {
     Button upButton;
