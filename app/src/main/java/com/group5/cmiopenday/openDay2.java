@@ -40,13 +40,13 @@ public class openDay2 extends menu_Activity  {
         });
 
         Button openDay1 = findViewById(R.id.button3);
-        openDay1.setOnClickListener(new onClickPopUp(0, this));
+        openDay1.setOnClickListener(new onClickPopUp(4, this));
         Button openDay2 = findViewById(R.id.button4);
-        openDay2.setOnClickListener(new onClickPopUp(1, this));
+        openDay2.setOnClickListener(new onClickPopUp(5, this));
         Button openDay3 = findViewById(R.id.button5);
-        openDay3.setOnClickListener(new onClickPopUp(2, this));
+        openDay3.setOnClickListener(new onClickPopUp(6, this));
         Button openDay4 = findViewById(R.id.button6);
-        openDay4.setOnClickListener(new onClickPopUp(3, this));
+        openDay4.setOnClickListener(new onClickPopUp(7, this));
 
 
 
