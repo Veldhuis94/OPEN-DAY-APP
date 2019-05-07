@@ -43,13 +43,11 @@ public class openDayDetails extends AppCompatActivity {
             }
         });
 
-        Button popUpTest = findViewById(R.id.button3);
-        popUpTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),PopActivity.class));
-            }
-        });
+        Button openDay1 = findViewById(R.id.button3);
+        openDay1.setOnClickListener(new onClickPopUp(0, this));
+        Button openDay2 = findViewById(R.id.button4);
+        openDay2.setOnClickListener(new onClickPopUp(1, this));
+
         drawer = findViewById(R.id.drawer_layout);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);

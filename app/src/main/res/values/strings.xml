@@ -31,7 +31,7 @@
         <item>Software\nEngineering</item>
         <item>Communication</item>
         <item>Communication and\nMultimedia Design</item>
-        <item>Computer Engineering</item>
+        <item>Computer\nEngineering</item>
         <item>Creative Media and\nGame Technologies</item>
     </string-array>
 
@@ -73,4 +73,31 @@
     <string name="software_engineering">Software Engineering</string>
     <string name="computer_engineering">Computer Engineering</string>
 
+    <!--POPUPS-->
+    <string name="time">Time</string>
+    <string name="classroom">Classroom</string>
+    <string-array name="firstTimeArray">
+        <item>16:30</item>
+        <item>14:00</item>
+    </string-array>
+    <string-array name="secondTimeArray">
+        <item>17:00</item>
+        <item>15:00</item>
+    </string-array>
+    <string-array name="thirdTimeArray">
+        <item>17:30</item>
+        <item>15:45</item>
+    </string-array>
+    <string-array name="firstClassroom">
+        <item>H.04.208</item>
+        <item>H.04.206</item>
+    </string-array>
+    <string-array name="secondClassroom">
+        <item>H.04.208</item>
+        <item>WD.01.109</item>
+    </string-array>
+    <string-array name="thirdClassroom">
+        <item>H.04.208</item>
+        <item>WN.04.201</item>
+    </string-array>
 </resources>
