@@ -22,6 +22,13 @@ public class MainActivity extends menu_Activity{
                 openOpenDayDetails();
             }
         });
+        Button button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, openDay2.class));
+            }
+        });
     }
 
 
