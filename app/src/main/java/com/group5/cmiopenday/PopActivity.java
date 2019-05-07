@@ -30,8 +30,8 @@ public class PopActivity extends Activity {
 
         getWindow().setAttributes(params);
 
-        int[] ids = {R.array.firstTimeArray, R.array.firstClassroom, R.array.secondTimeArray, R.array.secondClassroom, R.array.thirdTimeArray, R.array.thirdClassroom};
-        int[] textViews = {R.id.textView15, R.id.textView16, R.id.textView21, R.id.textView22, R.id.textView23, R.id.textView24};
+        int[] ids = {R.array.firstTimeArray, R.array.secondTimeArray, R.array.thirdTimeArray};
+        int[] textViews = {R.id.textView15, R.id.textView21, R.id.textView23};
 
         for (int i = 0; i < textViews.length; i++) {
             String[] firstTime = getResources().getStringArray(ids[i]);

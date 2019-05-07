@@ -88,16 +88,4 @@
         <item>17:30</item>
         <item>15:45</item>
     </string-array>
-    <string-array name="firstClassroom">
-        <item>H.04.208</item>
-        <item>H.04.206</item>
-    </string-array>
-    <string-array name="secondClassroom">
-        <item>H.04.208</item>
-        <item>WD.01.109</item>
-    </string-array>
-    <string-array name="thirdClassroom">
-        <item>H.04.208</item>
-        <item>WN.04.201</item>
-    </string-array>
 </resources>
