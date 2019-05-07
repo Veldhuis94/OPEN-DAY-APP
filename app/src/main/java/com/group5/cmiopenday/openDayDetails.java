@@ -1,6 +1,8 @@
 package com.group5.cmiopenday;
 
 
+
+import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.CalendarContract;
@@ -16,18 +18,16 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class openDayDetails extends AppCompatActivity {
 
 
-    private DrawerLayout drawer;
+public class openDayDetails extends menu_Activity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.open_day_layout);
+        super.onCreateDrawer(savedInstanceState);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         ImageButton shareButton = findViewById(R.id.button2);
         shareButton.setOnClickListener(new View.OnClickListener() {
@@ -50,13 +50,6 @@ public class openDayDetails extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),PopActivity.class));
             }
         });
-        drawer = findViewById(R.id.drawer_layout);
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-
-        drawer.addDrawerListener(toggle);
-
-        toggle.syncState();
 
         ImageButton calendarButton = findViewById(R.id.button);
         calendarButton.setOnClickListener(new View.OnClickListener() {
@@ -75,14 +68,5 @@ public class openDayDetails extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)){
-            drawer.closeDrawer(GravityCompat.START);
-        }
-        else{
-            super.onBackPressed();
-        }
-    }
 
 }

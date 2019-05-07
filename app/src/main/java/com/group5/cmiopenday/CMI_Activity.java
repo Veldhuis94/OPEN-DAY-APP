@@ -7,18 +7,21 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class CMI_Activity extends AppCompatActivity {
+
+public class CMI_Activity extends menu_Activity {
     Button qfbtn;
     Button fpbtn;
     Button cbtn;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cmi);
+        super.onCreateDrawer(savedInstanceState);
 
-        qfbtn = (Button) findViewById(R.id.questionFormButton);
+    qfbtn = (Button) findViewById(R.id.questionFormButton);
         qfbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

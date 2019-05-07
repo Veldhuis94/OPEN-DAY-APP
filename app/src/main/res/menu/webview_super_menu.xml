@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/menu_back"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:title="Left" />
+
+    <item
+        android:id="@+id/menu_forward"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:title="Right" />
+
+    <item
+        android:id="@+id/menu_refresh"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:title="Refresh" />
+
+    <item android:title="menu_exit"
+        android:id="@+id/menu_exit"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        />
+
+
+
+</menu>

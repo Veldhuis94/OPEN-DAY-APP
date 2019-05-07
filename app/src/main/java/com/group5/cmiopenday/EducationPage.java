@@ -1,17 +1,23 @@
 package com.group5.cmiopenday;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
-public class EducationPage extends AppCompatActivity {
+public class EducationPage extends menu_Activity{
     static int currentPageId; //received from onClickStudypage
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //load layout
         setContentView(R.layout.activity_education_page);
+        super.onCreateDrawer(savedInstanceState);
+
+
+
 
         //set strings for proper display of correct page
         String[] bodyStrings = getResources().getStringArray(R.array.studyCourseBody); //fetch array of strings for Body
@@ -22,5 +28,7 @@ public class EducationPage extends AppCompatActivity {
         studyCourseHead.setText(headerStrings[currentPageId]);//set the string to be displayed in the Header, as indicated by currentPageId
 
 
+
     }
+
 }
