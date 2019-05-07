@@ -1,17 +1,11 @@
 package com.group5.cmiopenday;
 
 import android.content.Intent;
-<<<<<<< HEAD
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
-=======
->>>>>>> 6938bb20103c605936c169f30be97be504914062
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.net.URL;
 
 
 public class CMI_Activity extends menu_Activity {
