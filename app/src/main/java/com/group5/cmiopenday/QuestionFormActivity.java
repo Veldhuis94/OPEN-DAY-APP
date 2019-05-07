@@ -1,22 +1,25 @@
 package com.group5.cmiopenday;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
 
-public class QuestionFormActivity extends AppCompatActivity {
+public class QuestionFormActivity extends menu_Activity{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionform);
-        setTitle("Ask A Question");
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        super.onCreateDrawer(savedInstanceState);
+
+
 
         final EditText email = (EditText) findViewById(R.id.questionform_editemail);
         final EditText subject = (EditText) findViewById(R.id.questionform_editsubject);
@@ -47,14 +50,20 @@ public class QuestionFormActivity extends AppCompatActivity {
                 email.setType("message/rfc822");
                 startActivity(Intent.createChooser(email, "Choose app to send the Email"));
 
-
-
             }
         });
 
 
+
+
+
     }
+
+
 }
+
+
+
 
 
 

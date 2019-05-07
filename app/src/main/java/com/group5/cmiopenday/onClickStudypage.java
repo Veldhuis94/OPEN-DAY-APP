@@ -17,4 +17,6 @@ public class onClickStudypage implements View.OnClickListener {
 
         EducationPage.currentPageId = pageId; //pass pageId to the new instance of EducationPage
     }
+
+
 }

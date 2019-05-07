@@ -1,16 +1,13 @@
 package com.group5.cmiopenday;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import android.view.GestureDetector;
 import android.view.ScaleGestureDetector;
-
 import com.group5.cmiopenday.floorplan.DragController;
 import com.group5.cmiopenday.floorplan.DragListener;
 import com.group5.cmiopenday.floorplan.FloorplanLayout;
@@ -18,7 +15,10 @@ import com.group5.cmiopenday.floorplan.ZoomListener;
 import com.group5.cmiopenday.floorplan.ZoomController;
 import com.group5.cmiopenday.math.MathUtil;
 
-public class FloorPlanActivity extends AppCompatActivity {
+
+public class FloorPlanActivity extends menu_Activity {
+
+
     Button upButton;
     Button downButton;
     Button HButton;
@@ -35,10 +35,15 @@ public class FloorPlanActivity extends AppCompatActivity {
     int imageResourceIdsWD[] = {R.drawable.wdminusone,R.drawable.wdbg,R.drawable.wdone,R.drawable.wdtwo,R.drawable.wdthree,R.drawable.wdfour,R.drawable.wdfive,R.drawable.wdsix};
     int imageResourceIdsWN[] = {R.drawable.wnminusone,R.drawable.wnbg,R.drawable.wnone,R.drawable.wntwo,R.drawable.wnthree,R.drawable.wnfour,R.drawable.wnfive};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor_plan);
+        super.onCreateDrawer(savedInstanceState);
+
+
+
 
         upButton = (Button)findViewById(R.id.Floor_Up_Button);
         downButton = (Button)findViewById(R.id.Floor_Down_Button);
@@ -148,4 +153,6 @@ public class FloorPlanActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

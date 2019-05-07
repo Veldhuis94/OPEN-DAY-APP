@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity"
+    tools:context=".openDayDetails"
     tools:openDrawer="start">
 
     <LinearLayout
@@ -370,7 +370,6 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:visibility="gone"
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
         tools:visibility="gone" />
