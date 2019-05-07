@@ -15,19 +15,11 @@ public class MainActivity extends menu_Activity{
         super.onCreateDrawer(savedInstanceState);
 
 
-        Button tempeduc1 = findViewById(R.id.temp1);
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openOpenDayDetails();
-            }
-        });
-        /* TODO: remove these buttons */
-        tempeduc1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CMI_Activity.class));
             }
         });
     }
