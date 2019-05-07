@@ -2,15 +2,9 @@ package com.group5.cmiopenday;
 
 
 
-import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.CalendarContract;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -49,6 +43,10 @@ public class openDayDetails extends menu_Activity  {
         openDay1.setOnClickListener(new onClickPopUp(0, this));
         Button openDay2 = findViewById(R.id.button4);
         openDay2.setOnClickListener(new onClickPopUp(1, this));
+        Button openDay3 = findViewById(R.id.button5);
+        openDay3.setOnClickListener(new onClickPopUp(2, this));
+        Button openDay4 = findViewById(R.id.button6);
+        openDay4.setOnClickListener(new onClickPopUp(3, this));
 
 
 

@@ -77,15 +77,21 @@
     <string name="time">Time</string>
     <string name="classroom">Classroom</string>
     <string-array name="firstTimeArray">
-        <item>16:30</item>
-        <item>14:00</item>
+        <item>12:30</item>
+        <item>12:00</item>
+        <item>12:00</item>
+        <item>12:00</item>
     </string-array>
     <string-array name="secondTimeArray">
-        <item>17:00</item>
-        <item>15:00</item>
+        <item>14:00</item>
+        <item>14:00</item>
+        <item>14:45</item>
+        <item>14:00</item>
     </string-array>
     <string-array name="thirdTimeArray">
-        <item>17:30</item>
-        <item>15:45</item>
+        <item>16:30</item>
+        <item>16:45</item>
+        <item>16:30</item>
+        <item>16:00</item>
     </string-array>
 </resources>
