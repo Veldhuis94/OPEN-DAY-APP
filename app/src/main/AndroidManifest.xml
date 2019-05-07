@@ -14,6 +14,8 @@
         <activity android:name=".openDay2"></activity>
         <activity
             android:name=".EducationPage"
+        <activity android:name=".webview"/>
+        <activity android:name=".EducationPage"
             android:label="Course" />
         <activity android:name=".openDayDetails" />
         <activity

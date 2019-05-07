@@ -70,6 +70,4 @@ public class openDayDetails extends menu_Activity  {
             }
         });
     }
-
-
 }

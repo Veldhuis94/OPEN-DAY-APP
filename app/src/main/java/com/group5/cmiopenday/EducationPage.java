@@ -2,7 +2,6 @@ package com.group5.cmiopenday;
 
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 public class EducationPage extends menu_Activity{
