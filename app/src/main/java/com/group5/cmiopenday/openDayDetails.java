@@ -48,13 +48,7 @@ public class openDayDetails extends menu_Activity  {
         Button openDay2 = findViewById(R.id.button4);
         openDay2.setOnClickListener(new onClickPopUp(1, this));
 
-        drawer = findViewById(R.id.drawer_layout);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-
-        drawer.addDrawerListener(toggle);
-
-        toggle.syncState();
         Button popUpTest = findViewById(R.id.button3);
         popUpTest.setOnClickListener(new View.OnClickListener() {
             @Override
