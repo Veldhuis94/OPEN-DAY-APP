@@ -59,7 +59,7 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(a);
                 break;
             case R.id.sidebare_location:
-                Intent b = new Intent(menu_Activity.this, EducationPage.class);
+                Intent b = new Intent(menu_Activity.this,StudyProgramsActivity .class);
                 startActivity(b);
                 break;
             case R.id.sidebare_study_programs:

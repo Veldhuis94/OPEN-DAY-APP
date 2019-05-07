@@ -15,15 +15,10 @@ public class QuestionFormActivity extends menu_Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionform);
         super.onCreateDrawer(savedInstanceState);
 
-
-        setTitle("Ask A Question");
 
 
         final EditText email = (EditText) findViewById(R.id.questionform_editemail);
@@ -62,17 +57,6 @@ public class QuestionFormActivity extends menu_Activity{
 
 
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.sidebare_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
     }
 
 

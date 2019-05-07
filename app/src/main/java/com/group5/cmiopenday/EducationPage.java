@@ -13,8 +13,6 @@ public class EducationPage extends menu_Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //load layout
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         setContentView(R.layout.activity_education_page);
         super.onCreateDrawer(savedInstanceState);
 

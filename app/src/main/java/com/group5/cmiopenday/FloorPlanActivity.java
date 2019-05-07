@@ -44,6 +44,7 @@ public class FloorPlanActivity extends menu_Activity {
 
 
 
+
         upButton = (Button)findViewById(R.id.Floor_Up_Button);
         downButton = (Button)findViewById(R.id.Floor_Down_Button);
         HButton = (Button)findViewById(R.id.BuildingH_Button);

@@ -12,18 +12,20 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".EducationPage"
-            android:label="Courses" />
+            android:label="Course" />
         <activity android:name=".openDayDetails"/>
         <activity android:name=".CMI_Activity"
             android:label="About CMI"/>
-        <activity android:name=".FloorPlanActivity"/>
+        <activity android:name=".FloorPlanActivity"
+            android:label="Floorplan" />
         <activity android:name=".QuestionFormActivity"
             android:label="Ask A Question"/>
-        <activity android:name=".StudyProgramsActivity" />
+        <activity android:name=".StudyProgramsActivity"
+            android:label="Courses" />
         <activity
             android:name=".PopActivity"
             android:theme="@style/AppTheme.PopMe" />
-        <activity android:name=".MainActivity" android:label="@string/app_name">
+        <activity android:name=".MainActivity" android:label="CMI Open Days">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
