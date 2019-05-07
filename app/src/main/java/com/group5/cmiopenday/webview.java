@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class webview extends AppCompatActivity {
+public class webview extends menu_Activity {
 
     ProgressBar superProgressBar;
     ImageView superImageView;
