@@ -28,11 +28,11 @@
     <item>Creative technologists invent and develop innovative digital products, with which the user is the main focus.\n\nAs CMGTer, you are a developer of interactive digital products: you develop web- and mobile apps and you know the basis of game development. The boundaries between these digital products and the physical world continue to fade ever faster. Therefore you will not be educated as a specialist in one specific programming language or platform, but as a flexible programmer that can teach themselves the possibilities of a new language or platform (smartphone, game console, Internet of Things) quickly and efficiently, with the goal of creating and developing interactive solutions for clients, that cross the borders of platforms and programming langages, in mind.\n\nA CMGTer from Rotterdam sets themselves apart from other programmers through sheer creativity, design-focused approach, and the knowledge and sense for the interaction between devices and people. With everything you create, the person you create it for is the focus of your thought process. That is why you will need a researching attitude, and you\'d want to get to know your users and involve them in the creation process of your product as much as possible. The work and possibilities of this creative technologist are heavily subject to change because of the continuous developments in the area. Now, the focus in the course is on web- and mobile technologies. Game technologies form a smaller part.\n\nCMGT-students will work together with students from the Communication and Multimedia Design course at times. This collaboration is important because working together with other creative specialists like designers and strategists when developing interactive solutions, leads to a higher quality end product.\n\nAfter the course, CMGTers will work as programmers at internet bureaus or other bureaus in the creative sector (advertising, marketing, design, innovation). A part will start their own business, or will work as a freelancer. Web Developer and Mobile Developer are also by far the careers that many graduates follow after completing the course.</item>
     </string-array>
     <string-array name="studyCourseHeader">
-        <item>Software\nEngineering</item>
+        <item>Software Engineering</item>
         <item>Communication</item>
-        <item>Communication and\nMultimedia Design</item>
-        <item>Computer\nEngineering</item>
-        <item>Creative Media and\nGame Technologies</item>
+        <item>Communication and Multimedia Design</item>
+        <item>Computer Engineering</item>
+        <item>Creative Media and Game Technologies</item>
     </string-array>
 
     <!--ABOUT CMI PAGE-->
