@@ -1,6 +1,7 @@
 package com.group5.cmiopenday;
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 =======
