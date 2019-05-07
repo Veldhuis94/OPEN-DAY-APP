@@ -2,9 +2,8 @@ package com.group5.cmiopenday;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class webview extends AppCompatActivity {
+public class webview extends menu_Activity {
 
     ProgressBar superProgressBar;
     ImageView superImageView;
