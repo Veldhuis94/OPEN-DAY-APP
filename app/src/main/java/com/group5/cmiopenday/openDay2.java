@@ -14,7 +14,7 @@ import java.util.Calendar;
 
 
 
-public class openDayDetails extends menu_Activity  {
+public class openDay2 extends menu_Activity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class openDayDetails extends menu_Activity  {
         setContentView(R.layout.open_day_layout);
         super.onCreateDrawer(savedInstanceState);
 
-        final String date = "04-04-2019";
-        final int[] dateArray = {04, 04, 2019, 12, 00, 16, 00};
+        final String date = "04-06-2019";
+        final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
 
         ImageButton shareButton = findViewById(R.id.button2);
         shareButton.setOnClickListener(new View.OnClickListener() {
@@ -40,13 +40,13 @@ public class openDayDetails extends menu_Activity  {
         });
 
         Button openDay1 = findViewById(R.id.button3);
-        openDay1.setOnClickListener(new onClickPopUp(0, this));
+        openDay1.setOnClickListener(new onClickPopUp(4, this));
         Button openDay2 = findViewById(R.id.button4);
-        openDay2.setOnClickListener(new onClickPopUp(1, this));
+        openDay2.setOnClickListener(new onClickPopUp(5, this));
         Button openDay3 = findViewById(R.id.button5);
-        openDay3.setOnClickListener(new onClickPopUp(2, this));
+        openDay3.setOnClickListener(new onClickPopUp(6, this));
         Button openDay4 = findViewById(R.id.button6);
-        openDay4.setOnClickListener(new onClickPopUp(3, this));
+        openDay4.setOnClickListener(new onClickPopUp(7, this));
 
 
 
@@ -55,7 +55,7 @@ public class openDayDetails extends menu_Activity  {
         calendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(openDayDetails.this, "test1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(openDay2.this, "test1", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_INSERT);
                 intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("title", "CMI Open Day");
@@ -70,4 +70,6 @@ public class openDayDetails extends menu_Activity  {
             }
         });
     }
+
+
 }
