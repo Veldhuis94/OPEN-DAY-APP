@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".PopShareActivity"
+            android:theme="@style/AppTheme.PopMe"/>
         <activity android:name=".openDay2" />
-        <activity android:name=".webview"/>
-        <activity android:name=".EducationPage"
+        <activity android:name=".webview" />
+        <activity
+            android:name=".EducationPage"
             android:label="Course" />
         <activity android:name=".openDayDetails" />
         <activity
