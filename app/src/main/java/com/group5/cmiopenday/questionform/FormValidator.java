@@ -31,17 +31,12 @@ public class FormValidator {
 
     public int minTextLength = 1; //min length of a textfield to be valid
 
-    private Drawable validBackground;
-    private Drawable invalidBackground;
-
-    public FormValidator(Button submitButton, Context context){
+    public FormValidator(Button submitButton){
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
                 "[a-zA-Z0-9_+&*-]+)*@" +
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
                 "A-Z]{2,7}$"; //create regular expression for checking emails
         emailPattern = Pattern.compile(emailRegex); //compile the expression and store it in a pattern object.
-        validBackground = context.getResources().getDrawable(R.drawable.textfield_valid);
-        invalidBackground = context.getResources().getDrawable(R.drawable.textfield_invalid);
         this.submitButton = submitButton;
     }
 
@@ -54,7 +49,7 @@ public class FormValidator {
     }
 
     //Checks whether the textfield is valid and updates its state and the button state.
-    public void checkField(FieldType type, EditText textField){
+    public void checkField(FieldType type, EditText textField, boolean changeBackgroundIfInvalid){
         boolean valid;
         switch (type){
             case Text: valid = textIsValid(textField.getText().toString()); break; //valid textfield?
@@ -63,14 +58,16 @@ public class FormValidator {
         }
         if(valid){
             invalidFields.remove(textField);
-            textField.setBackgroundDrawable(validBackground);
-            if(invalidFields.size() == 0){
+            textField.setBackgroundResource(R.drawable.textfield_valid); //set background for showing it's valid.
+            if(invalidFields.size() == 0){ //All fields must be valid before the
                 submitButton.setEnabled(true);
             }
         }
-        else{
+        else{ //text is invalid
             invalidFields.add(textField);
-            textField.setBackgroundDrawable(invalidBackground);
+            if(changeBackgroundIfInvalid){
+                textField.setBackgroundResource(R.drawable.textfield_invalid); //set background for showing it's invalid.
+            }
             submitButton.setEnabled(false);
         }
     }

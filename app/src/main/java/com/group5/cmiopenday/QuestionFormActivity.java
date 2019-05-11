@@ -44,7 +44,7 @@ public class QuestionFormActivity extends menu_Activity{
             }
         });
 
-        validator = new FormValidator(SendE, this); //initialise object for validating the fields
+        validator = new FormValidator(SendE); //initialise object for validating the fields
         //create listeners for the validator, the validator will check the textfield after it has been changed.
         email.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Email, email, validator));
         subject.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, subject, validator));

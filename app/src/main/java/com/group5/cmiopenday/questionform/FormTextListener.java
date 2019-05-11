@@ -14,6 +14,7 @@ public class FormTextListener implements TextWatcher {
         this.type = type;
         this.textField = textField;
         this.validator = validator;
+        validator.checkField(type, textField, false);
     }
 
     @Override
@@ -28,6 +29,6 @@ public class FormTextListener implements TextWatcher {
 
     @Override
     public void afterTextChanged(Editable s) {
-        validator.checkField(type, textField); //check if the field is valid.
+        validator.checkField(type, textField, true); //check if the field is valid.
     }
 }
