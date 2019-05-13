@@ -43,14 +43,21 @@
     <string name="aboutcmi_website">Url: Hogeschoolrotterdam.nl</string>
     <string name="aboutcmi_questionForm">QUESTION FORM</string>
     <string name="aboutcmi_textHeader">Hogeschool Rotterdam (CMI)</string>
-    <string name="aboutcmi_content">
-    With its courses in Communication, Informatics, Technical Informatics,
-        Creative Media and Game Technologies and Communication and Multimedia Design,
-        the Institute for Communication, Media and Information Technology (CMI)
-        has no fewer than 3000 students who make a valuable contribution to the
-        unlimited world of communication, media and IT.
+    <string name="aboutcmi_content">The School of Communication, Media and Information Technology (CMI) provides higher education and applied research for the creative industry. As a committed partner CMI creates knowledge, skills and expertise for the ongoing development of the industry.\n\nCMI has five undergraduate programmes:
 
-    </string>
+Software engineering,
+Computer engineering,
+Creative Media and Game Technologies,
+Communication &amp; Multimedia Design and
+Communication.\n\n
+
+Each bachelor programme focuses on adding meaningful values to daily life by the use of communication, media or information technology. Students are being challenged to develop their competences such as creativity, entrepreneurship and interdisciplinary collaboration.\n\n
+
+Our education is practice driven and can be found throughout all years of our courses: practical cases and issues as a group assignment, embedded in education modules or advanced minors and electives, individual internships and graduate studies, but also in the form of guest lectures, workshops and business safaris (i.e. a trip where students visit multiple companies from an exploratory perspective).\n\n
+
+We are constantly looking for themes in which cooperation with companies and universities is possible. The fresh view and up-to-date knowledge of our students often leads to innovative concepts, advanced insights and prototypes that are highly useful.\n\n
+
+CMI is closely linked to research group Creating 010, that conducts applied research to better utilize the potential of the creative industry in Rotterdam.</string>
     <string name="aboutcmi_floorplan">FLOORPLAN</string>
     <string name="aboutcmi_courses">COURSES</string>
 
