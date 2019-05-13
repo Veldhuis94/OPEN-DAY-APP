@@ -30,9 +30,9 @@ public class FloorPlanActivity extends menu_Activity {
     Boolean WDisPressed = false;
     Boolean WNisPressed = false;
 
-    int imageResourceIdsH[] = {R.drawable.minusone,R.drawable.bg,R.drawable.first,R.drawable.second,R.drawable.third,R.drawable.fourth,R.drawable.fifth,R.drawable.sixth};
-    int imageResourceIdsWD[] = {R.drawable.wdminusone,R.drawable.wdbg,R.drawable.wdone,R.drawable.wdtwo,R.drawable.wdthree,R.drawable.wdfour,R.drawable.wdfive,R.drawable.wdsix};
-    int imageResourceIdsWN[] = {R.drawable.wnminusone,R.drawable.wnbg,R.drawable.wnone,R.drawable.wntwo,R.drawable.wnthree,R.drawable.wnfour,R.drawable.wnfive};
+    int[] imageResourceIdsH = {R.drawable.minusone, R.drawable.bg, R.drawable.first, R.drawable.second, R.drawable.third, R.drawable.fourth, R.drawable.fifth, R.drawable.sixth};
+    int[] imageResourceIdsWD = {R.drawable.wdminusone, R.drawable.wdbg, R.drawable.wdone, R.drawable.wdtwo, R.drawable.wdthree, R.drawable.wdfour, R.drawable.wdfive, R.drawable.wdsix};
+    int[] imageResourceIdsWN = {R.drawable.wnminusone, R.drawable.wnbg, R.drawable.wnone, R.drawable.wntwo, R.drawable.wnthree, R.drawable.wnfour, R.drawable.wnfive};
 
 
     @Override
