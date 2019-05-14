@@ -1,6 +1,7 @@
 package com.group5.cmiopenday;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -73,6 +74,11 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
             case R.id.floorplan:
                 Intent e = new Intent(menu_Activity.this, FloorPlanActivity.class);
                 startActivity(e);
+                break;
+            case R.id.travel:
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse("https://www.google.com/maps/place/Wijnhaven+101,+3911+WN+Rotterdam/@51.917373,4.4823428,17z/data=!3m1!4b1!4m5!3m4!1s0x47c4335dc8aaf1ef:0xdcb0c548366a2e26!8m2!3d51.9173697!4d4.4845315"));
+                startActivity(intent);
                 break;
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
