@@ -61,11 +61,13 @@
 
     <string name="floorplan_up">+</string>
     <string name="floorplan_down">-</string>
-    <string name="questionform_name">Name:</string>
-    <string name="questionform_subject">Subject:</string>
-    <string name="questionform_email">E-mail:</string>
-    <string name="questionform_message">Message:</string>
+    <string name="questionform_name">Name</string>
+    <string name="questionform_subject">Subject</string>
+    <string name="questionform_email">E-mail</string>
+    <string name="questionform_message">Message</string>
     <string name="questionform_send">SEND</string>
+    <string name="questionform_fill_in">Fill in</string>
+
     <string name="cmi_couses">CMI Courses</string>
     <string name="Communicatie">Communicatie</string>
     <string name="Communication_and_Multimedia_Design">Communication and Multimedia Design</string>
