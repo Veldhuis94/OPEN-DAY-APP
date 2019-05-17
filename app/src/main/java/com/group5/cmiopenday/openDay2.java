@@ -29,13 +29,15 @@ public class openDay2 extends menu_Activity  {
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(Intent.ACTION_SENDTO);
-                myIntent.setType("text/plain");
-                String shareBody = "CMI OPEN DAY";
-                String shareSub = "On " + date + ", I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/";
-                myIntent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
-                myIntent.putExtra(Intent.EXTRA_TEXT, shareSub);
-                startActivity(Intent.createChooser(myIntent, "Share using what?"));
+                startActivity(new Intent(openDay2.this, PopShareActivity.class));
+
+                //Intent myIntent = new Intent(Intent.ACTION_SENDTO);
+                //myIntent.setType("text/plain");
+                //String shareBody = "CMI OPEN DAY";
+                //String shareSub = "On " + date + ", I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/";
+                //myIntent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
+                //myIntent.putExtra(Intent.EXTRA_TEXT, shareSub);
+                //startActivity(Intent.createChooser(myIntent, "Share using what?"));
             }
         });
 

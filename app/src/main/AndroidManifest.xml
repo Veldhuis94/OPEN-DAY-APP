@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".CheckForApp2Activity"></activity>
+        <activity android:name=".CheckForAppActivity" />
         <activity
             android:name=".PopShareActivity"
-            android:theme="@style/AppTheme.PopMe"/>
+            android:theme="@style/AppTheme.PopMe" />
         <activity android:name=".openDay2" />
         <activity android:name=".webview" />
         <activity
