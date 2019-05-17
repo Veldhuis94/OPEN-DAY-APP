@@ -22,6 +22,7 @@ public class SplashscreenActivity extends AppCompatActivity {
             public  void run(){
                 Intent homeIntent = new Intent(SplashscreenActivity.this, MainActivity.class);
                 startActivity(homeIntent);
+                finish();
 
             }
         },SPLASH_TIME_OUT);
