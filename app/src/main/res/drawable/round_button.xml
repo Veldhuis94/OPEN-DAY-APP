@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <solid android:color="@color/secondary1"/>
-    <corners android:radius="4dp"/>
-</shape>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item android:state_enabled="true">
+        <shape
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <solid android:color="@color/secondary1"/>
+            <corners android:radius="4dp"/>
+        </shape>
+    </item>
+    <item> <!-- if disabled -->
+        <shape
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <solid android:color="@color/secondary2"/>
+            <corners android:radius="4dp"/>
+        </shape>
+    </item>
+</selector>
