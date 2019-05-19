@@ -64,6 +64,7 @@ public class FloorPlanActivity extends menu_Activity {
 
     //Return the floorplan image id array of the current building
     private int[] getCurrentBuildingFloorplans(){
+        floorCheck();
         if(HisPressed) {
             return imageResourceIdsH;
         }
