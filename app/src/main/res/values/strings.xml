@@ -67,6 +67,7 @@
     <string name="questionform_message">Message</string>
     <string name="questionform_send">SEND</string>
     <string name="questionform_fill_in">Fill in</string>
+    <string name="questionform_chooseApp">Choose an app for sending your message.</string>
 
     <string name="cmi_couses">CMI Courses</string>
     <string name="Communicatie">Communicatie</string>
