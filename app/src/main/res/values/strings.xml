@@ -52,13 +52,18 @@
     <string name="floorplan_floor_header">Floor</string>
     <string name="floorplan_building_header">Building</string>
 
+
     <string name="floorplan_up" translatable="false">+</string>
     <string name="floorplan_down" translatable="false">-</string>
-    <string name="questionform_name">Name:</string>
-    <string name="questionform_subject">Subject:</string>
-    <string name="questionform_email" translatable="false">E-mail:</string>
-    <string name="questionform_message">Message:</string>
+    <string name="questionform_name">Name</string>
+    <string name="questionform_subject">Subject</string>
+    <string name="questionform_email" translatable="false">E-mail</string>
+    <string name="questionform_message">Message</string>
+
     <string name="questionform_send">SEND</string>
+    <string name="questionform_fill_in">Fill in</string>
+    <string name="questionform_chooseApp">Choose an app for sending your message.</string>
+
     <string name="cmi_couses">CMI Courses</string>
     <string name="Communicatie" translatable="false">Communicatie</string>
     <string name="Communication_and_Multimedia_Design" translatable="false">Communication and Multimedia Design</string>
