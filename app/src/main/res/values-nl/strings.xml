@@ -6,7 +6,6 @@
     <string name="aboutcmi_phoneNumber">Telefoon: 010 – 794 4000</string>
     <string name="aboutcmi_questionForm">Vragenformulier</string>
     <string name="classroom">Klaslokaal</string>
-    <string name="cmi_couses">CMI-studies</string>
     <string name="computer_engineering">Technische Informatica</string>
     <string name="floorplan_building_header">Gebouw</string>
     <string name="floorplan_floor_header">Verdieping</string>
@@ -49,7 +48,7 @@
     </string-array>
     <string name="about_cmi">Over het CMI</string>
     <string name="ask_a_question">Stel een vraag</string>
-    <string name="courses">Studies</string>
+    <string name="courses">Opleidingen</string>
     <string name="floorplan">Plattegrond</string>
     <string name="homescreen">Hoofdmenu</string>
     <string name="schoolname">Hogeschool Rotterdam</string>

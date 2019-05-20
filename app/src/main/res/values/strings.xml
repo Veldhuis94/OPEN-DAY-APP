@@ -69,8 +69,6 @@
     <string name="questionform_send">SEND</string>
     <string name="questionform_fill_in">Fill in</string>
     <string name="questionform_chooseApp">Choose an app for sending your message.</string>
-
-    <string name="cmi_couses">CMI Courses</string>
     <string name="Communication_and_Multimedia_Design" translatable="false">Communication and Multimedia Design</string>
     <string name="Creative_Media_and_Game_Technologies" translatable="false">Creative Media and Game Technologies</string>
     <string name="Informatica" translatable="false">Informatica</string>
