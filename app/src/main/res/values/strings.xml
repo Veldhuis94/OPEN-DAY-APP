@@ -54,6 +54,8 @@
     <string name="aboutcmi_floorplan">FLOORPLAN</string>
     <string name="aboutcmi_courses">COURSES</string>
 
+    <string name="version">Version 1.0.0</string>
+
     <!--FLOORPLAN PAGE-->
     <string name="floorplan_location">Wijnhaven 99-103-107</string>
     <string name="floorplan_floor_header">Floor</string>
@@ -111,3 +113,4 @@
         <item>19:00</item>
     </string-array>
 </resources>
+
