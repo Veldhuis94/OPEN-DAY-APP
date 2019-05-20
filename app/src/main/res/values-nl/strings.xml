@@ -47,6 +47,6 @@
     <string name="floorplan">Plattegrond</string>
     <string name="homescreen">Hoofdmenu</string>
     <string name="schoolname">Hogeschool Rotterdam</string>
-    <string name="Communicatie">Communicatiewetenschappen</string>
-    <string name="Communicatiewetenschappen" translatable="false">Communicatiewetenschappen</string>
+    <string name="Communicatie">Communicatie</string>
+    <string name="Communicatiewetenschappen" translatable="false">Communicatie</string>
 </resources>

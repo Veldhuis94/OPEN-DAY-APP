@@ -10,7 +10,7 @@
     <string name="OpenDay_Technische_Informatica" translatable="false">H.03.108/ 12:00 – 16:00\nWijnhaven 107</string>
     <string name="CMGT" translatable="false">CMGT</string>
     <string name="OpenDay_CMGT" translatable="false">WD.05.018/ 12:00 – 16:00\nWijnhaven 103</string>
-    <string name="Communicatiewetenschappen">Communication Sciences</string>
+    <string name="Communicatiewetenschappen">Communication</string>
     <string name="OpenDay_Communicatiewetenschappen" translatable="false">WN.01.014/ 12:00 – 16:00\nWijnhaven 99</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -112,5 +112,5 @@
     <string name="about_cmi">About CMI</string>
     <string name="ask_a_question">Ask A Question</string>
     <string name="floorplan">Floorplan</string>
-    <string name="Communicatie">Communication Sciences</string>
+    <string name="Communicatie">Communication</string>
 </resources>
