@@ -14,6 +14,12 @@
     <string name="OpenDay_Communicatiewetenschappen" translatable="false">WN.01.014/ 12:00 – 16:00\nWijnhaven 99</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="shareString">Share using what?</string>
+    <string name="shareBody1">On</string>
+    <string name="shareBody2">, I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/</string>
+    <string name="calendarMessage">Opening calendar...</string>
+    <string name="calendarTitle">CMI Open Day</string>
+    <string name="calendarBody">CMI Open Day of</string>
 
 
     <string-array name="studyCourseBody">
