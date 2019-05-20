@@ -81,33 +81,59 @@
     <string name="classroom">Classroom</string>
     <string name="_17_00_20_00_nwijnhaven_107">17:00 – 20:00\nWijnhaven 107</string>
     <string-array name="firstTimeArray">
-        <item>12:30</item>
-        <item>12:00</item>
-        <item>12:00</item>
-        <item>12:00</item>
-        <item>17:00</item>
-        <item>17:00</item>
-        <item>17:00</item>
-        <item>17:00</item>
+        <item>16:30</item>
+        <item>16:30</item>
+        <item>16:30</item>
+        <item>16:30</item>
+        <item>16:30</item>
+        <item>16:30</item>
+        <item>16:30</item>
+        <item>16:30</item>
     </string-array>
     <string-array name="secondTimeArray">
-        <item>14:00</item>
-        <item>14:00</item>
-        <item>14:45</item>
-        <item>14:00</item>
-        <item>18:00</item>
-        <item>18:00</item>
-        <item>18:00</item>
-        <item>18:00</item>
+        <item>17:45</item>
+        <item>17:45</item>
+        <item>17:45</item>
+        <item>17:45</item>
+        <item>17:45</item>
+        <item>17:45</item>
+        <item>17:45</item>
+        <item>17:45</item>
     </string-array>
     <string-array name="thirdTimeArray">
-        <item>16:30</item>
-        <item>16:45</item>
-        <item>16:30</item>
-        <item>16:00</item>
+        <item>19:00</item>
+        <item>19:00</item>
+        <item>19:00</item>
+        <item>19:00</item>
         <item>19:00</item>
         <item>19:00</item>
         <item>19:00</item>
         <item>19:00</item>
     </string-array>
+    <string-array name="firstClassroomArray">
+        <item>H.04.208</item>
+        <item>H.03.108</item>
+        <item>WD.05.018</item>
+        <item>WN.01.014</item>
+    </string-array>
+    <string-array name="secondClassroomArray">
+        <item>H.04.208</item>
+        <item>H.03.108</item>
+        <item>WD.05.018</item>
+        <item>WN.01.014</item>
+    </string-array>
+    <string-array name="thirdClassroomArray">
+        <item>H.04.208</item>
+        <item>H.03.108</item>
+        <item>WD.05.018</item>
+        <item>WN.01.014</item>
+    </string-array>
+    <string-array name="StudyProjectArray">
+        <item>Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
+        <item>Studenten Technische Informatica hebben het studielandschap op de 5e etage van Wijnhaven 99  ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
+        <item>Studenten Creative Media and Game Technologies hebben het studielandschap op de 4e etage van Wijnhaven 99 ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
+        <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
+    </string-array>
+
+
 </resources>
