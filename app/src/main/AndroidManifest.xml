@@ -21,9 +21,6 @@
             android:label="Course" />
         <activity android:name=".openDayDetails" />
         <activity
-            android:name=".CMI_Activity"
-            android:label="About CMI" />
-        <activity
             android:name=".FloorPlanActivity"
             android:label="Floorplan" />
         <activity
