@@ -13,26 +13,26 @@
         <activity android:name=".openDay2" />
         <activity android:name=".webview"/>
         <activity android:name=".EducationPage"
-            android:label="Course" />
+            android:label="@string/courses" />
         <activity android:name=".openDayDetails" />
         <activity
             android:name=".CMI_Activity"
-            android:label="About CMI" />
+            android:label="@string/about_cmi" />
         <activity
             android:name=".FloorPlanActivity"
-            android:label="Floorplan" />
+            android:label="@string/floorplan" />
         <activity
             android:name=".QuestionFormActivity"
-            android:label="Ask A Question" />
+            android:label="@string/ask_a_question" />
         <activity
             android:name=".StudyProgramsActivity"
-            android:label="Courses" />
+            android:label="@string/courses" />
         <activity
             android:name=".PopActivity"
             android:theme="@style/AppTheme.PopMe" />
         <activity
             android:name=".MainActivity"
-            android:label="CMI Open Days">
+            android:label="@string/open_days">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
