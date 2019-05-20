@@ -14,10 +14,10 @@
     <string name="navigation_drawer_open">Open navigatiemenu</string>
     <string name="open_days">Open dagen</string>
     <string name="opendaybutton">Meer informatie</string>
-    <string name="questionform_message">Bericht:</string>
-    <string name="questionform_name">Naam:</string>
+    <string name="questionform_message">Bericht</string>
+    <string name="questionform_name">Naam</string>
     <string name="questionform_send">VERSTUUR</string>
-    <string name="questionform_subject">Onderwerp:</string>
+    <string name="questionform_subject">Onderwerp</string>
     <string name="software_engineering">Informatica</string>
     <string name="time">Tijd</string>
     <string name="aboutcmi_content">Het instituut voor Communicatie, Media en Informatietechnologie (CMI) heeft met de opleidingen Communicatie, Informatica, Technische Informatica, Creative Media and Game Technologies en Communication and Multimedia Design maar liefst 3000 studenten die een waardevolle bijdrage leveren aan de onbegrensde wereld van communicatie, media en ICT.\n\nOns praktijkgestuurd onderwijs vindt plaats in alle jaren van onze opleidingen: praktijkcases en vraagstukken als groepsopdracht, ingebed in onderwijsmodules of verdiepende (keuze)minors, individuele stageplaatsen en afstudeeronderzoeken, maar ook in de vorm van gastcolleges, workshops en bedrijfssafari\'s.\n\nWe zijn voortdurend op zoek naar thema\'s waarop (meerjarige) samenwerking mogelijk is. Resultaten van samenwerking kunnen desgewenst een vervolg krijgen in ander onderwijs. Garantie op resultaat kunnen we niet geven, maar de frisse blik en actuele kennis van onze hbo\'ers leidt vaak tot innovatieve concepten, vernieuwende inzichten en prototypes die zeer bruikbaar blijken.\n\nCMI is nauw gelieerd aan kenniscentrum Creating 010 waar toegepast onderzoek gedaan wordt om de Rotterdamse potentie van de creatieve industrie beter te benutten.</string>
@@ -49,4 +49,6 @@
     <string name="schoolname">Hogeschool Rotterdam</string>
     <string name="Communicatie">Communicatie</string>
     <string name="Communicatiewetenschappen" translatable="false">Communicatie</string>
+    <string name="questionform_fill_in">Vul in</string>
+    <string name="questionform_chooseApp">Kies een app om je bericht mee te versturen.</string>
 </resources>
