@@ -15,6 +15,8 @@ public class TravelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_travel);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
     }
 
 }

@@ -119,6 +119,20 @@
                             android:text="@string/aboutcmi_questionForm"
                             android:textColor="@color/textLight"
                             android:textSize="14dp" />
+
+                        <Button
+                            android:id="@+id/travelDirectionButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/round_button"
+                            android:gravity="center"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text="@string/TravelDirection"
+                            android:textColor="@color/textLight"
+                            android:textSize="14dp" />
+
                     </LinearLayout>
 
                 </LinearLayout>
