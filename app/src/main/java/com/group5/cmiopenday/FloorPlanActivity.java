@@ -112,7 +112,7 @@ public class FloorPlanActivity extends menu_Activity {
                 upButton.setEnabled(true);
             }
         }
-        if(WNisPressed) {
+        else if(WNisPressed) {
             if(currentFloor == 5) {
                 upButton.setBackgroundColor(getResources().getColor(greyedOutColor));
                 upButton.setEnabled(false);
