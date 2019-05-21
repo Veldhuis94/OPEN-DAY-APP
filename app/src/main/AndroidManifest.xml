@@ -12,10 +12,6 @@
         tools:ignore="GoogleAppIndexingWarning">
 
 
-        <activity android:name=".CheckForApp2Activity"></activity>
-        <activity android:name=".CheckForAppActivity" />
-
-
         <activity
             android:name=".TravelActivity"
             android:label="@string/title_activity_travel"
