@@ -74,6 +74,10 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
                 Intent e = new Intent(menu_Activity.this, FloorPlanActivity.class);
                 startActivity(e);
                 break;
+            case R.id.travel:
+                Intent f = new Intent(menu_Activity.this,TravelActivity.class);
+                startActivity(f);
+                break;
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

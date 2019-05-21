@@ -10,10 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+<<<<<<< HEAD
 
         <activity android:name=".CheckForApp2Activity"></activity>
         <activity android:name=".CheckForAppActivity" />
 
+=======
+        <activity
+            android:name=".TravelActivity"
+            android:label="@string/title_activity_travel"
+            android:theme="@style/AppTheme.NoActionBar"/>
+>>>>>>> 4bf26cf2e230b55c890770e2838a6cc0d540581d
         <activity android:name=".SplashscreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
