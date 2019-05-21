@@ -7,8 +7,8 @@
     tools:context=".PopActivity">
 
     <ScrollView
-        android:layout_width="264dp"
-        android:layout_height="441dp"
+        android:layout_width="259dp"
+        android:layout_height="410dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
