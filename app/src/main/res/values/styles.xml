@@ -8,18 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-<<<<<<< HEAD
 
-    <style name = "AppTheme.PopMe">
-        <item name="android:windowIsFloating">true</item>
+
+
 
     
 
-=======
+
     <style name = "AppTheme.PopMe">
         <item name="android:windowIsFloating">true</item>
 
->>>>>>> 2d6821c65a8bac10ae03c07fd0aea22ef902f230
+
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
