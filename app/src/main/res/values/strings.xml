@@ -121,5 +121,7 @@ CMI is closely linked to research group Creating 010, that conducts applied rese
         <item>19:00</item>
         <item>19:00</item>
     </string-array>
+    <string name="TravelDirection">Travel Directions</string>
+    <string name="title_activity_travel">TravelActivity</string>
 </resources>
 
