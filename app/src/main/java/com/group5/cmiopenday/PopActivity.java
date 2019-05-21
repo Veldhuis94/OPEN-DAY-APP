@@ -38,5 +38,24 @@ public class PopActivity extends Activity {
             TextView firstTimeView = findViewById(textViews[i]);
             firstTimeView.setText(firstTime[popUpId]);
         }
+        int[] classid = {R.array.firstClassroomArray, R.array.secondClassroomArray, R.array.thirdClassroomArray};
+        int[] classrooms = {R.id.textView25, R.id.textView26, R.id.textView27};
+
+        for(int l = 0; l< classrooms.length; l++){
+            String[] firstClassroom = getResources().getStringArray(classid[l]);
+            TextView firstClassroomView = findViewById(classrooms[l]);
+            firstClassroomView.setText(firstClassroom[popUpId]);
+        }
+
+        int[] projectId = {R.array.StudyProjectArray};
+        int[] projectText = {R.id.textView28};
+
+        for(int x = 0; x < projectText.length; x++){
+            String[] firstProject = getResources().getStringArray(projectId[x]);
+            TextView firstProjectView = findViewById(projectText[x]);
+            firstProjectView.setText(firstProject[popUpId]);
+        }
+
     }
+
 }
