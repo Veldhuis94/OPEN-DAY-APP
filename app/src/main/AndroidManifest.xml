@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".SplashscreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".openDay2" />
-        <activity android:name=".webview"/>
-        <activity android:name=".EducationPage"
+        <activity android:name=".webview" />
+        <activity
+            android:name=".EducationPage"
             android:label="Course" />
         <activity android:name=".openDayDetails" />
         <activity
@@ -33,11 +41,7 @@
         <activity
             android:name=".MainActivity"
             android:label="CMI Open Days">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
