@@ -44,15 +44,16 @@ public class FloorPlanActivity extends menu_Activity {
 
 
 
-        upButton = (Button)findViewById(R.id.Floor_Up_Button);
-        downButton = (Button)findViewById(R.id.Floor_Down_Button);
-        HButton = (Button)findViewById(R.id.BuildingH_Button);
+        upButton = findViewById(R.id.Floor_Up_Button);
+        downButton = findViewById(R.id.Floor_Down_Button);
+        HButton = findViewById(R.id.BuildingH_Button);
         HButton.setBackgroundColor(getResources().getColor(R.color.secondary3));
-        WDButton = (Button)findViewById(R.id.BuildingWD_Button);
-        WNButton = (Button)findViewById(R.id.BuildingWN_Button);
-        floorText = (TextView)findViewById(R.id.Floor_Value_Text);
-        floorplanImage = (ImageView)findViewById(R.id.FloorplanImageView);
+        WDButton = findViewById(R.id.BuildingWD_Button);
+        WNButton = findViewById(R.id.BuildingWN_Button);
+        floorText = findViewById(R.id.Floor_Value_Text);
+        floorplanImage = findViewById(R.id.FloorplanImageView);
 
+        updateBuildingButtonColors(); //set the buttons to the right colours from startup
         addEventsToButtons(); //add events to the buttons to change the current floor and building
         floorplanImageInit(); //initialise objects for the floorplan imageview
     }
@@ -63,6 +64,7 @@ public class FloorPlanActivity extends menu_Activity {
 
     //Return the floorplan image id array of the current building
     private int[] getCurrentBuildingFloorplans(){
+        floorCheck();
         if(HisPressed) {
             return imageResourceIdsH;
         }
@@ -76,12 +78,50 @@ public class FloorPlanActivity extends menu_Activity {
 
     //The selected building button will have a different color from the other buttons
     private void updateBuildingButtonColors() {
-        int selectedColor = R.color.secondary3;
+        int selectedColor = R.color.secondary1;
         int defaultColor = R.color.secondary2;
         //                                                  condition       true            false
         HButton.setBackgroundColor(getResources().getColor((HisPressed)? selectedColor : defaultColor));
         WNButton.setBackgroundColor(getResources().getColor((WNisPressed)? selectedColor : defaultColor));
         WDButton.setBackgroundColor(getResources().getColor((WDisPressed)? selectedColor : defaultColor));
+        //disables or enables the button based on if the building is selected or not
+        HButton.setEnabled(!HisPressed);
+        WNButton.setEnabled(!WNisPressed);
+        WDButton.setEnabled(!WDisPressed);
+    }
+
+    //The plus or minus buttons will turn grey if the floor above or below does not exist
+    private void floorCheck() {
+        int greyedOutColor = R.color.secondary3;
+        int defaultColor = R.color.secondary2;
+        if(currentFloor == -1) {
+            downButton.setBackgroundColor(getResources().getColor(greyedOutColor)); //sets color
+            downButton.setEnabled(false); //sets pressability
+        }
+        else {
+            downButton.setBackgroundColor(getResources().getColor(defaultColor));
+            downButton.setEnabled(true);
+        }
+        if(HisPressed || WDisPressed) {
+            if(currentFloor == 6) {
+                upButton.setBackgroundColor(getResources().getColor(greyedOutColor));
+                upButton.setEnabled(false);
+            }
+            else {
+                upButton.setBackgroundColor(getResources().getColor(defaultColor));
+                upButton.setEnabled(true);
+            }
+        }
+        else if(WNisPressed) {
+            if(currentFloor == 5) {
+                upButton.setBackgroundColor(getResources().getColor(greyedOutColor));
+                upButton.setEnabled(false);
+            }
+            else {
+                upButton.setBackgroundColor(getResources().getColor(defaultColor));
+                upButton.setEnabled(true);
+            }
+        }
     }
 
     private void onBuildingButtonClick(boolean h, boolean wd, boolean wn) { //Used when a new building is selected with a button
@@ -116,6 +156,7 @@ public class FloorPlanActivity extends menu_Activity {
                     currentFloor += 1;
                     floorText.setText(String.valueOf(currentFloor));
                 }
+                floorCheck();
                 updateFloorplanImage();
             }
         });
@@ -126,6 +167,7 @@ public class FloorPlanActivity extends menu_Activity {
                     currentFloor -=1;
                     floorText.setText(String.valueOf(currentFloor));
                 }
+                floorCheck();
                 updateFloorplanImage();
             }
         });
