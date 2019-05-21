@@ -12,6 +12,7 @@ public class CMI_Activity extends menu_Activity {
     Button qfbtn;
     Button fpbtn;
     Button cbtn;
+    Button tdbtn;
     TextView text;
 
 
@@ -30,6 +31,13 @@ public class CMI_Activity extends menu_Activity {
             }
         });
 
+    tdbtn = (Button) findViewById(R.id.travelDirectionButton);
+        tdbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CMI_Activity.this, TravelActivity.class));
+            }
+        });
         fpbtn = (Button) findViewById(R.id.floorPlanButton);
         fpbtn.setOnClickListener(new View.OnClickListener() {
             @Override

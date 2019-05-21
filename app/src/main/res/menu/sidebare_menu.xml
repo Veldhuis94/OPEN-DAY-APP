@@ -30,6 +30,10 @@
             android:icon="@android:drawable/ic_dialog_map"
             android:title="Floorplan" />
 
+        <item
+            android:id="@+id/travel"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Travel Directions" />
     </group>
 
 </menu>
