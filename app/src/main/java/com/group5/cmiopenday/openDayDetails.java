@@ -2,19 +2,27 @@ package com.group5.cmiopenday;
 
 
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.provider.CalendarContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 
+public class openDayDetails extends menu_Activity {
 
-public class openDayDetails extends menu_Activity  {
+    final String date = "04-04-2019";
+    final int[] dateArray = {04, 04, 2019, 12, 00, 16, 00};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,22 +30,15 @@ public class openDayDetails extends menu_Activity  {
         setContentView(R.layout.open_day_layout);
         super.onCreateDrawer(savedInstanceState);
 
-        final String date = "04-04-2019";
-        final int[] dateArray = {04, 04, 2019, 12, 00, 16, 00};
 
         ImageButton shareButton = findViewById(R.id.button2);
+        final Context context = this;
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(openDayDetails.this, PopShareActivity.class));
+                shareOnOtherSocialMedia(context);
 
-                // Intent myIntent = new Intent(Intent.ACTION_SEND);
-                //myIntent.setType("text/plain");
-                //String shareBody = "CMI OPEN DAY";
-                //String shareSub = "On " + date + ", I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/";
-                //myIntent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
-                //myIntent.putExtra(Intent.EXTRA_TEXT, shareSub);
-                //startActivity(Intent.createChooser(myIntent, "Share using what?"));
+
             }
         });
 
@@ -49,8 +50,6 @@ public class openDayDetails extends menu_Activity  {
         openDay3.setOnClickListener(new onClickPopUp(2, this));
         Button openDay4 = findViewById(R.id.button6);
         openDay4.setOnClickListener(new onClickPopUp(3, this));
-
-
 
 
         ImageButton calendarButton = findViewById(R.id.button);
@@ -71,5 +70,38 @@ public class openDayDetails extends menu_Activity  {
                 startActivity(intent);
             }
         });
+    }
+
+    public void shareOnOtherSocialMedia(Context context) {
+
+        List<Intent> shareIntentsLists = new ArrayList<Intent>();
+        Intent shareIntent = new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+        shareIntent.setType("image/*");
+        List<ResolveInfo> resInfos = context.getPackageManager().queryIntentActivities(shareIntent, 0);
+        if (!resInfos.isEmpty()) {
+            for (ResolveInfo resInfo : resInfos) {
+                String packageName = resInfo.activityInfo.packageName;
+                if (packageName.toLowerCase().contains("twitter") || packageName.toLowerCase().contains("facebook") || packageName.toLowerCase().contains("whatsapp") || packageName.toLowerCase().contains("email") || packageName.toLowerCase().contains("gm")) {
+                    Intent intent = new Intent();
+                    intent.setComponent(new ComponentName(packageName, resInfo.activityInfo.name));
+                    intent.setAction(Intent.ACTION_SEND);
+                    intent.setType("text/plain");
+                    String shareBody = "CMI OPEN DAY";
+                    String shareSub = "On " + date + ", I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/";
+                    intent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
+                    intent.putExtra(Intent.EXTRA_TEXT, shareSub);
+                    intent.setPackage(packageName);
+                    shareIntentsLists.add(intent);
+                }
+            }
+            if (!shareIntentsLists.isEmpty()) {
+                Intent chooserIntent = Intent.createChooser(shareIntentsLists.remove(0), "Choose app to share");
+                chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, shareIntentsLists.toArray(new Parcelable[]{}));
+                context.startActivity(chooserIntent);
+            } else
+                Toast.makeText(openDayDetails.this, "Error", Toast.LENGTH_SHORT).show();
+
+        }
     }
 }
