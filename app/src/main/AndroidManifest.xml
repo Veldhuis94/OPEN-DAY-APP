@@ -10,11 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+<<<<<<< HEAD
         <activity android:name=".CheckForApp2Activity"></activity>
         <activity android:name=".CheckForAppActivity" />
         <activity
             android:name=".PopShareActivity"
             android:theme="@style/AppTheme.PopMe" />
+=======
+        <activity android:name=".SplashscreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+>>>>>>> a216fbb28ce654707aef8c79cd8c39f9b0332797
         <activity android:name=".openDay2" />
         <activity android:name=".webview" />
         <activity
@@ -39,11 +49,7 @@
         <activity
             android:name=".MainActivity"
             android:label="CMI Open Days">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
