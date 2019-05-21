@@ -127,7 +127,7 @@ CMI is closely linked to research group Creating 010, that conducts applied rese
         <item>WD.05.018</item>
         <item>WN.01.014</item>
     </string-array>
-<<<<<<< HEAD
+
     <string-array name="secondClassroomArray">
         <item>H.04.208</item>
         <item>H.03.108</item>
@@ -148,9 +148,9 @@ CMI is closely linked to research group Creating 010, that conducts applied rese
     </string-array>
 
 
-=======
+
     <string name="TravelDirection">Travel Directions</string>
     <string name="title_activity_travel">TravelActivity</string>
->>>>>>> 4bf26cf2e230b55c890770e2838a6cc0d540581d
+
 </resources>
 
