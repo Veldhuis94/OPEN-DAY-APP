@@ -54,7 +54,7 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
         switch (id) {
-            case R.id.sidebare_homescreen:
+            case R.id.sidebare_home:
                 Intent a = new Intent(menu_Activity.this, MainActivity.class);
                 startActivity(a);
                 break;
