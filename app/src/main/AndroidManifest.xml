@@ -45,9 +45,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/open_days">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
 
         </activity>
     </application>
