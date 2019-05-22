@@ -39,6 +39,7 @@ public class openDay2 extends menu_Activity  {
             public void onClick(View v) {
                 shareOnOtherSocialMedia(context);
 
+
             }
         });
 
@@ -58,11 +59,11 @@ public class openDay2 extends menu_Activity  {
         calendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(openDay2.this, "test1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(openDay2.this, getString(R.string.calendarMessage), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_INSERT);
                 intent.setType("vnd.android.cursor.item/event");
-                intent.putExtra("title", "CMI Open Day");
-                intent.putExtra("description", "The CMI Open Day of " + date);
+                intent.putExtra("title", getString(R.string.calendarTitle));
+                intent.putExtra("description", getString(R.string.calendarBody) + date);
                 Calendar beginTime = Calendar.getInstance();
                 beginTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[3], dateArray[4]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
