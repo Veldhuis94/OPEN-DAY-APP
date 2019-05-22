@@ -13,22 +13,22 @@
         <item
             android:id="@+id/sidebare_location"
             android:icon="@drawable/ic_location"
-            android:title="Courses" />
+            android:title="@string/courses" />
 
         <item
             android:id="@+id/sidebare_study_programs"
             android:icon="@drawable/ic_school"
-            android:title="About CMI" />
+            android:title="@string/about_cmi" />
 
         <item
             android:id="@+id/sidebare_ask_a_question"
             android:icon="@drawable/ic_question"
-            android:title="Ask A Question" />
+            android:title="@string/ask_a_question" />
 
         <item
             android:id="@+id/floorplan"
             android:icon="@android:drawable/ic_dialog_map"
-            android:title="Floorplan" />
+            android:title="@string/floorplan" />
 
         <item
             android:id="@+id/travel"
