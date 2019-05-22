@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/sidebare_homescreen"
+            android:id="@+id/sidebare_home"
             android:icon="@drawable/ic_home"
             android:title="Homescreen" />
 
