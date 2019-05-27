@@ -17,7 +17,7 @@
 
         <item
             android:id="@+id/sidebare_study_programs"
-            android:icon="@drawable/info75"
+            android:icon="@drawable/info"
             android:title="@string/about_cmi" />
 
         <item
