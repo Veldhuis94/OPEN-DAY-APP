@@ -22,7 +22,7 @@
 
         <item
             android:id="@+id/sidebare_ask_a_question"
-            android:icon="@drawable/ic_question"s
+            android:icon="@drawable/ic_question"
             android:title="@string/ask_a_question" />
 
         <item
