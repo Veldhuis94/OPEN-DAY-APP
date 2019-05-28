@@ -10,10 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".CopyDatabase"></activity>
         <activity
             android:name=".TravelActivity"
             android:label="@string/title_activity_travel"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SplashscreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,10 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".openDay2" />
-        <activity android:name=".webview"/>
-        <activity android:name=".EducationPage"
+        <activity android:name=".webview" />
+        <activity
+            android:name=".EducationPage"
             android:label="@string/courses" />
-
         <activity android:name=".openDayDetails" />
         <activity
             android:name=".CMI_Activity"
@@ -44,9 +45,7 @@
             android:theme="@style/AppTheme.PopMe" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/open_days">
-
-        </activity>
+            android:label="@string/open_days"></activity>
     </application>
 
 </manifest>
