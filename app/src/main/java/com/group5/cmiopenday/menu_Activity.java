@@ -21,7 +21,8 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Making the toolbar as the action bar
         setSupportActionBar(toolbar);
-
+        getSupportActionBar().setIcon(R.drawable.logohr);
+        //toolbar.setLogo(R.drawable.logohr);
 
 
         // making the variable link with xml

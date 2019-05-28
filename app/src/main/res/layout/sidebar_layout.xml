@@ -23,8 +23,15 @@
             android:elevation="4dp"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+
             />
 
+        <item
+            android:id="@+id/menu_item"
+            android:icon="@drawable/ic_application_icon"
+            android:title="@string/aplication_icon"
+            app:showAsAction="always" />
 
 
         <FrameLayout
