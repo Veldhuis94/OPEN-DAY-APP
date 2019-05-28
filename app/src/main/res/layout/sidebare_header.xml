@@ -20,10 +20,10 @@
         android:layout_gravity="center"
         android:baselineAligned="false"
         android:paddingTop="15dp"
-        android:text="Rotterdam University of Applied Sciences"
+        android:text="@string/schoolname"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
 
 </LinearLayout>

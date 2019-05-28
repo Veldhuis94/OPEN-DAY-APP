@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -32,22 +33,22 @@
             android:id="@+id/textView6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="13dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
             android:gravity="center_horizontal"
             android:textAllCaps="true"
-            android:textSize="25sp"
+            android:textSize="35sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/scrollView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.05" />
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintVertical_bias="0.5" />
 
         <ScrollView
             android:id="@+id/scrollView3"
@@ -78,22 +79,6 @@
             </TableLayout>
 
         </ScrollView>
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_marginStart="61dp"
-            android:layout_marginLeft="61dp"
-            android:layout_marginEnd="61dp"
-            android:layout_marginRight="61dp"
-            android:layout_marginBottom="25dp"
-            android:contentDescription="hr logo"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6"
-            app:srcCompat="@drawable/logo" />
 
 
     </android.support.constraint.ConstraintLayout>

@@ -57,6 +57,19 @@
                     android:textStyle="bold"
                     app:fontFamily="sans-serif" />
 
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginBottom="20dp"
+                    android:adjustViewBounds="false"
+                    android:contentDescription="Wijnhaven Image"
+                    android:cropToPadding="false"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/wijnhaven61" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
@@ -119,22 +132,23 @@
                             android:text="@string/aboutcmi_questionForm"
                             android:textColor="@color/textLight"
                             android:textSize="14dp" />
+
+                        <Button
+                            android:id="@+id/travelDirectionButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/round_button"
+                            android:gravity="center"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text="@string/TravelDirection"
+                            android:textColor="@color/textLight"
+                            android:textSize="14dp" />
+
                     </LinearLayout>
 
                 </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:layout_gravity="top"
-                    android:layout_marginTop="-2dp"
-                    android:layout_marginBottom="20dp"
-                    android:adjustViewBounds="false"
-                    android:contentDescription="Wijnhaven Image"
-                    android:cropToPadding="false"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/wijnhaven61" />
 
                 <TextView
                     android:id="@+id/textView13"

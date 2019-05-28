@@ -55,7 +55,7 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
         switch (id) {
-            case R.id.sidebare_homescreen:
+            case R.id.sidebare_home:
                 Intent a = new Intent(menu_Activity.this, MainActivity.class);
                 startActivity(a);
                 break;
@@ -74,6 +74,10 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
             case R.id.floorplan:
                 Intent e = new Intent(menu_Activity.this, FloorPlanActivity.class);
                 startActivity(e);
+                break;
+            case R.id.travel:
+                Intent f = new Intent(menu_Activity.this,TravelActivity.class);
+                startActivity(f);
                 break;
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
