@@ -169,8 +169,9 @@
 
     <string name="title_activity_travel">TravelActivity</string>
 
-
-
+    <string name="credits1">CMI OPEN DAY APP © INF1C GROUP 9\non behalf of:</string>
+    <string name="credits2">Deborah Barnett\nAstrid van Duuren\n\nDeveloped by:\n\nMohamed Abdi\nAzzeddine Agrida\nHakan Dalama\nAudi van Gog\nLucas Oudhuis\nDinesh Pahladsingh\nBastiaan te Veldhuis\n\nSpecial thanks to:\n\nEddie Lau\nLars Mostert\nJason Teo</string>
+    <string name="logo_of_school">Logo of School</string>
 
 </resources>
 

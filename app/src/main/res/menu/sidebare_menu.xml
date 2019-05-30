@@ -34,6 +34,10 @@
             android:id="@+id/travel"
             android:icon="@drawable/ic_location"
             android:title="Travel Directions" />
+        <item
+            android:id="@+id/credits"
+            android:icon="@drawable/info"
+            android:title="Credits" />
     </group>
 
 </menu>

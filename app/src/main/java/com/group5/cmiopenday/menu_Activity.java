@@ -78,6 +78,8 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
                 Intent f = new Intent(menu_Activity.this,TravelActivity.class);
                 startActivity(f);
                 break;
+            case R.id.credits:
+                startActivity(new Intent(menu_Activity.this, creditsPage.class));
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
