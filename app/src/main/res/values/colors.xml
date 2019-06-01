@@ -14,9 +14,6 @@
     <color name="secondary3">#E7E7E7</color>
     <color name="secondary4">#d6d6d6</color>
 
-    <color name="background_light">#FCFCFC</color>
-    <color name="background_dark">#272727</color>
-
     <color name="textfield_border_default">#000000</color>
     <color name="textfield_border_valid">#03DB27</color>
     <color name="textfield_border_invalid">#DB0303</color>

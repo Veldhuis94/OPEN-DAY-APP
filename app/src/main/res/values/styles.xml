@@ -6,25 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
-        <item name="backgroundcolor">@color/background_light</item>
-        <item name="textcolor">@color/textDark</item>
-        <item name="textcolor2">@color/textDark2</item>
-        <item name="textfield_border">@color/textDark2</item>
-
     </style>
 
-    <style name="AppThemeDark" parent="Theme.AppCompat.DayNight">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
 
-        <item name="backgroundcolor">@color/background_dark</item>
-        <item name="textcolor">@color/textLight</item>
-        <item name="textcolor2">@color/secondary2</item>
-        <item name="textfield_border">@color/textLight</item>
-    </style>
 
 
 
