@@ -18,4 +18,6 @@
     <color name="textfield_border_valid">#03DB27</color>
     <color name="textfield_border_invalid">#DB0303</color>
 
+    <color name="backgroundcolor_light">#FFFFFF</color>
+    <color name="backgroundcolor_dark">#1F1F1F</color>
 </resources>
