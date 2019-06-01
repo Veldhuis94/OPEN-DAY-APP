@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="backgroundcolor" format="reference"></attr>
+    <attr name="fieldbordercolor" format="reference"></attr>
+    <attr name="textcolor" format="reference"></attr>
+    <attr name="textcolor2" format="reference"></attr>
 </resources>
