@@ -43,6 +43,8 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
             //CHANGE MAINACTIVITY TO THE NEW ACTIVITY WHEN ITS DONE
             //CHANGE USERNAME AND  PASSWORD IF NEEDED
+            //CHANGE A BUTTON ON THE HOMEPAGE TO START THIS ACTIVITY
+            //USERNAME AND PASSOWRD ARE: admin and admin123
 
 
         }else{ Info.setText("Wrong username or password");
