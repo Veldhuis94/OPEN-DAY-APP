@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:background="@color/secondary3"
+                android:background="?attr/backgroundcolor"
                 android:orientation="vertical"
                 android:paddingBottom="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
                     android:layout_height="68dp"
                     android:gravity="center"
                     android:text="@string/aboutcmi_location"
-                    android:textColor="@color/textDark2"
+                    android:textColor="?attr/textcolor2"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:fontFamily="sans-serif" />
@@ -60,7 +60,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:background="@color/secondary4"
+                    android:background="?attr/backgroundcolor2"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -75,7 +75,7 @@
                             android:layout_marginLeft="10dp"
                             android:gravity="center|left"
                             android:text="@string/aboutcmi_phoneNumber"
-                            android:textColor="@color/textDark"
+                            android:textColor="?attr/textcolor"
                             android:textSize="16dp" />
 
                         <TextView
@@ -85,7 +85,7 @@
                             android:layout_marginLeft="10dp"
                             android:gravity="center|left"
                             android:text="@string/aboutcmi_email"
-                            android:textColor="@color/textDark"
+                            android:textColor="?attr/textcolor"
                             android:textSize="16dp" />
 
                         <TextView
@@ -95,7 +95,7 @@
                             android:layout_marginLeft="10dp"
                             android:gravity="center|left"
                             android:text="@string/aboutcmi_website"
-                            android:textColor="@color/textDark"
+                            android:textColor="?attr/textcolor"
                             android:textSize="16dp"
                             tools:layout_editor_absoluteX="25dp"
                             tools:layout_editor_absoluteY="217dp" />
@@ -158,7 +158,7 @@
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
                     android:text="@string/aboutcmi_textHeader"
-                    android:textColor="@color/textDark"
+                    android:textColor="?attr/textcolor"
                     android:textSize="16dp" />
 
                 <TextView
@@ -169,7 +169,7 @@
                     android:layout_marginRight="20dp"
                     android:gravity="center"
                     android:text="@string/aboutcmi_content"
-                    android:textColor="@color/textDark"
+                    android:textColor="?attr/textcolor"
                     android:textSize="16dp" />
 
                 <LinearLayout

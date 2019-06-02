@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="backgroundcolor">@color/backgroundcolor_light</item>
+        <item name="backgroundcolor2">@color/secondary4</item>
         <item name="fieldbordercolor">@color/textfield_border_default</item>
         <item name="textcolor">@color/textDark</item>
         <item name="textcolor2">@color/textDark2</item>
@@ -18,6 +19,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="backgroundcolor">@color/backgroundcolor_dark</item>
+        <item name="backgroundcolor2">@color/secondary5</item>
         <item name="fieldbordercolor">@color/textfield_border_default_light</item>
         <item name="textcolor">@color/textLight</item>
         <item name="textcolor2">@color/textLight2</item>
