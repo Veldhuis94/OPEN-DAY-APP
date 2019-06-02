@@ -31,149 +31,149 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:background="@color/secondary3"
-            android:orientation="vertical"
-            android:paddingBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="36dp"
+               android:background="?attr/backgroundcolor2"
+               android:orientation="vertical"
+               android:paddingBottom="20dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.0"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.0">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="68dp"
-                android:gravity="center"
-                android:text="@string/floorplan_location"
-                android:textColor="@color/textDark2"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:fontFamily="sans-serif" />
+               <TextView
+                   android:id="@+id/textView4"
+                   android:layout_width="match_parent"
+                   android:layout_height="68dp"
+                   android:gravity="center"
+                   android:text="@string/floorplan_location"
+                   android:textColor="?attr/textcolor2"
+                   android:textSize="30sp"
+                   android:textStyle="bold"
+                   app:fontFamily="sans-serif" />
 
-            <TextView
-                android:id="@+id/BuildingHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/floorplan_building_header"
-                android:textColor="@color/textDark2"
-                android:textSize="22dp" />
+               <TextView
+                   android:id="@+id/BuildingHeader"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:text="@string/floorplan_building_header"
+                   android:textColor="?attr/textcolor"
+                   android:textSize="22dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:layout_marginRight="80dp"
-                android:orientation="horizontal">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="80dp"
+                   android:layout_marginRight="80dp"
+                   android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/BuildingH_Button"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/round_button_grey"
-                    android:text="H"
-                    android:textColor="@color/textLight"
-                    android:textSize="16dp" />
+                   <Button
+                       android:id="@+id/BuildingH_Button"
+                       android:layout_width="100dp"
+                       android:layout_height="40dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:layout_weight="1"
+                       android:background="@drawable/round_button_grey"
+                       android:text="H"
+                       android:textColor="@color/textLight"
+                       android:textSize="16dp" />
 
-                <Button
-                    android:id="@+id/BuildingWD_Button"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/round_button_grey"
-                    android:text="WD"
-                    android:textColor="@color/textLight"
-                    android:textSize="16dp" />
+                   <Button
+                       android:id="@+id/BuildingWD_Button"
+                       android:layout_width="100dp"
+                       android:layout_height="40dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:layout_weight="1"
+                       android:background="@drawable/round_button_grey"
+                       android:text="WD"
+                       android:textColor="@color/textLight"
+                       android:textSize="16dp" />
 
-                <Button
-                    android:id="@+id/BuildingWN_Button"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/round_button_grey"
-                    android:text="WN"
-                    android:textColor="@color/textLight"
-                    android:textSize="16dp" />
+                   <Button
+                       android:id="@+id/BuildingWN_Button"
+                       android:layout_width="100dp"
+                       android:layout_height="40dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:layout_weight="1"
+                       android:background="@drawable/round_button_grey"
+                       android:text="WN"
+                       android:textColor="@color/textLight"
+                       android:textSize="16dp" />
 
-            </LinearLayout>
+               </LinearLayout>
 
-            <TextView
-                android:id="@+id/FloorHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/floorplan_floor_header"
-                android:textColor="@color/textDark2"
-                android:textSize="22dp" />
+               <TextView
+                   android:id="@+id/FloorHeader"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:text="@string/floorplan_floor_header"
+                   android:textColor="?attr/textcolor"
+                   android:textSize="22dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="100dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="100dp"
+                   android:layout_marginRight="100dp"
+                   android:layout_weight="1"
+                   android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/Floor_Down_Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/round_button_grey"
-                    android:text="@string/floorplan_down"
-                    android:textColor="@color/textLight"
-                    android:textSize="20dp" />
+                   <Button
+                       android:id="@+id/Floor_Down_Button"
+                       android:layout_width="wrap_content"
+                       android:layout_height="40dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_weight="1"
+                       android:background="@drawable/round_button_grey"
+                       android:text="@string/floorplan_down"
+                       android:textColor="@color/textLight"
+                       android:textSize="20dp" />
 
-                <TextView
-                    android:id="@+id/Floor_Value_Text"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="@color/textDark2"
-                    android:textSize="20sp"
-                    tools:text="0" />
+                   <TextView
+                       android:id="@+id/Floor_Value_Text"
+                       android:layout_width="100dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_weight="1"
+                       android:gravity="center"
+                       android:text="0"
+                       android:textColor="?attr/textcolor2"
+                       android:textSize="20sp"
+                       tools:text="0" />
 
-                <Button
-                    android:id="@+id/Floor_Up_Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/round_button_grey"
-                    android:text="@string/floorplan_up"
-                    android:textColor="@color/textLight"
-                    android:textSize="20dp" />
+                   <Button
+                       android:id="@+id/Floor_Up_Button"
+                       android:layout_width="wrap_content"
+                       android:layout_height="40dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_weight="1"
+                       android:background="@drawable/round_button_grey"
+                       android:text="@string/floorplan_up"
+                       android:textColor="@color/textLight"
+                       android:textSize="20dp" />
 
-            </LinearLayout>
+               </LinearLayout>
 
 
-        </LinearLayout>
+           </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
