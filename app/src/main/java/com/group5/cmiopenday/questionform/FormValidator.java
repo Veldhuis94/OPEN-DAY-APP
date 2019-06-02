@@ -30,6 +30,7 @@ public class FormValidator {
     private HashSet invalidFields = new HashSet(); //set that contains textfields that are invalid.
 
     public int minTextLength = 1; //min length of a textfield to be valid
+    public static boolean valids;
 
     public FormValidator(Button submitButton){
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
@@ -60,6 +61,7 @@ public class FormValidator {
             invalidFields.remove(textField);
             textField.setBackgroundResource(R.drawable.textfield_valid); //set background for showing it's valid.
             if(invalidFields.size() == 0){ //All fields must be valid before the
+                valids = true;
                 submitButton.setEnabled(true);
             }
         }
@@ -68,7 +70,8 @@ public class FormValidator {
             if(changeBackgroundIfInvalid){
                 textField.setBackgroundResource(R.drawable.textfield_invalid); //set background for showing it's invalid.
             }
-            submitButton.setEnabled(false);
+            valids = false;
+            submitButton.setEnabled(true);
         }
     }
 }
