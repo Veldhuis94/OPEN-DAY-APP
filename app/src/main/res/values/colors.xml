@@ -12,7 +12,7 @@
     <color name="secondary1">#B70F0A</color>
     <color name="secondary2">#999999</color>
     <color name="secondary3">#E7E7E7</color>
-    <color name="secondary4">#d6d6d6</color>
+    <color name="secondary4">#00D6D6D6</color>
 
     <color name="textfield_border_default">#000000</color>
     <color name="textfield_border_valid">#03DB27</color>

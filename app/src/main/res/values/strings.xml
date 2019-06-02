@@ -145,15 +145,25 @@
         <item>WN.01.014</item>
     </string-array>
     <string-array name="StudyProjectArray">
-        <item>Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Technische Informatica hebben het studielandschap op de 5e etage van Wijnhaven 99  ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Creative Media and Game Technologies hebben het studielandschap op de 4e etage van Wijnhaven 99 ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Technische Informatica hebben het studielandschap op de 5e etage van Wijnhaven 99  ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Creative Media and Game Technologies hebben het studielandschap op de 4e etage van Wijnhaven 99 ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
+        <item>Computer Science students have furnished the study landscape on the 4th floor with examples of their projects and are happy to tell you something about this.</item>
+        <item>Technical Computer Science students have furnished the study landscape on the 5th floor of Wijnhaven 99 with examples of their projects and are happy to tell you something about it.</item>
+        <item>Students Creative Media and Game Technologies have furnished the study landscape on the 4th floor of Wijnhaven 99 with examples of their projects and are happy to tell you something about this.</item>
+        <item>Communication students have furnished the study landscape on the 2nd floor with examples of their projects and are happy to tell you something about this.</item>
+        <item>Computer Science students have furnished the study landscape on the 4th floor with examples of their projects and are happy to tell you something about this.</item>
+        <item>Computer Science students have furnished the study landscape on the 5th floor of Wijnhaven 99 with examples of their projects and are happy to tell you something about this.</item>
+        <item>Students Creative Media and Game Technologies have furnished the study landscape on the 4th floor of Wijnhaven 99 with examples of their projects and are happy to tell you something about this.</item>
+        <item>Communication students have furnished the study landscape on the 2nd floor with examples of their projects and are happy to tell you something about this.</item>
 
+    </string-array>
+    <string-array name="CourseNameArray">
+        <item>Computer Science</item>
+        <item>Technical Computer Science</item>
+        <item>CMGT</item>
+        <item>Communication</item>
+        <item>Computer Science</item>
+        <item>Technical Computer Science</item>
+        <item>CMGT</item>
+        <item>Communication</item>
     </string-array>
 
     <string name="aboutcmi_content">The School of Communication, Media and Information Technology (CMI) provides higher education and applied research for the creative industry. As a committed partner CMI creates knowledge, skills and expertise for the ongoing development of the industry.\n\nCMI has five undergraduate programmes\n\nSoftware engineering\nComputer engineering\nCreative Media and Game Technologies\nCommunication &amp; Multimedia Design\nCommunication\nEach bachelor programme focuses on adding meaningful values to daily life by the use of communication, media or information technology. Students are being challenged to develop their competences such as creativity, entrepreneurship and interdisciplinary collaboration.\n\nOur education is practice driven and can be found throughout all years of our courses: practical cases and issues as a group assignment, embedded in education modules or advanced minors and electives, individual internships and graduate studies, but also in the form of guest lectures, workshops and business safaris (i.e. a trip where students visit multiple companies from an exploratory perspective).\n\nWe are constantly looking for themes in which cooperation with companies and universities is possible. The fresh view and up-to-date knowledge of our students often leads to innovative concepts, advanced insights and prototypes that are highly useful.\n\nCMI is closely linked to research group Creating 010, that conducts applied research to better utilize the potential of the creative industry in Rotterdam.</string>

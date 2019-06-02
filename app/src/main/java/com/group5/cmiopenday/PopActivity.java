@@ -1,34 +1,87 @@
 package com.group5.cmiopenday;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.provider.CalendarContract;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
 
 public class PopActivity extends Activity {
     static int popUpId;
+
+    final String date = "04-06-2019";
+    final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop);
 
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        int width = dm.widthPixels;
-        int height = dm.heightPixels;
+        //share button calls the function shareONOtherSocialMedia
+        ImageButton shareButton = findViewById(R.id.imageButton);
+        final Context context = this;
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shareOnOtherSocialMedia(context);
 
-        getWindow().setLayout((int) (width * .800), (int) (height * .70));
 
-        WindowManager.LayoutParams params = getWindow().getAttributes();
-        params.gravity = Gravity.CENTER;
-        params.x = 10;
-        params.y = -20;
+            }
+        });
 
-        getWindow().setAttributes(params);
+
+
+        //code for the add to calendar button
+        ImageButton calendarButton = findViewById(R.id.imageButton3);
+        calendarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(PopActivity.this, getString(R.string.calendarMessage), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_INSERT);
+                intent.setType("vnd.android.cursor.item/event");
+                intent.putExtra("title", getString(R.string.calendarTitle));
+                intent.putExtra("description", getString(R.string.calendarBody) + date);
+                Calendar beginTime = Calendar.getInstance();
+                beginTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[3], dateArray[4]);
+                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
+                Calendar endTime = Calendar.getInstance();
+                endTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[5], dateArray[6]);
+                intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
+                startActivity(intent);
+            }
+        });
+
+
+        int[] courseId = {R.array.CourseNameArray};
+        int[] courseText = {R.id.textView18};
+
+        for(int o = 0; o < courseText.length; o++){
+            String[] firstCourse = getResources().getStringArray(courseId[o]);
+            TextView firstCourseView = findViewById(courseText[o]);
+            firstCourseView.setText(firstCourse[popUpId]);
+        }
+
+
 
         int[] ids = {R.array.firstTimeArray, R.array.secondTimeArray, R.array.thirdTimeArray};
         int[] textViews = {R.id.textView15, R.id.textView21, R.id.textView23};
@@ -47,7 +100,7 @@ public class PopActivity extends Activity {
             TextView firstClassroomView = findViewById(classrooms[l]);
             firstClassroomView.setText(firstClassroom[popUpId]);
         }
-
+        //text for all study studyprojects. You can find it in strings.
         int[] projectId = {R.array.StudyProjectArray};
         int[] projectText = {R.id.textView28};
 
@@ -57,6 +110,39 @@ public class PopActivity extends Activity {
             firstProjectView.setText(firstProject[popUpId]);
         }
 
+    }
+
+    public void shareOnOtherSocialMedia(Context context) {
+
+        List<Intent> shareIntentsLists = new ArrayList<Intent>();
+        Intent shareIntent = new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+        shareIntent.setType("image/*");
+        List<ResolveInfo> resInfos = context.getPackageManager().queryIntentActivities(shareIntent, 0);
+        if (!resInfos.isEmpty()) {
+            for (ResolveInfo resInfo : resInfos) {
+                String packageName = resInfo.activityInfo.packageName;
+                if (packageName.toLowerCase().contains("twitter") || packageName.toLowerCase().contains("facebook") || packageName.toLowerCase().contains("whatsapp") || packageName.toLowerCase().contains("email") || packageName.toLowerCase().contains("gm")) {
+                    Intent intent = new Intent();
+                    intent.setComponent(new ComponentName(packageName, resInfo.activityInfo.name));
+                    intent.setAction(Intent.ACTION_SEND);
+                    intent.setType("text/plain");
+                    String shareBody = "CMI OPEN DAY";
+                    String shareSub = "On " + date + ", I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/";
+                    intent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
+                    intent.putExtra(Intent.EXTRA_TEXT, shareSub);
+                    intent.setPackage(packageName);
+                    shareIntentsLists.add(intent);
+                }
+            }
+            if (!shareIntentsLists.isEmpty()) {
+                Intent chooserIntent = Intent.createChooser(shareIntentsLists.remove(0), "Choose app to share");
+                chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, shareIntentsLists.toArray(new Parcelable[]{}));
+                context.startActivity(chooserIntent);
+            } else
+                Toast.makeText(PopActivity.this,"Error",Toast.LENGTH_SHORT).show();
+
+        }
     }
 
 }
