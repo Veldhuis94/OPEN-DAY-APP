@@ -6,8 +6,8 @@
 
     <color name="textLight">#FFFFFF</color>
     <color name="textLight2">#DDDDDD</color>
-    <color name="textDark">#000000</color>
-    <color name="textDark2">#444444</color>
+    <color name="textDark">#272727</color>
+    <color name="textDark2">#4D4D4D</color>
     <color name="primary">#e61610</color>
     <color name="accent">#FFCC00</color>
     <color name="secondary1">#B70F0A</color>
@@ -22,5 +22,5 @@
     <color name="textfield_border_invalid">#DB0303</color>
 
     <color name="backgroundcolor_light">#FFFFFF</color>
-    <color name="backgroundcolor_dark">#1F1F1F</color>
+    <color name="backgroundcolor_dark">#252525</color>
 </resources>
