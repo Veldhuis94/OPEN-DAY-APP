@@ -16,13 +16,31 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
     private DrawerLayout drawer;
     private NavigationView navigationView;
 
+    protected boolean nightmodeDuringCreation; //nightmode state of the activity creation
+    protected static boolean nightmodeIsOn; //nightmode of the app
+
+    @Override
+    protected void onStart(){ //is called after oncreate and when the user returns to this activity
+        if(nightmodeDuringCreation != nightmodeIsOn){
+            nightmodeDuringCreation = nightmodeIsOn;
+            recreate(); //recreate the activity with the right theme.
+        }
+        super.onStart();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        nightmodeDuringCreation = nightmodeIsOn; //save the nightmode state in this object for later use.
+        int themeId = ((nightmodeIsOn)? R.style.AppThemeDark : R.style.AppTheme);
+        getTheme().applyStyle(themeId, true); //set the theme
+        super.onCreate(savedInstanceState);
+    }
+
     protected void onCreateDrawer(Bundle savedInstanceState) {
         // making a variable with from xml
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Making the toolbar as the action bar
         setSupportActionBar(toolbar);
-
-
 
         // making the variable link with xml
         drawer = findViewById(R.id.drawer_layout);
@@ -78,10 +96,21 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
                 Intent f = new Intent(menu_Activity.this,TravelActivity.class);
                 startActivity(f);
                 break;
+            case R.id.nightmode_toggle:
+                //toggle nightmode
+                nightmodeIsOn = !nightmodeIsOn;
+                nightmodeDuringCreation = nightmodeIsOn;
+
+                //this implementation is better than using recreate in this case, because the screen
+                //blinks when using recreate().
+                startActivity(getIntent());
+                overridePendingTransition( 0, 0); //set the transition time of launching the same activity to 0
+
+                finish(); //destroy this activity
+                overridePendingTransition( 0, 0); //set the transition time of leaving this activity to 0
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 }
