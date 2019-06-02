@@ -6,8 +6,8 @@
 
     <color name="textLight">#FFFFFF</color>
     <color name="textLight2">#DDDDDD</color>
-    <color name="textDark">#272727</color>
-    <color name="textDark2">#4D4D4D</color>
+    <color name="textDark">#2E2E2E</color>
+    <color name="textDark2">#525252</color>
     <color name="primary">#e61610</color>
     <color name="accent">#FFCC00</color>
     <color name="secondary1">#B70F0A</color>

@@ -85,9 +85,9 @@
                     android:layout_marginEnd="20dp"
                     android:text="@string/open_days"
                     android:textAllCaps="false"
+                    android:textColor="?attr/textcolor2"
                     android:textSize="36sp"
                     android:textStyle="bold"
-                    android:textColor="?attr/textcolor"
                     tools:layout_editor_absoluteX="132dp"
                     tools:layout_editor_absoluteY="258dp" />
 
