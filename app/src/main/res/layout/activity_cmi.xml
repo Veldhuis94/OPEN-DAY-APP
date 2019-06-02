@@ -213,6 +213,7 @@
         app:menu="@menu/sidebare_menu"
         tools:visibility="gone"
         app:itemTextColor="?attr/textcolor"
+        app:itemIconTint="?attr/sidebar_icon_color"
         android:background="?attr/backgroundcolor"/>
 
 </android.support.v4.widget.DrawerLayout>
