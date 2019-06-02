@@ -95,6 +95,8 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
-        tools:visibility="gone" />
+        tools:visibility="gone"
+        app:itemTextColor="?attr/textcolor"
+        android:background="?attr/backgroundcolor"/>
 
 </android.support.v4.widget.DrawerLayout>
