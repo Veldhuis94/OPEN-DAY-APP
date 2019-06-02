@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">CMI Open Day</string>
     <string name="opendaybutton">more information</string>
-    <string name="de_scroller_werkt_lol" translatable="false">de scroller werkt lol</string>
-    <string name="OpenDay_Test" translatable="false">CMI Open Day, 04–4–2019\n12:00 – 16:00\nInformatica, Technische Informatica, Communicatie</string>
-    <string name="OpenDay_Test2" translatable="false">CMI Open Day, 04–6–2019\n17:00 – 20:00\nInformatica, Communicatie</string>
+    <string name="OpenDay_Test">CMI Open Day, 04–4–2019\n12:00 – 16:00\nSoftware Engineering, Computer Engineering, Communication</string>
+    <string name="OpenDay_Test2">CMI Open Day, 04–6–2019\n17:00 – 20:00\nSoftware Engineering, Communication</string>
     <string name="open_days">Open Days</string>
     <string name="OpenDay_Informatica" translatable="false">H.04.208/ 12:00 – 16:00\nWijnhaven 107</string>
-    <string name="Technische_Informatica" translatable="false">Technische informatica</string>
+    <string name="Technische_Informatica">Computer Engineering</string>
     <string name="OpenDay_Technische_Informatica" translatable="false">H.03.108/ 12:00 – 16:00\nWijnhaven 107</string>
     <string name="CMGT" translatable="false">CMGT</string>
     <string name="OpenDay_CMGT" translatable="false">WD.05.018/ 12:00 – 16:00\nWijnhaven 103</string>
@@ -17,7 +16,7 @@
     <string name="shareString">Share using what?</string>
     <string name="shareBody1">On</string>
     <string name="shareBody2">, I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/</string>
-    <string name="calendarMessage">Opening calendar...</string>
+    <string name="calendarMessage">Opening calendar…</string>
     <string name="calendarTitle">CMI Open Day</string>
     <string name="calendarBody">CMI Open Day of</string>
 
@@ -74,7 +73,7 @@
     <string name="questionform_chooseApp">Choose an app for sending your message.</string>
     <string name="Communication_and_Multimedia_Design" translatable="false">Communication and Multimedia Design</string>
     <string name="Creative_Media_and_Game_Technologies" translatable="false">Creative Media and Game Technologies</string>
-    <string name="Informatica" translatable="false">Informatica</string>
+    <string name="Informatica">Software Engineering</string>
     <string name="software_engineering">Software Engineering</string>
     <string name="computer_engineering">Computer Engineering</string>
 
