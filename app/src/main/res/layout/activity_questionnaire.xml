@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Questionnaire">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="57dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:text="Question 1"
+                android:textSize="36sp"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/qbody1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/textView22"
+                android:text="Question Body"
+                android:layout_marginBottom="20dp"/>
+            <Button
+                android:id="@+id/q1a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 1"
+                android:layout_toLeftOf="@id/q1a2"
+                android:layout_below="@id/qbody1" />
+
+            <Button
+                android:id="@+id/q1a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/qbody1"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/q1a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 3"
+                android:layout_toRightOf="@id/q1a2"
+                android:layout_below="@id/qbody1" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/q1a2"
+                android:text="Question 2"
+                android:textSize="36sp"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/qbody2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/textView23"
+                android:text="Question Body"
+                android:layout_marginBottom="20dp"/>
+            <Button
+                android:id="@+id/q2a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 1"
+                android:layout_toLeftOf="@id/q2a2"
+                android:layout_below="@id/qbody2" />
+
+            <Button
+                android:id="@+id/q2a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/qbody2"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/q2a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 3"
+                android:layout_toRightOf="@id/q2a2"
+                android:layout_below="@id/qbody2" />
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/q2a2"
+                android:text="Question 3"
+                android:textSize="36sp"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/qbody3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/textView24"
+                android:text="Question Body"
+                android:layout_marginBottom="20dp"/>
+            <Button
+                android:id="@+id/q3a1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 1"
+                android:layout_toLeftOf="@id/q3a2"
+                android:layout_below="@id/qbody3" />
+
+            <Button
+                android:id="@+id/q3a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/qbody3"
+                android:layout_marginBottom="40dp"/>
+
+            <Button
+                android:id="@+id/q3a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 3"
+                android:layout_toRightOf="@id/q3a2"
+                android:layout_below="@id/qbody3" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/submitButton"
+                android:text="Submit"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/q3a2" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
