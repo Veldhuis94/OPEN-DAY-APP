@@ -38,7 +38,24 @@
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/editext"
+            android:hint="Date"
+            android:id="@+id/editext_Date"
+            />
+        <EditText
+            android:layout_marginTop="150dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/editext_Time"
+            android:hint="Time"
+            />
+        <EditText
+            android:layout_marginTop="200dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/editext_Courses"
+            android:hint="Courses"
             />
     </android.support.design.circularreveal.CircularRevealRelativeLayout>
     <android.support.design.circularreveal.CircularRevealRelativeLayout
@@ -64,7 +81,7 @@
 
 
     </android.support.design.circularreveal.CircularRevealRelativeLayout>
-
+    </android.support.design.circularreveal.CircularRevealRelativeLayout>
         <android.support.design.widget.NavigationView
         android:id="@+id/sidebar_view"
         android:layout_width="wrap_content"
@@ -76,5 +93,5 @@
 
 />
 
-    </android.support.design.circularreveal.CircularRevealRelativeLayout>
+
 </android.support.v4.widget.DrawerLayout>
