@@ -1,35 +1,38 @@
 package com.group5.cmiopenday;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class Questionnaire extends AppCompatActivity {
+public class Questionnaire extends menu_Activity {
 
-    Button[] answers = {findViewById(R.id.q1a1), findViewById(R.id.q1a2), findViewById(R.id.q1a3), findViewById(R.id.q1a3), findViewById(R.id.q2a1), findViewById(R.id.q2a2), findViewById(R.id.q2a3), findViewById(R.id.q3a1), findViewById(R.id.q3a2), findViewById(R.id.q3a3)};
+
+    boolean[] isPressed = {false, false, false, false, false, false, false, false, false};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire);
-        int finalScore = onClickEvent();
-        final int finalScoreSend = finalScore;
+        onClickEvent();
+
 
         Button submitButton = findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Questionnaire.this, resultPage.class));
-                resultPage.finalResult = finalScoreSend;
+                int finalScoreSend = scoreCalculate();
+                TextView scoreView = findViewById(R.id.SCOREVIEW);
+                scoreView.setText("Your score is: " + finalScoreSend);
             }
         });
     }
-    private int onClickEvent() {
+    private void onClickEvent() {
+        final Button[] answers = {findViewById(R.id.q1a1), findViewById(R.id.q1a2), findViewById(R.id.q1a3), findViewById(R.id.q2a1), findViewById(R.id.q2a2), findViewById(R.id.q2a3), findViewById(R.id.q3a1), findViewById(R.id.q3a2), findViewById(R.id.q3a3)};
         final int disabledColor = R.color.secondary2;
         final int enabledColor = R.color.secondary1;
-        final int[] returnScores = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-        int ResultScore = 0;
+
+
         for(int id = 0; id <= 9; id ++) {
             if(id == 0 || id == 3 || id == 6) {
                 final int finalId = id;
@@ -39,7 +42,9 @@ public class Questionnaire extends AppCompatActivity {
                         answers[finalId].setBackgroundColor(getResources().getColor(enabledColor));
                         answers[finalId + 1].setBackgroundColor(getResources().getColor(disabledColor));
                         answers[finalId + 2].setBackgroundColor(getResources().getColor(disabledColor));
-                        returnScores[finalId] = 1;
+                        isPressed[finalId] = true;
+                        isPressed[finalId + 1] = false;
+                        isPressed[finalId + 2] = false;
                     }
                 });
             }
@@ -51,11 +56,13 @@ public class Questionnaire extends AppCompatActivity {
                         answers[finalId].setBackgroundColor(getResources().getColor(enabledColor));
                         answers[finalId + 1].setBackgroundColor(getResources().getColor(disabledColor));
                         answers[finalId - 1].setBackgroundColor(getResources().getColor(disabledColor));
-                        returnScores[finalId] = 3;
+                        isPressed[finalId] = true;
+                        isPressed[finalId + 1] = false;
+                        isPressed[finalId - 1] = false;
                     }
                 });
             }
-            else {
+            else if(id == 2 || id == 5 || id == 8) {
                 final int finalId = id;
                 answers[finalId].setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -63,12 +70,29 @@ public class Questionnaire extends AppCompatActivity {
                         answers[finalId].setBackgroundColor(getResources().getColor(enabledColor));
                         answers[finalId - 1].setBackgroundColor(getResources().getColor(disabledColor));
                         answers[finalId - 2].setBackgroundColor(getResources().getColor(disabledColor));
-                        returnScores[finalId] = 5;
+                        isPressed[finalId] = true;
+                        isPressed[finalId - 1] = false;
+                        isPressed[finalId - 2] = false;
                     }
                 });
             }
-            ResultScore += returnScores[id];
         }
-        return ResultScore;
+    }
+    private int scoreCalculate() {
+        int score = 0;
+        for(int id = 0; id <= 8; id ++) {
+            if(isPressed[id]){
+                if(id == 0 || id == 3 || id == 6){
+                    score += 1;
+                }
+                else if(id == 1 || id == 4 || id == 7){
+                    score += 3;
+                }
+                else if(id == 2 || id == 5 || id == 8) {
+                    score += 5;
+                }
+            }
+        }
+        return score;
     }
 }
