@@ -3,6 +3,7 @@
     <string name="opendaybutton">more information</string>
     <string name="OpenDay_Test">CMI Open Day, 04–4–2019\n12:00 – 16:00\nSoftware Engineering, Computer Engineering, Communication</string>
     <string name="OpenDay_Test2">CMI Open Day, 04–6–2019\n17:00 – 20:00\nSoftware Engineering, Communication</string>
+
     <string name="open_days">Open Days</string>
     <string name="OpenDay_Informatica" translatable="false">H.04.208/ 12:00 – 16:00\nWijnhaven 107</string>
     <string name="Technische_Informatica">Computer Engineering</string>
@@ -167,8 +168,6 @@
     <string name="TravelDirection">Travel Directions</string>
 
     <string name="title_activity_travel">TravelActivity</string>
-
-
 
 
 </resources>
