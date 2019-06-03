@@ -19,19 +19,16 @@ public class MainActivity extends menu_Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         super.onCreateDrawer(savedInstanceState);
-        DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
+ //       DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
+ //       StringBuilder stringBuilder = new StringBuilder();
+ //       TextView textView2 = findViewById(R.id.textView2);
  //       c = myDbHelper.query("Homepage", null, null, null, null, null, null);
- //       if (c.moveToFirst()) {
- //           do {
- //               Toast.makeText(MainActivity.this,
-//                        "_id: " + c.getString(0) + "\n" +
- //                               "Date: " + c.getString(1) + "\n" +
-//                                "Time: " + c.getString(2) + "\n" +
-//                                "Courses:  " + c.getString(3),
-//                        Toast.LENGTH_LONG).show();
-//            } while (c.moveToNext());
-//        TextView textView2 = findViewById(R.id.textView2);
-//        StringBuilder stringBuilder = new StringBuilder();
+  //      if (c.moveToFirst()) {
+  //          do {
+   //             stringBuilder.append("CMI Open Day, Date: "+c.getString(1)+"\nTime: "+c.getString(2)+"\n"+c.getString(3));
+   //         } while (c.moveToNext());
+
+
 //        c1 = myDbHelper.query("Homepage", null, null, null, null, null, null);
 //        if (c1.moveToFirst()) {
 //            do {
@@ -51,8 +48,8 @@ public class MainActivity extends menu_Activity{
 //        String ewa = cursor.getString(3);
 //        while (cursor.moveToNext()){
 //            stringBuilder.append("CMI Open Day, Date: "+cursor.getString(1)+"\nTime: "+cursor.getString(2)+"\n"+cursor.getString(3));
-  //      }
-//        textView2.setText(stringBuilder);
+ //       }
+  //      textView2.setText(stringBuilder);
 
         Button button21 = findViewById(R.id.button21);
         button21.setOnClickListener(new View.OnClickListener() {
