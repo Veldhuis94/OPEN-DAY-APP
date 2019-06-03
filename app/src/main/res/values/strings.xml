@@ -61,7 +61,7 @@
     <string name="floorplan_floor_header">Floor</string>
     <string name="floorplan_building_header">Building</string>
 
-
+    <string name="questionnaire">Questionnaire</string>
     <string name="floorplan_up" translatable="false">+</string>
     <string name="floorplan_down" translatable="false">-</string>
     <string name="questionform_name">Name</string>

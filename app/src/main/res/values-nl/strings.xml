@@ -56,4 +56,5 @@
     <string name="Communicatiewetenschappen" translatable="false">Communicatie</string>
     <string name="questionform_fill_in">Vul in</string>
     <string name="questionform_chooseApp">Kies een app om je bericht mee te versturen.</string>
+    <string name="questionnaire">Questionnaire</string>
 </resources>

@@ -10,10 +10,12 @@ public class Questionnaire extends menu_Activity {
 
 
     boolean[] isPressed = {false, false, false, false, false, false, false, false, false};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire);
+        super.onCreateDrawer(savedInstanceState);
         onClickEvent();
 
 
@@ -23,7 +25,12 @@ public class Questionnaire extends menu_Activity {
             public void onClick(View v) {
                 int finalScoreSend = scoreCalculate();
                 TextView scoreView = findViewById(R.id.SCOREVIEW);
-                scoreView.setText("Your score is: " + finalScoreSend);
+                if(finalScoreSend <= 0) {
+                    scoreView.setText("You have not filled in all the questions.");
+                }
+                else {
+                    scoreView.setText("Your score is: " + finalScoreSend);
+                }
             }
         });
     }
@@ -93,6 +100,11 @@ public class Questionnaire extends menu_Activity {
                 }
             }
         }
-        return score;
+        if((isPressed[0] || isPressed[1] || isPressed[2]) && (isPressed[3] || isPressed[4] || isPressed[5]) && (isPressed[6] || isPressed[7] || isPressed[8])) {
+            return score;
+        }
+        else {
+            return 0;
+        }
     }
 }
