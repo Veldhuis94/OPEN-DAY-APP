@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity android:name=".resultPage" />
         <activity android:name=".Questionnaire" />
+
+        <activity android:name=".LoginActivity"></activity>
+
         <activity
             android:name=".TravelActivity"
             android:label="@string/title_activity_travel"
@@ -46,7 +50,9 @@
             android:theme="@style/AppTheme.PopMe" />
         <activity
             android:name=".MainActivity"
+
             android:label="@string/open_days" />
+
     </application>
 
 </manifest>
