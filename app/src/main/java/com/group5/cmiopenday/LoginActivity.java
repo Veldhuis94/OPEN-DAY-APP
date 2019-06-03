@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void validate(String userName, String userPassword){
 
-        if ((userName.equals("admin")) & (userPassword.equals("admin123"))){
+        if ((userName.equals("admin")) && (userPassword.equals("admin123"))){
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
             //CHANGE MAINACTIVITY TO THE NEW ACTIVITY WHEN ITS DONE
@@ -47,9 +47,10 @@ public class LoginActivity extends AppCompatActivity {
             //USERNAME AND PASSOWRD ARE: admin and admin123
 
 
-        }else{ Info.setText("Wrong username or password");
-
-
         }
+        else {Info.setText("Wrong username or password"); Toast.makeText(LoginActivity.this,"Try Again", Toast.LENGTH_SHORT).show();}
+
+
+
     }
 }
