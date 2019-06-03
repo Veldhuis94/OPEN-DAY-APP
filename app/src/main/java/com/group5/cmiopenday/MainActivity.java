@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends menu_Activity{
     private Button button;
     private Button button21;
-    Cursor c1 = null;
+    Cursor c = null;
 
 
     @Override
@@ -20,19 +20,29 @@ public class MainActivity extends menu_Activity{
         setContentView(R.layout.activity_main);
         super.onCreateDrawer(savedInstanceState);
         DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
-        TextView textView2 = findViewById(R.id.textView2);
-        StringBuilder stringBuilder = new StringBuilder();
-        c1 = myDbHelper.query("Homepage", null, null, null, null, null, null);
-        if (c1.moveToFirst()) {
-            do {
-                stringBuilder.append("CMI Open Day, Date: "+c1.getString(1)+"\nTime: "+c1.getString(2)+"\n"+c1.getString(3));
-            } while (c1.moveToNext());
+ //       c = myDbHelper.query("Homepage", null, null, null, null, null, null);
+ //       if (c.moveToFirst()) {
+ //           do {
+ //               Toast.makeText(MainActivity.this,
+//                        "_id: " + c.getString(0) + "\n" +
+ //                               "Date: " + c.getString(1) + "\n" +
+//                                "Time: " + c.getString(2) + "\n" +
+//                                "Courses:  " + c.getString(3),
+//                        Toast.LENGTH_LONG).show();
+//            } while (c.moveToNext());
+//        TextView textView2 = findViewById(R.id.textView2);
+//        StringBuilder stringBuilder = new StringBuilder();
+//        c1 = myDbHelper.query("Homepage", null, null, null, null, null, null);
+//        if (c1.moveToFirst()) {
+//            do {
+//                stringBuilder.append("CMI Open Day, Date: "+c1.getString(1)+"\nTime: "+c1.getString(2)+"\n"+c1.getString(3));
+//            } while (c1.moveToNext());
 
 
 
 //        while (c1.moveToNext()){
 //            stringBuilder.append("CMI Open Day, Date: "+c1.getString(1)+"\nTime: "+c1.getString(2)+"\n"+c1.getString(3));
-        }
+//        }
 
 
 
@@ -41,8 +51,8 @@ public class MainActivity extends menu_Activity{
 //        String ewa = cursor.getString(3);
 //        while (cursor.moveToNext()){
 //            stringBuilder.append("CMI Open Day, Date: "+cursor.getString(1)+"\nTime: "+cursor.getString(2)+"\n"+cursor.getString(3));
-//        }
-        textView2.setText(stringBuilder);
+  //      }
+//        textView2.setText(stringBuilder);
 
         Button button21 = findViewById(R.id.button21);
         button21.setOnClickListener(new View.OnClickListener() {
