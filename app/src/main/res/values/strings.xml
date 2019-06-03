@@ -168,7 +168,7 @@
     <string name="TravelDirection">Travel Directions</string>
 
     <string name="title_activity_travel">TravelActivity</string>
-
+    <string name="invalid_fields">You have some invalid field(s).</string>
 
 </resources>
 

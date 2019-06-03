@@ -30,7 +30,7 @@ public class FormValidator {
     private HashSet invalidFields = new HashSet(); //set that contains textfields that are invalid.
 
     public int minTextLength = 1; //min length of a textfield to be valid
-    public static boolean valids;
+    public boolean valids;
 
     public FormValidator(Button submitButton){
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+

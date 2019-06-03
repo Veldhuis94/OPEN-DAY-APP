@@ -16,7 +16,7 @@ import com.group5.cmiopenday.questionform.FormValidator;
 public class QuestionFormActivity extends menu_Activity{
 
     private FormValidator validator; //for validating the textfields
-    boolean valid = false;
+    Toast toast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +33,15 @@ public class QuestionFormActivity extends menu_Activity{
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(FormValidator.valids) {
+                if(validator.valids) {
                     FormSender.Send(activity, email.getText().toString(), name.getText().toString(), subject.getText().toString(), question.getText().toString());
                 }
                 else{
-                    Toast.makeText(QuestionFormActivity.this,"You have some invalid field(s).",Toast.LENGTH_SHORT).show();
+                    if(toast !=null){
+                        toast.cancel();
+                    }
+                   toast = Toast.makeText(QuestionFormActivity.this,R.string.invalid_fields,Toast.LENGTH_LONG);
+                   toast.show();
                 }
             }
         });
