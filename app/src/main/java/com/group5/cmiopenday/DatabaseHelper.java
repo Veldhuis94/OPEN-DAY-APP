@@ -20,6 +20,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "MyDatabase";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
+    String row_id = null;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, 10);
@@ -101,6 +102,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
         return myDataBase.query("Homepage", null, null, null, null, null, null);
+    }
+
+    public Cursor ViewData(){
+        SQLiteDatabase sqLiteDatabase  = this.getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from "+ DB_NAME+" where _id= 1",null);
+        return cursor;
     }
 
 

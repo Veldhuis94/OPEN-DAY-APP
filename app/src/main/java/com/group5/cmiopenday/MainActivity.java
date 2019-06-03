@@ -1,9 +1,11 @@
 package com.group5.cmiopenday;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends menu_Activity{
     private Button button;
@@ -14,6 +16,14 @@ public class MainActivity extends menu_Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         super.onCreateDrawer(savedInstanceState);
+        DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
+        TextView textView2 = findViewById(R.id.textView2);
+        Cursor cursor = myDbHelper.ViewData();
+        StringBuilder stringBuilder = new StringBuilder();
+        while (cursor.moveToNext()){
+            stringBuilder.append("CMI Open Day, Date: "+cursor.getString(1)+"\nTime: "+cursor.getString(2)+"\n"+cursor.getString(3));
+       }
+        textView2.setText(stringBuilder);
 
         Button button21 = findViewById(R.id.button21);
         button21.setOnClickListener(new View.OnClickListener() {

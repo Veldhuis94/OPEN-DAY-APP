@@ -35,7 +35,7 @@ public class CopyDatabase extends AppCompatActivity {
                 } catch (SQLException sqle) {
                     throw sqle;
                 }
-                Toast.makeText(CopyDatabase.this, "Successfully Imported", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CopyDatabase.this, "Successfully Imported" , Toast.LENGTH_SHORT).show();
                 c = myDbHelper.query("Homepage", null, null, null, null, null, null);
                 if (c.moveToFirst()) {
                     do {
