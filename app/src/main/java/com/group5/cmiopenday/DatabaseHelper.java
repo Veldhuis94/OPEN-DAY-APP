@@ -24,6 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String Col2 = "Date";
     private static final String Col3 = "Time";
     private static final String Col4 = "Courses";
+    private static final String DBlocation = "/data/data/com.group5.cmiopenday/databases/";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
 

@@ -14,6 +14,8 @@ public class DatabaseAddOpendays extends menu_Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database_add_openday);
         super.onCreateDrawer(savedInstanceState);
+        DatabaseHelper myDbHelper = new DatabaseHelper(DatabaseAddOpendays.this);
+        myDbHelper.openDataBase();
         editText_Date = findViewById(R.id.editext_Date);
         editText_Time = findViewById(R.id.editext_Time);
         editText_Courses = findViewById(R.id.editext_Courses);

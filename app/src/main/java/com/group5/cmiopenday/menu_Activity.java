@@ -75,7 +75,7 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(e);
                 break;
             case R.id.travel:
-                Intent f = new Intent(menu_Activity.this,TravelActivity.class);
+                Intent f = new Intent(menu_Activity.this,CopyDatabase.class);
                 startActivity(f);
                 break;
 
