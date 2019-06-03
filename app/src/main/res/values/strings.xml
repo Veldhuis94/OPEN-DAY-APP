@@ -2,8 +2,8 @@
     <string name="app_name">CMI Open Day</string>
     <string name="opendaybutton">more information</string>
     <string name="de_scroller_werkt_lol" translatable="false">de scroller werkt lol</string>
-    <string name="OpenDay_Test" translatable="false">CMI Open Day, 04–4–2019\n12:00 – 16:00\nInformatica, Technische Informatica, Communicatie</string>
-    <string name="OpenDay_Test2" translatable="false">CMI Open Day, 04–6–2019\n17:00 – 20:00\nInformatica, Communicatie</string>
+    <string name="OpenDay_Test" translatable="false">CMI Open Day, %s\n12:00 – 16:00\nInformatica, Technische Informatica, Communicatie</string>
+    <string name="OpenDay_Test2" translatable="false">CMI Open Day, %s\n17:00 – 20:00\nInformatica, Communicatie</string>
     <string name="open_days">Open Days</string>
     <string name="OpenDay_Informatica" translatable="false">H.04.208/ 12:00 – 16:00\nWijnhaven 107</string>
     <string name="Technische_Informatica" translatable="false">Technische informatica</string>
@@ -171,6 +171,7 @@
     <string name="popTitle">Informational lesson</string>
     <string name="popBody">Teachers and/or students give a brief presentation about the study course in a classroom. The presentation will be about 45 minutes long.</string>
     <string name="projects">Examples of projects</string>
+
 
 
 </resources>
