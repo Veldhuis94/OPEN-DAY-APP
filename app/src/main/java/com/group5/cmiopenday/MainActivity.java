@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ImageView;
+
 
 public class MainActivity extends menu_Activity{
     private Button button;
+    private ImageView loginbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,14 @@ public class MainActivity extends menu_Activity{
         secondOpenDay.setText(String.format(secondOpenDay.getText().toString(), DateUtility.getFullDate(4,6, 2019)));
 
         button = findViewById(R.id.button);
+        loginbtn = findViewById(R.id.loggbtn);
+        loginbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        });
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
