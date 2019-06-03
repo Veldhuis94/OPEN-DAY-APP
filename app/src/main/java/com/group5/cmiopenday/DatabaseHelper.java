@@ -105,9 +105,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public Cursor ViewData(){
-        SQLiteDatabase sqLiteDatabase  = this.getReadableDatabase();
+        SQLiteDatabase myDbHelper  = this.getReadableDatabase();
 
-        Cursor cursor = sqLiteDatabase.rawQuery("select * from "+ DB_NAME+" where _id= 1",null);
+        Cursor cursor = myDbHelper.rawQuery("select * from "+ DB_NAME,null);
         return cursor;
     }
 
