@@ -17,7 +17,7 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
     private NavigationView navigationView;
 
     protected boolean nightmodeDuringCreation; //nightmode state of the activity creation
-    protected static boolean nightmodeIsOn; //nightmode of the app
+    public static boolean nightmodeIsOn; //nightmode of the app
 
     @Override
     protected void onStart(){ //is called after oncreate and when the user returns to this activity
