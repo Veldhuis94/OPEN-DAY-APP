@@ -150,7 +150,6 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginEnd="20dp"
-                    android:text="@string/OpenDay_Test2"
                     android:textSize="18sp"
                     tools:layout_editor_absoluteX="132dp"
                     tools:layout_editor_absoluteY="258dp" />

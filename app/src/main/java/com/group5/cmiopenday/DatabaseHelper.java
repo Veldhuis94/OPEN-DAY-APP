@@ -20,7 +20,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "MyDatabase";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
-    String row_id = null;
+    int row_id = 0;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, 10);
@@ -100,9 +100,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
     }
 
+    public Cursor fetch_row(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy,int row_id) {
+        return myDataBase.query("Homepage", null, "_id="+row_id, null, null, null, null);
+    }
     public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
         return myDataBase.query("Homepage", null, null, null, null, null, null);
     }
+
 
     public Cursor ViewData(){
         SQLiteDatabase myDbHelper  = this.getReadableDatabase();
