@@ -145,14 +145,14 @@
         <item>WN.01.014</item>
     </string-array>
     <string-array name="StudyProjectArray">
-        <item>Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Technische Informatica hebben het studielandschap op de 5e etage van Wijnhaven 99  ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Creative Media and Game Technologies hebben het studielandschap op de 4e etage van Wijnhaven 99 ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Technische Informatica hebben het studielandschap op de 5e etage van Wijnhaven 99  ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Creative Media and Game Technologies hebben het studielandschap op de 4e etage van Wijnhaven 99 ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
-        <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
+        <item>Software Engineering students have staged examples of projects on the Study Landscape on the 5th floor, and would love to tell you more about them.</item>
+        <item>Computer Engineering students have staged examples of projects on the Study Landscape on the 6th floor of Wijnhaven 99, and would love to tell you more about them.</item>
+        <item>Creative Media and Game Technologies-students have staged examples of projects on the Study Landscape on the 5th floor of Wijnhaven 99, and would love to tell you more about them.</item>
+        <item>Communication students have staged examples of projects on the Study Landscape on the 3rd floor, and would love to tell you more about them.</item>
+        <item>Software Engineering students have staged examples of projects on the Study Landscape on the 5th floor, and would love to tell you more about them.</item>
+        <item>Computer Engineering students have staged examples of projects on the Study Landscape on the 6th floor of Wijnhaven 99, and would love to tell you more about them.</item>
+        <item>Creative Media and Game Technologies-students have staged examples of projects on the Study Landscape on the 5th floor of Wijnhaven 99, and would love to tell you more about them.</item>
+        <item>Communication students have staged examples of projects on the Study Landscape on the 3rd floor, and would love to tell you more about them.</item>
 
     </string-array>
 
@@ -168,7 +168,13 @@
     <string name="TravelDirection">Travel Directions</string>
 
     <string name="title_activity_travel">TravelActivity</string>
+
     <string name="invalid_fields">You have some invalid field(s).</string>
+
+    <string name="popTitle">Informational lesson</string>
+    <string name="popBody">Teachers and/or students give a brief presentation about the study course in a classroom. The presentation will be about 45 minutes long.</string>
+    <string name="projects">Examples of projects</string>
+
 
 </resources>
 
