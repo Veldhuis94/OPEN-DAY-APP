@@ -248,11 +248,11 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
                             tools:layout_editor_absoluteY="184dp"
-                            android:background="?attr/backgroundcolor2"
                             android:textColor="?attr/textcolor"/>
 
                         <View
@@ -281,6 +281,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/Technische_Informatica"
                             android:textSize="30sp"
                             android:textStyle="bold"
@@ -312,11 +313,11 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
                             tools:layout_editor_absoluteY="184dp"
-                            android:background="?attr/backgroundcolor2"
                             android:textColor="?attr/textcolor"/>
 
                         <View
@@ -375,11 +376,11 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
                             tools:layout_editor_absoluteY="184dp"
-                            android:background="?attr/backgroundcolor2"
                             android:textColor="?attr/textcolor"/>
 
                         <View
@@ -438,11 +439,11 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
                             tools:layout_editor_absoluteY="184dp"
-                            android:background="?attr/backgroundcolor2"
                             android:textColor="?attr/textcolor"/>
 
 
