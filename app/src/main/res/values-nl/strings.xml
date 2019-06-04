@@ -44,8 +44,9 @@
         <item>Communication and\nMultimedia Design</item>
         <item>Technische\nInformatica</item>
         <item>Creative Media and\nGame Technologies</item>
-
     </string-array>
+
+    <string name="version">Versie 1.0.0</string>
     <string name="about_cmi">Over het CMI</string>
     <string name="ask_a_question">Stel een vraag</string>
     <string name="courses">Opleidingen</string>
@@ -57,6 +58,11 @@
     <string name="questionform_fill_in">Vul in</string>
     <string name="questionform_chooseApp">Kies een app om je bericht mee te versturen.</string>
 
+
+    <string name="OpenDay_Test">CMI Open Dag, %s\n12:00 – 16:00\nInformatica, Technische Informatica, Communicatie</string>
+    <string name="OpenDay_Test2">CMI Open Dag, %s\n17:00 – 20:00\nInformatica, Communicatie</string>
+    <string name="Technische_Informatica">Technische Informatica</string>
+    <string name="Informatica">Informatica</string>
     <string name="questionnaire">Questionnaire</string>
 
     <string name="popTitle">Klassikale voorlichting</string>
