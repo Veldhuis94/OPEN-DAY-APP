@@ -19,7 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     String DB_PATH = null;
     private static String DB_NAME = "MyDatabase";
-    private static final String TABLE_NAME = "ID";
+    private static final String TABLE_NAME = "Homepage";
     private static final String Col1 = "ID";
     private static final String Col2 = "Date";
     private static final String Col3 = "Time";
@@ -106,14 +106,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
     }
     public boolean addData(String date, String time, String courses){
-        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-      contentValues.put("android_metadata",date.get());
-       // contentValues.put(Col2,date);
-        //contentValues.put(Col3,time);
-        //contentValues.put(Col4,courses);
-
-        long result = db.insert(DB_NAME, null, contentValues);
+        contentValues.put(Col2,date);
+        contentValues.put(Col3,time);
+        contentValues.put(Col4,courses);
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.insert(TABLE_NAME, null, contentValues);
         return result != -1;
     }
 

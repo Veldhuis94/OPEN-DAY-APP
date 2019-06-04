@@ -26,7 +26,7 @@ public class MainActivity extends menu_Activity{
         button21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DatabaseAddOpendays.class));
+                startActivity(new Intent(MainActivity.this, CopyDatabase.class));
             }
         });
 
