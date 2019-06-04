@@ -92,7 +92,7 @@ public class FloorPlanActivity extends menu_Activity {
 
     //The plus or minus buttons will turn grey if the floor above or below does not exist
     private void floorCheck() {
-        int greyedOutColor = R.color.secondary3;
+        int greyedOutColor = R.color.disabledButtonFoorplan;
         int defaultColor = R.color.secondary2;
         if(currentFloor == -1) {
             downButton.setBackgroundColor(getResources().getColor(greyedOutColor)); //sets color
