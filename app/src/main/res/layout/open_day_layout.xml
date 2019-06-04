@@ -27,7 +27,9 @@
         <android.support.constraint.ConstraintLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="?attr/backgroundcolor"
+            >
 
             <ImageButton
                 android:id="@+id/button"
@@ -42,7 +44,9 @@
                 android:src="@drawable/ic_contact"
                 app:layout_constraintEnd_toStartOf="@+id/button2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="?attr/backgroundcolor2"
+                />
 
             <ImageButton
                 android:id="@+id/button2"
@@ -56,7 +60,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/button"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="?attr/backgroundcolor2"
+                />
 
             <ScrollView
                 android:id="@+id/scrollView3"
@@ -74,6 +80,54 @@
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="417dp"
+                        android:layout_height="232dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/communication" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="412dp"
+                        android:layout_height="323dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/computer_science" />
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="414dp"
+                        android:layout_height="299dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.394"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.666"
+                        app:srcCompat="@drawable/cmgt" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="418dp"
+                        android:layout_height="214dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.857"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.346"
+                        app:srcCompat="@drawable/technische_informatica" />
 
                     <Button
                         android:id="@+id/button13"
@@ -137,36 +191,42 @@
                         android:stretchColumns="1"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="15dp"
-                            android:background="@android:color/white" />
+                            />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/darker_gray" />
+                            android:background="?attr/backgroundcolor2" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="15dp"
-                            android:background="@android:color/white" />
+                             />
 
                         <TextView
                             android:id="@+id/textView"
-                            android:layout_width="wrap_content"
+                            android:layout_width="387dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+
+                            android:background="#A3FFFFFF"
+                            android:text="@string/Informatica"
+
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor"/>
 
                         <TextView
                             android:id="@+id/textView2"
@@ -175,38 +235,46 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/OpenDay_Informatica"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor"/>
 
 
                         <Button
                             android:id="@+id/button3"
-                            android:layout_width="344dp"
+                            android:layout_width="361dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
-                            tools:layout_editor_absoluteY="184dp" />
+                            tools:layout_editor_absoluteY="184dp"
+                            android:textColor="?attr/textcolor"/>
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
+
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/darker_gray" />
+                            android:background="?attr/backgroundcolor2" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
+
 
                         <TextView
                             android:id="@+id/textView3"
@@ -215,11 +283,14 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/Technische_Informatica"
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor"
+                            />
 
 
                         <TextView
@@ -229,10 +300,12 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/OpenDay_Technische_Informatica"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor"/>
 
 
                         <Button
@@ -242,25 +315,31 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
-                            tools:layout_editor_absoluteY="184dp" />
+                            tools:layout_editor_absoluteY="184dp"
+                            android:textColor="?attr/textcolor"/>
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
+
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/darker_gray" />
+                            android:background="?attr/backgroundcolor2" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
+
 
                         <TextView
                             android:id="@+id/textView5"
@@ -269,11 +348,13 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/CMGT"
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor"/>
 
 
                         <TextView
@@ -283,10 +364,12 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/OpenDay_CMGT"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor"/>
 
                         <Button
                             android:id="@+id/button5"
@@ -295,25 +378,31 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
-                            tools:layout_editor_absoluteY="184dp" />
+                            tools:layout_editor_absoluteY="184dp"
+                            android:textColor="?attr/textcolor"/>
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
+
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/darker_gray" />
+                            android:background="?attr/backgroundcolor2" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
+
 
                         <TextView
                             android:id="@+id/textView7"
@@ -322,11 +411,13 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/Communicatiewetenschappen"
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor"/>
 
 
                         <TextView
@@ -336,10 +427,12 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/OpenDay_Communicatiewetenschappen"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor"/>
 
                         <Button
                             android:id="@+id/button6"
@@ -348,10 +441,12 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
-                            tools:layout_editor_absoluteY="184dp" />
+                            tools:layout_editor_absoluteY="184dp"
+                            android:textColor="?attr/textcolor"/>
 
 
                     </TableLayout>
@@ -371,7 +466,10 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
-        tools:visibility="gone" />
+        tools:visibility="gone"
+        app:itemTextColor="?attr/textcolor"
+        app:itemIconTint="?attr/sidebar_icon_color"
+        android:background="?attr/backgroundcolor"/>
 
 
 </android.support.v4.widget.DrawerLayout>

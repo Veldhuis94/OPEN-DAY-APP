@@ -10,7 +10,11 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.CalendarContract;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -18,6 +22,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+
+import java.util.Date;
+
+import java.util.EventListener;
+
 import java.util.List;
 
 
@@ -29,6 +38,7 @@ public class openDayDetails extends menu_Activity {
     Cursor course_2 = null;
     Cursor course_3 = null;
     Cursor course_4 = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,10 +128,17 @@ public class openDayDetails extends menu_Activity {
                 intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("title", getString(R.string.calendarTitle));
                 intent.putExtra("description", getString(R.string.calendarBody) + date);
+                //intent.putExtra("Wijnhaven",103);
+                //intent.putExtra(Events.EVENT_LOCATION, "Wijnhaven 103/107");
                 Calendar beginTime = Calendar.getInstance();
                 beginTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[3], dateArray[4]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
+                //CHANGE LOCATION IF NEEDED
+                intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Wijnhaven 103/107, Rotterdam");
+
                 Calendar endTime = Calendar.getInstance();
+
+
                 endTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[5], dateArray[6]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
                 startActivity(intent);
@@ -160,5 +177,9 @@ public class openDayDetails extends menu_Activity {
                 Toast.makeText(openDayDetails.this, "Error", Toast.LENGTH_SHORT).show();
 
         }
+
+
+
     }
+
 }

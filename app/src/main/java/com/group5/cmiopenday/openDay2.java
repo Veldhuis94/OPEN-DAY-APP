@@ -128,6 +128,9 @@ public class openDay2 extends menu_Activity  {
                 Calendar beginTime = Calendar.getInstance();
                 beginTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[3], dateArray[4]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
+                //CHANGE LOCATION ID NEEDED
+                intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Wijnhaven 103/107, Rotterdam");
+
                 Calendar endTime = Calendar.getInstance();
                 endTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[5], dateArray[6]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());

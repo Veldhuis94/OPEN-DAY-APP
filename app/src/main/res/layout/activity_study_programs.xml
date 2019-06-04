@@ -9,7 +9,8 @@
 
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -42,7 +43,9 @@
             android:layout_width="match_parent"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_height="90dp"
-            android:text="@string/Communicatie" />
+            android:text="@string/Communicatie"
+            android:background="?attr/backgroundcolor2"
+            android:textColor="?attr/textcolor"/>
 
         <Space
             android:layout_width="match_parent"
@@ -53,7 +56,9 @@
             android:layout_width="match_parent"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_height="90dp"
-            android:text="@string/Communication_and_Multimedia_Design" />
+            android:text="@string/Communication_and_Multimedia_Design"
+            android:background="?attr/backgroundcolor2"
+            android:textColor="?attr/textcolor"/>
 
         <Space
             android:layout_width="match_parent"
@@ -64,7 +69,10 @@
             android:layout_width="match_parent"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_height="90dp"
-            android:text="@string/Creative_Media_and_Game_Technologies" />
+            android:text="@string/Creative_Media_and_Game_Technologies"
+            android:background="?attr/backgroundcolor2"
+            android:textColor="?attr/textcolor"
+            />
 
         <Space
             android:layout_width="match_parent"
@@ -75,7 +83,9 @@
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:text="@string/software_engineering"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:background="?attr/backgroundcolor2"
+            android:textColor="?attr/textcolor"/>
 
         <Space
             android:layout_width="match_parent"
@@ -86,10 +96,13 @@
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:text="@string/computer_engineering"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:background="?attr/backgroundcolor2"
+            android:textColor="?attr/textcolor"/>
 
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/sidebar_view"
         android:layout_width="wrap_content"
@@ -97,6 +110,9 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
-        tools:visibility="gone" />
+        tools:visibility="gone"
+        app:itemTextColor="?attr/textcolor"
+        app:itemIconTint="?attr/sidebar_icon_color"
+        android:background="?attr/backgroundcolor"/>
 
 </android.support.v4.widget.DrawerLayout>
