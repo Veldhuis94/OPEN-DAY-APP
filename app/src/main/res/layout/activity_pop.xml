@@ -28,14 +28,14 @@
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="54dp"
-                android:text="Klassikale voorlichting"
+                android:text="Course presentation"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="104dp"
-                android:text="Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting over de opleiding in een lokaal. De voorlichting duurt circa 45 min." />
+                android:text="Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes." />
 
             <LinearLayout
                 android:layout_width="match_parent"

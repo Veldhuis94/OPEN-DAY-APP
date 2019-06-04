@@ -1,5 +1,6 @@
 package com.group5.cmiopenday;
 
+import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.support.v7.app.AppCompatActivity;
@@ -35,22 +36,23 @@ public class CopyDatabase extends AppCompatActivity {
                 } catch (SQLException sqle) {
                     throw sqle;
                 }
-                Toast.makeText(CopyDatabase.this, "Successfully Imported" , Toast.LENGTH_SHORT).show();
-          //      c = myDbHelper.query("Homepage", null, null, null, null, null, null);
-                if (c.moveToFirst()) {
-                    do {
-                        Toast.makeText(CopyDatabase.this,
-                                "_id: " + c.getString(0) + "\n" +
-                                        "Date: " + c.getString(1) + "\n" +
-                                        "Time: " + c.getString(2) + "\n" +
-                                        "Courses:  " + c.getString(3),
-                                Toast.LENGTH_LONG).show();
-                    } while (c.moveToNext());
-                }
+                Toast.makeText(CopyDatabase.this, "Successfully Imported", Toast.LENGTH_SHORT).show();
             }
         });
+        ((Button) findViewById(R.id.DeleteDB)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseHelper myDbHelper = new DatabaseHelper(CopyDatabase.this);
+                myDbHelper.close();
+                myDbHelper.purgeDatabase(CopyDatabase.this);
+                try {
+                    myDbHelper.createDataBase();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(CopyDatabase.this, "Database reloaded", Toast.LENGTH_SHORT).show();
+            }
 
+        });
     }
-
-
 }

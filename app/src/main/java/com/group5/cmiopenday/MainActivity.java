@@ -22,12 +22,7 @@ public class MainActivity extends menu_Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         super.onCreateDrawer(savedInstanceState);
-        DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
-        try {
-            myDbHelper.createDataBase();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);//Database
         StringBuilder stringBuilder_row_1 = new StringBuilder();
         StringBuilder stringBuilder_row_2 = new StringBuilder();
         TextView textView2 = findViewById(R.id.textView2);
@@ -46,36 +41,13 @@ public class MainActivity extends menu_Activity{
             } while (row_2.moveToNext());
         }
         textView2.setText(stringBuilder_row_1);
-        textView3.setText(stringBuilder_row_2);
+        textView3.setText(stringBuilder_row_2);//Database
 
-
-//        c1 = myDbHelper.query("Homepage", null, null, null, null, null, null);
-//        if (c1.moveToFirst()) {
-//            do {
-//                stringBuilder.append("CMI Open Day, Date: "+c1.getString(1)+"\nTime: "+c1.getString(2)+"\n"+c1.getString(3));
-//            } while (c1.moveToNext());
-
-
-
-//        while (c1.moveToNext()){
-//            stringBuilder.append("CMI Open Day, Date: "+c1.getString(1)+"\nTime: "+c1.getString(2)+"\n"+c1.getString(3));
-//        }
-
-
-
-        //        Cursor cursor = myDbHelper.ViewData();
-//        StringBuilder stringBuilder = new StringBuilder();
-//        String ewa = cursor.getString(3);
-//        while (cursor.moveToNext()){
-//            stringBuilder.append("CMI Open Day, Date: "+cursor.getString(1)+"\nTime: "+cursor.getString(2)+"\n"+cursor.getString(3));
-
-
-
-        Button button21 = findViewById(R.id.button21);
-        button21.setOnClickListener(new View.OnClickListener() {
+        Button button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CopyDatabase.class));
+                startActivity(new Intent(MainActivity.this, openDay2.class));
             }
         });
 
@@ -86,11 +58,11 @@ public class MainActivity extends menu_Activity{
                 openOpenDayDetails();
             }
         });
-        Button button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Button button21 = findViewById(R.id.button21);
+        button21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, openDay2.class));
+                startActivity(new Intent(MainActivity.this, CopyDatabase.class));
             }
         });
     }
