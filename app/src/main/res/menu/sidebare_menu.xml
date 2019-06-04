@@ -34,6 +34,15 @@
             android:id="@+id/travel"
             android:icon="@drawable/ic_location"
             android:title="Travel Directions" />
+
+        <item
+            android:id="@+id/questions"
+            android:title="questionnaire test"/>
+        <item
+            android:id="@+id/nightmode_toggle"
+            android:icon="@drawable/night_mode"
+            android:title="Toggle night mode" />
+
     </group>
 
 </menu>
