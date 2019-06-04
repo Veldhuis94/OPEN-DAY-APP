@@ -20,11 +20,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-<<<<<<< HEAD
+
 import java.util.Date;
-=======
+
 import java.util.EventListener;
->>>>>>> edf61fcd24caf1154cad571ecf3ea5cd4bc86501
+
 import java.util.List;
 
 

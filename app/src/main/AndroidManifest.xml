@@ -10,11 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-<<<<<<< HEAD
-        <activity android:name=".NotesActivity" />
-=======
+
+
+
+
         <activity android:name=".LoginActivity"></activity>
->>>>>>> edf61fcd24caf1154cad571ecf3ea5cd4bc86501
+
         <activity
             android:name=".TravelActivity"
             android:label="@string/title_activity_travel"
@@ -49,11 +50,10 @@
             android:theme="@style/AppTheme.PopMe" />
         <activity
             android:name=".MainActivity"
-<<<<<<< HEAD
+
             android:label="@string/open_days" />
-=======
-            android:label="@string/open_days"></activity>
->>>>>>> edf61fcd24caf1154cad571ecf3ea5cd4bc86501
-    </application>
+
+            android:label="@string/open_days"></application>
+
 
 </manifest>
