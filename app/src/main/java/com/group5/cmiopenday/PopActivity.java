@@ -49,7 +49,14 @@ public class PopActivity extends Activity {
             }
         });
 
-
+        ImageButton noteButton = findViewById(R.id.imageButton2);
+        final Context context1 = this;
+        noteButton.setOnClickListener(new View.OnClickListener(){
+           @Override
+            public void onClick(View v){
+               openNoteApp(context1);
+           }
+        });
 
         //code for the add to calendar button
         ImageButton calendarButton = findViewById(R.id.imageButton3);
@@ -141,6 +148,39 @@ public class PopActivity extends Activity {
                 context.startActivity(chooserIntent);
             } else
                 Toast.makeText(PopActivity.this,"Error",Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
+    public void openNoteApp(Context context) {
+
+        List<Intent> shareIntentsLists = new ArrayList<Intent>();
+        Intent shareIntent = new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+        shareIntent.setType("image/*");
+        List<ResolveInfo> resInfos = context.getPackageManager().queryIntentActivities(shareIntent, 0);
+        if (!resInfos.isEmpty()) {
+            for (ResolveInfo resInfo : resInfos) {
+                String packageName = resInfo.activityInfo.packageName;
+                if (packageName.toLowerCase().contains("keep") || packageName.toLowerCase().contains("note") || packageName.toLowerCase().contains("notes") || packageName.toLowerCase().contains("memo") ) {
+                    Intent intent = new Intent();
+                    intent.setComponent(new ComponentName(packageName, resInfo.activityInfo.name));
+                    intent.setAction(Intent.ACTION_SEND);
+                    intent.setType("text/plain");
+                    //String shareBody = "CMI OPEN DAY";
+                    //String shareSub = "On " + date + ", I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/";
+                    //intent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
+                    //intent.putExtra(Intent.EXTRA_TEXT, shareSub);
+                    intent.setPackage(packageName);
+                    shareIntentsLists.add(intent);
+                }
+            }
+            if (!shareIntentsLists.isEmpty()) {
+                Intent chooserIntent = Intent.createChooser(shareIntentsLists.remove(0), "Choose app to share");
+                chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, shareIntentsLists.toArray(new Parcelable[]{}));
+                context.startActivity(chooserIntent);
+            } else
+                Toast.makeText(PopActivity.this,"No memo app installed",Toast.LENGTH_SHORT).show();
 
         }
     }
