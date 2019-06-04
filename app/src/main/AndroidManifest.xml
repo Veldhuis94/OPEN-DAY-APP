@@ -19,8 +19,7 @@
 
         <activity
             android:name=".TravelActivity"
-            android:label="@string/title_activity_travel"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_travel" />
         <activity android:name=".SplashscreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
