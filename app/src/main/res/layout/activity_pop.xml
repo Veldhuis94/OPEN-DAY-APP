@@ -58,14 +58,18 @@
                 android:id="@+id/textView18"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
-                android:text=""
+
+                android:text="@string/popTitle"
+
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="104dp"
-                android:text="Teachers and / or students provide brief information about the training in a room. The information lasts approximately 45 minutes." />
+
+                android:text="@string/popBody" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -142,7 +146,9 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="29dp"
-                android:text="Examples of Projects "
+
+                android:text="@string/projects"
+
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <TextView
