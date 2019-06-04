@@ -11,11 +11,13 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+
         <activity android:name=".resultPage" />
         <activity android:name=".Questionnaire" />
 
         <activity android:name=".LoginActivity"
             android:label="@string/questionnaire"/>
+
 
         <activity
             android:name=".TravelActivity"
@@ -53,6 +55,8 @@
 
             android:label="@string/open_days" />
 
+
     </application>
+
 
 </manifest>
