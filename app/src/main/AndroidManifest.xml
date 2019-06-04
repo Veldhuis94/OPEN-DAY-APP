@@ -14,7 +14,11 @@
         <activity android:name=".LoginActivity"/>
 
 
+        <activity android:name=".resultPage" />
+        <activity android:name=".Questionnaire" />
 
+        <activity android:name=".LoginActivity"
+            android:label="@string/questionnaire"/>
 
 
         <activity
@@ -53,7 +57,8 @@
 
             android:label="@string/open_days" />
 
-            android:label="@string/open_days"></application>
+
+    </application>
 
 
 </manifest>
