@@ -20,7 +20,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+<<<<<<< HEAD
 import java.util.Date;
+=======
+import java.util.EventListener;
+>>>>>>> edf61fcd24caf1154cad571ecf3ea5cd4bc86501
 import java.util.List;
 
 
@@ -68,10 +72,17 @@ public class openDayDetails extends menu_Activity {
                 intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("title", getString(R.string.calendarTitle));
                 intent.putExtra("description", getString(R.string.calendarBody) + date);
+                //intent.putExtra("Wijnhaven",103);
+                //intent.putExtra(Events.EVENT_LOCATION, "Wijnhaven 103/107");
                 Calendar beginTime = Calendar.getInstance();
                 beginTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[3], dateArray[4]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
+                //CHANGE LOCATION IF NEEDED
+                intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Wijnhaven 103/107, Rotterdam");
+
                 Calendar endTime = Calendar.getInstance();
+
+
                 endTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[5], dateArray[6]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
                 startActivity(intent);
