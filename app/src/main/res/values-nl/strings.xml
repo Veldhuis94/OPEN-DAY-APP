@@ -58,6 +58,7 @@
     <string name="questionform_fill_in">Vul in</string>
     <string name="questionform_chooseApp">Kies een app om je bericht mee te versturen.</string>
 
+    <string name="invalid_fields">U hebt een of meer ongeldige velden.</string>
 
     <string name="OpenDay_Test">CMI Open Dag, %s\n12:00 – 16:00\nInformatica, Technische Informatica, Communicatie</string>
     <string name="OpenDay_Test2">CMI Open Dag, %s\n17:00 – 20:00\nInformatica, Communicatie</string>
