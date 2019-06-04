@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".CopyDatabase"></activity>
         <activity
             android:name=".TravelActivity"
             android:label="@string/title_activity_travel"
