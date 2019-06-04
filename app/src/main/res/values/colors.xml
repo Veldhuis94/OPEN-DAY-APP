@@ -5,18 +5,25 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="textLight">#FFFFFF</color>
-    <color name="textDark">#000000</color>
-    <color name="textDark2">#444444</color>
-    <color name="primary">#E61610</color>
+    <color name="textLight2">#DDDDDD</color>
+    <color name="textDark">#2E2E2E</color>
+    <color name="textDark2">#525252</color>
+    <color name="primary">#e61610</color>
     <color name="accent">#FFCC00</color>
     <color name="secondary1">#B70F0A</color>
     <color name="secondary2">#999999</color>
     <color name="secondary3">#E7E7E7</color>
     <color name="secondary4">#d6d6d6</color>
+    <color name="secondary5">#2E2E2E</color>
+    <color name="secondary6">#696969</color>
 
     <color name="textfield_border_default">#000000</color>
+    <color name="textfield_border_default_light">#A8A8A8</color>
     <color name="textfield_border_valid">#03DB27</color>
     <color name="textfield_border_invalid">#DB0303</color>
+
+    <color name="backgroundcolor_light">#FFFFFF</color>
+    <color name="backgroundcolor_dark">#252525</color>
 
     <color name="disabledButtonFoorplan">#CCCCCC</color>
 
