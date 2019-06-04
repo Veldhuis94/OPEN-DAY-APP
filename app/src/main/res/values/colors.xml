@@ -18,4 +18,6 @@
     <color name="textfield_border_valid">#03DB27</color>
     <color name="textfield_border_invalid">#DB0303</color>
 
+    <color name="disabledButtonFoorplan">#CCCCCC</color>
+
 </resources>
