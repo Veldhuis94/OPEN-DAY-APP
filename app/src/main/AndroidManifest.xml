@@ -10,19 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-<<<<<<< HEAD
         <activity android:name=".LoginActivity"/>
-=======
-
-
         <activity android:name=".resultPage" />
         <activity android:name=".Questionnaire" />
 
-        <activity android:name=".LoginActivity"
-            android:label="@string/questionnaire"/>
-
-
->>>>>>> b1932cf413233132b0d5f8c6173b6a99efb19cb7
         <activity
             android:name=".TravelActivity"
             android:label="@string/title_activity_travel" />
