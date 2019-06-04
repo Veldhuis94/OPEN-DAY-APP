@@ -180,15 +180,12 @@
     <string name="TravelDirection">Travel Directions</string>
 
     <string name="title_activity_travel">TravelActivity</string>
-<<<<<<< HEAD
+
     <string name="invalid_fields">You have some invalid field(s).</string>
-=======
+
     <string name="popTitle">Informational lesson</string>
     <string name="popBody">Teachers and/or students give a brief presentation about the study course in a classroom. The presentation will be about 45 minutes long.</string>
     <string name="projects">Examples of projects</string>
-
-
->>>>>>> b1932cf413233132b0d5f8c6173b6a99efb19cb7
 
 </resources>
 
