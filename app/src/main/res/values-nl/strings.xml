@@ -56,6 +56,9 @@
     <string name="Communicatiewetenschappen" translatable="false">Communicatie</string>
     <string name="questionform_fill_in">Vul in</string>
     <string name="questionform_chooseApp">Kies een app om je bericht mee te versturen.</string>
+
+    <string name="questionnaire">Questionnaire</string>
+
     <string name="popTitle">Klassikale voorlichting</string>
     <string name="popBody">Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt circa 45 min.</string>
     <string name="projects">Voorbeelden van projecten</string>
@@ -71,4 +74,5 @@
         <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
 
     </string-array>
+
 </resources>
