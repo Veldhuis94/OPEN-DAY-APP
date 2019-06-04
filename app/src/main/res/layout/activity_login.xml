@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="@drawable/loginbackground">
+    android:background="?attr/backgroundcolor"
+    tools:context=".LoginActivity">
 
 
     <EditText
@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
 
 
-        android:inputType="textPassword"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
         android:layout_marginLeft="98dp"
@@ -23,13 +22,16 @@
         android:layout_marginBottom="344dp"
         android:ems="10"
         android:hint="Password"
+        android:inputType="textPassword"
 
 
-
+        android:textColor="?attr/textcolor"
+        android:textColorHint="?attr/textcolor2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:backgroundTint="?attr/textcolor2"/>
 
     <EditText
         android:id="@+id/username"
@@ -46,10 +48,13 @@
 
         android:hint="Username"
         android:inputType="textPersonName"
+        android:textColor="?attr/textcolor"
+        android:textColorHint="?attr/textcolor2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="?attr/textcolor2"/>
 
     <Button
         android:id="@+id/buttonlogin"
@@ -63,9 +68,9 @@
         android:layout_marginBottom="264dp"
 
 
-
-
+        android:background="?attr/backgroundcolor2"
         android:text="Login"
+        android:textColor="?attr/textcolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,8 +109,6 @@
         android:layout_marginEnd="115dp"
         android:layout_marginRight="115dp"
         android:layout_marginBottom="36dp"
-
-
 
 
         app:layout_constraintBottom_toTopOf="@+id/username"

@@ -9,16 +9,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//Reminder: remove the code of the nightmode when it's extending from menu_Activity
 public class LoginActivity extends AppCompatActivity {
 
     private EditText Name;
     private EditText Password;
     private Button Login;
     private TextView Info;
-
+    private boolean nightmodeDuringCreation; //nightmode of the app
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        int themeId = ((menu_Activity.nightmodeIsOn)? R.style.AppThemeDark : R.style.AppTheme);
+        getTheme().applyStyle(themeId, true); //set the theme
+        nightmodeDuringCreation = menu_Activity.nightmodeIsOn;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -34,6 +39,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onStart(){
+        if(nightmodeDuringCreation != menu_Activity.nightmodeIsOn){
+            nightmodeDuringCreation = menu_Activity.nightmodeIsOn;
+            recreate(); //recreate the activity with the right theme.
+        }
+        super.onStart();
     }
 
     private void validate(String userName, String userPassword){

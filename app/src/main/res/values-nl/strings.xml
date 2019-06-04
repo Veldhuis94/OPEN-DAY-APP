@@ -63,6 +63,7 @@
     <string name="OpenDay_Test2">CMI Open Dag, %s\n17:00 – 20:00\nInformatica, Communicatie</string>
     <string name="Technische_Informatica">Technische Informatica</string>
     <string name="Informatica">Informatica</string>
+    <string name="questionnaire">Questionnaire</string>
 
     <string name="popTitle">Klassikale voorlichting</string>
     <string name="popBody">Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt circa 45 min.</string>

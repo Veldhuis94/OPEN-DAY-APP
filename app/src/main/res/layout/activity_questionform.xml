@@ -9,7 +9,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?attr/backgroundcolor">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -93,6 +94,8 @@
                             android:paddingRight="5dp"
                             android:paddingBottom="2dp"
                             android:singleLine="true"
+                            android:textColor="?attr/textcolor"
+                            android:textColorHint="?attr/textcolor2"
                             android:textSize="22sp" />
 
                     </android.support.design.widget.TextInputLayout>
@@ -141,6 +144,8 @@
                             android:paddingRight="5dp"
                             android:paddingBottom="2dp"
                             android:singleLine="true"
+                            android:textColor="?attr/textcolor"
+                            android:textColorHint="?attr/textcolor2"
                             android:textSize="22sp" />
 
                     </android.support.design.widget.TextInputLayout>
@@ -189,6 +194,8 @@
                             android:paddingRight="5dp"
                             android:paddingBottom="2dp"
                             android:singleLine="true"
+                            android:textColor="?attr/textcolor"
+                            android:textColorHint="?attr/textcolor2"
                             android:textSize="22sp" />
 
                     </android.support.design.widget.TextInputLayout>
@@ -238,6 +245,8 @@
                         android:paddingTop="2dp"
                         android:paddingRight="5dp"
                         android:paddingBottom="2dp"
+                        android:textColor="?attr/textcolor"
+                        android:textColorHint="?attr/textcolor2"
                         android:textSize="22sp" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -255,6 +264,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/round_button"
                         android:enabled="true"
+                        android:paddingHorizontal="5dp"
                         android:text="@string/questionform_send"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:textColor="@color/secondary3"
@@ -263,8 +273,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.498"
                         app:layout_constraintStart_toStartOf="parent"
-                        tools:text="@string/questionform_send"
-                        android:paddingHorizontal="5dp"/>
+                        tools:text="@string/questionform_send" />
                 </LinearLayout>
 
                 <Space
@@ -289,6 +298,9 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
-        tools:visibility="gone" />
+        tools:visibility="gone"
+        app:itemTextColor="?attr/textcolor"
+        app:itemIconTint="?attr/sidebar_icon_color"
+        android:background="?attr/backgroundcolor"/>
 
 </android.support.v4.widget.DrawerLayout>
