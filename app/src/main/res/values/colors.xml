@@ -24,4 +24,7 @@
 
     <color name="backgroundcolor_light">#FFFFFF</color>
     <color name="backgroundcolor_dark">#252525</color>
+
+    <color name="disabledButtonFoorplan">#CCCCCC</color>
+
 </resources>
