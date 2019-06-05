@@ -26,7 +26,8 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="?attr/backgroundcolor">
 
 
 
@@ -65,16 +66,16 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:background="@android:color/white"/>
+                    android:layout_height="15dp" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/darker_gray"/>
+                    android:background="?attr/textcolor" />
+
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:background="@android:color/white"/>
+                    android:layout_height="15dp" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -84,6 +85,7 @@
                     android:layout_marginEnd="20dp"
                     android:text="@string/open_days"
                     android:textAllCaps="false"
+                    android:textColor="?attr/textcolor2"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     tools:layout_editor_absoluteX="132dp"
@@ -91,18 +93,16 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:background="@android:color/white" />
+                    android:layout_height="15dp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                    android:background="?attr/textcolor" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:background="@android:color/white" />
+                    android:layout_height="15dp" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -111,8 +111,8 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginEnd="20dp"
-                    android:text="@string/OpenDay_Test"
                     android:textSize="18sp"
+                    android:textColor="?attr/textcolor"
                     tools:layout_editor_absoluteX="132dp"
                     tools:layout_editor_absoluteY="258dp" />
 
@@ -126,23 +126,23 @@
                     android:layout_marginEnd="20dp"
                     android:clickable="true"
                     android:text="@string/opendaybutton"
+                    android:textColor="?attr/textcolor"
+                    android:background="?attr/backgroundcolor2"
                     tools:layout_editor_absoluteX="161dp"
                     tools:layout_editor_absoluteY="184dp" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:background="@android:color/white" />
+                    android:layout_height="15dp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                    android:background="?attr/textcolor" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:background="@android:color/white" />
+                    android:layout_height="15dp" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -151,8 +151,8 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginEnd="20dp"
-                    android:text="@string/OpenDay_Test2"
                     android:textSize="18sp"
+                    android:textColor="?attr/textcolor"
                     tools:layout_editor_absoluteX="132dp"
                     tools:layout_editor_absoluteY="258dp" />
 
@@ -166,26 +166,50 @@
                     android:layout_marginEnd="20dp"
                     android:clickable="true"
                     android:text="@string/opendaybutton"
+                    android:textColor="?attr/textcolor"
+                    android:background="?attr/backgroundcolor2"
                     tools:layout_editor_absoluteX="161dp"
                     tools:layout_editor_absoluteY="184dp" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:background="@android:color/white" />
+                    android:layout_height="15dp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                    android:background="?attr/textcolor" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:background="@android:color/white" />
+                    android:layout_height="15dp" />
+
+                <Button
+                    android:id="@+id/button21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RELOAD DB"
+ />
+
 
             </TableLayout>
+
         </ScrollView>
+
+        <ImageView
+            android:id="@+id/loggbtn"
+            android:layout_width="46dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="368dp"
+            android:layout_marginLeft="368dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView1"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@android:drawable/ic_lock_idle_lock" />
+
 
 
     </android.support.constraint.ConstraintLayout>
@@ -198,7 +222,10 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
-        tools:visibility="gone" />
+        tools:visibility="gone"
+        app:itemTextColor="?attr/textcolor"
+        app:itemIconTint="?attr/sidebar_icon_color"
+        android:background="?attr/backgroundcolor"/>
 
 
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.group5.cmiopenday.questionform.FormSender;
 import com.group5.cmiopenday.questionform.FormSubmitListener;
@@ -15,7 +16,7 @@ import com.group5.cmiopenday.questionform.FormValidator;
 public class QuestionFormActivity extends menu_Activity{
 
     private FormValidator validator; //for validating the textfields
-
+    Toast toast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +29,20 @@ public class QuestionFormActivity extends menu_Activity{
         final EditText name = (EditText) findViewById(R.id.questionform_editname);
         final QuestionFormActivity activity = this;
 
-        Button submitButton = (Button) findViewById(R.id.questionform_button);
+        final Button submitButton = (Button) findViewById(R.id.questionform_button);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FormSender.Send(activity, email.getText().toString(), name.getText().toString(), subject.getText().toString(), question.getText().toString());
+                if(validator.valids) {
+                    FormSender.Send(activity, email.getText().toString(), name.getText().toString(), subject.getText().toString(), question.getText().toString());
+                }
+                else{
+                    if(toast !=null){
+                        toast.cancel();
+                    }
+                   toast = Toast.makeText(QuestionFormActivity.this,R.string.invalid_fields,Toast.LENGTH_LONG);
+                   toast.show();
+                }
             }
         });
 
