@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
 
-                android:text="@string/popTitle"
+                android:text="Course presentation"
 
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -67,6 +67,9 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="104dp"
+
+                android:text="Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes." />
+
 
                 android:text="@string/popBody" />
 

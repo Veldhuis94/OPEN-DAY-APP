@@ -52,10 +52,10 @@ public class PopActivity extends Activity {
         ImageButton noteButton = findViewById(R.id.imageButton2);
         final Context context1 = this;
         noteButton.setOnClickListener(new View.OnClickListener(){
-           @Override
+            @Override
             public void onClick(View v){
-               openNoteApp(context1);
-           }
+                openNoteApp(context1);
+            }
         });
 
         //code for the add to calendar button
@@ -186,3 +186,35 @@ public class PopActivity extends Activity {
     }
 
 }
+
+//        DatabaseHelper myDbHelper = new DatabaseHelper(PopActivity.this);//Database
+//        StringBuilder stringBuilder_time_1 = new StringBuilder();
+//        StringBuilder stringBuilder_time_2 = new StringBuilder();
+//        StringBuilder stringBuilder_time_3 = new StringBuilder();
+//        StringBuilder stringBuilder_room = new StringBuilder();
+//        StringBuilder stringBuilder_text = new StringBuilder();
+//        TextView textView15 = findViewById(R.id.textView15);//time1
+//        TextView textView21 = findViewById(R.id.textView21);//time2
+//        TextView textView23 = findViewById(R.id.textView23);//time3
+//        TextView textView25 = findViewById(R.id.textView25);//Room1
+//        TextView textView26 = findViewById(R.id.textView26);//Room2
+//        TextView textView27 = findViewById(R.id.textView27);//Room3
+//        TextView textView28 = findViewById(R.id.textView28);//Text
+//        myDbHelper.openDataBase();
+//        PopUpinfo = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, popUpId, "PopUps");
+//        if (PopUpinfo.moveToFirst()) {
+//            do {
+//                stringBuilder_time_1.append(PopUpinfo.getString(2));
+//                stringBuilder_time_2.append(PopUpinfo.getString(3));
+//                stringBuilder_time_3.append(PopUpinfo.getString(4));
+//                stringBuilder_room.append(PopUpinfo.getString(5));
+//                stringBuilder_text.append(PopUpinfo.getString(6));
+//            } while (PopUpinfo.moveToNext());
+
+//            textView15.setText(stringBuilder_time_1);
+//            textView21.setText(stringBuilder_time_2);
+//            textView23.setText(stringBuilder_time_3);
+//            textView25.setText(stringBuilder_room);
+//            textView26.setText(stringBuilder_room);
+//            textView27.setText(stringBuilder_room);
+//            textView28.setText(stringBuilder_text);
