@@ -1,5 +1,6 @@
 package com.group5.cmiopenday;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -18,6 +19,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     String DB_PATH = null;
     private static String DB_NAME = "MyDatabase";
+    private static final String TABLE_NAME = "Homepage";
+    private static final String Col1 = "ID";
+    private static final String Col2 = "Date";
+    private static final String Col3 = "Time";
+    private static final String Col4 = "Courses";
+    private static final String DBlocation = "/data/data/com.group5.cmiopenday/databases/";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
 
@@ -97,6 +104,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 e.printStackTrace();
 
             }
+    }
+    public boolean addData(String date, String time, String courses){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Col2,date);
+        contentValues.put(Col3,time);
+        contentValues.put(Col4,courses);
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.insert(TABLE_NAME, null, contentValues);
+        return result != -1;
     }
 
     public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
