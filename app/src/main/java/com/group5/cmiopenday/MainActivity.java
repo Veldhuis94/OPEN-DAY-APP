@@ -16,6 +16,7 @@ public class MainActivity extends menu_Activity{
     private Button button21;
     Cursor row_1 = null;
     Cursor row_2 = null;
+    Cursor row_3 = null;
     private ImageView loginbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,14 @@ public class MainActivity extends menu_Activity{
         DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);//Database
         StringBuilder stringBuilder_row_1 = new StringBuilder();
         StringBuilder stringBuilder_row_2 = new StringBuilder();
+        StringBuilder stringBuilder_row_3 = new StringBuilder();
         TextView textView2 = findViewById(R.id.textView2);
         TextView textView3 = findViewById(R.id.textView3);
+        TextView textView4 = findViewById(R.id.textViewdatabase);
         myDbHelper.openDataBase();
         row_1 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,1);
         row_2 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,2);
+        row_3 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,3);
         if (row_1.moveToFirst()) {
             do {
                 stringBuilder_row_1.append("CMI Open Day, "+row_1.getString(1)+"\nTime: "+row_1.getString(2)+"\n"+row_1.getString(3));
@@ -40,9 +44,14 @@ public class MainActivity extends menu_Activity{
                 stringBuilder_row_2.append("CMI Open Day, "+row_2.getString(1)+"\nTime: "+row_2.getString(2)+"\n"+row_2.getString(3));
             } while (row_2.moveToNext());
         }
+        if (row_3.moveToFirst()) {
+            do {
+                stringBuilder_row_3.append("CMI Open Day, "+row_3.getString(1)+"\nTime: "+row_3.getString(2)+"\n"+row_3.getString(3));
+            } while (row_3.moveToNext());
+        }
         textView2.setText(stringBuilder_row_1);
         textView3.setText(stringBuilder_row_2);//Database
-
+        textView4.setText(stringBuilder_row_3);
         Button button2 = findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
