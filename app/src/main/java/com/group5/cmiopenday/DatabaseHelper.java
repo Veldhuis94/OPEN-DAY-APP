@@ -115,6 +115,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
+    public boolean addDataEvent(String date, String time, String courses){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Col2,date);
+        contentValues.put(Col3,time);
+        contentValues.put(Col4,courses);
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.insert(TABLE_NAME, null, contentValues);
+        return result != -1;
+    }
+
     public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
         return myDataBase.query("Homepage", null, null, null, null, null, null);
     }
