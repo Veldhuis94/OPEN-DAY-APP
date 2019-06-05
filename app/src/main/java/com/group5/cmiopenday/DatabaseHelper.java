@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import static android.content.ContentValues.TAG;
+
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -34,6 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DBlocation = "/data/data/com.group5.cmiopenday/databases/";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
+    int row_id = 0;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, 10);
@@ -90,6 +93,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    public void deleteAll() {
+        SQLiteDatabase myDbHelper = this.getWritableDatabase();
+        myDbHelper.execSQL("delete from " + "Homepage");
+        myDbHelper.close();
+
+    }
+
+
     @Override
     public synchronized void close() {
         if (myDataBase != null)
@@ -133,9 +144,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
+    public Cursor fetch_row(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, int row_id) {
+        return myDataBase.query("Homepage", null, "_id=" + row_id, null, null, null, null);
+    }
+
+    public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy,String Table) {
         return myDataBase.query("Homepage", null, null, null, null, null, null);
     }
+    public Cursor fetch_item(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, int row_id,String Table) {
+        return myDataBase.query(Table,columns , "_id=" + row_id, null, null, null, null);
+    }
+
+    public Cursor ViewData() {
+        SQLiteDatabase myDbHelper = this.getReadableDatabase();
+
+        Cursor cursor = myDbHelper.rawQuery("select * from " + DB_NAME, null);
+        return cursor;
+    }
+
+
+    public void purgeDatabase(Context context) {
+        context.deleteDatabase("MyDatabase");
+    }
+
 
 
 

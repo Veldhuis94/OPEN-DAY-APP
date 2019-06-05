@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
+
+import java.io.IOException;
 
 
 public class SplashscreenActivity extends AppCompatActivity {
@@ -14,6 +17,12 @@ public class SplashscreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
+        DatabaseHelper myDbHelper = new DatabaseHelper(SplashscreenActivity.this);//Creates database on startup
+        try {
+            myDbHelper.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         ///ImageView myimage = (ImageView)  findViewById(R.id.myImageView);
        /// myimage.setImageResource(R.drawable.splashs);
 
