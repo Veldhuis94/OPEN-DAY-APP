@@ -17,8 +17,8 @@ public class MainActivity extends menu_Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         super.onCreateDrawer(savedInstanceState);
-        DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);//Database
-        myDbHelper.openDataBase();
+   //     DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);//Database
+ //       myDbHelper.openDataBase();
 
         //editText_Date = findViewById(R.id.editext_Date);
         //editText_Time = findViewById(R.id.editext_Time);
