@@ -10,6 +10,7 @@ public class DatabaseAddOpendays extends menu_Activity {
     EditText editText_Date, editText_Time, editText_Courses;
     DatabaseHelper myDbHelper;
     private Button buttonadd;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database_add_openday);

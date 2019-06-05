@@ -8,14 +8,14 @@ import android.widget.Toast;
 
 public class DatabaseAddOpendayEvent extends menu_Activity {
     EditText editText_Classroom, editText_Time, editText_Course, editText_Location;
-    DatabaseHelper myDatabase;
+    DatabaseHelper myDbHelper;
     private Button buttonadd;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database_add_openday_event);
         super.onCreateDrawer(savedInstanceState);
-        DatabaseHelper myDbHelper = new DatabaseHelper(DatabaseAddOpendayEvent.this);
+        myDbHelper = new DatabaseHelper(DatabaseAddOpendayEvent.this);
         myDbHelper.openDataBase();
         editText_Classroom = findViewById(R.id.editext_Classroom);
         editText_Time = findViewById(R.id.editext_Time);
@@ -29,7 +29,7 @@ public class DatabaseAddOpendayEvent extends menu_Activity {
         buttonadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean result = myDatabase.addDataEvent(editText_Course.getText().toString(), editText_Classroom.getText().toString(), editText_Time.getText().toString(), editText_Location.getText().toString());
+                boolean result = myDbHelper.addDataEvent(editText_Course.getText().toString(), editText_Classroom.getText().toString(), editText_Time.getText().toString(), editText_Location.getText().toString());
                 if (result == true) {
                     Toast.makeText(DatabaseAddOpendayEvent.this, "Data is inserted :)", Toast.LENGTH_SHORT).show();
                 } else {

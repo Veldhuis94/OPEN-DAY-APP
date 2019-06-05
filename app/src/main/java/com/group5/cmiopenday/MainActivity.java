@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.Toast;
-import java.io.IOException;droid.widget.Toast;
+import java.io.IOException;
 
 public class MainActivity extends menu_Activity{
     private Button button;
