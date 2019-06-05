@@ -59,6 +59,14 @@ public class MainActivity extends menu_Activity{
                 startActivity(new Intent(MainActivity.this, openDay2.class));
             }
         });
+
+        Button button3 = findViewById(R.id.buttondatabase);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, openDay3.class));
+            }
+        });
         //get the texts of both open days and fill it in with the full dates
 //        TextView firstOpenDay = findViewById(R.id.opendaytext_1);
 //        TextView secondOpenDay = findViewById(R.id.opendaytext_2);

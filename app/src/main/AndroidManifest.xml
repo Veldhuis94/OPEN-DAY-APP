@@ -27,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".openDay3" />
         <activity android:name=".openDay2" />
         <activity android:name=".webview" />
         <activity

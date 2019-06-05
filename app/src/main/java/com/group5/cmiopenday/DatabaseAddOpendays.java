@@ -1,5 +1,6 @@
 package com.group5.cmiopenday;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,13 @@ public class DatabaseAddOpendays extends menu_Activity {
                 }
             }
         });
+        buttonadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DatabaseAddOpendays.this, DatabaseAddOpendayEvent.class));
+                }
+        });
+
     }
 
 }
