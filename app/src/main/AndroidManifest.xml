@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".creditsPage" />
+        <activity android:name=".creditsPage"
+            android:label="Credits"/>
         <activity
             android:name=".TravelActivity"
             android:label="@string/title_activity_travel"
@@ -45,7 +46,7 @@
             android:theme="@style/AppTheme.PopMe" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/open_days"></activity>
+            android:label="@string/open_days" />
     </application>
 
 </manifest>
