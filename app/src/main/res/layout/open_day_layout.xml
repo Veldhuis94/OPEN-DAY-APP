@@ -218,8 +218,10 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+
                             android:background="#A3FFFFFF"
                             android:text="@string/Informatica"
+
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
