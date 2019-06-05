@@ -20,10 +20,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     String DB_PATH = null;
     private static String DB_NAME = "MyDatabase";
     private static final String TABLE_NAME = "Homepage";
+    private static final String TABLE_NAME1 = "OpenDays";
     private static final String Col1 = "ID";
     private static final String Col2 = "Date";
     private static final String Col3 = "Time";
     private static final String Col4 = "Courses";
+    private static final String Col5 = "Course";
+    private static final String Col6 = "Classroom";
+    private static final String Col7 = "Time";
+    private static final String Col8 = "Location";
+
+
     private static final String DBlocation = "/data/data/com.group5.cmiopenday/databases/";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
@@ -115,13 +122,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    public boolean addDataEvent(String date, String time, String courses){
+    public boolean addDataEvent(String course, String time, String courses, String location){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Col2,date);
-        contentValues.put(Col3,time);
-        contentValues.put(Col4,courses);
+        contentValues.put(Col5,course);
+        contentValues.put(Col6,time);
+        contentValues.put(Col7,courses);
+        contentValues.put(Col8,location);
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.insert(TABLE_NAME, null, contentValues);
+        long result = db.insert(TABLE_NAME1, null, contentValues);
         return result != -1;
     }
 
