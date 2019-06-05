@@ -16,7 +16,6 @@ public class MainActivity extends menu_Activity{
     private Button button21;
     Cursor row_1 = null;
     Cursor row_2 = null;
-    private Button button;
     private ImageView loginbtn;
 
     @Override
@@ -54,10 +53,10 @@ public class MainActivity extends menu_Activity{
             }
         });
         //get the texts of both open days and fill it in with the full dates
-        TextView firstOpenDay = findViewById(R.id.opendaytext_1);
-        TextView secondOpenDay = findViewById(R.id.opendaytext_2);
-        firstOpenDay.setText(String.format(firstOpenDay.getText().toString(), DateUtility.getFullDate(4,4, 2019)));
-        secondOpenDay.setText(String.format(secondOpenDay.getText().toString(), DateUtility.getFullDate(4,6, 2019)));
+//        TextView firstOpenDay = findViewById(R.id.opendaytext_1);
+//        TextView secondOpenDay = findViewById(R.id.opendaytext_2);
+//        firstOpenDay.setText(String.format(firstOpenDay.getText().toString(), DateUtility.getFullDate(4,4, 2019)));
+//        secondOpenDay.setText(String.format(secondOpenDay.getText().toString(), DateUtility.getFullDate(4,6, 2019)));
 
 
         button = findViewById(R.id.button);
