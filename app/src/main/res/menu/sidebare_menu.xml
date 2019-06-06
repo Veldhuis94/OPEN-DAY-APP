@@ -45,7 +45,7 @@
             android:title="Toggle night mode" />
         <item
             android:id="@+id/credits"
-            android:icon="@drawable/info"
+            android:icon="@drawable/team"
             android:title="Credits" />
 
 
