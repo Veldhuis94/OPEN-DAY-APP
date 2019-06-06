@@ -103,14 +103,16 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(g);
                 break;
 
+            case R.id.credits:
+                startActivity(new Intent(menu_Activity.this, creditsPage.class));
+                break;
+
             case R.id.nightmode_toggle:
                 //toggle nightmode
                 nightmodeIsOn = !nightmodeIsOn;
                 nightmodeDuringCreation = nightmodeIsOn;
             
-            case R.id.credits:
-                startActivity(new Intent(menu_Activity.this, creditsPage.class));
-                break;
+
 
                 //this implementation is better than using recreate in this case, because the screen
                 //blinks when using recreate().
