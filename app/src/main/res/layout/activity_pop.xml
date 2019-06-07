@@ -7,239 +7,256 @@
     android:layout_height="match_parent"
     tools:context=".PopActivity">
 
-   <android.support.constraint.ConstraintLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?attr/backgroundcolor">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/holo_red_dark"
-        android:elevation="4dp"
-        android:src="@drawable/logohr"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="416dp"
-        android:layout_height="276dp"
-        android:alpha="0.08"
-        android:background="#BAFFFFFF"
-        android:src="@drawable/background_pic"
-        android:tint="@color/secondary4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-       <ScrollView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-
-           app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintVertical_bias="0.333">
-
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical">
-
-               <TextView
-                   android:id="@+id/textView18"
-                   android:layout_width="match_parent"
-                   android:layout_height="54dp"
-
-                   android:text="Course presentation"
-
-                   android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-               <TextView
-                   android:id="@+id/textView20"
-                   android:layout_width="wrap_content"
-                   android:layout_height="104dp"
-
-                   android:text="Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes." />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_red_dark"
+            android:elevation="4dp"
+            android:src="@drawable/logohr"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 
-               android:text="@string/popBody" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="416dp"
+            android:layout_height="276dp"
+            android:alpha="0.08"
+            android:background="@android:color/holo_red_dark"
+            android:src="@drawable/background_pic"
+            android:tint="@color/secondary4"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.333">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+
+                    android:text="Course presentation"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="?attr/textcolor" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="104dp"
+
+                    android:text="Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes."
+                    android:textColor="?attr/textcolor2" />
 
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="horizontal">
-
-                   <TextView
-                       android:id="@+id/textView19"
-                       android:layout_width="125dp"
-                       android:layout_height="36dp"
-                       android:text="@string/time" />
-
-                   <TextView
-                       android:id="@+id/textView17"
-                       android:layout_width="211dp"
-                       android:layout_height="wrap_content"
-                       android:layout_weight="1"
-                       android:text="@string/classroom" />
-               </LinearLayout>
-
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="horizontal">
-
-                   <TextView
-                       android:id="@+id/textView15"
-                       android:layout_width="123dp"
-                       android:layout_height="35dp" />
+                android:text="@string/popBody" />
 
 
-                   <TextView
-                       android:id="@+id/textView25"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_weight="1" />
-               </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="125dp"
+                        android:layout_height="36dp"
+                        android:text="@string/time"
+                        android:textColor="?attr/textcolor2" />
 
-                   <TextView
-                       android:id="@+id/textView21"
-                       android:layout_width="123dp"
-                       android:layout_height="31dp" />
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="211dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/classroom"
+                        android:textColor="?attr/textcolor2" />
+                </LinearLayout>
 
-                   <TextView
-                       android:id="@+id/textView26"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_weight="1" />
-               </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="59dp"
-                   android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="123dp"
+                        android:layout_height="35dp"
+                        android:textColor="?attr/textcolor2" />
 
-                   <TextView
-                       android:id="@+id/textView23"
-                       android:layout_width="123dp"
-                       android:layout_height="33dp" />
 
-                   <TextView
-                       android:id="@+id/textView27"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_weight="1" />
-               </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="?attr/textcolor2" />
+                </LinearLayout>
 
-               <TextView
-                   android:id="@+id/textView9"
-                   android:layout_width="match_parent"
-                   android:layout_height="29dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                   android:text="@string/projects"
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="123dp"
+                        android:layout_height="31dp"
+                        android:textColor="?attr/textcolor2" />
 
-                   android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="?attr/textcolor2" />
+                </LinearLayout>
 
-               <TextView
-                   android:id="@+id/textView28"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content" />
-           </LinearLayout>
-       </ScrollView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="54dp"
-        android:layout_height="61dp"
-        android:background="#00000000"
-        android:src="?attr/actionModeShareDrawable"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="123dp"
+                        android:layout_height="33dp"
+                        android:textColor="?attr/textcolor2" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
-        android:adjustViewBounds="true"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/notitielogo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="?attr/textcolor2" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Notes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.837"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
+                    android:text="@string/projects"
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="52dp"
-        android:layout_height="51dp"
-        android:src="@android:drawable/ic_menu_my_calendar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="?attr/textcolor" />
 
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calendar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
-   </android.support.constraint.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/textcolor2" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="54dp"
+            android:layout_height="61dp"
+            android:background="#00000000"
+            android:src="?attr/actionModeShareDrawable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.851"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.877" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="52dp"
+            android:layout_height="51dp"
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/notitielogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.875" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textColor="?attr/textcolor2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.945" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:textColor="?attr/textcolor2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.837"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.945" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="52dp"
+            android:layout_height="51dp"
+            android:src="@android:drawable/ic_menu_my_calendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.88" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.945"
+            android:textColor="?attr/textcolor2" />
+    </android.support.constraint.ConstraintLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/sidebar_view"
         android:layout_width="wrap_content"
@@ -247,7 +264,10 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/sidebare_header"
         app:menu="@menu/sidebare_menu"
-        tools:visibility="gone"/>
+        tools:visibility="gone"
+        app:itemTextColor="?attr/textcolor"
+        app:itemIconTint="?attr/sidebar_icon_color"
+        android:background="?attr/backgroundcolor"/>
 
 
 </android.support.v4.widget.DrawerLayout>

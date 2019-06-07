@@ -47,7 +47,7 @@
             android:label="@string/courses" />
         <activity
             android:name=".PopActivity"
-            android:theme="@style/AppTheme.PopMe" />
+            android:label="@string/event_page_toolbar_text" />
         <activity
             android:name=".MainActivity"
 
