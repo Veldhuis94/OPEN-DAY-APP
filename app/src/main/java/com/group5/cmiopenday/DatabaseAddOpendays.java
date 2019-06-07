@@ -7,10 +7,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.group5.cmiopenday.questionform.FormTextListener;
+import com.group5.cmiopenday.questionform.FormValidator;
+
 public class DatabaseAddOpendays extends menu_Activity {
     EditText editText_Date, editText_Time, editText_Courses;
     DatabaseHelper myDbHelper;
     private Button buttonadd;
+    private FormValidator validator;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,11 @@ public class DatabaseAddOpendays extends menu_Activity {
                 startActivity(new Intent(DatabaseAddOpendays.this, DatabaseAddOpendayEvent.class));
                 }
         });
+        validator = new FormValidator(buttonadd); //initialise object for validating the fields
+        //create listeners for the validator, the validator will check the textfield after it has been changed.
+        editText_Courses.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Courses, validator));
+        editText_Date.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Date, validator));
+        editText_Time.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Time, validator));
 
     }
 
