@@ -58,6 +58,9 @@
                 app:layout_constraintStart_toEndOf="@+id/button"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
+
+
             <ScrollView
                 android:id="@+id/scrollView3"
                 android:layout_width="match_parent"
@@ -74,6 +77,54 @@
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="417dp"
+                        android:layout_height="232dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@mipmap/communication" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="412dp"
+                        android:layout_height="323dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@mipmap/computer_science" />
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="414dp"
+                        android:layout_height="299dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.394"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.666"
+                        app:srcCompat="@mipmap/cmgt" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="418dp"
+                        android:layout_height="214dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.857"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.346"
+                        app:srcCompat="@mipmap/technische_informatica" />
 
                     <Button
                         android:id="@+id/button13"
@@ -143,7 +194,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
 
                         <View
@@ -153,7 +204,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
 
                         <TextView
@@ -163,6 +214,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="EWa"
                             android:textSize="30sp"
                             android:textStyle="bold"
@@ -176,6 +228,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/_17_00_20_00_nwijnhaven_107"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
@@ -189,6 +242,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
@@ -196,7 +250,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
 
                         <View
@@ -206,7 +260,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
 
                         <TextView
@@ -216,6 +270,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/Technische_Informatica"
                             android:textSize="30sp"
                             android:textStyle="bold"
@@ -230,6 +285,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/_17_00_20_00_nwijnhaven_107"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
@@ -243,6 +299,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
@@ -250,7 +307,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
 
                         <View
@@ -260,7 +317,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
 
                         <TextView
@@ -270,6 +327,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/CMGT"
                             android:textSize="30sp"
                             android:textStyle="bold"
@@ -284,6 +342,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/_17_00_20_00_nwijnhaven_107"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
@@ -296,6 +355,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
@@ -303,7 +363,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
 
                         <View
@@ -313,7 +373,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="20dp"
                             android:background="@android:color/white" />
 
                         <TextView
@@ -323,6 +383,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/Communicatiewetenschappen"
                             android:textSize="30sp"
                             android:textStyle="bold"
@@ -337,6 +398,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:text="@string/_17_00_20_00_nwijnhaven_107"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
@@ -349,6 +411,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="#A3FFFFFF"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
                             tools:layout_editor_absoluteX="161dp"
