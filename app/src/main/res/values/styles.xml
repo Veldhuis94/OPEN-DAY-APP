@@ -12,6 +12,8 @@
         <item name="textcolor">@color/textDark</item>
         <item name="textcolor2">@color/textDark2</item>
         <item name="sidebar_icon_color">@color/secondary6</item>
+        <item name="openDayDetails_courseBackground">@color/backgroundcolor_transparent_light</item>
+
     </style>
 
     <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.NoActionBar">
@@ -25,6 +27,7 @@
         <item name="textcolor">@color/textLight</item>
         <item name="textcolor2">@color/textLight2</item>
         <item name="sidebar_icon_color">@color/secondary4</item>
+        <item name="openDayDetails_courseBackground">@color/backgroundcolor_transparent_dark</item>
     </style>
 
 
