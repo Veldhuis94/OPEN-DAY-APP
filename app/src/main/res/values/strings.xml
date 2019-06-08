@@ -79,6 +79,7 @@
     <string name="computer_engineering">Computer Engineering</string>
 
     <!--POPUPS-->
+    <string name="event_page_toolbar_text">Event Information</string>
     <string name="time">Time</string>
     <string name="classroom">Classroom</string>
     <string name="_17_00_20_00_nwijnhaven_107" translatable="false">17:00 – 20:00\nWijnhaven 107</string>
