@@ -258,8 +258,13 @@
                         <View
                             android:layout_width="match_parent"
 
+<<<<<<< HEAD
                             android:layout_height="22dp"
                             android:background="@android:color/white" />
+=======
+                            android:layout_height="20dp"
+                            android:background="?attr/backgroundcolor" />
+>>>>>>> 6bb8d2189cca2b1579ebffbe11a9bc349a2d116c
 
                             android:layout_height="20dp"
                             android:background="?attr/backgroundcolor" />
@@ -274,8 +279,13 @@
                         <View
                             android:layout_width="match_parent"
 
+<<<<<<< HEAD
                             android:layout_height="22dp"
                             android:background="@android:color/white" />
+=======
+                            android:layout_height="20dp"
+                            android:background="?attr/backgroundcolor" />
+>>>>>>> 6bb8d2189cca2b1579ebffbe11a9bc349a2d116c
 
                             android:layout_height="20dp"
                             android:background="?attr/backgroundcolor" />
@@ -330,8 +340,13 @@
                         <View
                             android:layout_width="match_parent"
 
+<<<<<<< HEAD
                             android:layout_height="22dp"
                             android:background="@android:color/white" />
+=======
+                            android:layout_height="20dp"
+                            android:background="?attr/backgroundcolor" />
+>>>>>>> 6bb8d2189cca2b1579ebffbe11a9bc349a2d116c
 
                             android:layout_height="20dp"
                             android:background="?attr/backgroundcolor" />
@@ -346,8 +361,13 @@
                         <View
                             android:layout_width="match_parent"
 
+<<<<<<< HEAD
                             android:layout_height="22dp"
                             android:background="@android:color/white" />
+=======
+                            android:layout_height="20dp"
+                            android:background="?attr/backgroundcolor" />
+>>>>>>> 6bb8d2189cca2b1579ebffbe11a9bc349a2d116c
 
                             android:layout_height="20dp"
                             android:background="?attr/backgroundcolor" />
@@ -400,8 +420,13 @@
                         <View
                             android:layout_width="match_parent"
 
+<<<<<<< HEAD
                             android:layout_height="22dp"
                             android:background="@android:color/white" />
+=======
+                            android:layout_height="20dp"
+                            android:background="?attr/backgroundcolor" />
+>>>>>>> 6bb8d2189cca2b1579ebffbe11a9bc349a2d116c
 
                             android:layout_height="20dp"
                             android:background="?attr/backgroundcolor" />
@@ -416,8 +441,13 @@
                         <View
                             android:layout_width="match_parent"
 
+<<<<<<< HEAD
                             android:layout_height="22dp"
                             android:background="@android:color/white" />
+=======
+                            android:layout_height="20dp"
+                            android:background="?attr/backgroundcolor" />
+>>>>>>> 6bb8d2189cca2b1579ebffbe11a9bc349a2d116c
 
                             android:layout_height="20dp"
                             android:background="?attr/backgroundcolor" />
