@@ -58,6 +58,12 @@
     <string name="questionform_fill_in">Vul in</string>
     <string name="questionform_chooseApp">Kies een app om je bericht mee te versturen.</string>
 
+    <string name="logo_of_school">Logo van School</string>
+
+    <string name="TravelDirection">Routebeschrijving</string>
+    <string name="credits1">CMI OPEN DAY APP © INF1C GROUP 9\nin opdracht van:</string>
+    <string name="credits2">Deborah Barnett\nAstrid van Duuren\n\nOntwikkeld door:\n\nMohamed Abdi\nAzzeddine Agrida\nHakan Dalama\nAudi van Gog\nLucas Oudhuis\nDinesh Pahladsingh\nBastiaan te Veldhuis\n\nMet dank aan:\n\nEddie Lau\nLars Mostert\nJason Teo</string>
+
     <string name="invalid_fields">U hebt een of meer ongeldige velden.</string>
 
     <string name="OpenDay_Test">CMI Open Dag, %s\n12:00 – 16:00\nInformatica, Technische Informatica, Communicatie</string>
