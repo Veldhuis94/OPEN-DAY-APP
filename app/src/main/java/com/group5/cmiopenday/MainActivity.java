@@ -75,21 +75,6 @@ public class MainActivity extends menu_Activity{
             }
         });
 
-        ((Button) findViewById(R.id.button21)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);
-                myDbHelper.close();
-                myDbHelper.purgeDatabase(MainActivity.this);
-                try {
-                    myDbHelper.createDataBase();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                Toast.makeText(MainActivity.this, "Database reloaded", Toast.LENGTH_SHORT).show();
-            }
-
-        });
     }
 
 
