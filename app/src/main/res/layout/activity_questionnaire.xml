@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_alignParentTop="true"
-                android:text="Question 1"
+                android:text="Statement 1"
                 android:textSize="36sp"
                 android:layout_marginBottom="20dp"/>
             <TextView
@@ -53,13 +53,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_below="@id/textView22"
-                android:text="Question Body"
                 android:layout_marginBottom="20dp"/>
             <Button
                 android:id="@+id/q1a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 1"
+                android:text="@string/disagree"
                 android:layout_toLeftOf="@id/q1a2"
                 android:layout_below="@id/qbody1" />
 
@@ -67,7 +66,7 @@
                 android:id="@+id/q1a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 2"
+                android:text="@string/neutral"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/qbody1"
                 android:layout_marginBottom="20dp"/>
@@ -76,7 +75,7 @@
                 android:id="@+id/q1a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 3"
+                android:text="@string/agree"
                 android:layout_toRightOf="@id/q1a2"
                 android:layout_below="@id/qbody1" />
 
@@ -86,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_below="@id/q1a2"
-                android:text="Question 2"
+                android:text="Statement 2"
                 android:textSize="36sp"
                 android:layout_marginBottom="20dp"/>
             <TextView
@@ -101,7 +100,7 @@
                 android:id="@+id/q2a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 1"
+                android:text="@string/disagree"
                 android:layout_toLeftOf="@id/q2a2"
                 android:layout_below="@id/qbody2" />
 
@@ -109,7 +108,7 @@
                 android:id="@+id/q2a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 2"
+                android:text="@string/neutral"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/qbody2"
                 android:layout_marginBottom="20dp"/>
@@ -118,7 +117,7 @@
                 android:id="@+id/q2a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 3"
+                android:text="@string/agree"
                 android:layout_toRightOf="@id/q2a2"
                 android:layout_below="@id/qbody2" />
             <TextView
@@ -142,7 +141,7 @@
                 android:id="@+id/q3a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 1"
+                android:text="@string/disagree"
                 android:layout_toLeftOf="@id/q3a2"
                 android:layout_below="@id/qbody3" />
 
@@ -150,7 +149,7 @@
                 android:id="@+id/q3a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 2"
+                android:text="@string/neutral"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/qbody3"
                 android:layout_marginBottom="40dp"/>
@@ -159,7 +158,7 @@
                 android:id="@+id/q3a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 3"
+                android:text="@string/agree"
                 android:layout_toRightOf="@id/q3a2"
                 android:layout_below="@id/qbody3" />
 
@@ -167,7 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/submitButton"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/q3a2" />
             <TextView

@@ -14,7 +14,8 @@
             android:label="Credits"/>
 
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".resultPage" />
+        <activity android:name=".resultPage"
+            android:label = "Results"/>
         <activity android:name=".Questionnaire" />
 
 

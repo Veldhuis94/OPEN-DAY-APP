@@ -191,6 +191,34 @@
     <string name="popTitle">Informational lesson</string>
     <string name="popBody">Teachers and/or students give a brief presentation about the study course in a classroom. The presentation will be about 45 minutes long.</string>
     <string name="projects">Examples of projects</string>
+    <string name="submit">Submit</string>
+    <string name="agree">agree</string>
+    <string name="neutral">Neutral</string>
+    <string name="disagree">Disagree</string>
+    <string name="questionnaire_incomplete">You have not filled in all the questions.</string>
+    <string name="questionnairebutton">Does this studycourse fit you?</string>
 
+    <string-array name="q1Body">
+        <item>Question 1 Body 1</item>
+        <item>Question 1 Body 2</item>
+        <item>Question 1 Body 3</item>
+        <item>Question 1 Body 4</item>
+        <item>Question 1 Body 5</item>
+    </string-array>
+
+    <string-array name="q2Body">
+        <item>Question 2 Body 1</item>
+        <item>Question 2 Body 2</item>
+        <item>Question 2 Body 3</item>
+        <item>Question 2 Body 4</item>
+        <item>Question 2 Body 5</item>
+    </string-array>
+    <string-array name="q3Body">
+        <item>Question 3 Body 1</item>
+        <item>Question 3 Body 2</item>
+        <item>Question 3 Body 3</item>
+        <item>Question 3 Body 4</item>
+        <item>Question 3 Body 5</item>
+    </string-array>
 </resources>
 

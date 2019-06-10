@@ -1,5 +1,6 @@
 package com.group5.cmiopenday;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,7 +9,7 @@ import android.widget.Toast;
 
 public class Questionnaire extends menu_Activity {
 
-
+    static int currentPageId; //decides which questionnaire is displayed, received from onClickQuestionnaire which in turn received it from its call on EducationPage
     boolean[] isPressed = {false, false, false, false, false, false, false, false, false};
 
     @Override
@@ -18,6 +19,18 @@ public class Questionnaire extends menu_Activity {
         super.onCreateDrawer(savedInstanceState);
         onClickEvent();
 
+        //System to assign the correct strings to the correct textviews
+        String[] q1strings = getResources().getStringArray(R.array.q1Body);
+        TextView q1 = findViewById(R.id.qbody1);
+        q1.setText(q1strings[currentPageId]);
+
+        String[] q2strings = getResources().getStringArray(R.array.q2Body);
+        TextView q2 = findViewById(R.id.qbody2);
+        q2.setText(q2strings[currentPageId]);
+
+        String[] q3strings = getResources().getStringArray(R.array.q3Body);
+        TextView q3 = findViewById(R.id.qbody3);
+        q3.setText(q3strings[currentPageId]);
 
         Button submitButton = findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -26,10 +39,11 @@ public class Questionnaire extends menu_Activity {
                 int finalScoreSend = scoreCalculate();
                 TextView scoreView = findViewById(R.id.SCOREVIEW);
                 if(finalScoreSend <= 0) {
-                    scoreView.setText("You have not filled in all the questions.");
+                    scoreView.setText(getString(R.string.questionnaire_incomplete));
                 }
                 else {
-                    scoreView.setText("Your score is: " + finalScoreSend);
+                    startActivity(new Intent(Questionnaire.this, resultPage.class));
+                    resultPage.finalResult = finalScoreSend;
                 }
             }
         });
