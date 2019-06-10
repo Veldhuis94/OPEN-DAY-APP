@@ -34,21 +34,6 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="416dp"
-            android:layout_height="276dp"
-            android:alpha="0.08"
-            android:background="#BAFFFFFF"
-            android:src="@drawable/background_pic"
-            android:tint="@color/secondary4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
