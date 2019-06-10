@@ -85,9 +85,9 @@ public class FloorPlanActivity extends menu_Activity {
         WNButton.setBackgroundResource((WNisPressed)? selectedBackground : defaultBackground);
         WDButton.setBackgroundResource((WDisPressed)? selectedBackground : defaultBackground);
         //disables or enables the button based on if the building is selected or not
-        //HButton.setEnabled(!HisPressed);
-        //WNButton.setEnabled(!WNisPressed);
-        //WDButton.setEnabled(!WDisPressed);
+        HButton.setEnabled(!HisPressed);
+        WNButton.setEnabled(!WNisPressed);
+        WDButton.setEnabled(!WDisPressed);
     }
 
     //The plus or minus buttons will turn grey if the floor above or below does not exist
