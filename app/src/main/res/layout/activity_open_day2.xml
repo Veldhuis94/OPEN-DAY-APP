@@ -261,7 +261,7 @@
 
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -274,7 +274,7 @@
                             android:layout_width="match_parent"
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
                         <TextView
@@ -326,7 +326,7 @@
                             android:layout_width="match_parent"
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -339,7 +339,7 @@
                             android:layout_width="match_parent"
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -391,7 +391,7 @@
                             android:layout_width="match_parent"
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -404,7 +404,7 @@
                             android:layout_width="match_parent"
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 

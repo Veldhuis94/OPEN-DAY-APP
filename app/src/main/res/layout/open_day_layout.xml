@@ -260,7 +260,7 @@
 
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -275,7 +275,7 @@
 
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -330,7 +330,7 @@
 
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -345,7 +345,7 @@
 
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -398,7 +398,7 @@
 
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
@@ -413,7 +413,7 @@
 
 
                             android:layout_height="22dp"
-                            android:background="@android:color/white" />
+                            android:background="?attr/backgroundcolor" />
 
 
 
