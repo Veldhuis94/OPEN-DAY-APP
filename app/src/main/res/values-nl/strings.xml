@@ -58,6 +58,12 @@
     <string name="questionform_fill_in">Vul in</string>
     <string name="questionform_chooseApp">Kies een app om je bericht mee te versturen.</string>
 
+    <string name="logo_of_school">Logo van School</string>
+
+    <string name="TravelDirection">Routebeschrijving</string>
+    <string name="credits1">CMI OPEN DAY APP © INF1C GROUP 9\nin opdracht van:</string>
+    <string name="credits2">Deborah Barnett\nAstrid van Duuren\n\nOntwikkeld door:\n\nMohamed Abdi\nAzzeddine Agrida\nHakan Dalama\nAudi van Gog\nLucas Oudhuis\nDinesh Pahladsingh\nBastiaan te Veldhuis\n\nMet dank aan:\n\nEddie Lau\nLars Mostert\nJason Teo</string>
+
     <string name="invalid_fields">U hebt een of meer ongeldige velden.</string>
 
     <string name="OpenDay_Test">CMI Open Dag, %s\n12:00 – 16:00\nInformatica, Technische Informatica, Communicatie</string>
@@ -81,5 +87,25 @@
         <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
 
     </string-array>
+
+    <string name="event_page_toolbar_text">Event Informatie</string>
+
+    <string name="aboutcmi_address">Adres: Wijnhaven 107, 3011 WN, Rotterdam</string>
+    <string name="title_activity_travel">TravelActivity</string>
+
+    <string-array name="CourseNameArray">
+        <item>Informatica</item>
+        <item>Technische Informatica</item>
+        <item>CMGT</item>
+        <item>Communicatie</item>
+        <item>Informatica</item>
+        <item>Technische Informtica</item>
+        <item>CMGT</item>
+        <item>Communicatie</item>
+    </string-array>
+
+    <string name="preface_openday_event">Docenten en studenten geven een korte presentatie in een klaslokaal. De presentatie duurt ongeveer 40 minuten.
+
+    </string>
 
 </resources>

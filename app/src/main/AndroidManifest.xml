@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.group5.cmiopenday">
+    package="com.group5.cmiopenday"
+    android:versionCode="1">
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".creditsPage"
+            android:label="Credits"/>
+
         <activity android:name=".LoginActivity"/>
         <activity android:name=".resultPage" />
         <activity android:name=".Questionnaire" />
+
 
         <activity
             android:name=".TravelActivity"
@@ -52,12 +57,11 @@
             android:name=".DatabaseAddOpendayEvent"/>
         <activity
             android:name=".PopActivity"
-            android:theme="@style/AppTheme.PopMe" />
+            android:label="@string/event_page_toolbar_text" />
         <activity
             android:name=".MainActivity"
 
             android:label="@string/open_days" />
-
 
     </application>
 

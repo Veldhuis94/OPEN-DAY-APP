@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.CalendarContract;
@@ -22,10 +23,13 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 
-public class PopActivity extends Activity {
+public class PopActivity extends menu_Activity {
     static int popUpId;
+    Cursor PopUp_info = null;
+    String Language = "";
 
     final String date = "04-06-2019";
     final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
@@ -35,6 +39,7 @@ public class PopActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop);
+        super.onCreateDrawer(savedInstanceState);
 
 
         //share button calls the function shareONOtherSocialMedia
@@ -51,9 +56,9 @@ public class PopActivity extends Activity {
 
         ImageButton noteButton = findViewById(R.id.imageButton2);
         final Context context1 = this;
-        noteButton.setOnClickListener(new View.OnClickListener(){
+        noteButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 openNoteApp(context1);
             }
         });
@@ -78,46 +83,68 @@ public class PopActivity extends Activity {
             }
         });
 
+        DatabaseHelper myDbHelper = new DatabaseHelper(PopActivity.this);//Database
+        StringBuilder stringBuilder_time_1 = new StringBuilder();
+        StringBuilder stringBuilder_time_2 = new StringBuilder();
+        StringBuilder stringBuilder_time_3 = new StringBuilder();
+        StringBuilder stringBuilder_room = new StringBuilder();
+        StringBuilder stringBuilder_text = new StringBuilder();
+        StringBuilder stringBuilder_title = new StringBuilder();
+        TextView textView15 = findViewById(R.id.textView15);//time1
+        TextView textView21 = findViewById(R.id.textView21);//time2
+        TextView textView18 = findViewById(R.id.textView18);//title
+        TextView textView23 = findViewById(R.id.textView23);//time3
+        TextView textView25 = findViewById(R.id.textView25);//Room1
+        TextView textView26 = findViewById(R.id.textView26);//Room2
+        TextView textView27 = findViewById(R.id.textView27);//Room3
+        TextView textView28 = findViewById(R.id.textView28);//Text
 
-        int[] courseId = {R.array.CourseNameArray};
-        int[] courseText = {R.id.textView18};
+        String PhoneLanguage = Locale.getDefault().getLanguage();//Checks if phone language is NL
+        if(PhoneLanguage.equals("nl")){
+            Language = "NL";}
 
-        for(int o = 0; o < courseText.length; o++){
-            String[] firstCourse = getResources().getStringArray(courseId[o]);
-            TextView firstCourseView = findViewById(courseText[o]);
-            firstCourseView.setText(firstCourse[popUpId]);
+        myDbHelper.openDataBase();
+
+        if (popUpId == 0) {
+           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 1, "PopUps"+Language);}
+        if ((popUpId == 1)){
+           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 2, "PopUps"+Language);}
+        if (popUpId == 2) {
+           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 3, "PopUps"+Language);}
+        if ((popUpId == 3)){
+           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 4, "PopUps"+Language);}
+        if (popUpId == 4) {
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 5, "PopUps"+Language);}
+        if ((popUpId == 5)){
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 6, "PopUps"+Language);}
+        if (popUpId == 6) {
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 7, "PopUps"+Language);}
+        if ((popUpId == 7)){
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 8, "PopUps"+Language);}//Checks wich popup to show
+
+
+        if (PopUp_info.moveToFirst()) {
+            do {
+                stringBuilder_time_1.append(PopUp_info.getString(1));
+                stringBuilder_time_2.append(PopUp_info.getString(2));
+                stringBuilder_time_3.append(PopUp_info.getString(3));
+                stringBuilder_room.append(PopUp_info.getString(4));
+                stringBuilder_text.append(PopUp_info.getString(5));
+                stringBuilder_title.append(PopUp_info.getString(6));
+            } while (PopUp_info.moveToNext());
+
+            textView15.setText(stringBuilder_time_1);
+            textView21.setText(stringBuilder_time_2);
+            textView23.setText(stringBuilder_time_3);
+            textView25.setText(stringBuilder_room);
+            textView26.setText(stringBuilder_room);
+            textView27.setText(stringBuilder_room);
+            textView28.setText(stringBuilder_text);
+            textView18.setText(stringBuilder_title);
         }
-
-
-
-        int[] ids = {R.array.firstTimeArray, R.array.secondTimeArray, R.array.thirdTimeArray};
-        int[] textViews = {R.id.textView15, R.id.textView21, R.id.textView23};
-
-        for (int i = 0; i < textViews.length; i++) {
-            String[] firstTime = getResources().getStringArray(ids[i]);
-            TextView firstTimeView = findViewById(textViews[i]);
-            firstTimeView.setText(firstTime[popUpId]);
-        }
-
-        int[] classid = {R.array.firstClassroomArray, R.array.secondClassroomArray, R.array.thirdClassroomArray};
-        int[] classrooms = {R.id.textView25, R.id.textView26, R.id.textView27};
-
-        for(int l = 0; l< classrooms.length; l++){
-            String[] firstClassroom = getResources().getStringArray(classid[l]);
-            TextView firstClassroomView = findViewById(classrooms[l]);
-            firstClassroomView.setText(firstClassroom[popUpId]);
-        }
-        //text for all study studyprojects. You can find it in strings.
-        int[] projectId = {R.array.StudyProjectArray};
-        int[] projectText = {R.id.textView28};
-
-        for(int x = 0; x < projectText.length; x++){
-            String[] firstProject = getResources().getStringArray(projectId[x]);
-            TextView firstProjectView = findViewById(projectText[x]);
-            firstProjectView.setText(firstProject[popUpId]);
-        }
-
     }
+
+
 
     public void shareOnOtherSocialMedia(Context context) {
 
@@ -187,34 +214,3 @@ public class PopActivity extends Activity {
 
 }
 
-//        DatabaseHelper myDbHelper = new DatabaseHelper(PopActivity.this);//Database
-//        StringBuilder stringBuilder_time_1 = new StringBuilder();
-//        StringBuilder stringBuilder_time_2 = new StringBuilder();
-//        StringBuilder stringBuilder_time_3 = new StringBuilder();
-//        StringBuilder stringBuilder_room = new StringBuilder();
-//        StringBuilder stringBuilder_text = new StringBuilder();
-//        TextView textView15 = findViewById(R.id.textView15);//time1
-//        TextView textView21 = findViewById(R.id.textView21);//time2
-//        TextView textView23 = findViewById(R.id.textView23);//time3
-//        TextView textView25 = findViewById(R.id.textView25);//Room1
-//        TextView textView26 = findViewById(R.id.textView26);//Room2
-//        TextView textView27 = findViewById(R.id.textView27);//Room3
-//        TextView textView28 = findViewById(R.id.textView28);//Text
-//        myDbHelper.openDataBase();
-//        PopUpinfo = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, popUpId, "PopUps");
-//        if (PopUpinfo.moveToFirst()) {
-//            do {
-//                stringBuilder_time_1.append(PopUpinfo.getString(2));
-//                stringBuilder_time_2.append(PopUpinfo.getString(3));
-//                stringBuilder_time_3.append(PopUpinfo.getString(4));
-//                stringBuilder_room.append(PopUpinfo.getString(5));
-//                stringBuilder_text.append(PopUpinfo.getString(6));
-//            } while (PopUpinfo.moveToNext());
-
-//            textView15.setText(stringBuilder_time_1);
-//            textView21.setText(stringBuilder_time_2);
-//            textView23.setText(stringBuilder_time_3);
-//            textView25.setText(stringBuilder_room);
-//            textView26.setText(stringBuilder_room);
-//            textView27.setText(stringBuilder_room);
-//            textView28.setText(stringBuilder_text);

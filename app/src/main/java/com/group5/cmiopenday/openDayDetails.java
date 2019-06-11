@@ -7,12 +7,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.CalendarContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Display;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.Button;
@@ -28,16 +34,27 @@ import java.util.Date;
 import java.util.EventListener;
 
 import java.util.List;
+import java.util.Locale;
 
 
     public class openDayDetails extends menu_Activity {
 
-        final String date = "4-4-2019";
+
+    final String date = "4-4-2019";
+
+
+ 
+
     final int[] dateArray = {4, 4, 2019, 12, 00, 16, 00};
     Cursor course_1 = null;
     Cursor course_2 = null;
     Cursor course_3 = null;
     Cursor course_4 = null;
+    String Language = "";
+    String Room = "Room: ";
+    String Time = "Time: ";
+    String Location = "Location: ";
+
 
 
     @Override
@@ -53,8 +70,13 @@ import java.util.List;
                 shareOnOtherSocialMedia(context);
             }
         });
+
+
+
         DatabaseHelper myDbHelper = new DatabaseHelper(openDayDetails.this);//Database
+
         myDbHelper.openDataBase();
+
         TextView textView = findViewById(R.id.textView);//course 1
         StringBuilder stringBuilder_course_1 = new StringBuilder();
         TextView textView2 = findViewById(R.id.textView2);//info 1
@@ -71,34 +93,48 @@ import java.util.List;
         StringBuilder stringBuilder_course_4 = new StringBuilder();
         TextView textView8 = findViewById(R.id.textView8);//info 4
         StringBuilder stringBuilder_info_4 = new StringBuilder();
-        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,0,"OpenDays");
-        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,1,"OpenDays");
-        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,2,"OpenDays");
-        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,3,"OpenDays");
+
+        String PhoneLanguage = Locale.getDefault().getLanguage();
+        if(PhoneLanguage.equals("nl")){
+            Language = "NL";
+            Room = "Lokaal: ";
+            Time = "Tijd: ";
+            Location = "Locatie: ";
+}
+
+        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,0,"OpenDays"+Language);
+        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,1,"OpenDays"+Language);
+        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,2,"OpenDays"+Language);
+        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,3,"OpenDays"+Language);
+
         if (course_1.moveToFirst()) {
             do {
                 stringBuilder_course_1.append(course_1.getString(2));
-                stringBuilder_info_1.append("Room: "+course_1.getString(3)+" | Time: "+course_1.getString(4)+"\nLocation: "+course_1.getString(5));
+                stringBuilder_info_1.append(Room+course_1.getString(3)+" | "+Time+course_1.getString(4)+"\n"+Location+course_1.getString(5));
             } while (course_1.moveToNext());
         }
+
         if (course_2.moveToFirst()) {
             do {
                 stringBuilder_course_2.append(course_2.getString(2));
-                stringBuilder_info_2.append("Room: "+course_2.getString(3)+" | Time: "+course_2.getString(4)+"\nLocation: "+course_2.getString(5));
+                stringBuilder_info_2.append(Room+course_2.getString(3)+" | "+Time+course_2.getString(4)+"\n"+Location+course_2.getString(5));
             } while (course_2.moveToNext());
         }
+
         if (course_3.moveToFirst()) {
             do {
                 stringBuilder_course_3.append(course_3.getString(2));
-                stringBuilder_info_3.append("Room: "+course_3.getString(3)+" | Time: "+course_3.getString(4)+"\nLocation: "+course_3.getString(5));
+                stringBuilder_info_3.append(Room+course_3.getString(3)+" | "+Time+course_3.getString(4)+"\n"+Location+course_3.getString(5));
             } while (course_3.moveToNext());
         }
+
         if (course_4.moveToFirst()) {
             do {
                 stringBuilder_course_4.append(course_4.getString(2));
-                stringBuilder_info_4.append("Room: "+course_4.getString(3)+" | Time: "+course_4.getString(4)+"\nLocation: "+course_4.getString(5));
+                stringBuilder_info_4.append(Room+course_4.getString(3)+" | "+Time+course_4.getString(4)+"\n"+Location+course_4.getString(5));
             } while (course_4.moveToNext());
         }
+
         textView.setText(stringBuilder_course_1);
         textView2.setText(stringBuilder_info_1);
         textView3.setText(stringBuilder_course_2);
@@ -180,6 +216,46 @@ import java.util.List;
 
 
 
+    }
+
+    public Drawable resizeImage(int imageResource) {//R.drawable.computer_science
+        // Get device dimensions
+        Display display = getWindowManager().getDefaultDisplay();
+        double deviceWidth = display.getWidth();
+
+        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(
+                imageResource);
+        double imageHeight = bd.getBitmap().getHeight();
+        double imageWidth = bd.getBitmap().getWidth();
+
+        double ratio = deviceWidth / imageWidth;
+        int newImageHeight = (int) (imageHeight * ratio);
+
+        Bitmap bMap = BitmapFactory.decodeResource(getResources(), imageResource);
+        Drawable drawable = new BitmapDrawable(this.getResources(),
+                getResizedBitmap(bMap, newImageHeight, (int) deviceWidth));
+
+        return drawable;
+    }
+
+    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
+
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+
+        // create a matrix for the manipulation
+        Matrix matrix = new Matrix();
+
+        // resize the bit map
+        matrix.postScale(scaleWidth, scaleHeight);
+
+        // recreate the new Bitmap
+        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
+
+        return resizedBitmap;
     }
 
 }

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.Toast;
 import java.io.IOException;
+import java.util.Locale;
 
 public class MainActivity extends menu_Activity{
     private Button button;
@@ -18,6 +19,10 @@ public class MainActivity extends menu_Activity{
     Cursor row_2 = null;
     Cursor row_3 = null;
     private ImageView loginbtn;
+    String Language = "";
+    String Openday = "CMI Open Day, ";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,17 +36,26 @@ public class MainActivity extends menu_Activity{
         TextView textView3 = findViewById(R.id.textView3);
         TextView textView4 = findViewById(R.id.textViewdatabase);
         myDbHelper.openDataBase();
+
         row_1 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,1);
         row_2 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,2);
         row_3 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,3);
+
+        String PhoneLanguage = Locale.getDefault().getLanguage();
+        if(PhoneLanguage.equals("nl")){
+            Language = "NL";
+            Openday = "CMI Opendag, ";}
+        row_1 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,1,"Homepage"+Language);
+        row_2 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,2,"Homepage"+Language);
+
         if (row_1.moveToFirst()) {
             do {
-                stringBuilder_row_1.append("CMI Open Day, "+row_1.getString(1)+"\nTime: "+row_1.getString(2)+"\n"+row_1.getString(3));
+                stringBuilder_row_1.append(Openday+row_1.getString(1)+"\nTime: "+row_1.getString(2)+"\n"+row_1.getString(3));
             } while (row_1.moveToNext());
         }
         if (row_2.moveToFirst()) {
             do {
-                stringBuilder_row_2.append("CMI Open Day, "+row_2.getString(1)+"\nTime: "+row_2.getString(2)+"\n"+row_2.getString(3));
+                stringBuilder_row_2.append(Openday+row_2.getString(1)+"\nTime: "+row_2.getString(2)+"\n"+row_2.getString(3));
             } while (row_2.moveToNext());
         }
         if (row_3.moveToFirst()) {
@@ -105,6 +119,7 @@ public class MainActivity extends menu_Activity{
             }
 
         });
+
 
     }
 
