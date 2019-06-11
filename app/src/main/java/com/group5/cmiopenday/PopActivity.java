@@ -23,12 +23,13 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 
 public class PopActivity extends Activity {
     static int popUpId;
     Cursor PopUp_info = null;
-    int row_id = popUpId;
+    String Language = "";
 
     final String date = "04-06-2019";
     final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
@@ -96,23 +97,29 @@ public class PopActivity extends Activity {
         TextView textView26 = findViewById(R.id.textView26);//Room2
         TextView textView27 = findViewById(R.id.textView27);//Room3
         TextView textView28 = findViewById(R.id.textView28);//Text
+
+        String PhoneLanguage = Locale.getDefault().getLanguage();//Checks if phone language is NL
+        if(PhoneLanguage.equals("nl")){
+            Language = "NL";}
+
         myDbHelper.openDataBase();
+
         if (popUpId == 0) {
-           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 1, "PopUps");}
+           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 1, "PopUps"+Language);}
         if ((popUpId == 1)){
-           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 2, "PopUps");}
+           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 2, "PopUps"+Language);}
         if (popUpId == 2) {
-           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 3, "PopUps");}
+           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 3, "PopUps"+Language);}
         if ((popUpId == 3)){
-           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 4, "PopUps");}
+           PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 4, "PopUps"+Language);}
         if (popUpId == 4) {
-            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 5, "PopUps");}
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 5, "PopUps"+Language);}
         if ((popUpId == 5)){
-            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 6, "PopUps");}
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 6, "PopUps"+Language);}
         if (popUpId == 6) {
-            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 7, "PopUps");}
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 7, "PopUps"+Language);}
         if ((popUpId == 7)){
-            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 8, "PopUps");}
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 8, "PopUps"+Language);}//Checks wich popup to show
 
 
         if (PopUp_info.moveToFirst()) {

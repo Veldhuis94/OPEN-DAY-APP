@@ -126,14 +126,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return myDataBase.query(Table,columns , "_id=" + row_id, null, null, null, null);
     }
 
-    public Cursor ViewData() {
-        SQLiteDatabase myDbHelper = this.getReadableDatabase();
-
-        Cursor cursor = myDbHelper.rawQuery("select * from " + DB_NAME, null);
-        return cursor;
-    }
-
-
     public void purgeDatabase(Context context) {
         context.deleteDatabase("MyDatabase");
     }
