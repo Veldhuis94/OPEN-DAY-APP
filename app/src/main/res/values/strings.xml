@@ -197,6 +197,10 @@
     <string name="disagree">Disagree</string>
     <string name="questionnaire_incomplete">You have not filled in all the questions.</string>
     <string name="questionnairebutton">Does this studycourse fit you?</string>
+    <string name="score">Your score is:</string>
+    <string name="negativeQ">This study may not be for you. Try looking for something you feel truly passionate about!</string>
+    <string name="neutralQ">This may be to your liking, but keep your options open!</string>
+    <string name="positiveQ">You\'ll definitely feel at home here. Do try to keep looking around you though!</string>
 
     <string-array name="q1Body">
         <item>Question 1 Body 1</item>

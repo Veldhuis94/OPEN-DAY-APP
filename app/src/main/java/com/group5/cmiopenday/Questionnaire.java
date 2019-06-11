@@ -1,5 +1,6 @@
 package com.group5.cmiopenday;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,6 @@ public class Questionnaire extends menu_Activity {
 
     static int currentPageId; //decides which questionnaire is displayed, received from onClickQuestionnaire which in turn received it from its call on EducationPage
     boolean[] isPressed = {false, false, false, false, false, false, false, false, false};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,21 +32,9 @@ public class Questionnaire extends menu_Activity {
         TextView q3 = findViewById(R.id.qbody3);
         q3.setText(q3strings[currentPageId]);
 
-        Button submitButton = findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int finalScoreSend = scoreCalculate();
-                TextView scoreView = findViewById(R.id.SCOREVIEW);
-                if(finalScoreSend <= 0) {
-                    scoreView.setText(getString(R.string.questionnaire_incomplete));
-                }
-                else {
-                    startActivity(new Intent(Questionnaire.this, resultPage.class));
-                    resultPage.finalResult = finalScoreSend;
-                }
-            }
-        });
+        final Button submitButton = findViewById(R.id.submitButton);
+        final Questionnaire current = this;
+        submitButton.setOnClickListener(new onClickResultpage(current));
     }
     private void onClickEvent() {
         final Button[] answers = {findViewById(R.id.q1a1), findViewById(R.id.q1a2), findViewById(R.id.q1a3), findViewById(R.id.q2a1), findViewById(R.id.q2a2), findViewById(R.id.q2a3), findViewById(R.id.q3a1), findViewById(R.id.q3a2), findViewById(R.id.q3a3)};
@@ -99,18 +87,18 @@ public class Questionnaire extends menu_Activity {
             }
         }
     }
-    private int scoreCalculate() {
+    public int scoreCalculate() {
         int score = 0;
         for(int id = 0; id <= 8; id ++) {
             if(isPressed[id]){
                 if(id == 0 || id == 3 || id == 6){
-                    score += 1;
+                    score += 0;
                 }
                 else if(id == 1 || id == 4 || id == 7){
-                    score += 3;
+                    score += 1;
                 }
                 else if(id == 2 || id == 5 || id == 8) {
-                    score += 5;
+                    score += 2;
                 }
             }
         }
@@ -118,7 +106,7 @@ public class Questionnaire extends menu_Activity {
             return score;
         }
         else {
-            return 0;
+            return -1;
         }
     }
 }

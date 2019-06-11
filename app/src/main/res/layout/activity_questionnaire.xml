@@ -173,7 +173,6 @@
                 android:id="@+id/SCOREVIEW"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your score will display here."
                 android:layout_below="@id/submitButton"
                 android:layout_centerHorizontal="true"
                 tools:layout_editor_absoluteX="179dp"

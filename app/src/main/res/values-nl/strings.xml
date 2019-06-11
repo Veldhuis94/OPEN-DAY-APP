@@ -87,5 +87,15 @@
         <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
 
     </string-array>
+    <string name="submit">Indienen</string>
+    <string name="agree">eens</string>
+    <string name="neutral">Neutraal</string>
+    <string name="disagree">oneens</string>
+    <string name="questionnaire_incomplete">Je hebt niet alle vragen ingevuld.</string>
+    <string name="questionnairebutton">Past deze studie bij jou?</string>
+    <string name="score">Je score is:</string>
+    <string name="negativeQ">Deze studie past misschien niet zo goed bij je. Probeer iets te vinden waar je echt passie voor hebt!</string>
+    <string name="neutralQ">Dit kan een optie zijn, maar houd andere keuzes open!</string>
+    <string name="positiveQ">Je zult je hier zeker thuisvoelen, maar kijk gerust nog even rond!</string>
 
 </resources>

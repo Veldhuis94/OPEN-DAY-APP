@@ -13,6 +13,24 @@ public class resultPage extends menu_Activity {
         super.onCreateDrawer(savedInstanceState);
 
         TextView resultScore = findViewById(R.id.textView29);
-        resultScore.setText(finalResult);
+        resultScore.setText(displayResult());
+
+        TextView resultText = findViewById(R.id.scoreText);
+        resultText.setText(whatText());
+    }
+    public String displayResult() {
+        int res = finalResult * 100 / 6;
+        return res + "%";
+    }
+    public String whatText() {
+        if(finalResult <= 2) {
+            return getResources().getString(R.string.negativeQ);
+        }
+        if(finalResult > 2 && finalResult <= 4) {
+            return getResources().getString(R.string.neutralQ);
+        }
+        else {
+            return getResources().getString(R.string.positiveQ);
+        }
     }
 }
