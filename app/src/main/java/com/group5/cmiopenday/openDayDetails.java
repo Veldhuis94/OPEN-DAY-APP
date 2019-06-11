@@ -86,7 +86,7 @@ public class openDayDetails extends menu_Activity {
         String PhoneLanguage = Locale.getDefault().getLanguage();
         if(PhoneLanguage.equals("nl")){
             Language = "NL";
-            Room = "Kamer: ";
+            Room = "Lokaal: ";
             Time = "Tijd: ";
             Location = "Locatie: ";
 }
