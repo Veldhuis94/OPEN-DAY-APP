@@ -31,7 +31,7 @@ public class PopActivity extends Activity {
     final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
     int sharetextcount = 0;
     boolean extra ;
-    final String sharetext = "";
+    String sharetext = "";
 
 
 
@@ -124,17 +124,14 @@ public class PopActivity extends Activity {
             TextView firstProjectView = findViewById(projectText[x]);
             firstProjectView.setText(firstProject[popUpId]);
             sharetextcount= x;
-        }
-
-        for(sharetextcount = 1; extra; ){
-             sharetext = "Hoihoi";
-        }
-        for(sharetextcount = 2; extra; ){
-             sharetext = "Ho2ihoi";
+            sharetext();
 
         }
-        for(sharetextcount =3;extra;){
-             sharetext = "blblblb";
+        public void shareText(){
+            if(sharetextcount==1){
+                sharetext = "fgff";
+
+            }
         }
 
     }
