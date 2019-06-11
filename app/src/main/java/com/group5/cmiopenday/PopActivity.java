@@ -29,6 +29,12 @@ public class PopActivity extends Activity {
 
     final String date = "04-06-2019";
     final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
+    int sharetextcount = 0;
+    boolean extra ;
+    final String sharetext = "";
+
+
+
 
 
     @Override
@@ -55,6 +61,8 @@ public class PopActivity extends Activity {
             @Override
             public void onClick(View v){
                 openNoteApp(context1);
+
+
             }
         });
 
@@ -115,6 +123,18 @@ public class PopActivity extends Activity {
             String[] firstProject = getResources().getStringArray(projectId[x]);
             TextView firstProjectView = findViewById(projectText[x]);
             firstProjectView.setText(firstProject[popUpId]);
+            sharetextcount= x;
+        }
+
+        for(sharetextcount = 1; extra; ){
+             sharetext = "Hoihoi";
+        }
+        for(sharetextcount = 2; extra; ){
+             sharetext = "Ho2ihoi";
+
+        }
+        for(sharetextcount =3;extra;){
+             sharetext = "blblblb";
         }
 
     }
@@ -129,13 +149,13 @@ public class PopActivity extends Activity {
         if (!resInfos.isEmpty()) {
             for (ResolveInfo resInfo : resInfos) {
                 String packageName = resInfo.activityInfo.packageName;
-                if (packageName.toLowerCase().contains("twitter") || packageName.toLowerCase().contains("facebook") || packageName.toLowerCase().contains("whatsapp") || packageName.toLowerCase().contains("email") || packageName.toLowerCase().contains("gm")) {
+                if (packageName.toLowerCase().contains("twitter") || packageName.toLowerCase().contains("whatsapp") || packageName.toLowerCase().contains("email") || packageName.toLowerCase().contains("gm")) {
                     Intent intent = new Intent();
                     intent.setComponent(new ComponentName(packageName, resInfo.activityInfo.name));
                     intent.setAction(Intent.ACTION_SEND);
                     intent.setType("text/plain");
                     String shareBody = "CMI OPEN DAY";
-                    String shareSub = "On " + date + ", I am going to an open day at the CMI of the Rotterdam University of Applied Sciences! Learn more at https://www.hogeschoolrotterdam.nl/";
+                    String shareSub = "On " + date + sharetext;
                     intent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
                     intent.putExtra(Intent.EXTRA_TEXT, shareSub);
                     intent.setPackage(packageName);
