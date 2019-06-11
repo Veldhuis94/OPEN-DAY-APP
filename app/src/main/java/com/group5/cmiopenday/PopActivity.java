@@ -26,10 +26,10 @@ import java.util.List;
 
 public class PopActivity extends Activity {
     static int popUpId;
-
+    int i = 0;
     final String date = "04-06-2019";
     final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
-
+    public int[] arr = {1,2,3,4,5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
