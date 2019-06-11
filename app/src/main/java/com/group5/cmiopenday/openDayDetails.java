@@ -30,9 +30,9 @@ import java.util.EventListener;
 import java.util.List;
 
 
-public class openDayDetails extends menu_Activity {
+    public class openDayDetails extends menu_Activity {
 
-    final String date = "4-4-2019";
+        final String date = "4-4-2019";
     final int[] dateArray = {4, 4, 2019, 12, 00, 16, 00};
     Cursor course_1 = null;
     Cursor course_2 = null;

@@ -15,6 +15,7 @@ public class DatabaseAddOpendays extends menu_Activity {
     DatabaseHelper myDbHelper;
     private Button buttonadd;
     private FormValidator validator;
+    Toast toast;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,33 +26,37 @@ public class DatabaseAddOpendays extends menu_Activity {
         editText_Date = findViewById(R.id.editext_Date);
         editText_Time = findViewById(R.id.editext_Time);
         editText_Courses = findViewById(R.id.editext_Courses);
-        InsertData();
-    }
-    public void InsertData() {
         buttonadd  = findViewById(R.id.buttonadd);
-        buttonadd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean result = myDbHelper.addData(editText_Date.getText().toString(), editText_Time.getText().toString(), editText_Courses.getText().toString());
-                if (result == true) {
-                    Toast.makeText(DatabaseAddOpendays.this, "Data is inserted :)", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(DatabaseAddOpendays.this, "Data is not inserted :(", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        buttonadd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DatabaseAddOpendays.this, DatabaseAddOpendayEvent.class));
-                }
-        });
         validator = new FormValidator(buttonadd); //initialise object for validating the fields
         //create listeners for the validator, the validator will check the textfield after it has been changed.
         editText_Courses.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Courses, validator));
         editText_Date.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Date, validator));
         editText_Time.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Time, validator));
+        final Button submitButton = (Button) findViewById(R.id.questionform_button);
 
+        InsertData();
+    }
+    public void InsertData() {
+        buttonadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean result = myDbHelper.addData(editText_Date.getText().toString(), editText_Time.getText().toString(), editText_Courses.getText().toString());
+                    if (validator.valids) {
+                    if (result == true) {
+                        Toast.makeText(DatabaseAddOpendays.this, "Data is inserted :)", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(DatabaseAddOpendays.this, DatabaseAddOpendayEvent.class));
+                    }
+                }
+                else{
+                    if(toast !=null){
+                        toast.cancel();
+                    }
+                    toast = Toast.makeText(DatabaseAddOpendays.this,R.string.invalid_fields,Toast.LENGTH_LONG);
+                    toast.show();
+                }
+
+            }
+        });
     }
 
 }
