@@ -54,7 +54,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="43dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -84,7 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="104dp"
 
-                    android:text="Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes." />
+                    android:text="@string/preface_openday_event" />
 
 
                 android:text="@string/popBody" />
