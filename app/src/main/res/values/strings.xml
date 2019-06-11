@@ -80,6 +80,7 @@
     <string name="computer_engineering">Computer Engineering</string>
 
     <!--POPUPS-->
+    <string name="event_page_toolbar_text">Event Information</string>
     <string name="time">Time</string>
     <string name="classroom">Classroom</string>
     <string name="_17_00_20_00_nwijnhaven_107" translatable="false">17:00 – 20:00\nWijnhaven 107</string>
@@ -192,6 +193,8 @@
     <string name="popTitle">Informational lesson</string>
     <string name="popBody">Teachers and/or students give a brief presentation about the study course in a classroom. The presentation will be about 45 minutes long.</string>
     <string name="projects">Examples of projects</string>
+    <string name="preface_openday_event">Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes.
+    </string>
 
 </resources>
 

@@ -24,7 +24,7 @@ import java.util.Calendar;
 import java.util.List;
 
 
-public class PopActivity extends Activity {
+public class PopActivity extends menu_Activity {
     static int popUpId;
 
     final String date = "04-06-2019";
@@ -35,6 +35,7 @@ public class PopActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop);
+        super.onCreateDrawer(savedInstanceState);
 
 
         //share button calls the function shareONOtherSocialMedia

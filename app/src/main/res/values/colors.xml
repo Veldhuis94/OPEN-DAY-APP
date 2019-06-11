@@ -29,4 +29,6 @@
 
     <color name="disabledButtonFoorplan">#CCCCCC</color>
 
+    <color name="backgroundcolor_transparent_light">#A3FFFFFF</color>
+    <color name="backgroundcolor_transparent_dark">#A32E2E2E</color>
 </resources>
