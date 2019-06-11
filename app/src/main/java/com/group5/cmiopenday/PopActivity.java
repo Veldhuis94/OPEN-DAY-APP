@@ -29,7 +29,7 @@ public class PopActivity extends Activity {
 
     final String date = "04-06-2019";
     final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
-    int sharetextcount = 0;
+    int sharetextcount =0;
     boolean extra ;
     String sharetext = "";
 
@@ -123,19 +123,42 @@ public class PopActivity extends Activity {
             String[] firstProject = getResources().getStringArray(projectId[x]);
             TextView firstProjectView = findViewById(projectText[x]);
             firstProjectView.setText(firstProject[popUpId]);
-            sharetextcount= x;
-            sharetext();
+
+
 
         }
-        public void shareText(){
-            if(sharetextcount==1){
-                sharetext = "fgff";
 
-            }
-        }
+
+
 
     }
 
+
+    public void shareText(){
+        if(sharetextcount==1){
+            sharetext = "fgff";
+        }
+
+        if(sharetextcount==2){
+            sharetext = "fff";
+
+        }
+
+        if(sharetextcount==3){
+            sharetext = "f345ff";
+
+        }
+        if(sharetextcount==4){
+            sharetext = "ff3f";
+        }
+
+        if(sharetextcount==5){
+            sharetext = "f4ff";
+        }
+
+
+
+    }
     public void shareOnOtherSocialMedia(Context context) {
 
         List<Intent> shareIntentsLists = new ArrayList<Intent>();
