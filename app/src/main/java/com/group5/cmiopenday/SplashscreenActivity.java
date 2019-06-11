@@ -19,10 +19,11 @@ public class SplashscreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splashscreen);
         DatabaseHelper myDbHelper = new DatabaseHelper(SplashscreenActivity.this);//Creates database on startup
         try {
-            myDbHelper.createDataBase();
+            myDbHelper.ReloadDataBase(SplashscreenActivity.this);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         ///ImageView myimage = (ImageView)  findViewById(R.id.myImageView);
        /// myimage.setImageResource(R.drawable.splashs);
 
