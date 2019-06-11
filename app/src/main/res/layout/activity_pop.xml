@@ -61,7 +61,8 @@
                         android:id="@+id/textView30"
                         android:layout_width="40dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:textColor="?attr/textcolor2" />
 
                     <TextView
                         android:id="@+id/textView18"
@@ -70,13 +71,15 @@
 
                         android:text="Course presentation"
 
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="?attr/textcolor" />
 
                     <TextView
                         android:id="@+id/textView31"
                         android:layout_width="40dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:textColor="?attr/textcolor2" />
                 </LinearLayout>
 
                 <TextView
@@ -84,7 +87,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="104dp"
 
+
                     android:text="@string/preface_openday_event" />
+
 
 
                 android:text="@string/popBody" />
@@ -99,14 +104,16 @@
                         android:id="@+id/textView19"
                         android:layout_width="125dp"
                         android:layout_height="36dp"
-                        android:text="@string/time" />
+                        android:text="@string/time"
+                        android:textColor="?attr/textcolor2" />
 
                     <TextView
                         android:id="@+id/textView17"
                         android:layout_width="211dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/classroom" />
+                        android:text="@string/classroom"
+                        android:textColor="?attr/textcolor2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -117,14 +124,16 @@
                     <TextView
                         android:id="@+id/textView15"
                         android:layout_width="123dp"
-                        android:layout_height="35dp" />
+                        android:layout_height="35dp"
+                        android:textColor="?attr/textcolor2" />
 
 
                     <TextView
                         android:id="@+id/textView25"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:textColor="?attr/textcolor2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -135,13 +144,15 @@
                     <TextView
                         android:id="@+id/textView21"
                         android:layout_width="123dp"
-                        android:layout_height="31dp" />
+                        android:layout_height="31dp"
+                        android:textColor="?attr/textcolor2" />
 
                     <TextView
                         android:id="@+id/textView26"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:textColor="?attr/textcolor2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -152,13 +163,15 @@
                     <TextView
                         android:id="@+id/textView23"
                         android:layout_width="123dp"
-                        android:layout_height="33dp" />
+                        android:layout_height="33dp"
+                        android:textColor="?attr/textcolor2" />
 
                     <TextView
                         android:id="@+id/textView27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:textColor="?attr/textcolor2" />
                 </LinearLayout>
 
                 <TextView
@@ -168,12 +181,14 @@
 
                     android:text="@string/projects"
 
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="?attr/textcolor" />
 
                 <TextView
                     android:id="@+id/textView28"
                     android:layout_width="match_parent"
-                    android:layout_height="166dp" />
+                    android:layout_height="166dp"
+                    android:textColor="?attr/textcolor2" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -237,7 +252,8 @@
                         android:id="@+id/textView29"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Calendar" />
+                        android:text="Calendar"
+                        android:textColor="?attr/textcolor2" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -248,7 +264,8 @@
                         android:id="@+id/textView22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Notes" />
+                        android:text="Notes"
+                        android:textColor="?attr/textcolor2" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -259,7 +276,8 @@
                         android:id="@+id/textView24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Share" />
+                        android:text="Share"
+                        android:textColor="?attr/textcolor2" />
 
                     <Space
                         android:layout_width="wrap_content"
