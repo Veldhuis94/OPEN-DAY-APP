@@ -78,12 +78,12 @@ public class FloorPlanActivity extends menu_Activity {
 
     //The selected building button will have a different color from the other buttons
     private void updateBuildingButtonColors() {
-        int selectedColor = R.color.secondary1;
-        int defaultColor = R.color.secondary2;
-        //                                                  condition       true            false
-        HButton.setBackgroundColor(getResources().getColor((HisPressed)? selectedColor : defaultColor));
-        WNButton.setBackgroundColor(getResources().getColor((WNisPressed)? selectedColor : defaultColor));
-        WDButton.setBackgroundColor(getResources().getColor((WDisPressed)? selectedColor : defaultColor));
+        int selectedBackground = R.drawable.round_button;
+        int defaultBackground = R.drawable.round_button_grey;
+        //                                  condition       true            false
+        HButton.setBackgroundResource((HisPressed)? selectedBackground : defaultBackground);
+        WNButton.setBackgroundResource((WNisPressed)? selectedBackground : defaultBackground);
+        WDButton.setBackgroundResource((WDisPressed)? selectedBackground : defaultBackground);
         //disables or enables the button based on if the building is selected or not
         HButton.setEnabled(!HisPressed);
         WNButton.setEnabled(!WNisPressed);
@@ -92,33 +92,33 @@ public class FloorPlanActivity extends menu_Activity {
 
     //The plus or minus buttons will turn grey if the floor above or below does not exist
     private void floorCheck() {
-        int greyedOutColor = R.color.disabledButtonFoorplan;
-        int defaultColor = R.color.secondary2;
+        int disabledBackground = R.drawable.round_button_grey_disabled;
+        int defaultBackground = R.drawable.round_button_grey;
         if(currentFloor == -1) {
-            downButton.setBackgroundColor(getResources().getColor(greyedOutColor)); //sets color
+            downButton.setBackgroundResource(disabledBackground); //sets background
             downButton.setEnabled(false); //sets pressability
         }
         else {
-            downButton.setBackgroundColor(getResources().getColor(defaultColor));
+            downButton.setBackgroundResource(defaultBackground);
             downButton.setEnabled(true);
         }
         if(HisPressed || WDisPressed) {
             if(currentFloor == 6) {
-                upButton.setBackgroundColor(getResources().getColor(greyedOutColor));
+                upButton.setBackgroundResource(disabledBackground);
                 upButton.setEnabled(false);
             }
             else {
-                upButton.setBackgroundColor(getResources().getColor(defaultColor));
+                upButton.setBackgroundResource(defaultBackground);
                 upButton.setEnabled(true);
             }
         }
         else if(WNisPressed) {
             if(currentFloor == 5) {
-                upButton.setBackgroundColor(getResources().getColor(greyedOutColor));
+                upButton.setBackgroundResource(disabledBackground);
                 upButton.setEnabled(false);
             }
             else {
-                upButton.setBackgroundColor(getResources().getColor(defaultColor));
+                upButton.setBackgroundResource(defaultBackground);
                 upButton.setEnabled(true);
             }
         }

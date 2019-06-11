@@ -60,82 +60,100 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="match_parent"
                     android:background="?attr/backgroundcolor2"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="245dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView5"
-                            android:layout_width="230dp"
-                            android:layout_height="37dp"
-                            android:layout_marginLeft="10dp"
-                            android:gravity="center|left"
-                            android:text="@string/aboutcmi_phoneNumber"
-                            android:textColor="?attr/textcolor"
-                            android:textSize="16dp" />
-
-                        <TextView
-                            android:id="@+id/textView11"
-                            android:layout_width="230dp"
-                            android:layout_height="37dp"
-                            android:layout_marginLeft="10dp"
-                            android:gravity="center|left"
-                            android:text="@string/aboutcmi_email"
-                            android:textColor="?attr/textcolor"
-                            android:textSize="16dp" />
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="230dp"
-                            android:layout_height="37dp"
-                            android:layout_marginLeft="10dp"
-                            android:gravity="center|left"
-                            android:text="@string/aboutcmi_website"
-                            android:textColor="?attr/textcolor"
-                            android:textSize="16dp"
-                            tools:layout_editor_absoluteX="25dp"
-                            tools:layout_editor_absoluteY="217dp" />
-
-                    </LinearLayout>
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                        <Button
-                            android:id="@+id/questionFormButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="38dp"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/round_button"
-                            android:gravity="center"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:text="@string/aboutcmi_questionForm"
-                            android:textColor="@color/textLight"
-                            android:textSize="14dp" />
+                        <LinearLayout
+                            android:layout_width="245dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <Button
-                            android:id="@+id/travelDirectionButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="38dp"
-                            android:layout_margin="8dp"
-                            android:background="@drawable/round_button"
-                            android:gravity="center"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
-                            android:text="@string/TravelDirection"
-                            android:textColor="@color/textLight"
-                            android:textSize="14dp" />
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="230dp"
+                                android:layout_height="37dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center|left"
+                                android:text="@string/aboutcmi_phoneNumber"
+                                android:textColor="?attr/textcolor"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="230dp"
+                                android:layout_height="37dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center|left"
+                                android:text="@string/aboutcmi_email"
+                                android:textColor="?attr/textcolor"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="230dp"
+                                android:layout_height="37dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center|left"
+                                android:text="@string/aboutcmi_website"
+                                android:textColor="?attr/textcolor"
+                                android:textSize="16dp"
+                                tools:layout_editor_absoluteX="25dp"
+                                tools:layout_editor_absoluteY="217dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/questionFormButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/round_button"
+                                android:gravity="center"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:text="@string/aboutcmi_questionForm"
+                                android:textColor="@color/textLight"
+                                android:textSize="14dp" />
+
+                            <Button
+                                android:id="@+id/travelDirectionButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="38dp"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/round_button"
+                                android:gravity="center"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:text="@string/TravelDirection"
+                                android:textColor="@color/textLight"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/aboutcmi_address"
+                        android:textColor="?attr/textcolor"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="25dp"
+                        tools:layout_editor_absoluteY="217dp" />
                 </LinearLayout>
 
                 <ImageView
