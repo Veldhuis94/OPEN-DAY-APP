@@ -96,16 +96,16 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
                 Intent f = new Intent(menu_Activity.this,TravelActivity.class);
                 startActivity(f);
                 break;
-
-            case R.id.questions:
-                Intent g = new Intent(menu_Activity.this, Questionnaire.class);
-                startActivity(g);
+            case R.id.credits:
+                startActivity(new Intent(menu_Activity.this, creditsPage.class));
                 break;
 
             case R.id.nightmode_toggle:
                 //toggle nightmode
                 nightmodeIsOn = !nightmodeIsOn;
                 nightmodeDuringCreation = nightmodeIsOn;
+            
+
 
                 //this implementation is better than using recreate in this case, because the screen
                 //blinks when using recreate().
@@ -114,6 +114,7 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
 
                 finish(); //destroy this activity
                 overridePendingTransition( 0, 0); //set the transition time of leaving this activity to 0
+
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
