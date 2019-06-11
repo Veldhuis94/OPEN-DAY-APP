@@ -88,7 +88,8 @@
                     android:layout_height="104dp"
 
 
-                    android:text="@string/preface_openday_event" />
+                    android:text="@string/preface_openday_event"
+                    android:textColor="?attr/textcolor2" />
 
 
 
