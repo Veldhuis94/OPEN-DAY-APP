@@ -12,6 +12,7 @@ import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,9 +32,10 @@ public class PopActivity extends Activity {
     final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
     int sharetextcount =0;
     boolean extra ;
-    String sharetext = "";
+    //String text = "";
 
 
+    public TextView firstCourseView;
 
 
 
@@ -49,6 +51,8 @@ public class PopActivity extends Activity {
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //getText();
+                //shareMessage();
                 shareOnOtherSocialMedia(context);
 
 
@@ -94,6 +98,7 @@ public class PopActivity extends Activity {
             String[] firstCourse = getResources().getStringArray(courseId[o]);
             TextView firstCourseView = findViewById(courseText[o]);
             firstCourseView.setText(firstCourse[popUpId]);
+
         }
 
 
@@ -131,35 +136,30 @@ public class PopActivity extends Activity {
 
 
 
-    }
-
-
-    public void shareText(){
-        if(sharetextcount==1){
-            sharetext = "fgff";
-        }
-
-        if(sharetextcount==2){
-            sharetext = "fff";
-
-        }
-
-        if(sharetextcount==3){
-            sharetext = "f345ff";
-
-        }
-        if(sharetextcount==4){
-            sharetext = "ff3f";
-        }
-
-        if(sharetextcount==5){
-            sharetext = "f4ff";
-        }
-
 
 
     }
+
+
+
+
+
+
+
+
     public void shareOnOtherSocialMedia(Context context) {
+        String sharetext = "";
+        firstCourseView = findViewById(R.id.textView18);
+        String text =firstCourseView.getText().toString();
+        if(text == "Computer Science"){
+            sharetext = sharetext+ "Dit is een test voor informatica";
+
+
+        }
+
+        if(text=="Technical Computer Science"||text == "Technische Informactica"){
+            sharetext = sharetext+ "Dit is een test voor Technische informatica";
+        }
 
         List<Intent> shareIntentsLists = new ArrayList<Intent>();
         Intent shareIntent = new Intent();
@@ -216,7 +216,7 @@ public class PopActivity extends Activity {
                 }
             }
             if (!shareIntentsLists.isEmpty()) {
-                Intent chooserIntent = Intent.createChooser(shareIntentsLists.remove(0), "Choose app to share");
+                Intent chooserIntent = Intent.createChooser(shareIntentsLists.remove(0), "Choose a note app");
                 chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, shareIntentsLists.toArray(new Parcelable[]{}));
                 context.startActivity(chooserIntent);
             } else
