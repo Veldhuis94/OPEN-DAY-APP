@@ -12,13 +12,13 @@ public class onClickResultpage implements View.OnClickListener {
     @Override
     public void onClick (View v) {
         int result = activity.scoreCalculate();
-        TextView scoreDisplay = activity.findViewById(R.id.SCOREVIEW);
         if (result <= -1) {
+            TextView scoreDisplay = activity.findViewById(R.id.SCOREVIEW);
             scoreDisplay.setText(activity.getResources().getString(R.string.questionnaire_incomplete));
         }
         else {
             this.activity.startActivity(new Intent(v.getContext(), resultPage.class));
-            resultPage.finalResult = activity.scoreCalculate();
+            resultPage.finalResult = result;
         }
     }
 }
