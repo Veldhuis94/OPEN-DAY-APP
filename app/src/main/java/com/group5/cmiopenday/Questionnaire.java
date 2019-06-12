@@ -33,6 +33,7 @@ public class Questionnaire extends menu_Activity {
         final Questionnaire current = this;
         submitButton.setOnClickListener(new onClickResultpage(current));
     }
+    //sets onClicks for all the buttons, and checks which are pressed
     private void onClickEvent() {
         final Button[] answers = {findViewById(R.id.q1a1), findViewById(R.id.q1a2), findViewById(R.id.q1a3), findViewById(R.id.q2a1), findViewById(R.id.q2a2), findViewById(R.id.q2a3), findViewById(R.id.q3a1), findViewById(R.id.q3a2), findViewById(R.id.q3a3)};
         final int disabledColor = R.color.secondary2;
@@ -84,6 +85,7 @@ public class Questionnaire extends menu_Activity {
             }
         }
     }
+    //Calculates the score and returns it into onClickResultpage
     public int scoreCalculate() {
         int score = 0;
         for(int id = 0; id <= 8; id ++) {
