@@ -119,7 +119,7 @@ public class PopActivity extends Activity {
         if (popUpId == 6) {
             PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 7, "PopUps"+Language);}
         if ((popUpId == 7)){
-            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 8, "PopUps"+Language);}//Checks wich popup to show
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 8, "PopUps"+Language);}//Checks which popup to show
 
 
         if (PopUp_info.moveToFirst()) {

@@ -39,7 +39,7 @@ public class openDay2 extends menu_Activity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_day2);
+        setContentView(R.layout.open_day_layout);
         super.onCreateDrawer(savedInstanceState);
 
 
