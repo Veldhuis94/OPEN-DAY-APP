@@ -22,7 +22,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "MyDatabase";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
-    int row_id = 0;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, 10);
@@ -44,8 +43,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
     }
+    public void ReloadDataBase(Context context) throws IOException {
+        boolean dbExist = checkDataBase();
+        if (dbExist) {context.deleteDatabase("MyDatabase");
+            this.getReadableDatabase();
+            try {
+                copyDataBase();
+            } catch (IOException e) {
+                throw new Error("Error copying database");
+        }}  else {
+            this.getReadableDatabase();
+            try {
+                copyDataBase();
+            } catch (IOException e) {
+                throw new Error("Error copying database");
+            }
+        }
+    }
 
-    private boolean checkDataBase() {
+    public boolean checkDataBase() {
         SQLiteDatabase checkDB = null;
         try {
             String myPath = DB_PATH + DB_NAME;
@@ -55,7 +71,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (checkDB != null) {
             checkDB.close();
         }
-        return checkDB != null ? true : false;
+        return checkDB != null;
     }
 
     private void copyDataBase() throws IOException {
@@ -78,14 +94,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
 
     }
-
-    public void deleteAll() {
-        SQLiteDatabase myDbHelper = this.getWritableDatabase();
-        myDbHelper.execSQL("delete from " + "Homepage");
-        myDbHelper.close();
-
-    }
-
 
     @Override
     public synchronized void close() {
@@ -114,20 +122,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return myDataBase.query("Homepage", null, "_id=" + row_id, null, null, null, null);
     }
 
-    public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy,String Table) {
-        return myDataBase.query("Homepage", null, null, null, null, null, null);
-    }
     public Cursor fetch_item(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, int row_id,String Table) {
         return myDataBase.query(Table,columns , "_id=" + row_id, null, null, null, null);
     }
-
-    public Cursor ViewData() {
-        SQLiteDatabase myDbHelper = this.getReadableDatabase();
-
-        Cursor cursor = myDbHelper.rawQuery("select * from " + DB_NAME, null);
-        return cursor;
-    }
-
 
     public void purgeDatabase(Context context) {
         context.deleteDatabase("MyDatabase");
