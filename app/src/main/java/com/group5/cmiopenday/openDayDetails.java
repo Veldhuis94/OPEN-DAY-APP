@@ -156,22 +156,8 @@ public class openDayDetails extends menu_Activity {
 
 
 
-    public void onClick(View v){
-        switch(v.getId()){
-            case R.id.button3:
-                sharetext = sharetext+ "Dit is een test voor informatica";
-                break;
-            case R.id.button4:
-                sharetext = sharetext+ "Dit is een test voor informatica";
-                break;
-            case R.id.button5:
-                sharetext = sharetext+ "Dit is een test voor informatica";
-                break;
-            case R.id.button6:
-                sharetext = sharetext+ "Dit is een test voor informatica";
-                break;
-        }
-    }
+
+
 
 
 

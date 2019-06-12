@@ -32,12 +32,11 @@ public class PopActivity extends Activity {
     final int[] dateArray = {04, 06, 2019, 17, 00, 20, 00};
     int sharetextcount =0;
     boolean extra ;
-    //String text = "";
-    Intent intent = getIntent();
-    String sharetext = intent.getExtras().getString("epuzzle");
+    TextView shareText;
 
 
-    public TextView firstCourseView;
+
+
 
 
 
@@ -138,7 +137,15 @@ public class PopActivity extends Activity {
 
         }
 
+        int[] shareId = {R.array.ShareTextArray};
+        int[] shareText = {R.id.textView100};
 
+        for(int z = 0; z < shareText.length; z++) {
+            String[] firstShare = getResources().getStringArray(shareId[z]);
+            TextView firstShareView = findViewById(shareText[z]);
+            firstShareView.setText(firstShare[popUpId]);
+
+        }
 
 
 
@@ -154,8 +161,8 @@ public class PopActivity extends Activity {
 
 
     public void shareOnOtherSocialMedia(Context context) {
-
-
+        shareText = findViewById(R.id.textView100);
+        String sharetext = shareText.getText().toString();
         List<Intent> shareIntentsLists = new ArrayList<Intent>();
         Intent shareIntent = new Intent();
         shareIntent.setAction(Intent.ACTION_SEND);
@@ -170,7 +177,7 @@ public class PopActivity extends Activity {
                     intent.setAction(Intent.ACTION_SEND);
                     intent.setType("text/plain");
                     String shareBody = "CMI OPEN DAY";
-                    String shareSub = "On " + date + sharetext;
+                    String shareSub = "On " + date + "" + sharetext;
                     intent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
                     intent.putExtra(Intent.EXTRA_TEXT, shareSub);
                     intent.setPackage(packageName);
