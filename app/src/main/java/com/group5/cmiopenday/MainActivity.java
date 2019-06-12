@@ -39,12 +39,6 @@ public class MainActivity extends menu_Activity{
         TextView textView3 = findViewById(R.id.textView3);
 
         TextView textView4 = findViewById(R.id.textViewdatabase);
-        myDbHelper.openDataBase();
-
-        row_1 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,1);
-        row_2 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,2);
-        row_3 = myDbHelper.fetch_row("Homepage", null, null, null, null, null, null,3);
-
 
 
         String PhoneLanguage = Locale.getDefault().getLanguage();// Gets language code
