@@ -20,6 +20,7 @@ public class MainActivity extends menu_Activity{
     private ImageView loginbtn;
     String Language = "";
     String Openday = "CMI Open Day, ";
+    String Time = "Time: ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +36,18 @@ public class MainActivity extends menu_Activity{
         String PhoneLanguage = Locale.getDefault().getLanguage();
         if(PhoneLanguage.equals("nl")){
             Language = "NL";
-            Openday = "CMI Opendag, ";}
+            Openday = "CMI Opendag, ";
+            Time = "Tijd: ";}
         row_1 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,1,"Homepage"+Language);
         row_2 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,2,"Homepage"+Language);
         if (row_1.moveToFirst()) {
             do {
-                stringBuilder_row_1.append(Openday+row_1.getString(1)+"\nTime: "+row_1.getString(2)+"\n"+row_1.getString(3));
+                stringBuilder_row_1.append(Openday+row_1.getString(1)+"\n"+Time+row_1.getString(2)+"\n"+row_1.getString(3));
             } while (row_1.moveToNext());
         }
         if (row_2.moveToFirst()) {
             do {
-                stringBuilder_row_2.append(Openday+row_2.getString(1)+"\nTime: "+row_2.getString(2)+"\n"+row_2.getString(3));
+                stringBuilder_row_2.append(Openday+row_2.getString(1)+"\n"+Time+row_2.getString(2)+"\n"+row_2.getString(3));
             } while (row_2.moveToNext());
         }
         textView2.setText(stringBuilder_row_1);
