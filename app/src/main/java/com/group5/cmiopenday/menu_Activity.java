@@ -97,10 +97,7 @@ public class menu_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(f);
                 break;
 
-            
-            case R.id.questions:
-                Intent g = new Intent(menu_Activity.this, Questionnaire.class);
-                startActivity(g);
+
 
             case R.id.credits:
                 startActivity(new Intent(menu_Activity.this, creditsPage.class));
