@@ -33,6 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String Col7 = "Time";
     private static final String Col8 = "Location";
     String Language = "";
+    String Language1 = "";
 
 
     private static final String DBlocation = "/data/data/com.group5.cmiopenday/databases/";
@@ -158,7 +159,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(Col7,courses);
         contentValues.put(Col8,location);
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.insert(TABLE_NAME1+Language, null, contentValues);
+        long result = db.insert(TABLE_NAME1 +Language, null, contentValues);
         return result != -1;
     }
 

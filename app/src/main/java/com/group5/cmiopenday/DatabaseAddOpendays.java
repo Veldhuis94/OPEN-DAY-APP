@@ -32,7 +32,6 @@ public class DatabaseAddOpendays extends menu_Activity {
         editText_Courses.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Courses, validator));
         editText_Date.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Date, validator));
         editText_Time.addTextChangedListener(new FormTextListener(FormValidator.FieldType.Text, editText_Time, validator));
-        final Button submitButton = (Button) findViewById(R.id.questionform_button);
 
         InsertData();
     }

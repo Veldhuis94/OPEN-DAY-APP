@@ -16,6 +16,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
+
 public class openDay3 extends menu_Activity{
     final String date = "04-06-2019";
     final int[] dateArray = {4, 6, 2019, 17, 00, 20, 00};
@@ -23,6 +25,10 @@ public class openDay3 extends menu_Activity{
     Cursor course_2 = null;
     Cursor course_3 = null;
     Cursor course_4 = null;
+    String Language = "";
+    String Room = "Room: ";
+    String Time = "Time: ";
+    String Location = "Location: ";
 
 
     @Override
@@ -61,10 +67,17 @@ public class openDay3 extends menu_Activity{
         StringBuilder stringBuilder_course_4 = new StringBuilder();
         TextView textView8 = findViewById(R.id.textView8);//info 4
         StringBuilder stringBuilder_info_4 = new StringBuilder();
-        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,8,"OpenDays");
-        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,9,"OpenDays");
-        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,10,"OpenDays");
-        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,11,"OpenDays");
+        String PhoneLanguage = Locale.getDefault().getLanguage();//Gets phone language
+        if(PhoneLanguage.equals("nl")){
+            Language = "NL";
+            Room = "Kamer: ";
+            Time = "Tijd: ";
+            Location = "Locatie: ";//Changes to dutch table
+        }
+        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,8,"OpenDays" +Language);
+        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,9,"OpenDays" +Language);
+        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,10,"OpenDays" +Language);
+        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,11,"OpenDays" +Language);
         if (course_1.moveToFirst()) {
             do {
                 stringBuilder_course_1.append(course_1.getString(2));
