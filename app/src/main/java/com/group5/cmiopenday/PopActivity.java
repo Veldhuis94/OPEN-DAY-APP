@@ -83,6 +83,7 @@ public class PopActivity extends Activity {
         });
 
         DatabaseHelper myDbHelper = new DatabaseHelper(PopActivity.this);//Database
+
         StringBuilder stringBuilder_time_1 = new StringBuilder();
         StringBuilder stringBuilder_time_2 = new StringBuilder();
         StringBuilder stringBuilder_time_3 = new StringBuilder();
@@ -99,6 +100,7 @@ public class PopActivity extends Activity {
         TextView textView28 = findViewById(R.id.textView28);//Text
 
         String PhoneLanguage = Locale.getDefault().getLanguage();//Checks if phone language is NL
+
         if(PhoneLanguage.equals("nl")){
             Language = "NL";}
 
