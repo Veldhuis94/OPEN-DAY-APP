@@ -33,6 +33,7 @@ public class PopActivity extends Activity {
     int sharetextcount =0;
     boolean extra ;
     TextView shareText;
+    TextView CalendarText;
 
 
 
@@ -79,11 +80,13 @@ public class PopActivity extends Activity {
         calendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CalendarText = findViewById(R.id.textView101);
+                String calendartext = CalendarText.getText().toString();
                 Toast.makeText(PopActivity.this, getString(R.string.calendarMessage), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_INSERT);
                 intent.setType("vnd.android.cursor.item/event");
-                intent.putExtra("title", getString(R.string.calendarTitle));
-                intent.putExtra("description", getString(R.string.calendarBody) + date);
+                intent.putExtra("title", getString(R.string.calendarTitle)+ " "+ calendartext);
+                intent.putExtra("description", getString(R.string.calendarBody) +" " + date + " "+calendartext);
                 Calendar beginTime = Calendar.getInstance();
                 beginTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[3], dateArray[4]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
@@ -147,6 +150,16 @@ public class PopActivity extends Activity {
 
         }
 
+        int[] CalendarId = {R.array.CalendarTextArray};
+        int[] CalendarText = {R.id.textView101};
+
+        for(int q = 0; q < CalendarText.length; q++) {
+            String[] firstCalendar = getResources().getStringArray(CalendarId[q]);
+            TextView firstCalendarView = findViewById(CalendarText[q]);
+            firstCalendarView.setText(firstCalendar[popUpId]);
+
+        }
+
 
 
 
@@ -177,7 +190,7 @@ public class PopActivity extends Activity {
                     intent.setAction(Intent.ACTION_SEND);
                     intent.setType("text/plain");
                     String shareBody = "CMI OPEN DAY";
-                    String shareSub = "On " + date + "" + sharetext;
+                    String shareSub = "On " + date + " " + sharetext;
                     intent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
                     intent.putExtra(Intent.EXTRA_TEXT, shareSub);
                     intent.setPackage(packageName);

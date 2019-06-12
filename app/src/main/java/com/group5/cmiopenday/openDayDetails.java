@@ -48,9 +48,8 @@ public class openDayDetails extends menu_Activity {
         super.onCreateDrawer(savedInstanceState);
         ImageButton shareButton = findViewById(R.id.button2);
         final Context context = this;
-        Intent i = new Intent(this, PopActivity.class);
-        i.putExtra("epuzzle", sharetext);
-        startActivity(i);
+
+
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
