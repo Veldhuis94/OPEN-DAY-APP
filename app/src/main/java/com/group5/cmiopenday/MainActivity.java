@@ -58,7 +58,7 @@ public class MainActivity extends menu_Activity{
 
         row_1 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,1,"Homepage"+Language);
         row_2 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,2,"Homepage"+Language);
-
+        row_3 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,3,"Homepage"+Language);
         if (row_1.moveToFirst()) {
             do {
                 stringBuilder_row_1.append(Openday+row_1.getString(1)+"\n"+Time+row_1.getString(2)+"\n"+row_1.getString(3));
@@ -72,7 +72,7 @@ public class MainActivity extends menu_Activity{
         }
         if (row_3.moveToFirst()) {
             do {
-                stringBuilder_row_3.append("CMI Open Day, "+row_3.getString(1)+"\nTime: "+row_3.getString(2)+"\n"+row_3.getString(3));
+                stringBuilder_row_3.append(Openday+row_3.getString(1)+"\n" + Time+row_3.getString(2)+"\n"+row_3.getString(3));
             } while (row_3.moveToNext());
         }
 
