@@ -32,6 +32,7 @@ import java.util.List;
 
 public class openDayDetails extends menu_Activity {
 
+    String sharetext = "";
     final String date = "4-4-2019";
     final int[] dateArray = {4, 4, 2019, 12, 00, 16, 00};
     Cursor course_1 = null;
@@ -47,6 +48,9 @@ public class openDayDetails extends menu_Activity {
         super.onCreateDrawer(savedInstanceState);
         ImageButton shareButton = findViewById(R.id.button2);
         final Context context = this;
+        Intent i = new Intent(this, PopActivity.class);
+        i.putExtra("epuzzle", sharetext);
+        startActivity(i);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,32 +75,32 @@ public class openDayDetails extends menu_Activity {
         StringBuilder stringBuilder_course_4 = new StringBuilder();
         TextView textView8 = findViewById(R.id.textView8);//info 4
         StringBuilder stringBuilder_info_4 = new StringBuilder();
-        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,0,"OpenDays");
-        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,1,"OpenDays");
-        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,2,"OpenDays");
-        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,3,"OpenDays");
+        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null, 0, "OpenDays");
+        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null, 1, "OpenDays");
+        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null, 2, "OpenDays");
+        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null, 3, "OpenDays");
         if (course_1.moveToFirst()) {
             do {
                 stringBuilder_course_1.append(course_1.getString(2));
-                stringBuilder_info_1.append("Room: "+course_1.getString(3)+" | Time: "+course_1.getString(4)+"\nLocation: "+course_1.getString(5));
+                stringBuilder_info_1.append("Room: " + course_1.getString(3) + " | Time: " + course_1.getString(4) + "\nLocation: " + course_1.getString(5));
             } while (course_1.moveToNext());
         }
         if (course_2.moveToFirst()) {
             do {
                 stringBuilder_course_2.append(course_2.getString(2));
-                stringBuilder_info_2.append("Room: "+course_2.getString(3)+" | Time: "+course_2.getString(4)+"\nLocation: "+course_2.getString(5));
+                stringBuilder_info_2.append("Room: " + course_2.getString(3) + " | Time: " + course_2.getString(4) + "\nLocation: " + course_2.getString(5));
             } while (course_2.moveToNext());
         }
         if (course_3.moveToFirst()) {
             do {
                 stringBuilder_course_3.append(course_3.getString(2));
-                stringBuilder_info_3.append("Room: "+course_3.getString(3)+" | Time: "+course_3.getString(4)+"\nLocation: "+course_3.getString(5));
+                stringBuilder_info_3.append("Room: " + course_3.getString(3) + " | Time: " + course_3.getString(4) + "\nLocation: " + course_3.getString(5));
             } while (course_3.moveToNext());
         }
         if (course_4.moveToFirst()) {
             do {
                 stringBuilder_course_4.append(course_4.getString(2));
-                stringBuilder_info_4.append("Room: "+course_4.getString(3)+" | Time: "+course_4.getString(4)+"\nLocation: "+course_4.getString(5));
+                stringBuilder_info_4.append("Room: " + course_4.getString(3) + " | Time: " + course_4.getString(4) + "\nLocation: " + course_4.getString(5));
             } while (course_4.moveToNext());
         }
         textView.setText(stringBuilder_course_1);
@@ -117,6 +121,10 @@ public class openDayDetails extends menu_Activity {
         openDay3.setOnClickListener(new onClickPopUp(2, this));
         Button openDay4 = findViewById(R.id.button6);
         openDay4.setOnClickListener(new onClickPopUp(3, this));
+
+
+
+
 
 
         ImageButton calendarButton = findViewById(R.id.button);
@@ -145,6 +153,28 @@ public class openDayDetails extends menu_Activity {
             }
         });
     }
+
+
+
+    public void onClick(View v){
+        switch(v.getId()){
+            case R.id.button3:
+                sharetext = sharetext+ "Dit is een test voor informatica";
+                break;
+            case R.id.button4:
+                sharetext = sharetext+ "Dit is een test voor informatica";
+                break;
+            case R.id.button5:
+                sharetext = sharetext+ "Dit is een test voor informatica";
+                break;
+            case R.id.button6:
+                sharetext = sharetext+ "Dit is een test voor informatica";
+                break;
+        }
+    }
+
+
+
 
     public void shareOnOtherSocialMedia(Context context) {
 
@@ -181,5 +211,7 @@ public class openDayDetails extends menu_Activity {
 
 
     }
+
+
 
 }

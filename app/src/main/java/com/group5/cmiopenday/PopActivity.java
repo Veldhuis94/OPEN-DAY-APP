@@ -33,6 +33,8 @@ public class PopActivity extends Activity {
     int sharetextcount =0;
     boolean extra ;
     //String text = "";
+    Intent intent = getIntent();
+    String sharetext = intent.getExtras().getString("epuzzle");
 
 
     public TextView firstCourseView;
@@ -43,6 +45,8 @@ public class PopActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop);
+
+
 
 
         //share button calls the function shareONOtherSocialMedia
@@ -64,6 +68,7 @@ public class PopActivity extends Activity {
         noteButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
                 openNoteApp(context1);
 
 
@@ -147,19 +152,9 @@ public class PopActivity extends Activity {
 
 
 
+
     public void shareOnOtherSocialMedia(Context context) {
-        String sharetext = "";
-        firstCourseView = findViewById(R.id.textView18);
-        String text =firstCourseView.getText().toString();
-        if(text == "Computer Science"){
-            sharetext = sharetext+ "Dit is een test voor informatica";
 
-
-        }
-
-        if(text=="Technical Computer Science"||text == "Technische Informactica"){
-            sharetext = sharetext+ "Dit is een test voor Technische informatica";
-        }
 
         List<Intent> shareIntentsLists = new ArrayList<Intent>();
         Intent shareIntent = new Intent();
