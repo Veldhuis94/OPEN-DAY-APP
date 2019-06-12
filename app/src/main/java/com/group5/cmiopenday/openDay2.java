@@ -39,7 +39,7 @@ public class openDay2 extends menu_Activity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_day2);
+        setContentView(R.layout.open_day_layout);
         super.onCreateDrawer(savedInstanceState);
 
 
@@ -74,12 +74,12 @@ public class openDay2 extends menu_Activity  {
         StringBuilder stringBuilder_info_4 = new StringBuilder();
 
 
-        String PhoneLanguage = Locale.getDefault().getLanguage();
+        String PhoneLanguage = Locale.getDefault().getLanguage();//Gets phone language
         if(PhoneLanguage.equals("nl")){
             Language = "NL";
             Room = "Kamer: ";
             Time = "Tijd: ";
-            Location = "Locatie: ";
+            Location = "Locatie: ";//Changes to dutch table
         }
 
         course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,4,"OpenDays"+Language);

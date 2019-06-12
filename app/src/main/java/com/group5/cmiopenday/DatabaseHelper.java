@@ -91,8 +91,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void copyDataBase() throws IOException {
-        InputStream myInput = myContext.getAssets().open(DB_NAME);
-        String outFileName = DB_PATH + DB_NAME;
+        InputStream myInput = myContext.getAssets().open(DB_NAME);//Gets Database from assets folder
+        String outFileName = DB_PATH + DB_NAME;//Path to Database on phone
         OutputStream myOutput = new FileOutputStream(outFileName);
         byte[] buffer = new byte[10];
         int length;
