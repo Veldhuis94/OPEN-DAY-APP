@@ -113,6 +113,7 @@ public class PopActivity extends menu_Activity {
 
 
         DatabaseHelper myDbHelper = new DatabaseHelper(PopActivity.this);//Database
+
         StringBuilder stringBuilder_time_1 = new StringBuilder();
         StringBuilder stringBuilder_time_2 = new StringBuilder();
         StringBuilder stringBuilder_time_3 = new StringBuilder();
@@ -129,6 +130,7 @@ public class PopActivity extends menu_Activity {
         TextView textView28 = findViewById(R.id.textView28);//Text
 
         String PhoneLanguage = Locale.getDefault().getLanguage();//Checks if phone language is NL
+
         if(PhoneLanguage.equals("nl")){
             Language = "NL";}
 
@@ -149,7 +151,7 @@ public class PopActivity extends menu_Activity {
         if (popUpId == 6) {
             PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 7, "PopUps"+Language);}
         if ((popUpId == 7)){
-            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 8, "PopUps"+Language);}//Checks wich popup to show
+            PopUp_info = myDbHelper.fetch_item("PopUps", null, null, null, null, null, null, 8, "PopUps"+Language);}//Checks which popup to show
 
 
         if (PopUp_info.moveToFirst()) {

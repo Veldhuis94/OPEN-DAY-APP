@@ -74,7 +74,7 @@ public class openDayDetails extends menu_Activity {
 
         DatabaseHelper myDbHelper = new DatabaseHelper(openDayDetails.this);//Database
 
-        myDbHelper.openDataBase();
+        myDbHelper.openDataBase();//opens Database
 
         TextView textView = findViewById(R.id.textView);//course 1
         StringBuilder stringBuilder_course_1 = new StringBuilder();
@@ -94,12 +94,13 @@ public class openDayDetails extends menu_Activity {
         StringBuilder stringBuilder_info_4 = new StringBuilder();
 
 
-        String PhoneLanguage = Locale.getDefault().getLanguage();
+        String PhoneLanguage = Locale.getDefault().getLanguage();//Gets phone language
+
         if(PhoneLanguage.equals("nl")){
             Language = "NL";
             Room = "Lokaal: ";
             Time = "Tijd: ";
-            Location = "Locatie: ";
+            Location = "Locatie: ";//Changes to dutch table if phone is dutch
 }
 
         course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,0,"OpenDays"+Language);

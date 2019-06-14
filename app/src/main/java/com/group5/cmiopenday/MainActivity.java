@@ -20,34 +20,45 @@ public class MainActivity extends menu_Activity{
     private ImageView loginbtn;
     String Language = "";
     String Openday = "CMI Open Day, ";
+    String Time = "Time: ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         super.onCreateDrawer(savedInstanceState);
+
         DatabaseHelper myDbHelper = new DatabaseHelper(MainActivity.this);//Database
+
         StringBuilder stringBuilder_row_1 = new StringBuilder();
         StringBuilder stringBuilder_row_2 = new StringBuilder();
         TextView textView2 = findViewById(R.id.textView2);
         TextView textView3 = findViewById(R.id.textView3);
-        myDbHelper.openDataBase();
-        String PhoneLanguage = Locale.getDefault().getLanguage();
+
+        String PhoneLanguage = Locale.getDefault().getLanguage();// Gets language code
+
         if(PhoneLanguage.equals("nl")){
             Language = "NL";
-            Openday = "CMI Opendag, ";}
+            Openday = "CMI Opendag, ";
+            Time = "Tijd: ";}
+
+        myDbHelper.openDataBase();
+
         row_1 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,1,"Homepage"+Language);
         row_2 = myDbHelper.fetch_item("Homepage", null, null, null, null, null, null,2,"Homepage"+Language);
+
         if (row_1.moveToFirst()) {
             do {
-                stringBuilder_row_1.append(Openday+row_1.getString(1)+"\nTime: "+row_1.getString(2)+"\n"+row_1.getString(3));
+                stringBuilder_row_1.append(Openday+row_1.getString(1)+"\n"+Time+row_1.getString(2)+"\n"+row_1.getString(3));
             } while (row_1.moveToNext());
         }
+
         if (row_2.moveToFirst()) {
             do {
-                stringBuilder_row_2.append(Openday+row_2.getString(1)+"\nTime: "+row_2.getString(2)+"\n"+row_2.getString(3));
+                stringBuilder_row_2.append(Openday+row_2.getString(1)+"\n"+Time+row_2.getString(2)+"\n"+row_2.getString(3));
             } while (row_2.moveToNext());
         }
+
         textView2.setText(stringBuilder_row_1);
         textView3.setText(stringBuilder_row_2);//Database
 
