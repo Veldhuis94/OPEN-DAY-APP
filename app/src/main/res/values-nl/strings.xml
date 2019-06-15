@@ -114,6 +114,30 @@
         <item>Communicatie</item>
     </string-array>
 
+    <string-array name="q1Body">
+        <item>Als een software engineer ga je aan de ontwikkeling werken voor veel applicaties.</item>
+        <item>Je hebt een scherp oog en oor voor de verhalen van mensen en merken.</item>
+        <item>Je vindt het leuk om in een studio te werken.</item>
+        <item>Als technisch computerwetenschapper werk je aan moderne IT-systemen waarin hardware en software zijn geïntegreerd.</item>
+        <item>Creatieve technologen bedenken en ontwikkelen innovatieve digitale producten, waarbij de gebruiker centraal staat.</item>
+    </string-array>
+
+    <string-array name="q2Body">
+        <item>Je wordt een expert in grote en complexe software-informatie.</item>
+        <item>Je bent creatief met tekst en beeld en gefascineerd door de mediawereld.</item>
+        <item>Je bent bezig met schetsen, onderzoeken, bouwen of onderzoek buiten de deur.</item>
+        <item>Als technisch computerwetenschapper draag je bij aan de ontwikkeling, beveiliging en het bijhouden van deze systemen.</item>
+        <item>Als CMGT-persoon ben je een ontwikkelaar (programmeur) van interactieve digitale producten.</item>
+    </string-array>
+
+    <string-array name="q3Body">
+        <item>Als software-engineer leert u programmeren met veel verschillende programmeertalen.</item>
+        <item>Je geniet ervan een product te presenteren en samen te werken met klanten.</item>
+        <item>Je leert om te werken vanuit de interesses en perceptie van gebruikers en klanten.</item>
+        <item>Je bent een allrounder in alle disciplines, maar je bent ook gespecialiseerd in een of meerdere aspecten van het vakgebied.</item>
+        <item>De grenzen tussen digitale producten en de fysieke wereld worden steeds vager en sneller.</item>
+    </string-array>
+
     <string name="preface_openday_event">Docenten en studenten geven een korte presentatie in een klaslokaal. De presentatie duurt ongeveer 40 minuten.
 
     </string>
