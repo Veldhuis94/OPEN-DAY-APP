@@ -24,7 +24,6 @@ public class FormValidator {
     public enum FieldType{
         Text, Email
     }
-
     private Button submitButton; //button for sending or submitting a form
     private Pattern emailPattern; //object for storing the email regular expression (used to validate emails)
     private HashSet invalidFields = new HashSet(); //set that contains textfields that are invalid.

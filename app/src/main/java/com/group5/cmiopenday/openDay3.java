@@ -1,26 +1,13 @@
 package com.group5.cmiopenday;
-
-
-
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.CalendarContract;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.Display;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -28,24 +15,12 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-
-import java.util.Date;
-
-import java.util.EventListener;
-
 import java.util.List;
 import java.util.Locale;
 
-
-    public class openDayDetails extends menu_Activity {
-
-
-    final String date = "4-4-2019";
-
-
- 
-
-    final int[] dateArray = {4, 4, 2019, 12, 00, 16, 00};
+public class openDay3 extends menu_Activity{
+    final String date = "04-06-2019";
+    final int[] dateArray = {4, 6, 2019, 17, 00, 20, 00};
     Cursor course_1 = null;
     Cursor course_2 = null;
     Cursor course_3 = null;
@@ -56,27 +31,26 @@ import java.util.Locale;
     String Location = "Location: ";
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.open_day_layout);
+        setContentView(R.layout.activity_open_day3);
         super.onCreateDrawer(savedInstanceState);
+
+
+
         ImageButton shareButton = findViewById(R.id.button2);
         final Context context = this;
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 shareOnOtherSocialMedia(context);
+
+
             }
         });
-
-
-
-        DatabaseHelper myDbHelper = new DatabaseHelper(openDayDetails.this);//Database
-
-        myDbHelper.openDataBase();//opens Database
-
+        DatabaseHelper myDbHelper = new DatabaseHelper(openDay3.this);//Database
+        myDbHelper.openDataBase();
         TextView textView = findViewById(R.id.textView);//course 1
         StringBuilder stringBuilder_course_1 = new StringBuilder();
         TextView textView2 = findViewById(R.id.textView2);//info 1
@@ -93,48 +67,41 @@ import java.util.Locale;
         StringBuilder stringBuilder_course_4 = new StringBuilder();
         TextView textView8 = findViewById(R.id.textView8);//info 4
         StringBuilder stringBuilder_info_4 = new StringBuilder();
-
         String PhoneLanguage = Locale.getDefault().getLanguage();//Gets phone language
         if(PhoneLanguage.equals("nl")){
             Language = "NL";
-            Room = "Lokaal: ";
+            Room = "Kamer: ";
             Time = "Tijd: ";
-            Location = "Locatie: ";//Changes to dutch table if phone is dutch
-}
-
-        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,0,"OpenDays"+Language);
-        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,1,"OpenDays"+Language);
-        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,2,"OpenDays"+Language);
-        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,3,"OpenDays"+Language);
-
+            Location = "Locatie: ";//Changes to dutch table
+        }
+        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,8,"OpenDays" +Language);
+        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,9,"OpenDays" +Language);
+        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,10,"OpenDays" +Language);
+        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,11,"OpenDays" +Language);
         if (course_1.moveToFirst()) {
             do {
                 stringBuilder_course_1.append(course_1.getString(2));
-                stringBuilder_info_1.append(Room+course_1.getString(3)+" | "+Time+course_1.getString(4)+"\n"+Location+course_1.getString(5));
+                stringBuilder_info_1.append("Room: "+course_1.getString(3)+" | Time: "+course_1.getString(4)+"\nLocation: "+course_1.getString(5));
             } while (course_1.moveToNext());
         }
-
         if (course_2.moveToFirst()) {
             do {
                 stringBuilder_course_2.append(course_2.getString(2));
-                stringBuilder_info_2.append(Room+course_2.getString(3)+" | "+Time+course_2.getString(4)+"\n"+Location+course_2.getString(5));
+                stringBuilder_info_2.append("Room: "+course_2.getString(3)+" | Time: "+course_2.getString(4)+"\nLocation: "+course_2.getString(5));
             } while (course_2.moveToNext());
         }
-
         if (course_3.moveToFirst()) {
             do {
                 stringBuilder_course_3.append(course_3.getString(2));
-                stringBuilder_info_3.append(Room+course_3.getString(3)+" | "+Time+course_3.getString(4)+"\n"+Location+course_3.getString(5));
+                stringBuilder_info_3.append("Room: "+course_3.getString(3)+" | Time: "+course_3.getString(4)+"\nLocation: "+course_3.getString(5));
             } while (course_3.moveToNext());
         }
-
         if (course_4.moveToFirst()) {
             do {
                 stringBuilder_course_4.append(course_4.getString(2));
-                stringBuilder_info_4.append(Room+course_4.getString(3)+" | "+Time+course_4.getString(4)+"\n"+Location+course_4.getString(5));
+                stringBuilder_info_4.append("Room: "+course_4.getString(3)+" | Time: "+course_4.getString(4)+"\nLocation: "+course_4.getString(5));
             } while (course_4.moveToNext());
         }
-
         textView.setText(stringBuilder_course_1);
         textView2.setText(stringBuilder_info_1);
         textView3.setText(stringBuilder_course_2);
@@ -144,37 +111,34 @@ import java.util.Locale;
         textView7.setText(stringBuilder_course_4);
         textView8.setText(stringBuilder_info_4);
 
-
         Button openDay1 = findViewById(R.id.button3);
-        openDay1.setOnClickListener(new onClickPopUp(0, this));
+        openDay1.setOnClickListener(new onClickPopUp(4, this));
         Button openDay2 = findViewById(R.id.button4);
-        openDay2.setOnClickListener(new onClickPopUp(1, this));
+        openDay2.setOnClickListener(new onClickPopUp(5, this));
         Button openDay3 = findViewById(R.id.button5);
-        openDay3.setOnClickListener(new onClickPopUp(2, this));
+        openDay3.setOnClickListener(new onClickPopUp(6, this));
         Button openDay4 = findViewById(R.id.button6);
-        openDay4.setOnClickListener(new onClickPopUp(3, this));
+        openDay4.setOnClickListener(new onClickPopUp(7, this));
+
+
 
 
         ImageButton calendarButton = findViewById(R.id.button);
         calendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(openDayDetails.this, getString(R.string.calendarMessage), Toast.LENGTH_SHORT).show();
+                Toast.makeText(openDay3.this, getString(R.string.calendarMessage), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_INSERT);
                 intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("title", getString(R.string.calendarTitle));
                 intent.putExtra("description", getString(R.string.calendarBody) + date);
-                //intent.putExtra("Wijnhaven",103);
-                //intent.putExtra(Events.EVENT_LOCATION, "Wijnhaven 103/107");
                 Calendar beginTime = Calendar.getInstance();
                 beginTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[3], dateArray[4]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis());
-                //CHANGE LOCATION IF NEEDED
+                //CHANGE LOCATION ID NEEDED
                 intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Wijnhaven 103/107, Rotterdam");
 
                 Calendar endTime = Calendar.getInstance();
-
-
                 endTime.set(dateArray[2], dateArray[1], dateArray[0], dateArray[5], dateArray[6]);
                 intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis());
                 startActivity(intent);
@@ -210,52 +174,9 @@ import java.util.Locale;
                 chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, shareIntentsLists.toArray(new Parcelable[]{}));
                 context.startActivity(chooserIntent);
             } else
-                Toast.makeText(openDayDetails.this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(openDay3.this,"Error",Toast.LENGTH_SHORT).show();
 
         }
-
-
-
-    }
-
-    public Drawable resizeImage(int imageResource) {//R.drawable.computer_science
-        // Get device dimensions
-        Display display = getWindowManager().getDefaultDisplay();
-        double deviceWidth = display.getWidth();
-
-        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(
-                imageResource);
-        double imageHeight = bd.getBitmap().getHeight();
-        double imageWidth = bd.getBitmap().getWidth();
-
-        double ratio = deviceWidth / imageWidth;
-        int newImageHeight = (int) (imageHeight * ratio);
-
-        Bitmap bMap = BitmapFactory.decodeResource(getResources(), imageResource);
-        Drawable drawable = new BitmapDrawable(this.getResources(),
-                getResizedBitmap(bMap, newImageHeight, (int) deviceWidth));
-
-        return drawable;
-    }
-
-    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
-
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-
-        // create a matrix for the manipulation
-        Matrix matrix = new Matrix();
-
-        // resize the bit map
-        matrix.postScale(scaleWidth, scaleHeight);
-
-        // recreate the new Bitmap
-        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
-
-        return resizedBitmap;
     }
 
 }

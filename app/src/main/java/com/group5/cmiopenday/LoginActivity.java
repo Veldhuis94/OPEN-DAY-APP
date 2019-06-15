@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     private void validate(String userName, String userPassword){
 
         if ((userName.equals("admin")) && (userPassword.equals("admin123"))){
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, DatabaseAddOpendays.class);
             startActivity(intent);
             //CHANGE MAINACTIVITY TO THE NEW ACTIVITY WHEN ITS DONE
             //CHANGE USERNAME AND  PASSWORD IF NEEDED
