@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="?attr/backgroundcolor"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
@@ -33,11 +34,12 @@
                 android:id="@+id/button"
                 android:layout_width="67dp"
                 android:layout_height="51dp"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="56dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="102dp"
                 android:layout_marginRight="102dp"
+                android:background="?attr/backgroundcolor2"
                 android:clickable="true"
                 android:src="@drawable/ic_contact"
                 app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -51,12 +53,14 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="80dp"
                 android:layout_marginRight="80dp"
+                android:background="?attr/backgroundcolor2"
                 android:clickable="true"
                 android:src="@drawable/ic_share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/button"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
             <ScrollView
                 android:id="@+id/scrollView3"
@@ -75,11 +79,60 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="417dp"
+                        android:layout_height="232dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@mipmap/communication" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="412dp"
+                        android:layout_height="323dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.033"
+                        app:srcCompat="@mipmap/computer_science" />
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="414dp"
+                        android:layout_height="299dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.697"
+                        app:srcCompat="@mipmap/cmgt" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="418dp"
+                        android:layout_height="214dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.857"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.356"
+                        app:srcCompat="@mipmap/technische_informatica" />
+
                     <Button
                         android:id="@+id/button13"
                         android:layout_width="379dp"
                         android:layout_height="157dp"
                         android:text="Button"
+                        android:textColor="?attr/textcolor"
                         android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -93,6 +146,7 @@
                         android:layout_width="368dp"
                         android:layout_height="136dp"
                         android:text="Button"
+                        android:textColor="?attr/textcolor"
                         android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -107,6 +161,7 @@
                         android:layout_width="372dp"
                         android:layout_height="134dp"
                         android:text="Button"
+                        android:textColor="?attr/textcolor"
                         android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -121,6 +176,7 @@
                         android:layout_width="366dp"
                         android:layout_height="127dp"
                         android:text="Button"
+                        android:textColor="?attr/textcolor"
                         android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -143,18 +199,18 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:background="@android:color/white" />
+                            android:layout_height="20dp"
+                            android:background="?attr/backgroundcolor" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/darker_gray" />
+                            android:background="?attr/backgroundcolor2" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:background="@android:color/white" />
+                            android:layout_height="20dp"
+                            android:background="?attr/backgroundcolor" />
 
                         <TextView
                             android:id="@+id/textView"
@@ -163,7 +219,9 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:text="EWa"
+                            android:textColor="?attr/textcolor"
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
@@ -176,7 +234,9 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:text="@string/_17_00_20_00_nwijnhaven_107"
+                            android:textColor="?attr/textcolor"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
                             tools:layout_editor_absoluteY="258dp" />
@@ -189,25 +249,33 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
+                            android:textColor="?attr/textcolor"
                             tools:layout_editor_absoluteX="161dp"
                             tools:layout_editor_absoluteY="184dp" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:background="@android:color/white" />
+
+
+                            android:layout_height="22dp"
+                            android:background="?attr/backgroundcolor" />
+
+
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/darker_gray" />
+                            android:background="?attr/backgroundcolor2" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:background="@android:color/white" />
+
+                            android:layout_height="22dp"
+                            android:background="?attr/backgroundcolor" />
+
 
                         <TextView
                             android:id="@+id/textView3"
@@ -216,11 +284,13 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:text="@string/Technische_Informatica"
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
-                            tools:layout_editor_absoluteY="258dp" />
+                            tools:layout_editor_absoluteY="258dp"
+                            android:textColor="?attr/textcolor" />
 
 
                         <TextView
@@ -230,7 +300,9 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:text="@string/_17_00_20_00_nwijnhaven_107"
+                            android:textColor="?attr/textcolor"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
                             tools:layout_editor_absoluteY="258dp" />
@@ -243,25 +315,33 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
+                            android:textColor="?attr/textcolor"
                             tools:layout_editor_absoluteX="161dp"
                             tools:layout_editor_absoluteY="184dp" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:background="@android:color/white" />
+
+                            android:layout_height="22dp"
+                            android:background="?attr/backgroundcolor" />
+
+
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/darker_gray" />
+                            android:background="?attr/backgroundcolor2" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:background="@android:color/white" />
+
+                            android:layout_height="22dp"
+                            android:background="?attr/backgroundcolor" />
+
+
 
                         <TextView
                             android:id="@+id/textView5"
@@ -270,7 +350,9 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:text="@string/CMGT"
+                            android:textColor="?attr/textcolor"
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
@@ -284,7 +366,9 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:text="@string/_17_00_20_00_nwijnhaven_107"
+                            android:textColor="?attr/textcolor"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
                             tools:layout_editor_absoluteY="258dp" />
@@ -296,25 +380,33 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
+                            android:textColor="?attr/textcolor"
                             tools:layout_editor_absoluteX="161dp"
                             tools:layout_editor_absoluteY="184dp" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:background="@android:color/white" />
+
+                            android:layout_height="22dp"
+                            android:background="?attr/backgroundcolor" />
+
+
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@android:color/darker_gray" />
+                            android:background="?attr/backgroundcolor2" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:background="@android:color/white" />
+
+                            android:layout_height="22dp"
+                            android:background="?attr/backgroundcolor" />
+
+
 
                         <TextView
                             android:id="@+id/textView7"
@@ -323,7 +415,9 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:text="@string/Communicatiewetenschappen"
+                            android:textColor="?attr/textcolor"
                             android:textSize="30sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="132dp"
@@ -337,7 +431,9 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:text="@string/_17_00_20_00_nwijnhaven_107"
+                            android:textColor="?attr/textcolor"
                             android:textSize="18sp"
                             tools:layout_editor_absoluteX="132dp"
                             tools:layout_editor_absoluteY="258dp" />
@@ -349,8 +445,10 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginEnd="20dp"
+                            android:background="?attr/openDayDetails_courseBackground"
                             android:clickable="true"
                             android:text="@string/opendaybutton"
+                            android:textColor="?attr/textcolor"
                             tools:layout_editor_absoluteX="161dp"
                             tools:layout_editor_absoluteY="184dp" />
 
@@ -374,6 +472,7 @@
         app:menu="@menu/sidebare_menu"
         tools:visibility="gone"
         app:itemTextColor="?attr/textcolor"
+        app:itemIconTint="?attr/sidebar_icon_color"
         android:background="?attr/backgroundcolor"/>
 
 

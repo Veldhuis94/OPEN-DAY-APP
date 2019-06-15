@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.group5.cmiopenday">
+    package="com.group5.cmiopenday"
+    android:versionCode="1">
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -32,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".openDay3" />
         <activity android:name=".openDay2" />
         <activity android:name=".webview" />
         <activity
@@ -51,8 +53,12 @@
             android:name=".StudyProgramsActivity"
             android:label="@string/courses" />
         <activity
+            android:name=".DatabaseAddOpendays"/>
+        <activity
+            android:name=".DatabaseAddOpendayEvent"/>
+        <activity
             android:name=".PopActivity"
-            android:theme="@style/AppTheme.PopMe" />
+            android:label="@string/event_page_toolbar_text" />
         <activity
             android:name=".MainActivity"
 

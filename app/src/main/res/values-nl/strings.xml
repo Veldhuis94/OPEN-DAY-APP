@@ -98,4 +98,24 @@
     <string name="neutralQ">Dit kan een optie zijn, maar houd andere keuzes open!</string>
     <string name="positiveQ">Je zult je hier zeker thuisvoelen, maar kijk gerust nog even rond!</string>
 
+    <string name="event_page_toolbar_text">Event Informatie</string>
+
+    <string name="aboutcmi_address">Adres: Wijnhaven 107, 3011 WN, Rotterdam</string>
+    <string name="title_activity_travel">TravelActivity</string>
+
+    <string-array name="CourseNameArray">
+        <item>Informatica</item>
+        <item>Technische Informatica</item>
+        <item>CMGT</item>
+        <item>Communicatie</item>
+        <item>Informatica</item>
+        <item>Technische Informtica</item>
+        <item>CMGT</item>
+        <item>Communicatie</item>
+    </string-array>
+
+    <string name="preface_openday_event">Docenten en studenten geven een korte presentatie in een klaslokaal. De presentatie duurt ongeveer 40 minuten.
+
+    </string>
+
 </resources>

@@ -19,6 +19,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 
 public class openDay2 extends menu_Activity  {
@@ -29,12 +30,16 @@ public class openDay2 extends menu_Activity  {
     Cursor course_2 = null;
     Cursor course_3 = null;
     Cursor course_4 = null;
+    String Language = "";
+    String Room = "Room: ";
+    String Time = "Time: ";
+    String Location = "Location: ";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_day2);
+        setContentView(R.layout.open_day_layout);
         super.onCreateDrawer(savedInstanceState);
 
 
@@ -67,33 +72,48 @@ public class openDay2 extends menu_Activity  {
         StringBuilder stringBuilder_course_4 = new StringBuilder();
         TextView textView8 = findViewById(R.id.textView8);//info 4
         StringBuilder stringBuilder_info_4 = new StringBuilder();
-        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,4,"OpenDays");
-        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,5,"OpenDays");
-        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,6,"OpenDays");
-        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,7,"OpenDays");
+
+
+        String PhoneLanguage = Locale.getDefault().getLanguage();//Gets phone language
+        if(PhoneLanguage.equals("nl")){
+            Language = "NL";
+            Room = "Kamer: ";
+            Time = "Tijd: ";
+            Location = "Locatie: ";//Changes to dutch table
+        }
+
+        course_1 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,4,"OpenDays"+Language);
+        course_2 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,5,"OpenDays"+Language);
+        course_3 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,6,"OpenDays"+Language);
+        course_4 = myDbHelper.fetch_item("OpenDays", null, null, null, null, null, null,7,"OpenDays"+Language);
+
         if (course_1.moveToFirst()) {
             do {
                 stringBuilder_course_1.append(course_1.getString(2));
-                stringBuilder_info_1.append("Room: "+course_1.getString(3)+" | Time: "+course_1.getString(4)+"\nLocation: "+course_1.getString(5));
+                stringBuilder_info_1.append(Room+course_1.getString(3)+" | "+Time+course_1.getString(4)+"\n"+Location+course_1.getString(5));
             } while (course_1.moveToNext());
         }
+
         if (course_2.moveToFirst()) {
             do {
                 stringBuilder_course_2.append(course_2.getString(2));
-                stringBuilder_info_2.append("Room: "+course_2.getString(3)+" | Time: "+course_2.getString(4)+"\nLocation: "+course_2.getString(5));
+                stringBuilder_info_2.append(Room+course_2.getString(3)+" | "+Time+course_2.getString(4)+"\n"+Location+course_2.getString(5));
             } while (course_2.moveToNext());
         }
+
         if (course_3.moveToFirst()) {
             do {
                 stringBuilder_course_3.append(course_3.getString(2));
-                stringBuilder_info_3.append("Room: "+course_3.getString(3)+" | Time: "+course_3.getString(4)+"\nLocation: "+course_3.getString(5));
+                stringBuilder_info_3.append(Room+course_3.getString(3)+" | "+Time+course_3.getString(4)+"\n"+Location+course_3.getString(5));
             } while (course_3.moveToNext());
         }
+
         if (course_4.moveToFirst()) {
             do {
                 stringBuilder_course_4.append(course_4.getString(2));
-                stringBuilder_info_4.append("Room: "+course_4.getString(3)+" | Time: "+course_4.getString(4)+"\nLocation: "+course_4.getString(5));
+                stringBuilder_info_4.append(Room+course_4.getString(3)+" | "+Time+course_4.getString(4)+"\n"+Location+course_4.getString(5));
             } while (course_4.moveToNext());
+
         }
         textView.setText(stringBuilder_course_1);
         textView2.setText(stringBuilder_info_1);

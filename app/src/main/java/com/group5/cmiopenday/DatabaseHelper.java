@@ -1,5 +1,6 @@
 package com.group5.cmiopenday;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -12,6 +13,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Locale;
 
 import static android.content.ContentValues.TAG;
 
@@ -20,9 +22,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     String DB_PATH = null;
     private static String DB_NAME = "MyDatabase";
+    private static final String TABLE_NAME = "Homepage";
+    private static final String TABLE_NAME1 = "OpenDays";
+    private static final String Col1 = "ID";
+    private static final String Col2 = "Date";
+    private static final String Col3 = "Time";
+    private static final String Col4 = "Courses";
+    private static final String Col5 = "Course";
+    private static final String Col6 = "Classroom";
+    private static final String Col7 = "Time";
+    private static final String Col8 = "Location";
+    String Language = "";
+    String Language1 = "";
+
+
+    private static final String DBlocation = "/data/data/com.group5.cmiopenday/databases/";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
-    int row_id = 0;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, 10);
@@ -44,8 +60,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
     }
+    public void ReloadDataBase(Context context) throws IOException {
+        boolean dbExist = checkDataBase();
+        if (dbExist) {context.deleteDatabase("MyDatabase");
+            this.getReadableDatabase();
+            try {
+                copyDataBase();
+            } catch (IOException e) {
+                throw new Error("Error copying database");
+        }}  else {
+            this.getReadableDatabase();
+            try {
+                copyDataBase();
+            } catch (IOException e) {
+                throw new Error("Error copying database");
+            }
+        }
+    }
 
-    private boolean checkDataBase() {
+    public boolean checkDataBase() {
         SQLiteDatabase checkDB = null;
         try {
             String myPath = DB_PATH + DB_NAME;
@@ -55,12 +88,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (checkDB != null) {
             checkDB.close();
         }
-        return checkDB != null ? true : false;
+        return checkDB != null;
     }
 
     private void copyDataBase() throws IOException {
-        InputStream myInput = myContext.getAssets().open(DB_NAME);
-        String outFileName = DB_PATH + DB_NAME;
+        InputStream myInput = myContext.getAssets().open(DB_NAME);//Gets Database from assets folder
+        String outFileName = DB_PATH + DB_NAME;//Path to Database on phone
         OutputStream myOutput = new FileOutputStream(outFileName);
         byte[] buffer = new byte[10];
         int length;
@@ -78,14 +111,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
 
     }
-
-    public void deleteAll() {
-        SQLiteDatabase myDbHelper = this.getWritableDatabase();
-        myDbHelper.execSQL("delete from " + "Homepage");
-        myDbHelper.close();
-
-    }
-
 
     @Override
     public synchronized void close() {
@@ -109,25 +134,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             }
     }
+    public boolean addData(String date, String time, String courses){
+        String Phonelanguage = Locale.getDefault().getLanguage();
+        if(Phonelanguage.equals("nl")){
+            Language = "NL";
+        }
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Col2,date);
+        contentValues.put(Col3,time);
+        contentValues.put(Col4,courses);
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.insert(TABLE_NAME+Language, null, contentValues);
+        return result != -1;
+    }
+
+    public boolean addDataEvent(String course, String time, String courses, String location){
+        String Phonelanguage = Locale.getDefault().getLanguage();
+        if(Phonelanguage.equals("nl")){
+            Language = "NL";
+        }
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Col5,course);
+        contentValues.put(Col6,time);
+        contentValues.put(Col7,courses);
+        contentValues.put(Col8,location);
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.insert(TABLE_NAME1 +Language, null, contentValues);
+        return result != -1;
+    }
 
     public Cursor fetch_row(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, int row_id) {
         return myDataBase.query("Homepage", null, "_id=" + row_id, null, null, null, null);
     }
 
-    public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy,String Table) {
-        return myDataBase.query("Homepage", null, null, null, null, null, null);
-    }
     public Cursor fetch_item(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, int row_id,String Table) {
         return myDataBase.query(Table,columns , "_id=" + row_id, null, null, null, null);
     }
-
-    public Cursor ViewData() {
-        SQLiteDatabase myDbHelper = this.getReadableDatabase();
-
-        Cursor cursor = myDbHelper.rawQuery("select * from " + DB_NAME, null);
-        return cursor;
-    }
-
 
     public void purgeDatabase(Context context) {
         context.deleteDatabase("MyDatabase");
