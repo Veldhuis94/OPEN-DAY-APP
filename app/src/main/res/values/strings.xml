@@ -205,29 +205,28 @@
     <string name="positiveQ">You\'ll definitely feel at home here. Do try to keep looking around you though!</string>
 
     <string-array name="q1Body">
-        <item>Question 1 Body 1</item>
-        <item>Question 1 Body 2</item>
-        <item>Question 1 Body 3</item>
-        <item>Question 1 Body 4</item>
-        <item>Question 1 Body 5</item>
+        <item>As a software engineer you are going to work on the development for many applications.</item>
+        <item>You have a keen eye and ear for the stories of people and brands.</item>
+        <item>You enjoy working in a studio.</item>
+        <item>As a technical computer scientist you work on modern IT systems in which hardware and software are integrated.</item>
+        <item>Creative technologists invent and develop innovative digital products, where the user is central.</item>
     </string-array>
     <string name="preface_openday_event">Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes.
     </string>
 
 
     <string-array name="q2Body">
-        <item>Question 2 Body 1</item>
-        <item>Question 2 Body 2</item>
-        <item>Question 2 Body 3</item>
-        <item>Question 2 Body 4</item>
-        <item>Question 2 Body 5</item>
+        <item>You become an expert in large and complex software information.</item>
+        <item>You are creative with text and image and fascinated by the world of media.</item>
+        <item>Je bent bezig met schetsen, onderzoeken, bouwen of onderzoek buiten de deur.</item>
+        <item>As a technical computer scientist you contribute to the development, security and keeping up of these systems.</item>
+        <item>As a CMGT person you are a developer (programmer) of interactive digital products.</item>
     </string-array>
     <string-array name="q3Body">
-        <item>Question 3 Body 1</item>
-        <item>Question 3 Body 2</item>
-        <item>Question 3 Body 3</item>
-        <item>Question 3 Body 4</item>
-        <item>Question 3 Body 5</item>
+        <item>As a software engineer you learn how to program with many different programming languages.</item>
+        <item>You enjoy presenting a product and working together with customers.</item>
+        <item>You learn to work from the interests and perception of users and clients.</item>
+        <item>You are an all-rounder in all disciplines, but you also specialize in one or more aspects in the professional field.</item>
+        <item>The boundaries between digital products and the physical world are becoming increasingly blurred and faster.</item>
     </string-array>
 </resources>
-
