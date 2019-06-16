@@ -22,7 +22,7 @@
     <string name="shareString">Deel met welke app?</string>
     <string name="shareBody1">Op</string>
     <string name="shareBody2"> ga ik een open dag bijwonen op het Instituut voor Communicatie, Multimedia- en Informatietechnolgie. Meer weten? Kijk op de website van de Hogeschool Rotterdam: https://www.hogeschoolrotterdam.nl/</string>
-    <string name="calendarMessage">Kalender aan het openen...</string>
+    <string name="calendarMessage">Kalender aan het openen…</string>
     <string name="calendarTitle">CMI Open Dag</string>
     <string name="calendarBody">CMI Open Dag van</string>
     <string name="aboutcmi_content">Het instituut voor Communicatie, Media en Informatietechnologie (CMI) heeft met de opleidingen Communicatie, Informatica, Technische Informatica, Creative Media and Game Technologies en Communication and Multimedia Design maar liefst 3000 studenten die een waardevolle bijdrage leveren aan de onbegrensde wereld van communicatie, media en ICT.\n\nOns praktijkgestuurd onderwijs vindt plaats in alle jaren van onze opleidingen: praktijkcases en vraagstukken als groepsopdracht, ingebed in onderwijsmodules of verdiepende (keuze)minors, individuele stageplaatsen en afstudeeronderzoeken, maar ook in de vorm van gastcolleges, workshops en bedrijfssafari\'s.\n\nWe zijn voortdurend op zoek naar thema\'s waarop (meerjarige) samenwerking mogelijk is. Resultaten van samenwerking kunnen desgewenst een vervolg krijgen in ander onderwijs. Garantie op resultaat kunnen we niet geven, maar de frisse blik en actuele kennis van onze hbo\'ers leidt vaak tot innovatieve concepten, vernieuwende inzichten en prototypes die zeer bruikbaar blijken.\n\nCMI is nauw gelieerd aan kenniscentrum Creating 010 waar toegepast onderzoek gedaan wordt om de Rotterdamse potentie van de creatieve industrie beter te benutten.</string>
@@ -87,6 +87,16 @@
         <item>Studenten Communicatie hebben het studielandschap op de 2e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.</item>
 
     </string-array>
+    <string name="submit">Indienen</string>
+    <string name="agree">eens</string>
+    <string name="neutral">Neutraal</string>
+    <string name="disagree">oneens</string>
+    <string name="questionnaire_incomplete">Je hebt niet alle vragen ingevuld.</string>
+    <string name="questionnairebutton">Past deze studie bij jou?</string>
+    <string name="score">Je score is:</string>
+    <string name="negativeQ">Deze studie past misschien niet zo goed bij je. Probeer iets te vinden waar je echt passie voor hebt!</string>
+    <string name="neutralQ">Dit kan een optie zijn, maar houd andere keuzes open!</string>
+    <string name="positiveQ">Je zult je hier zeker thuisvoelen, maar kijk gerust nog even rond!</string>
 
     <string name="event_page_toolbar_text">Event Informatie</string>
 
@@ -102,6 +112,30 @@
         <item>Technische Informtica</item>
         <item>CMGT</item>
         <item>Communicatie</item>
+    </string-array>
+
+    <string-array name="q1Body">
+        <item>Als een software engineer ga je aan de ontwikkeling werken voor veel applicaties.</item>
+        <item>Je hebt een scherp oog en oor voor de verhalen van mensen en merken.</item>
+        <item>Je vindt het leuk om in een studio te werken.</item>
+        <item>Als technisch computerwetenschapper werk je aan moderne IT-systemen waarin hardware en software zijn geïntegreerd.</item>
+        <item>Creatieve technologen bedenken en ontwikkelen innovatieve digitale producten, waarbij de gebruiker centraal staat.</item>
+    </string-array>
+
+    <string-array name="q2Body">
+        <item>Je wordt een expert in grote en complexe software-informatie.</item>
+        <item>Je bent creatief met tekst en beeld en gefascineerd door de mediawereld.</item>
+        <item>Je bent bezig met schetsen, onderzoeken, bouwen of onderzoek buiten de deur.</item>
+        <item>Als technisch computerwetenschapper draag je bij aan de ontwikkeling, beveiliging en het bijhouden van deze systemen.</item>
+        <item>Als CMGT-persoon ben je een ontwikkelaar (programmeur) van interactieve digitale producten.</item>
+    </string-array>
+
+    <string-array name="q3Body">
+        <item>Als software-engineer leert u programmeren met veel verschillende programmeertalen.</item>
+        <item>Je geniet ervan een product te presenteren en samen te werken met klanten.</item>
+        <item>Je leert om te werken vanuit de interesses en perceptie van gebruikers en klanten.</item>
+        <item>Je bent een allrounder in alle disciplines, maar je bent ook gespecialiseerd in een of meerdere aspecten van het vakgebied.</item>
+        <item>De grenzen tussen digitale producten en de fysieke wereld worden steeds vager en sneller.</item>
     </string-array>
 
     <string name="preface_openday_event">Docenten en studenten geven een korte presentatie in een klaslokaal. De presentatie duurt ongeveer 40 minuten.

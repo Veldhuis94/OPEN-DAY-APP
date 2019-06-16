@@ -8,199 +8,214 @@
     android:fitsSystemWindows="true"
     tools:context=".Questionnaire"
     tools:openDrawer="start">
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Questionnaire">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/holo_red_dark"
-        android:elevation="4dp"
-        android:src="@drawable/logohr"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <ScrollView
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="65dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="57dp">
-        <RelativeLayout
+        android:background="?attr/backgroundcolor"
+        tools:context=".Questionnaire">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_red_dark"
+            android:elevation="4dp"
+            android:src="@drawable/logohr"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-            <TextView
-                android:id="@+id/textView22"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="65dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="57dp">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_alignParentTop="true"
-                android:text="Question 1"
-                android:textSize="36sp"
-                android:layout_marginBottom="20dp"/>
-            <TextView
-                android:id="@+id/qbody1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_below="@id/textView22"
-                android:text="Question Body"
-                android:layout_marginBottom="20dp"/>
-            <Button
-                android:id="@+id/q1a1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 1"
-                android:layout_toLeftOf="@id/q1a2"
-                android:layout_below="@id/qbody1" />
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/q1a2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 2"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/qbody1"
-                android:layout_marginBottom="20dp"/>
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/statement_1"
+                    android:textColor="?textcolor"
+                    android:textSize="36sp" />
 
-            <Button
-                android:id="@+id/q1a3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 3"
-                android:layout_toRightOf="@id/q1a2"
-                android:layout_below="@id/qbody1" />
+                <TextView
+                    android:id="@+id/qbody1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView22"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:textColor="?textcolor" />
 
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_below="@id/q1a2"
-                android:text="Question 2"
-                android:textSize="36sp"
-                android:layout_marginBottom="20dp"/>
-            <TextView
-                android:id="@+id/qbody2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_below="@id/textView23"
-                android:text="Question Body"
-                android:layout_marginBottom="20dp"/>
-            <Button
-                android:id="@+id/q2a1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 1"
-                android:layout_toLeftOf="@id/q2a2"
-                android:layout_below="@id/qbody2" />
+                <Button
+                    android:id="@+id/q1a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody1"
+                    android:layout_toLeftOf="@id/q1a2"
+                    android:text="@string/disagree" />
 
-            <Button
-                android:id="@+id/q2a2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 2"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/qbody2"
-                android:layout_marginBottom="20dp"/>
+                <Button
+                    android:id="@+id/q1a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/neutral" />
 
-            <Button
-                android:id="@+id/q2a3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 3"
-                android:layout_toRightOf="@id/q2a2"
-                android:layout_below="@id/qbody2" />
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_below="@id/q2a2"
-                android:text="Question 3"
-                android:textSize="36sp"
-                android:layout_marginBottom="20dp"/>
-            <TextView
-                android:id="@+id/qbody3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_below="@id/textView24"
-                android:text="Question Body"
-                android:layout_marginBottom="20dp"/>
-            <Button
-                android:id="@+id/q3a1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 1"
-                android:layout_toLeftOf="@id/q3a2"
-                android:layout_below="@id/qbody3" />
+                <Button
+                    android:id="@+id/q1a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody1"
+                    android:layout_toRightOf="@id/q1a2"
+                    android:text="@string/agree" />
 
-            <Button
-                android:id="@+id/q3a2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 2"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/qbody3"
-                android:layout_marginBottom="40dp"/>
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/q1a2"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/statement_2"
+                    android:textColor="?textcolor"
+                    android:textSize="36sp" />
 
-            <Button
-                android:id="@+id/q3a3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option 3"
-                android:layout_toRightOf="@id/q3a2"
-                android:layout_below="@id/qbody3" />
+                <TextView
+                    android:id="@+id/qbody2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView23"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Question Body"
+                    android:textColor="?textcolor" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/submitButton"
-                android:text="Submit"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/q3a2" />
-            <TextView
-                android:id="@+id/SCOREVIEW"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Your score will display here."
-                android:layout_below="@id/submitButton"
-                android:layout_centerHorizontal="true"
-                tools:layout_editor_absoluteX="179dp"
-                tools:layout_editor_absoluteY="691dp" />
+                <Button
+                    android:id="@+id/q2a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody2"
+                    android:layout_toLeftOf="@id/q2a2"
+                    android:text="@string/disagree" />
 
-        </RelativeLayout>
+                <Button
+                    android:id="@+id/q2a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/neutral" />
+
+                <Button
+                    android:id="@+id/q2a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody2"
+                    android:layout_toRightOf="@id/q2a2"
+                    android:text="@string/agree" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/q2a2"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/statement_3"
+                    android:textColor="?textcolor"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/qbody3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView24"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Question Body"
+                    android:textColor="?textcolor" />
+
+                <Button
+                    android:id="@+id/q3a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody3"
+                    android:layout_toLeftOf="@id/q3a2"
+                    android:text="@string/disagree" />
+
+                <Button
+                    android:id="@+id/q3a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="40dp"
+                    android:text="@string/neutral" />
+
+                <Button
+                    android:id="@+id/q3a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qbody3"
+                    android:layout_toRightOf="@id/q3a2"
+                    android:text="@string/agree" />
+
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/q3a2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/submit" />
+
+                <TextView
+                    android:id="@+id/SCOREVIEW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/submitButton"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="?textcolor"
+                    tools:layout_editor_absoluteX="179dp"
+                    tools:layout_editor_absoluteY="691dp" />
+
+            </RelativeLayout>
 
 
+        </ScrollView>
 
 
-
-    </ScrollView>
-
-
-
-
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 
 <android.support.design.widget.NavigationView
-android:id="@+id/sidebar_view"
-android:layout_width="wrap_content"
-android:layout_height="match_parent"
-android:layout_gravity="start"
-app:headerLayout="@layout/sidebare_header"
-app:menu="@menu/sidebare_menu"
-tools:visibility="gone" />
+    android:id="@+id/sidebar_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    app:headerLayout="@layout/sidebare_header"
+    app:menu="@menu/sidebare_menu"
+    tools:visibility="gone"
+    app:itemTextColor="?attr/textcolor"
+    app:itemIconTint="?attr/sidebar_icon_color"
+    android:background="?attr/backgroundcolor" />
 
 
 

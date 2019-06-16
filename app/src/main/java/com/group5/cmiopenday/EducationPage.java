@@ -2,6 +2,7 @@ package com.group5.cmiopenday;
 
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class EducationPage extends menu_Activity{
@@ -16,7 +17,8 @@ public class EducationPage extends menu_Activity{
         super.onCreateDrawer(savedInstanceState);
 
 
-
+        Button questionnairebutton = findViewById(R.id.questionnairebutton);
+        questionnairebutton.setOnClickListener(new onClickQuestionnaire(currentPageId, this));
 
         //set strings for proper display of correct page
         String[] bodyStrings = getResources().getStringArray(R.array.studyCourseBody); //fetch array of strings for Body

@@ -81,9 +81,19 @@
                     android:text="CONTENT"
                     android:textColor="?attr/textcolor"
                     android:textSize="18sp" />
+                <Button
+                    android:id="@+id/questionnairebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/questionnairebutton"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/scrollView3" />
+
             </TableLayout>
 
         </ScrollView>
+
 
 
     </android.support.constraint.ConstraintLayout>

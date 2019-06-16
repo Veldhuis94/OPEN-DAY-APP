@@ -193,8 +193,43 @@
     <string name="popTitle">Informational lesson</string>
     <string name="popBody">Teachers and/or students give a brief presentation about the study course in a classroom. The presentation will be about 45 minutes long.</string>
     <string name="projects">Examples of projects</string>
+    <string name="submit">Submit</string>
+    <string name="agree">agree</string>
+    <string name="neutral">Neutral</string>
+    <string name="disagree">Disagree</string>
+    <string name="questionnaire_incomplete">You have not filled in all the questions.</string>
+    <string name="questionnairebutton">Does this studycourse fit you?</string>
+    <string name="score">Your score is:</string>
+    <string name="negativeQ">This study may not be for you. Try looking for something you feel truly passionate about!</string>
+    <string name="neutralQ">This may be to your liking, but keep your options open!</string>
+    <string name="positiveQ">You\'ll definitely feel at home here. Do try to keep looking around you though!</string>
+
+    <string-array name="q1Body">
+        <item>As a software engineer you are going to work on the development for many applications.</item>
+        <item>You have a keen eye and ear for the stories of people and brands.</item>
+        <item>You enjoy working in a studio.</item>
+        <item>As a technical computer scientist you work on modern IT systems in which hardware and software are integrated.</item>
+        <item>Creative technologists invent and develop innovative digital products, where the user is central.</item>
+    </string-array>
     <string name="preface_openday_event">Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes.
     </string>
+    <string name="statement_1">Statement 1</string>
+    <string name="statement_2">Statement 2</string>
+    <string name="statement_3">Statement 3</string>
 
+
+    <string-array name="q2Body">
+        <item>You become an expert in large and complex software information.</item>
+        <item>You are creative with text and image and fascinated by the world of media.</item>
+        <item>Je bent bezig met schetsen, onderzoeken, bouwen of onderzoek buiten de deur.</item>
+        <item>As a technical computer scientist you contribute to the development, security and keeping up of these systems.</item>
+        <item>As a CMGT person you are a developer (programmer) of interactive digital products.</item>
+    </string-array>
+    <string-array name="q3Body">
+        <item>As a software engineer you learn how to program with many different programming languages.</item>
+        <item>You enjoy presenting a product and working together with customers.</item>
+        <item>You learn to work from the interests and perception of users and clients.</item>
+        <item>You are an all-rounder in all disciplines, but you also specialize in one or more aspects in the professional field.</item>
+        <item>The boundaries between digital products and the physical world are becoming increasingly blurred and faster.</item>
+    </string-array>
 </resources>
-
