@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_alignParentTop="true"
-                android:text="Statement 1"
+                android:text="@string/statement_1"
                 android:textSize="36sp"
                 android:layout_marginBottom="20dp"/>
             <TextView
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_below="@id/q1a2"
-                android:text="Statement 2"
+                android:text="@string/statement_2"
                 android:textSize="36sp"
                 android:layout_marginBottom="20dp"/>
             <TextView
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_below="@id/q2a2"
-                android:text="Question 3"
+                android:text="@string/statement_3"
                 android:textSize="36sp"
                 android:layout_marginBottom="20dp"/>
             <TextView

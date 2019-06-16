@@ -213,6 +213,9 @@
     </string-array>
     <string name="preface_openday_event">Teachers and students will give a short presentation in a classroom. The presentation will approximately take 40 minutes.
     </string>
+    <string name="statement_1">Statement 1</string>
+    <string name="statement_2">Statement 2</string>
+    <string name="statement_3">Statement 3</string>
 
 
     <string-array name="q2Body">
