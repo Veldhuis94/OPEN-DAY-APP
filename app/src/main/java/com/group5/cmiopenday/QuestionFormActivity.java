@@ -37,10 +37,10 @@ public class QuestionFormActivity extends menu_Activity{
                     FormSender.Send(activity, email.getText().toString(), name.getText().toString(), subject.getText().toString(), question.getText().toString());
                 }
                 else{
-                    if(toast !=null){
-                        toast.cancel();
-                    }
-                   toast = Toast.makeText(QuestionFormActivity.this,R.string.invalid_fields,Toast.LENGTH_LONG);
+                        if(toast !=null){
+                            toast.cancel();
+                        }
+                        toast = Toast.makeText(QuestionFormActivity.this,R.string.invalid_fields,Toast.LENGTH_LONG);
                    toast.show();
                 }
             }

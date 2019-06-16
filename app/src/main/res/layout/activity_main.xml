@@ -185,6 +185,55 @@
                     android:layout_height="15dp" />
 
 
+                <TextView
+                    android:id="@+id/textViewdatabase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="18sp"
+                    android:textColor="?attr/textcolor"
+                    tools:layout_editor_absoluteX="132dp"
+                    tools:layout_editor_absoluteY="258dp" />
+
+
+                <Button
+                    android:id="@+id/buttondatabase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="true"
+                    android:text="@string/opendaybutton"
+                    android:textColor="?attr/textcolor"
+                    android:background="?attr/backgroundcolor2"
+                    tools:layout_editor_absoluteX="161dp"
+                    tools:layout_editor_absoluteY="184dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/textcolor" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <Button
+                    android:id="@+id/button21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RELOAD DB"
+ />
+
+
             </TableLayout>
 
         </ScrollView>
