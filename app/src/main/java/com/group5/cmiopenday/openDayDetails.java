@@ -39,6 +39,7 @@ import java.util.Locale;
 
     public class openDayDetails extends menu_Activity {
 
+    String sharetext = "";
 
     final String date = "4-4-2019";
 
@@ -64,6 +65,8 @@ import java.util.Locale;
         super.onCreateDrawer(savedInstanceState);
         ImageButton shareButton = findViewById(R.id.button2);
         final Context context = this;
+
+
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,7 +97,9 @@ import java.util.Locale;
         TextView textView8 = findViewById(R.id.textView8);//info 4
         StringBuilder stringBuilder_info_4 = new StringBuilder();
 
+
         String PhoneLanguage = Locale.getDefault().getLanguage();//Gets phone language
+
         if(PhoneLanguage.equals("nl")){
             Language = "NL";
             Room = "Lokaal: ";
@@ -111,27 +116,34 @@ import java.util.Locale;
             do {
                 stringBuilder_course_1.append(course_1.getString(2));
                 stringBuilder_info_1.append(Room+course_1.getString(3)+" | "+Time+course_1.getString(4)+"\n"+Location+course_1.getString(5));
+
             } while (course_1.moveToNext());
         }
 
         if (course_2.moveToFirst()) {
             do {
                 stringBuilder_course_2.append(course_2.getString(2));
+
                 stringBuilder_info_2.append(Room+course_2.getString(3)+" | "+Time+course_2.getString(4)+"\n"+Location+course_2.getString(5));
+
             } while (course_2.moveToNext());
         }
 
         if (course_3.moveToFirst()) {
             do {
                 stringBuilder_course_3.append(course_3.getString(2));
+
                 stringBuilder_info_3.append(Room+course_3.getString(3)+" | "+Time+course_3.getString(4)+"\n"+Location+course_3.getString(5));
+
             } while (course_3.moveToNext());
         }
 
         if (course_4.moveToFirst()) {
             do {
                 stringBuilder_course_4.append(course_4.getString(2));
+
                 stringBuilder_info_4.append(Room+course_4.getString(3)+" | "+Time+course_4.getString(4)+"\n"+Location+course_4.getString(5));
+
             } while (course_4.moveToNext());
         }
 
@@ -153,6 +165,10 @@ import java.util.Locale;
         openDay3.setOnClickListener(new onClickPopUp(2, this));
         Button openDay4 = findViewById(R.id.button6);
         openDay4.setOnClickListener(new onClickPopUp(3, this));
+
+
+
+
 
 
         ImageButton calendarButton = findViewById(R.id.button);
@@ -182,6 +198,14 @@ import java.util.Locale;
         });
     }
 
+
+
+
+
+
+
+
+
     public void shareOnOtherSocialMedia(Context context) {
 
         List<Intent> shareIntentsLists = new ArrayList<Intent>();
@@ -192,7 +216,7 @@ import java.util.Locale;
         if (!resInfos.isEmpty()) {
             for (ResolveInfo resInfo : resInfos) {
                 String packageName = resInfo.activityInfo.packageName;
-                if (packageName.toLowerCase().contains("twitter") || packageName.toLowerCase().contains("facebook") || packageName.toLowerCase().contains("whatsapp") || packageName.toLowerCase().contains("email") || packageName.toLowerCase().contains("gm")) {
+                if (packageName.toLowerCase().contains("twitter") || packageName.toLowerCase().contains("whatsapp") || packageName.toLowerCase().contains("email") || packageName.toLowerCase().contains("gm")) {
                     Intent intent = new Intent();
                     intent.setComponent(new ComponentName(packageName, resInfo.activityInfo.name));
                     intent.setAction(Intent.ACTION_SEND);
@@ -218,44 +242,6 @@ import java.util.Locale;
 
     }
 
-    public Drawable resizeImage(int imageResource) {//R.drawable.computer_science
-        // Get device dimensions
-        Display display = getWindowManager().getDefaultDisplay();
-        double deviceWidth = display.getWidth();
 
-        BitmapDrawable bd = (BitmapDrawable) this.getResources().getDrawable(
-                imageResource);
-        double imageHeight = bd.getBitmap().getHeight();
-        double imageWidth = bd.getBitmap().getWidth();
-
-        double ratio = deviceWidth / imageWidth;
-        int newImageHeight = (int) (imageHeight * ratio);
-
-        Bitmap bMap = BitmapFactory.decodeResource(getResources(), imageResource);
-        Drawable drawable = new BitmapDrawable(this.getResources(),
-                getResizedBitmap(bMap, newImageHeight, (int) deviceWidth));
-
-        return drawable;
-    }
-
-    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
-
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-
-        // create a matrix for the manipulation
-        Matrix matrix = new Matrix();
-
-        // resize the bit map
-        matrix.postScale(scaleWidth, scaleHeight);
-
-        // recreate the new Bitmap
-        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
-
-        return resizedBitmap;
-    }
 
 }

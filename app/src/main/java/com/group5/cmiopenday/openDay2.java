@@ -169,7 +169,7 @@ public class openDay2 extends menu_Activity  {
         if (!resInfos.isEmpty()) {
             for (ResolveInfo resInfo : resInfos) {
                 String packageName = resInfo.activityInfo.packageName;
-                if (packageName.toLowerCase().contains("twitter") || packageName.toLowerCase().contains("facebook") || packageName.toLowerCase().contains("whatsapp") || packageName.toLowerCase().contains("email") || packageName.toLowerCase().contains("gm")) {
+                if (packageName.toLowerCase().contains("twitter")  || packageName.toLowerCase().contains("whatsapp") || packageName.toLowerCase().contains("email") || packageName.toLowerCase().contains("gm")) {
                     Intent intent = new Intent();
                     intent.setComponent(new ComponentName(packageName, resInfo.activityInfo.name));
                     intent.setAction(Intent.ACTION_SEND);
