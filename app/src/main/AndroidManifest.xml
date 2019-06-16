@@ -4,7 +4,7 @@
     package="com.group5.cmiopenday1"
 
 
-    android:versionCode="2">
+    android:versionCode="1">
 
     <application
         android:icon="@mipmap/ic_launcher"
