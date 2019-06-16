@@ -206,13 +206,16 @@
     </android.support.constraint.ConstraintLayout>
 
 <android.support.design.widget.NavigationView
-android:id="@+id/sidebar_view"
-android:layout_width="wrap_content"
-android:layout_height="match_parent"
-android:layout_gravity="start"
-app:headerLayout="@layout/sidebare_header"
-app:menu="@menu/sidebare_menu"
-tools:visibility="gone" />
+    android:id="@+id/sidebar_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    app:headerLayout="@layout/sidebare_header"
+    app:menu="@menu/sidebare_menu"
+    tools:visibility="gone"
+    app:itemTextColor="?attr/textcolor"
+    app:itemIconTint="?attr/sidebar_icon_color"
+    android:background="?attr/backgroundcolor" />
 
 
 
