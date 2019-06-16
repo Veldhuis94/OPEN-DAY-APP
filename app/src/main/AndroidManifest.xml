@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.group5.cmiopenday"
+    package="com.group5.cmiopenday1"
 
-    
+
     android:versionCode="2">
 
     <application
@@ -13,56 +13,56 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".creditsPage"
+        <activity android:name="com.group5.cmiopenday1.creditsPage"
             android:label="Credits"/>
 
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".resultPage"
+        <activity android:name="com.group5.cmiopenday1.LoginActivity"/>
+        <activity android:name="com.group5.cmiopenday1.resultPage"
             android:label = "Results"/>
-        <activity android:name=".Questionnaire" />
+        <activity android:name="com.group5.cmiopenday1.Questionnaire" />
 
 
         <activity
-            android:name=".TravelActivity"
+            android:name="com.group5.cmiopenday1.TravelActivity"
 
             android:label="@string/title_activity_travel"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".SplashscreenActivity">
+        <activity android:name="com.group5.cmiopenday1.SplashscreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".openDay3" />
-        <activity android:name=".openDay2" />
-        <activity android:name=".webview" />
+        <activity android:name="com.group5.cmiopenday1.openDay3" />
+        <activity android:name="com.group5.cmiopenday1.openDay2" />
+        <activity android:name="com.group5.cmiopenday1.webview" />
         <activity
-            android:name=".EducationPage"
+            android:name="com.group5.cmiopenday1.EducationPage"
             android:label="@string/courses" />
-        <activity android:name=".openDayDetails" />
+        <activity android:name="com.group5.cmiopenday1.openDayDetails" />
         <activity
-            android:name=".CMI_Activity"
+            android:name="com.group5.cmiopenday1.CMI_Activity"
             android:label="@string/about_cmi" />
         <activity
-            android:name=".FloorPlanActivity"
+            android:name="com.group5.cmiopenday1.FloorPlanActivity"
             android:label="@string/floorplan" />
         <activity
-            android:name=".QuestionFormActivity"
+            android:name="com.group5.cmiopenday1.QuestionFormActivity"
             android:label="@string/ask_a_question" />
         <activity
-            android:name=".StudyProgramsActivity"
+            android:name="com.group5.cmiopenday1.StudyProgramsActivity"
             android:label="@string/courses" />
         <activity
-            android:name=".DatabaseAddOpendays"/>
+            android:name="com.group5.cmiopenday1.DatabaseAddOpendays"/>
         <activity
-            android:name=".DatabaseAddOpendayEvent"/>
+            android:name="com.group5.cmiopenday1.DatabaseAddOpendayEvent"/>
         <activity
-            android:name=".PopActivity"
+            android:name="com.group5.cmiopenday1.PopActivity"
             android:label="@string/event_page_toolbar_text" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.group5.cmiopenday1.MainActivity"
 
             android:label="@string/open_days" />
 
