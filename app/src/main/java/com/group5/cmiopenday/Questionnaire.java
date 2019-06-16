@@ -16,7 +16,7 @@ public class Questionnaire extends menu_Activity {
         setContentView(R.layout.activity_questionnaire);
         super.onCreateDrawer(savedInstanceState);
         onClickEvent();
-        setTitle("Questionnaire");
+        
 
         //System to assign the correct strings to the correct textviews
         String[] q1strings = getResources().getStringArray(R.array.q1Body);
